@@ -1,14 +1,15 @@
 # Jamovi Step-by-Step Lab Guide — Session 1
 
-> **Course**: Quantitative Data Analysis (M1 – S7)  
-> **Software**: [Jamovi](https://www.jamovi.org/) (Version 2.3+)  
-> **Session**: Session 1 — Data Setup & Univariate Descriptives  
-> **Target File**: `data/processed/sp500_esg_jamovi.csv`  
+> **Course**: Quantitative Data Analysis (M1 – S7)
+> **Software**: [Jamovi](https://www.jamovi.org/) (Version 2.3+)
+> **Session**: Session 1 — Data Setup & Univariate Descriptives
+> **Target File**: `data/processed/sp500_esg_jamovi.csv`
 > **Final Output**: `sp500_esg_session1.omv`
 
 ---
 
 ## Step 1: Open the Dataset in Jamovi
+
 1. Launch **Jamovi** on your computer.
 2. Click the top-left **`≡` menu** (hamburger icon).
 3. Select **`Open`** $\rightarrow$ **`Browse`**.
@@ -22,24 +23,24 @@
 ## Step 2: Configure Variable Measure Types (Crucial Step!)
 
 > [!CAUTION]
-> As Dr. NGUYEN Anh-Tuan warns in **Slide 38**: *"If the measure type is wrong, Jamovi will silently refuse to offer you the right test in week 2. This is the number one cause of a lost lab session."*
+> As Dr. NGUYEN Anh-Tuan warns in **Slide 38**: _"If the measure type is wrong, Jamovi will silently refuse to offer you the right test in week 2. This is the number one cause of a lost lab session."_
 
 Double-click on each column header in the **Data** tab and set the **Measure type** and **Data type**:
 
-| Column Name | Measure Type in Jamovi | Data Type | Missing Values / Levels |
-|---|---|---|---|
-| `Ticker` | **ID** | Text | Identifier (never analysed) |
-| `Company` | **Nominal** | Text | Company names |
-| `Sector` | **Nominal** | Text | 5 levels: *Consumer, Finance, Healthcare, Industrials & Energy, Tech & Comms* |
-| `Total_Revenue_B` | **Continuous** | Decimal | None |
-| `Market_Cap_B` | **Continuous** | Decimal | None |
-| `Market_Cap_Quartile` | **Ordinal** | Text | 4 ordered levels: *Q1 < Q2 < Q3 < Q4* |
-| `Profit_Margin` | **Continuous** | Decimal | None |
-| `ROE` | **Continuous** | Decimal | 32 missing values (leave empty) |
-| `Beta` | **Continuous** | Decimal | 4 missing values |
-| `Headcount` | **Continuous** | Integer | 3 missing values |
-| `Overall_Governance_Risk`| **Continuous** | Integer | Scores 1 to 10 |
-| `Governance_Risk_Level` | **Ordinal** | Text | 3 ordered levels: *Low < Medium < High* |
+| Column Name               | Measure Type in Jamovi | Data Type | Missing Values / Levels                                                       |
+| ------------------------- | ---------------------- | --------- | ----------------------------------------------------------------------------- |
+| `Ticker`                  | **ID**                 | Text      | Identifier (never analysed)                                                   |
+| `Company`                 | **Nominal**            | Text      | Company names                                                                 |
+| `Sector`                  | **Nominal**            | Text      | 5 levels: _Consumer, Finance, Healthcare, Industrials & Energy, Tech & Comms_ |
+| `Total_Revenue_B`         | **Continuous**         | Decimal   | None                                                                          |
+| `Market_Cap_B`            | **Continuous**         | Decimal   | None                                                                          |
+| `Market_Cap_Quartile`     | **Ordinal**            | Text      | 4 ordered levels: _Q1 < Q2 < Q3 < Q4_                                         |
+| `Profit_Margin`           | **Continuous**         | Decimal   | None                                                                          |
+| `ROE`                     | **Continuous**         | Decimal   | 32 missing values (leave empty)                                               |
+| `Beta`                    | **Continuous**         | Decimal   | 4 missing values                                                              |
+| `Headcount`               | **Continuous**         | Integer   | 3 missing values                                                              |
+| `Overall_Governance_Risk` | **Continuous**         | Integer   | Scores 1 to 10                                                                |
+| `Governance_Risk_Level`   | **Ordinal**            | Text      | 3 ordered levels: _Low < Medium < High_                                       |
 
 ---
 
@@ -88,4 +89,4 @@ Double-click on each column header in the **Data** tab and set the **Measure typ
 2. Select **`Save As`** $\rightarrow$ **`Browse`**.
 3. Name your file: **`sp500_esg_session1.omv`**.
 4. Save it in your project folder.
-   *(The `.omv` format bundles both your dataset and all interactive analysis output tables together into a single file ready for submission to Dr. NGUYEN Anh-Tuan).*
+   _(The `.omv` format bundles both your dataset and all interactive analysis output tables together into a single file ready for submission to Dr. NGUYEN Anh-Tuan)._

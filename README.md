@@ -1,7 +1,7 @@
 # S&P 500 Corporate Governance & Financial Performance Analysis
 
-> **Quantitative Data Analysis — M1 S7 Group Consulting Project**  
-> **Course Code**: `2627_ECO_2_EN_009` · **Institution**: EM Normandie Business School · **Lecturer**: Dr. NGUYEN Anh-Tuan  
+> **Quantitative Data Analysis — M1 S7 Group Consulting Project**
+> **Course Code**: `2627_ECO_2_EN_009` · **Institution**: EM Normandie Business School · **Lecturer**: Dr. NGUYEN Anh-Tuan
 > **Academic Year**: 2026–2027
 
 ---
@@ -58,6 +58,7 @@ Group Work S&P 500/
 ## 3. Quick Start & Execution
 
 ### 3.1 Environment Setup
+
 ```bash
 # 1. Activate virtual environment
 source .venv/bin/activate        # macOS / Linux
@@ -68,6 +69,7 @@ pip install -r requirements.txt
 ```
 
 ### 3.2 Run the End-to-End Pipeline
+
 ```bash
 # Run data cleaning, harmonization, and Jamovi export
 python -m src.cleaning
@@ -96,19 +98,20 @@ python -m pytest tests/test_dataset_integrity.py -v
 
 ## 5. 4-Week Course Roadmap
 
-| Session | Focus Area | Statistical Methods & Tests | Deliverable |
-|:---:|---|---|:---:|
-| **1** | Data Cleaning & Univariate Description | Central tendency, dispersion, shape, Shapiro-Wilk | **Artefact 1 (20 pts) + Provenance (10 pts)** |
-| **2** | Bivariate Associations | Chi-Square ($\chi^2$), Cramér's $V$, Pearson $r$ (95% CI) | Artefact 2 (25 pts) |
-| **3** | Group Mean Comparisons | One-Way ANOVA, Welch's ANOVA, Games-Howell post-hoc | Artefact 3 (20 pts) |
-| **4** | Predictive Regression & Strategy | Simple & Multiple Linear Regression (OLS), VIF, diagnostics | Artefact 4 (25 pts) |
+| Session | Focus Area                             | Statistical Methods & Tests                                 |                  Deliverable                  |
+| :-----: | -------------------------------------- | ----------------------------------------------------------- | :-------------------------------------------: |
+|  **1**  | Data Cleaning & Univariate Description | Central tendency, dispersion, shape, Shapiro-Wilk           | **Artefact 1 (20 pts) + Provenance (10 pts)** |
+|  **2**  | Bivariate Associations                 | Chi-Square ($\chi^2$), Cramér's $V$, Pearson $r$ (95% CI)   |              Artefact 2 (25 pts)              |
+|  **3**  | Group Mean Comparisons                 | One-Way ANOVA, Welch's ANOVA, Games-Howell post-hoc         |              Artefact 3 (20 pts)              |
+|  **4**  | Predictive Regression & Strategy       | Simple & Multiple Linear Regression (OLS), VIF, diagnostics |              Artefact 4 (25 pts)              |
 
 ---
 
 ## 6. Academic & Methodological Protocol
 
 All analyses strictly follow the 4-step framework (Slide 9):
+
 1. **IDENTIFY**: Method justified strictly by variable scale (Nominal, Ordinal, Continuous).
 2. **HYPOTHESISE**: $H_0$ and $H_1$ articulated in business language.
 3. **DECIDE**: Statistical significance evaluated at $\alpha = 0.05$ with effect size strength.
-4. **RECOMMEND**: Actionable executive takeaways answering *"What does the manager do on Monday morning?"*
+4. **RECOMMEND**: Actionable executive takeaways answering _"What does the manager do on Monday morning?"_

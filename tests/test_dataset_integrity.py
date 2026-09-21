@@ -90,3 +90,4 @@ def test_jamovi_header_compliance(cleaned_df):
     for col in cleaned_df.columns:
         assert " " not in col, f"Column '{col}' contains spaces (violates Jamovi naming standards)."
         assert col.isascii(), f"Column '{col}' contains non-ASCII characters."
+

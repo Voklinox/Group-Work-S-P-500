@@ -1,9 +1,9 @@
-# S&P 500 Quantitative Data Analysis — Master Glossary & Lexicon (Lexique Complet)
+# S&P 500 Quantitative Data Analysis — Master Glossary & Lexicon (Grand Lexique Bilingue)
 
 > **Course**: Quantitative Data Analysis (M1 – S7, Course code: `2627_ECO_2_EN_009`)  
 > **Institution**: EM Normandie Business School · Programme Grande École  
 > **Lecturer**: Dr. NGUYEN Anh-Tuan  
-> **Purpose**: A comprehensive, beginner-friendly bilingual guide (English concepts with detailed French explanations) covering all Financial, Data, Statistical, ESG, and Jamovi terminology used across all 4 sessions of the project.
+> **Purpose**: A comprehensive, beginner-friendly bilingual guide (English concepts with detailed French explanations) covering all Financial, Data, Statistical, Econometric, ESG, and Jamovi terminology across all 4 sessions of the project.
 
 ---
 
@@ -11,11 +11,11 @@
 1. [Data Fundamentals & Variable Typology](#1-data-fundamentals--variable-typology)
 2. [Financial & Corporate Accounting Terminology](#2-financial--corporate-accounting-terminology)
 3. [ESG & Corporate Governance (ISS Framework)](#3-esg--corporate-governance-iss-framework)
-4. [Univariate Statistics & Shape Parameters (Session 1)](#4-univariate-statistics--shape-parameters-session-1)
-5. [Bivariate Analysis & Hypothesis Testing (Session 2)](#5-bivariate-analysis--hypothesis-testing-session-2)
-6. [Group Comparisons & ANOVA (Session 3)](#6-group-comparisons--anova-session-3)
-7. [Regression Modeling & Econometrics (Session 4)](#7-regression-modeling--econometrics-session-4)
-8. [Jamovi Software Operations & Common Pitfalls](#8-jamovi-software-operations--common-pitfalls)
+4. [Session 1: Univariate Statistics & Shape Parameters](#4-session-1-univariate-statistics--shape-parameters)
+5. [Session 2: Bivariate Associations, Chi-Square & Correlations](#5-session-2-bivariate-associations-chi-square--correlations)
+6. [Session 3: Group Comparisons, Welch's ANOVA & Games-Howell](#6-session-3-group-comparisons-welchs-anova--games-howell)
+7. [Session 4: Multiple Linear Regression & Econometric Diagnostics](#7-session-4-multiple-linear-regression--econometric-diagnostics)
+8. [Jamovi Software Operations & Costly Student Traps](#8-jamovi-software-operations--costly-student-traps)
 
 ---
 
@@ -139,7 +139,7 @@ To enable categorical contingency tables (Chi-Square) and group tests, the 1–1
 
 ---
 
-## 4. Univariate Statistics & Shape Parameters (Session 1)
+## 4. Session 1: Univariate Statistics & Shape Parameters
 
 ### Univariate Analysis (Analyse univariée)
 The statistical examination of **one single variable in isolation**, without analyzing causes, relationships, or predictive influences (Slide 19).
@@ -165,11 +165,13 @@ The statistical examination of **one single variable in isolation**, without ana
 
 ### Distribution Shape: Skewness & Kurtosis (Forme de distribution)
 * **Skewness ($g_1$ — Asymétrie)**:
+  $$g_1 = \frac{n}{(n-1)(n-2)} \sum_{i=1}^n \left(\frac{x_i - \bar{x}}{s}\right)^3$$
   Measures the lack of symmetry in a distribution.
   * $g_1 \approx 0$: Symmetric distribution ($\text{Mean} \approx \text{Median} \approx \text{Mode}$).
   * $g_1 > 0$ (**Positive / Right Skew**): Mean > Median > Mode. A long tail extending to the right (typical of income, revenue, market cap).
   * $g_1 < 0$ (**Negative / Left Skew**): Mean < Median < Mode. A long tail extending to the left (typical of profit margins with distressed outliers).
 * **Kurtosis ($g_2$ — Aplatissement / Acuité)**:
+  $$g_2 = \frac{n(n+1)}{(n-1)(n-2)(n-3)} \sum_{i=1}^n \left(\frac{x_i - \bar{x}}{s}\right)^4 - \frac{3(n-1)^2}{(n-2)(n-3)}$$
   Measures the "tailedness" and peakedness of the distribution relative to a normal curve.
   * $g_2 = 0$ (Mesokurtic): Standard bell-shaped normal curve.
   * $g_2 > 0$ (Leptokurtic): Sharply peaked with heavy, fat tails (higher probability of extreme outliers).
@@ -187,7 +189,7 @@ Never rely on a single metric; evaluate all three simultaneously:
 
 ---
 
-## 5. Bivariate Analysis & Hypothesis Testing (Session 2)
+## 5. Session 2: Bivariate Associations, Chi-Square & Correlations
 
 ### Bivariate Analysis (Analyse bivariée)
 The statistical examination of the relationship or association between **two variables simultaneously** (Slide 17 & Session 2).
@@ -209,70 +211,105 @@ The mandatory answer template for every analytical question:
 * **Effect Size (Strength)**: While $p$-value tells you *whether* an effect exists, effect size tells you *how strong* it is (whether it practically matters to a manager).
 
 ### Chi-Square Test of Independence ($\chi^2$ — Nominal $\times$ Ordinal)
-Tests whether two qualitative categorical variables are independent or statistically associated (e.g., `Sector` $\times$ `Governance_Risk_Level`).
-* **Cramér's $V$ (Effect Size)**:
-  Measures the strength of association between categorical variables, ranging from $0$ (no association) to $1$ (perfect association).
+Tests whether two qualitative categorical variables are independent or statistically associated.
+$$\chi^2 = \sum_{i=1}^r \sum_{j=1}^c \frac{(O_{ij} - E_{ij})^2}{E_{ij}}$$
+Where $O_{ij}$ is the observed cell count, and $E_{ij} = \frac{\text{Row Total} \times \text{Column Total}}{N}$ is the expected count under independence. Degrees of freedom: $df = (r - 1)(c - 1)$.
+* **Cramér's $V$ (Effect Size for Chi-Square)**:
+  $$V = \sqrt{\frac{\chi^2}{N \min(r - 1, c - 1)}}$$
+  Measures association strength from $0$ (no relationship) to $1$ (perfect association):
   * $V < 0.10$: Negligible
-  * $0.10 \le V < 0.30$: Weak to moderate association
+  * $0.10 \le V < 0.30$: Weak to moderate association (Our result: $V = 0.122$)
   * $V \ge 0.30$: Strong association
+* **Standardized Residuals (Résidus standardisés)**:
+  $$\text{Residual}_{ij} = \frac{O_{ij} - E_{ij}}{\sqrt{E_{ij}}}$$
+  Identifies which specific cells drive the overall Chi-Square result. A residual $> +2.0$ indicates significant over-representation; $< -2.0$ indicates significant under-representation. (In our data, Tech & Comms had $+1.75$ in High Risk; Industrials had $-1.97$).
 
 ### Pearson Correlation Coefficient ($r$ — Continuous $\times$ Continuous)
-Measures the linear strength and direction of the association between two continuous variables (e.g., `Overall_Governance_Risk` vs. `Profit_Margin`).
-* Ranges from $-1.0$ (perfect negative correlation) to $+1.0$ (perfect positive correlation), with $0.0$ indicating no linear relationship.
-* Requires continuous interval or ratio scale data.
-* **Confidence Interval (95% CI)**: The estimated range within which the true population correlation coefficient lies with 95% certainty.
+$$r = \frac{\sum (x_i - \bar{x})(y_i - \bar{y})}{\sqrt{\sum (x_i - \bar{x})^2 \sum (y_i - \bar{y})^2}}$$
+Measures the linear strength and direction of the association between two continuous variables:
+* Ranges from $-1.0$ (perfect inverse link) to $+1.0$ (perfect direct link).
+* **Fisher $z$-Transformation & 95% Confidence Interval**:
+  Constructs exact lower and upper confidence bounds:
+  $$z = \frac{1}{2} \ln \left(\frac{1+r}{1-r}\right), \quad SE_z = \frac{1}{\sqrt{n - 3}}$$
+
+### Spearman's Rank Correlation ($\rho$ — Non-Paramétrique)
+Calculates Pearson's correlation on the **ranks** of data rather than raw values. Robust to non-normality and monotonic non-linear patterns.
 
 ---
 
-## 6. Group Comparisons & ANOVA (Session 3)
+## 6. Session 3: Group Comparisons, Welch's ANOVA & Games-Howell
 
-### One-Way ANOVA (Analysis of Variance — Qualitative 3+ groups $\times$ Quantitative)
-Tests whether the mean of a continuous outcome variable (e.g., `Profit_Margin`) differs significantly across three or more categorical groups (e.g., the 5 `Sector` categories).
-* *Null Hypothesis ($H_0$)*: $\mu_1 = \mu_2 = \mu_3 = \mu_4 = \mu_5$ (All sector population means are equal).
-* *Alternative Hypothesis ($H_1$)*: At least one sector mean is significantly different.
+### One-Way Analysis of Variance (ANOVA — Qualitative 3+ groups $\times$ Quantitative)
+Tests whether the population means of a continuous outcome variable differ significantly across 3 or more categorical groups.
+$$F = \frac{MS_{\text{between}}}{MS_{\text{within}}} = \frac{SS_{\text{between}} / (k - 1)}{SS_{\text{within}} / (N - k)}$$
 
-### ANOVA Parametric Assumptions
-1. **Normality of Residuals**: Verified via Shapiro-Wilk per group or residual Q-Q plot.
-2. **Homogeneity of Variances (Homoscedasticity)**: Tested using **Levene's Test** ($H_0$: variances are equal across groups).
+### Levene's Test of Homogeneity of Variances (Test de Levene)
+Tests whether variances are equal across groups ($H_0: \sigma_1^2 = \sigma_2^2 = \dots = \sigma_k^2$).
+* *If $p > 0.05$*: Variances are equal (homoscedasticity confirmed; standard Fisher ANOVA is valid).
+* *If $p < 0.05$*: Variances are significantly unequal (**heteroscedasticity**; standard Fisher ANOVA is invalid and Welch's ANOVA must be used!).
+* *In our project*: Levene's test yielded $F = 5.39, p < .001$ for Profit Margin across sectors.
 
-### What if Assumptions are Violated? (Slide 118)
-* If variances are unequal ($p < 0.05$ on Levene's test): Run **Welch's ANOVA** instead of standard Fisher's ANOVA.
-* If normality is severely breached: Run the non-parametric **Kruskal-Wallis Test**.
+### Welch's Robust ANOVA ($F_{\text{Welch}}$)
+An adjusted ANOVA formulation that weights each group's variance by its sample size ($w_i = n_i / s_i^2$). Valid even when group variances and sample sizes are severely unequal.
 
-### Post-Hoc Pairwise Comparisons (Comparisons post-hoc)
-If the overall ANOVA is significant ($p < 0.05$), post-hoc tests determine *which specific pairs of groups* differ:
-* **Tukey's HSD (Honestly Significant Difference)**: Used when variances are equal.
-* **Games-Howell Post-Hoc**: Used when variances are unequal (adjusts p-values to control for family-wise error rate without assuming equal variances).
+### Effect Size: Eta-Squared ($\eta^2$) & Omega-Squared ($\omega^2$)
+$$\eta^2 = \frac{SS_{\text{between}}}{SS_{\text{total}}}$$
+The percentage of variance in the dependent variable accounted for by group membership:
+* $\eta^2 \approx 0.01$: Small effect
+* $\eta^2 \approx 0.06$: Medium effect
+* $\eta^2 \ge 0.14$: Large effect
+* *In our project*: $\eta^2 = 0.0405$ ($4.05\%$ of profit margin variance is explained by sector).
+
+### Kruskal-Wallis Non-Parametric Test ($H$)
+The non-parametric rank-based equivalent of One-Way ANOVA. Used when both normality and variance homogeneity are severely violated.
+
+### Post-Hoc Pairwise Comparisons: Tukey HSD vs. Games-Howell
+When ANOVA indicates that at least one group differs ($p < 0.05$), post-hoc tests identify *which specific pairs* differ:
+* **Tukey's HSD (Honestly Significant Difference)**: Assumes equal variances across all groups.
+* **Games-Howell Post-Hoc Test**:
+  $$t = \frac{\bar{x}_i - \bar{x}_j}{\sqrt{\frac{s_i^2}{n_i} + \frac{s_j^2}{n_j}}}$$
+  Adjusts degrees of freedom via the Welch-Satterthwaite equation and applies the Studentized Range distribution ($q$). **Required when Levene's test fails!**
 
 ---
 
-## 7. Regression Modeling & Econometrics (Session 4)
+## 7. Session 4: Multiple Linear Regression & Econometric Diagnostics
 
-### Linear Regression (Régression linéaire)
-Models the mathematical relationship between one continuous dependent variable ($Y$, e.g., `Profit_Margin`) and one or more independent explanatory variables ($X$, e.g., `Overall_Governance_Risk`, `Market_Cap_B`, `Beta`).
-
-### Model Equation (Multiple OLS Regression)
-$$Y = \beta_0 + \beta_1 X_1 + \beta_2 X_2 + \dots + \beta_k X_k + \epsilon$$
-* $\beta_0$ (Intercept): Expected value of $Y$ when all $X = 0$.
-* $\beta_k$ (Regression slope coefficient): The expected change in $Y$ for a one-unit change in $X_k$, holding all other variables constant (*ceteris paribus*).
-* $SE$ (Standard Error): The precision of the coefficient estimate.
-* $t$-statistic & $p$-value: Tests whether $\beta_k$ is significantly different from zero.
+### Multiple Linear Regression (Régression linéaire multiple MCO / OLS)
+Models the expected value of a continuous dependent variable ($Y$) as a linear combination of explanatory variables ($X_1, X_2, \dots, X_k$):
+$$Y_i = \beta_0 + \beta_1 X_{1i} + \beta_2 X_{2i} + \dots + \beta_k X_{ki} + \epsilon_i$$
+* **$\beta_0$ (Intercept / Constante)**: The predicted baseline value of $Y$ when all predictors are equal to zero.
+* **$\beta_k$ (Unstandardized Regression Coefficient)**: The expected change in $Y$ for a 1-unit increase in $X_k$, holding all other variables constant (*ceteris paribus*).
+* **Standardized Beta ($\beta^*$)**:
+  $$\beta_k^* = \beta_k \times \frac{s_{X_k}}{s_Y}$$
+  Allows direct comparison of predictor importance on a common standard-deviation scale.
 
 ### Coefficient of Determination ($R^2$ and Adjusted $R^2$)
-* **$R^2$**: The proportion of variance in the dependent variable explained by the regression model (ranges from 0 to 1).
-* **Adjusted $R^2$**: Penalizes the model for adding useless explanatory variables; used to compare models with different numbers of predictors.
+* **$R^2$**: The proportion of variance in $Y$ explained by the regression model:
+  $$R^2 = 1 - \frac{SS_{\text{residual}}}{SS_{\text{total}}}$$
+* **Adjusted $R^2$**: Corrects $R^2$ for the number of predictors ($k$) and sample size ($N$):
+  $$R_{\text{adj}}^2 = 1 - \left[\frac{(1 - R^2)(N - 1)}{N - k - 1}\right]$$
 
-### Regression Diagnostic Assumptions
-1. **Linearity**: The true relationship between predictors and outcome is linear (inspected via Residuals vs. Fitted plot).
-2. **Normality of Residuals**: The model errors ($\epsilon$) are normally distributed (Q-Q plot of residuals).
-3. **Homoscedasticity**: The variance of the residuals is constant across all predicted values (tested via **Breusch-Pagan test**).
-4. **No Multicollinearity**: Explanatory variables are not overly correlated with one another. Evaluated using the **Variance Inflation Factor (VIF)**:
-   * $\text{VIF} < 5$: Acceptable / low collinearity.
-   * $\text{VIF} > 10$: Severe multicollinearity (distorts coefficient estimates).
+### Logarithmic Transformations ($\ln(X)$)
+Applying natural logarithms to positively skewed financial metrics (Market Capitalization and Revenue).
+* *Econometric Rationale*: Compresses extreme mega-cap outliers (NVIDIA, Apple) and transforms multiplicative scale dynamics into linear additive relationships.
+
+### Econometric Assumptions & Diagnostic Suite (Slide 133–137)
+1. **Linearity**: Evaluated via the Residuals vs. Fitted plot (should show a flat horizontal band with no curvature).
+2. **Normality of Residuals**: Model errors ($\epsilon$) must be normally distributed (Q-Q plot of residuals).
+3. **Homoscedasticity (Equal Error Variance)**:
+   * **Breusch-Pagan Test**: Regresses squared residuals on explanatory variables.
+   * *If $p < 0.05$*: Heteroscedasticity is present (White's robust standard errors HC3 are required).
+4. **Absence of Multicollinearity (VIF & Tolerance)**:
+   * **Variance Inflation Factor (VIF)**:
+     $$\text{VIF}_j = \frac{1}{1 - R_j^2}$$
+     Measures how much the variance of an estimated regression coefficient increases due to collinearity with other predictors:
+     * $\text{VIF} < 5.0$: Safe / Low collinearity (Our maximum VIF was $1.89$).
+     * $\text{VIF} > 10.0$: Severe multicollinearity (distorts $t$-statistics and inflates standard errors).
+   * **Tolerance**: The inverse of VIF ($\text{Tol} = 1 / \text{VIF}$). Tolerance $< 0.20$ signals high collinearity risk.
 
 ---
 
-## 8. Jamovi Software Operations & Common Pitfalls
+## 8. Jamovi Software Operations & Costly Student Traps
 
 ### What is Jamovi?
 A free, open-source, point-and-click statistical software package built on top of the R statistical programming language, providing SPSS-style output tables and real-time reactive calculations (Slide 37).

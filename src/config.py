@@ -205,3 +205,4 @@ APA_STYLE = {
     "palette": ["#1f77b4", "#ff7f0e", "#2ca02c", "#d62728", "#9467bd"],
     "source_annotation": "Source: S&P 500 Corporate Governance & Financial Performance Dataset (ISS & Yahoo Finance, FY2025/2026)",
 }
+

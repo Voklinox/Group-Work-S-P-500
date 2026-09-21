@@ -197,3 +197,4 @@ if __name__ == "__main__":
     for var, cat_stats in suite["categorical"].items():
         print(f"\n--- {var} (Mode: {cat_stats['mode']} - {cat_stats['mode_percent']}%) ---")
         print(pd.DataFrame(cat_stats["table"]).to_string(index=False))
+

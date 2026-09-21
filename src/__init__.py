@@ -4,3 +4,4 @@ Quantitative Data Analysis (M1 - S7) — EM Normandie.
 """
 
 __version__ = "1.0.0"
+
