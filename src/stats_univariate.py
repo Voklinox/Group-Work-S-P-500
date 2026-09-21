@@ -11,7 +11,7 @@ import numpy as np
 import pandas as pd
 from scipy import stats
 
-from src.config import CLEANED_DATA_PATH, VARIABLE_METADATA
+from src.config import CLEANED_DATA_PATH
 
 
 def compute_continuous_univariate(series: pd.Series, var_name: str) -> dict[str, Any]:

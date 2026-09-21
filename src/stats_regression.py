@@ -186,3 +186,4 @@ if __name__ == "__main__":
     print("\n=== Model 3: Multiple OLS with Sector Dummies ===")
     print(f"R² = {res3['r_squared']}, Adj R² = {res3['adj_r_squared']}, F = {res3['f_stat']}, p = {res3['f_pvalue_apa']}")
     print(res3["coefficients"].to_string(index=False))
+

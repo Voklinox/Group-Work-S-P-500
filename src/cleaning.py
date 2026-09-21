@@ -6,14 +6,12 @@ constructs ordinal classifications, formats variable names for Jamovi,
 and exports validated datasets in both CSV and Excel formats.
 """
 
-import sys
 from pathlib import Path
 import numpy as np
 import pandas as pd
 
 from src.config import (
     CLEANED_DATA_PATH,
-    DOCS_DIR,
     JAMOVI_CSV_PATH,
     JAMOVI_XLSX_PATH,
     RAW_DATA_PATH,

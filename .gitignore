@@ -16,7 +16,8 @@ build/
 *.egg
 
 # IDE / Editor
-.vscode/
+.vscode/*
+!.vscode/settings.json
 .idea/
 *.swp
 *.swo

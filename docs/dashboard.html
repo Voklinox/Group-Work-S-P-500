@@ -1,357 +1,659 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>S&P 500 Governance & Financial Performance — Master Executive Dashboard</title>
-  <script src="https://www.gstatic.com/antigravity/web/dev/tailwindcss.min.js"></script>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
-    body { font-family: 'Inter', sans-serif; }
-  </style>
-</head>
-<body class="bg-slate-950 text-slate-100 min-h-screen p-6 md:p-10 antialiased">
-  <div class="max-w-7xl mx-auto space-y-8">
-    
-    <!-- Header -->
-    <header class="flex flex-col md:flex-row md:items-center justify-between pb-6 border-b border-slate-800 gap-4">
-      <div>
-        <div class="flex items-center gap-2 mb-2 flex-wrap">
-          <span class="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">EM Normandie · M1 S7</span>
-          <span class="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-blue-500/10 text-blue-400 border border-blue-500/20">Complete 4-Session Synthesis</span>
-          <span class="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-purple-500/10 text-purple-400 border border-purple-500/20">FY2025 Audited Data (N = 503)</span>
-          <span class="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-amber-500/10 text-amber-400 border border-amber-500/20">Dr. NGUYEN Anh-Tuan</span>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      S&P 500 Governance & Financial Performance — Master Executive Dashboard
+    </title>
+    <script src="https://www.gstatic.com/antigravity/web/dev/tailwindcss.min.js"></script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap");
+      body {
+        font-family: "Inter", sans-serif;
+      }
+    </style>
+  </head>
+  <body
+    class="bg-slate-950 text-slate-100 min-h-screen p-6 md:p-10 antialiased"
+  >
+    <div class="max-w-7xl mx-auto space-y-8">
+      <!-- Header -->
+      <header
+        class="flex flex-col md:flex-row md:items-center justify-between pb-6 border-b border-slate-800 gap-4"
+      >
+        <div>
+          <div class="flex items-center gap-2 mb-2 flex-wrap">
+            <span
+              class="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20"
+              >EM Normandie · M1 S7</span
+            >
+            <span
+              class="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-blue-500/10 text-blue-400 border border-blue-500/20"
+              >Complete 4-Session Synthesis</span
+            >
+            <span
+              class="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-purple-500/10 text-purple-400 border border-purple-500/20"
+              >FY2025 Audited Data (N = 503)</span
+            >
+            <span
+              class="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-amber-500/10 text-amber-400 border border-amber-500/20"
+              >Dr. NGUYEN Anh-Tuan</span
+            >
+          </div>
+          <h1
+            class="text-2xl md:text-3xl font-extrabold tracking-tight text-white"
+          >
+            S&P 500 Corporate Governance &amp; Financial Performance Analysis
+          </h1>
+          <p class="text-sm text-slate-400 mt-1">
+            Quantitative Consulting Final Master Report &amp; Econometric
+            Research Suite
+          </p>
         </div>
-        <h1 class="text-2xl md:text-3xl font-extrabold tracking-tight text-white">S&P 500 Corporate Governance &amp; Financial Performance Analysis</h1>
-        <p class="text-sm text-slate-400 mt-1">Quantitative Consulting Final Master Report &amp; Econometric Research Suite</p>
-      </div>
-      <div class="flex items-center gap-2.5 flex-wrap">
-        <a href="Final_Consulting_Report.md" class="px-4 py-2 text-xs font-semibold rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white transition-all shadow-md shadow-emerald-600/20">Final Consulting Report</a>
-        <a href="GLOSSARY_LEXICON.md" class="px-4 py-2 text-xs font-semibold rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 transition-all">Master Glossary</a>
-        <a href="Approval_Slip.md" class="px-4 py-2 text-xs font-semibold rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 transition-all">Approval Slip</a>
-      </div>
-    </header>
+        <div class="flex items-center gap-2.5 flex-wrap">
+          <a
+            href="Final_Consulting_Report.md"
+            class="px-4 py-2 text-xs font-semibold rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white transition-all shadow-md shadow-emerald-600/20"
+            >Final Consulting Report</a
+          >
+          <a
+            href="GLOSSARY_LEXICON.md"
+            class="px-4 py-2 text-xs font-semibold rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 transition-all"
+            >Master Glossary</a
+          >
+          <a
+            href="Approval_Slip.md"
+            class="px-4 py-2 text-xs font-semibold rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 transition-all"
+            >Approval Slip</a
+          >
+        </div>
+      </header>
 
-    <!-- Problematic Banner -->
-    <div class="bg-gradient-to-r from-blue-950 via-indigo-950 to-slate-900 border border-blue-800/50 rounded-2xl p-6 shadow-xl relative overflow-hidden">
-      <div class="relative z-10 space-y-2.5">
-        <div class="flex items-center gap-2">
-          <span class="text-xs uppercase tracking-wider font-bold text-blue-400">Core Managerial Problematic (Resolved)</span>
-          <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">EMPIRICALLY CONFIRMED (p = .037*)</span>
+      <!-- Problematic Banner -->
+      <div
+        class="bg-gradient-to-r from-blue-950 via-indigo-950 to-slate-900 border border-blue-800/50 rounded-2xl p-6 shadow-xl relative overflow-hidden"
+      >
+        <div class="relative z-10 space-y-2.5">
+          <div class="flex items-center gap-2">
+            <span
+              class="text-xs uppercase tracking-wider font-bold text-blue-400"
+              >Core Managerial Problematic (Resolved)</span
+            >
+            <span
+              class="px-2 py-0.5 rounded text-[10px] font-bold bg-emerald-500/20 text-emerald-300 border border-emerald-500/30"
+              >EMPIRICALLY CONFIRMED (p = .037*)</span
+            >
+          </div>
+          <blockquote
+            class="text-lg md:text-xl font-medium text-slate-100 italic leading-snug"
+          >
+            "Does corporate governance risk (ISS QualityScore) compromise
+            financial profitability among S&P 500 companies?"
+          </blockquote>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            <strong>Definitive Conclusion:</strong> High governance compliance
+            <strong>does not compromise profitability</strong>. Controlling for
+            sector structure and firm scale, weaker governance (higher ISS risk)
+            is associated with a
+            <strong
+              >0.59% net margin penalty per decile point (b = -0.0059, p =
+              .037*)</strong
+            >
+            and significantly inflates systematic market risk (<strong
+              >Beta correlation r = +0.268, p &lt; .001***</strong
+            >).
+          </p>
         </div>
-        <blockquote class="text-lg md:text-xl font-medium text-slate-100 italic leading-snug">
-          "Does corporate governance risk (ISS QualityScore) compromise financial profitability among S&P 500 companies?"
-        </blockquote>
-        <p class="text-xs text-slate-300 leading-relaxed">
-          <strong>Definitive Conclusion:</strong> High governance compliance <strong>does not compromise profitability</strong>. Controlling for sector structure and firm scale, weaker governance (higher ISS risk) is associated with a <strong>0.59% net margin penalty per decile point (b = -0.0059, p = .037*)</strong> and significantly inflates systematic market risk (<strong>Beta correlation r = +0.268, p &lt; .001***</strong>).
-        </p>
+      </div>
+
+      <!-- KPI Metric Cards -->
+      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
+        <div class="bg-slate-900/90 border border-slate-800 p-4 rounded-xl">
+          <p class="text-xs font-medium text-slate-400">Sample Universe</p>
+          <p class="text-2xl font-bold text-white mt-1">503</p>
+          <p class="text-[11px] text-emerald-400 mt-1">
+            ✓ S&amp;P 500 Unique Firms
+          </p>
+        </div>
+
+        <div class="bg-slate-900/90 border border-slate-800 p-4 rounded-xl">
+          <p class="text-xs font-medium text-slate-400">Governance Penalty</p>
+          <p class="text-2xl font-bold text-rose-400 mt-1">-0.59%</p>
+          <p class="text-[11px] text-slate-400 mt-1">
+            Margin / ISS Decile (p = .037*)
+          </p>
+        </div>
+
+        <div class="bg-slate-900/90 border border-slate-800 p-4 rounded-xl">
+          <p class="text-xs font-medium text-slate-400">Beta Link (r)</p>
+          <p class="text-2xl font-bold text-amber-400 mt-1">+0.268</p>
+          <p class="text-[11px] text-slate-400 mt-1">
+            Gov Risk vs Beta (p &lt; .001***)
+          </p>
+        </div>
+
+        <div class="bg-slate-900/90 border border-slate-800 p-4 rounded-xl">
+          <p class="text-xs font-medium text-slate-400">Finance Margin</p>
+          <p class="text-2xl font-bold text-emerald-400 mt-1">22.43%</p>
+          <p class="text-[11px] text-slate-400 mt-1">
+            Top Sector (p &lt; .001 vs All)
+          </p>
+        </div>
+
+        <div class="bg-slate-900/90 border border-slate-800 p-4 rounded-xl">
+          <p class="text-xs font-medium text-slate-400">
+            Model Explanatory (R²)
+          </p>
+          <p class="text-2xl font-bold text-blue-400 mt-1">15.59%</p>
+          <p class="text-[11px] text-slate-400 mt-1">
+            Adj R² = 14.2% (F = 11.2***)
+          </p>
+        </div>
+
+        <div class="bg-slate-900/90 border border-slate-800 p-4 rounded-xl">
+          <p class="text-xs font-medium text-slate-400">Multicollinearity</p>
+          <p class="text-2xl font-bold text-teal-400 mt-1">VIF &lt; 1.89</p>
+          <p class="text-[11px] text-teal-400 mt-1">✓ Zero Collinearity Bias</p>
+        </div>
+      </div>
+
+      <!-- Tabbed Content Section -->
+      <div class="space-y-6">
+        <div
+          class="flex border-b border-slate-800 gap-4 md:gap-8 text-sm font-medium overflow-x-auto pb-1"
+        >
+          <button
+            onclick="switchTab('tab-s4')"
+            id="btn-s4"
+            class="tab-btn pb-3 text-blue-400 border-b-2 border-blue-400 whitespace-nowrap"
+          >
+            Session 4: Regression &amp; Strategy
+          </button>
+          <button
+            onclick="switchTab('tab-s3')"
+            id="btn-s3"
+            class="tab-btn pb-3 text-slate-400 hover:text-slate-200 whitespace-nowrap"
+          >
+            Session 3: ANOVA &amp; Sectors
+          </button>
+          <button
+            onclick="switchTab('tab-s2')"
+            id="btn-s2"
+            class="tab-btn pb-3 text-slate-400 hover:text-slate-200 whitespace-nowrap"
+          >
+            Session 2: Chi-Square &amp; Beta Link
+          </button>
+          <button
+            onclick="switchTab('tab-s1')"
+            id="btn-s1"
+            class="tab-btn pb-3 text-slate-400 hover:text-slate-200 whitespace-nowrap"
+          >
+            Session 1: Univariate Baseline
+          </button>
+          <button
+            onclick="switchTab('tab-matrix')"
+            id="btn-matrix"
+            class="tab-btn pb-3 text-slate-400 hover:text-slate-200 whitespace-nowrap"
+          >
+            Action Matrix (Monday Morning)
+          </button>
+        </div>
+
+        <!-- TAB: SESSION 4 -->
+        <div id="tab-s4" class="tab-content space-y-6">
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+            <div
+              class="bg-slate-900 border border-slate-800 rounded-2xl p-6 space-y-4"
+            >
+              <div class="flex justify-between items-center">
+                <h3 class="font-bold text-white text-base">
+                  Model 3: Multiple OLS Regression with Sector Controls
+                </h3>
+                <span
+                  class="px-2.5 py-0.5 rounded text-xs font-semibold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20"
+                  >F(8, 485) = 11.20, p &lt; .001</span
+                >
+              </div>
+              <p class="text-xs text-slate-400">
+                OLS equation predicting Net Profit Margin with size controls and
+                sector fixed effects:
+              </p>
+
+              <div class="overflow-x-auto">
+                <table class="w-full text-left text-xs font-mono">
+                  <thead
+                    class="bg-slate-950 text-slate-400 border-b border-slate-800"
+                  >
+                    <tr>
+                      <th class="p-2.5">Predictor</th>
+                      <th class="p-2.5">B</th>
+                      <th class="p-2.5">Std. Beta</th>
+                      <th class="p-2.5">t</th>
+                      <th class="p-2.5">p-value</th>
+                    </tr>
+                  </thead>
+                  <tbody class="divide-y divide-slate-800/60 text-[11px]">
+                    <tr class="bg-blue-950/20 text-blue-300 font-semibold">
+                      <td class="p-2.5">Overall Governance Risk</td>
+                      <td class="p-2.5">-0.0059</td>
+                      <td class="p-2.5">-0.0915</td>
+                      <td class="p-2.5">-2.087</td>
+                      <td class="p-2.5">.037*</td>
+                    </tr>
+                    <tr>
+                      <td class="p-2.5">ln(Market Capitalization)</td>
+                      <td class="p-2.5">+0.0736</td>
+                      <td class="p-2.5">+0.4560</td>
+                      <td class="p-2.5">7.748</td>
+                      <td class="p-2.5">&lt; .001***</td>
+                    </tr>
+                    <tr>
+                      <td class="p-2.5">ln(Total Revenue)</td>
+                      <td class="p-2.5">-0.0592</td>
+                      <td class="p-2.5">-0.3769</td>
+                      <td class="p-2.5">-6.533</td>
+                      <td class="p-2.5">&lt; .001***</td>
+                    </tr>
+                    <tr>
+                      <td class="p-2.5">Market Beta (5Y)</td>
+                      <td class="p-2.5">-0.0250</td>
+                      <td class="p-2.5">-0.0681</td>
+                      <td class="p-2.5">-1.454</td>
+                      <td class="p-2.5">.147</td>
+                    </tr>
+                    <tr class="text-emerald-300">
+                      <td class="p-2.5">Sector: Finance Dummy</td>
+                      <td class="p-2.5">+0.0711</td>
+                      <td class="p-2.5">+0.1332</td>
+                      <td class="p-2.5">2.695</td>
+                      <td class="p-2.5">.007**</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <div
+                class="p-3 bg-slate-950 rounded-xl border border-slate-800 text-xs text-slate-300 space-y-1"
+              >
+                <p>
+                  <strong
+                    >R² = 0.1559 · Adjusted R² = 0.1420 · Max VIF =
+                    1.885</strong
+                  >
+                </p>
+                <p class="text-slate-400">
+                  All VIF values &lt; 2.0 confirm complete absence of
+                  multicollinearity. Governance risk slope is statistically
+                  significant at α = .05 (p = .037).
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="bg-slate-900 border border-slate-800 rounded-2xl p-6 space-y-4"
+            >
+              <h3 class="font-bold text-white text-base">
+                Econometric Insights &amp; Strategic Implications
+              </h3>
+              <div class="space-y-3 text-xs">
+                <div
+                  class="p-3.5 bg-slate-950 rounded-xl border border-slate-800 space-y-1"
+                >
+                  <span class="font-bold text-blue-400"
+                    >1. Resolving the Omitted Variable Bias</span
+                  >
+                  <p class="text-slate-300">
+                    In simple regression (Model 1), governance was
+                    non-significant (p = .244) because large-cap firms naturally
+                    carry higher market valuations. Once company scale (ln
+                    Market Cap and ln Revenue) and sector cost baselines are
+                    controlled for, the true negative effect of governance risk
+                    emerges unambiguously (p = .037*).
+                  </p>
+                </div>
+
+                <div
+                  class="p-3.5 bg-slate-950 rounded-xl border border-slate-800 space-y-1"
+                >
+                  <span class="font-bold text-emerald-400"
+                    >2. The +5.31% Governance Opportunity</span
+                  >
+                  <p class="text-slate-300">
+                    Moving from the poorest ISS decile (score 10) to the highest
+                    compliance decile (score 1) captures an estimated +5.31% net
+                    margin advantage. Governance is an operational performance
+                    driver, not a cost center.
+                  </p>
+                </div>
+
+                <div
+                  class="p-3.5 bg-slate-950 rounded-xl border border-slate-800 space-y-1"
+                >
+                  <span class="font-bold text-amber-400"
+                    >3. Diagnostic Robustness</span
+                  >
+                  <p class="text-slate-300">
+                    Breusch-Pagan test indicates mild heteroscedasticity (LM =
+                    15.14, p = .004). Robust standard errors (White HC3) confirm
+                    governance significance remains robust (p = .041).
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- TAB: SESSION 3 -->
+        <div id="tab-s3" class="tab-content hidden space-y-6">
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+            <div
+              class="bg-slate-900 border border-slate-800 rounded-2xl p-6 space-y-4"
+            >
+              <h3 class="font-bold text-white text-base">
+                Sector Mean Profitability: Welch's ANOVA (N = 503)
+              </h3>
+              <p class="text-xs text-slate-400">
+                Levene's test rejected variance equality (F = 5.39, p &lt;
+                .001). Welch's robust test reported:
+              </p>
+
+              <div class="space-y-2.5 text-xs">
+                <div
+                  class="p-2.5 bg-slate-950 rounded-lg flex justify-between items-center"
+                >
+                  <span class="font-semibold text-emerald-400"
+                    >1. Finance (Top Performing)</span
+                  >
+                  <span class="font-mono text-slate-200"
+                    >Mean: 22.43% · Mdn: 22.73% (SD: 12.4%)</span
+                  >
+                </div>
+                <div
+                  class="p-2.5 bg-slate-950 rounded-lg flex justify-between items-center"
+                >
+                  <span class="font-semibold text-purple-400"
+                    >2. Tech &amp; Comms (High Dispersion)</span
+                  >
+                  <span class="font-mono text-slate-200"
+                    >Mean: 16.72% · Mdn: 16.28% (SD: 29.5%)</span
+                  >
+                </div>
+                <div
+                  class="p-2.5 bg-slate-950 rounded-lg flex justify-between items-center"
+                >
+                  <span class="font-semibold text-blue-400">3. Consumer</span>
+                  <span class="font-mono text-slate-200"
+                    >Mean: 13.29% · Mdn: 11.05% (SD: 13.7%)</span
+                  >
+                </div>
+                <div
+                  class="p-2.5 bg-slate-950 rounded-lg flex justify-between items-center"
+                >
+                  <span class="font-semibold text-slate-300"
+                    >4. Industrials &amp; Energy (Mode)</span
+                  >
+                  <span class="font-mono text-slate-200"
+                    >Mean: 13.10% · Mdn: 11.99% (SD: 8.6%)</span
+                  >
+                </div>
+                <div
+                  class="p-2.5 bg-slate-950 rounded-lg flex justify-between items-center"
+                >
+                  <span class="font-semibold text-rose-400">5. Healthcare</span>
+                  <span class="font-mono text-slate-200"
+                    >Mean: 9.36% · Mdn: 9.90% (SD: 22.4%)</span
+                  >
+                </div>
+              </div>
+
+              <div
+                class="p-3 bg-slate-950 rounded-xl border border-slate-800 text-xs text-slate-300"
+              >
+                <strong
+                  >Welch's F(4, 191.2) = 9.302, p &lt; .001*** · Eta² =
+                  0.0405</strong
+                >
+              </div>
+            </div>
+
+            <div
+              class="bg-slate-900 border border-slate-800 rounded-2xl p-6 space-y-4"
+            >
+              <h3 class="font-bold text-white text-base">
+                Games-Howell Post-Hoc Pairwise Comparisons
+              </h3>
+              <p class="text-xs text-slate-400">
+                Corrected for unequal variances and heterogeneous group sample
+                sizes:
+              </p>
+              <div class="space-y-2 text-xs font-mono">
+                <div
+                  class="p-2 bg-slate-950 rounded border border-emerald-900/40 text-emerald-300 flex justify-between"
+                >
+                  <span>Finance vs. Consumer:</span>
+                  <span>Diff = +9.14% (t = 4.69, p &lt; .001***)</span>
+                </div>
+                <div
+                  class="p-2 bg-slate-950 rounded border border-emerald-900/40 text-emerald-300 flex justify-between"
+                >
+                  <span>Finance vs. Healthcare:</span>
+                  <span>Diff = +13.07% (t = 4.03, p = .001***)</span>
+                </div>
+                <div
+                  class="p-2 bg-slate-950 rounded border border-emerald-900/40 text-emerald-300 flex justify-between"
+                >
+                  <span>Finance vs. Industrials:</span>
+                  <span>Diff = +9.33% (t = 5.71, p &lt; .001***)</span>
+                </div>
+                <div
+                  class="p-2 bg-slate-950 rounded text-slate-400 flex justify-between"
+                >
+                  <span>Finance vs. Tech:</span>
+                  <span>Diff = +5.71% (t = 1.79, p = .385 ns)</span>
+                </div>
+                <div
+                  class="p-2 bg-slate-950 rounded text-slate-400 flex justify-between"
+                >
+                  <span>Tech vs. Healthcare:</span>
+                  <span>Diff = +7.37% (t = 1.82, p = .366 ns)</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- TAB: SESSION 2 -->
+        <div id="tab-s2" class="tab-content hidden space-y-6">
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+            <div
+              class="bg-slate-900 border border-slate-800 rounded-2xl p-6 space-y-4"
+            >
+              <h3 class="font-bold text-white text-base">
+                Chi-Square Test: Sector x Governance Risk Tier
+              </h3>
+              <p class="text-xs text-slate-400">
+                χ²(8, N = 496) = 14.719, p = .065, Cramér's V = 0.122
+              </p>
+              <div
+                class="p-3 bg-slate-950 rounded-xl border border-slate-800 text-xs space-y-2"
+              >
+                <p class="text-purple-300 font-semibold">
+                  • Tech &amp; Comms: 50.5% in High Risk (Std. Residual = +1.75)
+                </p>
+                <p class="text-slate-400">
+                  Driven by dual-class share rights, founder board control, and
+                  heavy option dilution.
+                </p>
+                <p class="text-blue-300 font-semibold">
+                  • Industrials &amp; Energy: High Compliance (Std. Residual =
+                  -1.97)
+                </p>
+                <p class="text-slate-400">
+                  Only 29.5% high risk; highest concentration of low-risk boards
+                  (54 firms).
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="bg-slate-900 border border-slate-800 rounded-2xl p-6 space-y-4"
+            >
+              <h3 class="font-bold text-white text-base">
+                Key Correlation Finding: Governance Risk vs. Beta
+              </h3>
+              <p class="text-xs text-slate-400">
+                Pearson r(492) = +0.268, p &lt; .001*** · 95% CI: [0.184, 0.348]
+              </p>
+              <div
+                class="p-3 bg-slate-950 rounded-xl border border-slate-800 text-xs space-y-2"
+              >
+                <p class="text-amber-300 font-semibold">
+                  • Weak Governance Directly Inflates Market Risk
+                </p>
+                <p class="text-slate-300">
+                  Firms with higher ISS governance risk exhibit significantly
+                  higher stock volatility. Sub-pillar risks (Compensation Risk r
+                  = +0.215, Shareholder Rights r = +0.231) are major volatility
+                  drivers.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- TAB: SESSION 1 -->
+        <div id="tab-s1" class="tab-content hidden space-y-6">
+          <div
+            class="p-4 bg-slate-900 border border-slate-800 rounded-2xl space-y-3"
+          >
+            <h3 class="font-bold text-white text-base">
+              Artefact 1 Univariate Baseline Summary
+            </h3>
+            <p class="text-xs text-slate-300">
+              5 variables described according to course protocol (Slide 41):
+            </p>
+            <ul class="text-xs text-slate-400 space-y-1 list-disc pl-5">
+              <li>
+                <strong>Sector</strong> (Nominal): Mode = Industrials &amp;
+                Energy (148 firms, 29.4%).
+              </li>
+              <li>
+                <strong>Governance Tier</strong> (Ordinal): Mode = High Risk
+                (197 firms, 39.7%), Median = Medium tier.
+              </li>
+              <li>
+                <strong>Profit Margin</strong> (Continuous): Non-normal
+                (Shapiro-Wilk W = 0.653, p &lt; .001). Median = 13.15%, Mean =
+                14.79%.
+              </li>
+              <li>
+                <strong>ROE</strong> (Continuous): Non-normal (Skew = 20.91,
+                Kurt = 447.6). Median = 16.76%, Mean = 39.52% (distorted by
+                Masco Corp). 32 firms undefined due to buybacks.
+              </li>
+              <li>
+                <strong>Market Cap</strong> (Continuous): Extreme Pareto
+                skewness (Median = $44.5B, Mean = $147.6B).
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- TAB: ACTION MATRIX -->
+        <div id="tab-matrix" class="tab-content hidden space-y-4">
+          <div
+            class="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden"
+          >
+            <div class="p-4 border-b border-slate-800">
+              <h3 class="font-bold text-white text-base">
+                The Monday Morning Executive Action Matrix (Slide 41)
+              </h3>
+            </div>
+            <table class="w-full text-left text-xs">
+              <thead
+                class="bg-slate-950 text-slate-400 border-b border-slate-800 font-semibold"
+              >
+                <tr>
+                  <th class="p-3">Role</th>
+                  <th class="p-3">Immediate Action (Monday Morning)</th>
+                  <th class="p-3">Medium-Term Initiative</th>
+                  <th class="p-3">Monitored Metric</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-slate-800/60 text-[12px]">
+                <tr>
+                  <td class="p-3 font-semibold text-blue-400">
+                    CEO &amp; Board
+                  </td>
+                  <td class="p-3 text-slate-300">
+                    Audit executive compensation; tie bonuses to ROIC/margins.
+                  </td>
+                  <td class="p-3 text-slate-400">
+                    Eliminate dual-class voting; separate Chair and CEO roles.
+                  </td>
+                  <td class="p-3 font-mono text-emerald-400">
+                    ISS QualityScore &le; 3.0
+                  </td>
+                </tr>
+                <tr>
+                  <td class="p-3 font-semibold text-emerald-400">CFO</td>
+                  <td class="p-3 text-slate-300">
+                    Benchmark operating margin against sector medians (13.15%).
+                  </td>
+                  <td class="p-3 text-slate-400">
+                    Capture the +0.59% margin gain per governance decile
+                    improvement.
+                  </td>
+                  <td class="p-3 font-mono text-emerald-400">
+                    Net Profit Margin
+                  </td>
+                </tr>
+                <tr>
+                  <td class="p-3 font-semibold text-amber-400">CRO</td>
+                  <td class="p-3 text-slate-300">
+                    Apply haircut on portfolio holdings in High Governance Risk
+                    tier.
+                  </td>
+                  <td class="p-3 text-slate-400">
+                    Factor the +0.268 beta correlation into VaR risk models.
+                  </td>
+                  <td class="p-3 font-mono text-emerald-400">
+                    Portfolio Beta &amp; Drawdown
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
       </div>
     </div>
 
-    <!-- KPI Metric Cards -->
-    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
-      <div class="bg-slate-900/90 border border-slate-800 p-4 rounded-xl">
-        <p class="text-xs font-medium text-slate-400">Sample Universe</p>
-        <p class="text-2xl font-bold text-white mt-1">503</p>
-        <p class="text-[11px] text-emerald-400 mt-1">✓ S&amp;P 500 Unique Firms</p>
-      </div>
-
-      <div class="bg-slate-900/90 border border-slate-800 p-4 rounded-xl">
-        <p class="text-xs font-medium text-slate-400">Governance Penalty</p>
-        <p class="text-2xl font-bold text-rose-400 mt-1">-0.59%</p>
-        <p class="text-[11px] text-slate-400 mt-1">Margin / ISS Decile (p = .037*)</p>
-      </div>
-
-      <div class="bg-slate-900/90 border border-slate-800 p-4 rounded-xl">
-        <p class="text-xs font-medium text-slate-400">Beta Link (r)</p>
-        <p class="text-2xl font-bold text-amber-400 mt-1">+0.268</p>
-        <p class="text-[11px] text-slate-400 mt-1">Gov Risk vs Beta (p &lt; .001***)</p>
-      </div>
-
-      <div class="bg-slate-900/90 border border-slate-800 p-4 rounded-xl">
-        <p class="text-xs font-medium text-slate-400">Finance Margin</p>
-        <p class="text-2xl font-bold text-emerald-400 mt-1">22.43%</p>
-        <p class="text-[11px] text-slate-400 mt-1">Top Sector (p &lt; .001 vs All)</p>
-      </div>
-
-      <div class="bg-slate-900/90 border border-slate-800 p-4 rounded-xl">
-        <p class="text-xs font-medium text-slate-400">Model Explanatory (R²)</p>
-        <p class="text-2xl font-bold text-blue-400 mt-1">15.59%</p>
-        <p class="text-[11px] text-slate-400 mt-1">Adj R² = 14.2% (F = 11.2***)</p>
-      </div>
-
-      <div class="bg-slate-900/90 border border-slate-800 p-4 rounded-xl">
-        <p class="text-xs font-medium text-slate-400">Multicollinearity</p>
-        <p class="text-2xl font-bold text-teal-400 mt-1">VIF &lt; 1.89</p>
-        <p class="text-[11px] text-teal-400 mt-1">✓ Zero Collinearity Bias</p>
-      </div>
-    </div>
-
-    <!-- Tabbed Content Section -->
-    <div class="space-y-6">
-      <div class="flex border-b border-slate-800 gap-4 md:gap-8 text-sm font-medium overflow-x-auto pb-1">
-        <button onclick="switchTab('tab-s4')" id="btn-s4" class="tab-btn pb-3 text-blue-400 border-b-2 border-blue-400 whitespace-nowrap">Session 4: Regression &amp; Strategy</button>
-        <button onclick="switchTab('tab-s3')" id="btn-s3" class="tab-btn pb-3 text-slate-400 hover:text-slate-200 whitespace-nowrap">Session 3: ANOVA &amp; Sectors</button>
-        <button onclick="switchTab('tab-s2')" id="btn-s2" class="tab-btn pb-3 text-slate-400 hover:text-slate-200 whitespace-nowrap">Session 2: Chi-Square &amp; Beta Link</button>
-        <button onclick="switchTab('tab-s1')" id="btn-s1" class="tab-btn pb-3 text-slate-400 hover:text-slate-200 whitespace-nowrap">Session 1: Univariate Baseline</button>
-        <button onclick="switchTab('tab-matrix')" id="btn-matrix" class="tab-btn pb-3 text-slate-400 hover:text-slate-200 whitespace-nowrap">Action Matrix (Monday Morning)</button>
-      </div>
-
-      <!-- TAB: SESSION 4 -->
-      <div id="tab-s4" class="tab-content space-y-6">
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
-          <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 space-y-4">
-            <div class="flex justify-between items-center">
-              <h3 class="font-bold text-white text-base">Model 3: Multiple OLS Regression with Sector Controls</h3>
-              <span class="px-2.5 py-0.5 rounded text-xs font-semibold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">F(8, 485) = 11.20, p &lt; .001</span>
-            </div>
-            <p class="text-xs text-slate-400">OLS equation predicting Net Profit Margin with size controls and sector fixed effects:</p>
-            
-            <div class="overflow-x-auto">
-              <table class="w-full text-left text-xs font-mono">
-                <thead class="bg-slate-950 text-slate-400 border-b border-slate-800">
-                  <tr>
-                    <th class="p-2.5">Predictor</th>
-                    <th class="p-2.5">B</th>
-                    <th class="p-2.5">Std. Beta</th>
-                    <th class="p-2.5">t</th>
-                    <th class="p-2.5">p-value</th>
-                  </tr>
-                </thead>
-                <tbody class="divide-y divide-slate-800/60 text-[11px]">
-                  <tr class="bg-blue-950/20 text-blue-300 font-semibold">
-                    <td class="p-2.5">Overall Governance Risk</td>
-                    <td class="p-2.5">-0.0059</td>
-                    <td class="p-2.5">-0.0915</td>
-                    <td class="p-2.5">-2.087</td>
-                    <td class="p-2.5">.037*</td>
-                  </tr>
-                  <tr>
-                    <td class="p-2.5">ln(Market Capitalization)</td>
-                    <td class="p-2.5">+0.0736</td>
-                    <td class="p-2.5">+0.4560</td>
-                    <td class="p-2.5">7.748</td>
-                    <td class="p-2.5">&lt; .001***</td>
-                  </tr>
-                  <tr>
-                    <td class="p-2.5">ln(Total Revenue)</td>
-                    <td class="p-2.5">-0.0592</td>
-                    <td class="p-2.5">-0.3769</td>
-                    <td class="p-2.5">-6.533</td>
-                    <td class="p-2.5">&lt; .001***</td>
-                  </tr>
-                  <tr>
-                    <td class="p-2.5">Market Beta (5Y)</td>
-                    <td class="p-2.5">-0.0250</td>
-                    <td class="p-2.5">-0.0681</td>
-                    <td class="p-2.5">-1.454</td>
-                    <td class="p-2.5">.147</td>
-                  </tr>
-                  <tr class="text-emerald-300">
-                    <td class="p-2.5">Sector: Finance Dummy</td>
-                    <td class="p-2.5">+0.0711</td>
-                    <td class="p-2.5">+0.1332</td>
-                    <td class="p-2.5">2.695</td>
-                    <td class="p-2.5">.007**</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            
-            <div class="p-3 bg-slate-950 rounded-xl border border-slate-800 text-xs text-slate-300 space-y-1">
-              <p><strong>R² = 0.1559 · Adjusted R² = 0.1420 · Max VIF = 1.885</strong></p>
-              <p class="text-slate-400">All VIF values &lt; 2.0 confirm complete absence of multicollinearity. Governance risk slope is statistically significant at α = .05 (p = .037).</p>
-            </div>
-          </div>
-
-          <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 space-y-4">
-            <h3 class="font-bold text-white text-base">Econometric Insights &amp; Strategic Implications</h3>
-            <div class="space-y-3 text-xs">
-              <div class="p-3.5 bg-slate-950 rounded-xl border border-slate-800 space-y-1">
-                <span class="font-bold text-blue-400">1. Resolving the Omitted Variable Bias</span>
-                <p class="text-slate-300">In simple regression (Model 1), governance was non-significant (p = .244) because large-cap firms naturally carry higher market valuations. Once company scale (ln Market Cap and ln Revenue) and sector cost baselines are controlled for, the true negative effect of governance risk emerges unambiguously (p = .037*).</p>
-              </div>
-
-              <div class="p-3.5 bg-slate-950 rounded-xl border border-slate-800 space-y-1">
-                <span class="font-bold text-emerald-400">2. The +5.31% Governance Opportunity</span>
-                <p class="text-slate-300">Moving from the poorest ISS decile (score 10) to the highest compliance decile (score 1) captures an estimated +5.31% net margin advantage. Governance is an operational performance driver, not a cost center.</p>
-              </div>
-
-              <div class="p-3.5 bg-slate-950 rounded-xl border border-slate-800 space-y-1">
-                <span class="font-bold text-amber-400">3. Diagnostic Robustness</span>
-                <p class="text-slate-300">Breusch-Pagan test indicates mild heteroscedasticity (LM = 15.14, p = .004). Robust standard errors (White HC3) confirm governance significance remains robust (p = .041).</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- TAB: SESSION 3 -->
-      <div id="tab-s3" class="tab-content hidden space-y-6">
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
-          <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 space-y-4">
-            <h3 class="font-bold text-white text-base">Sector Mean Profitability: Welch's ANOVA (N = 503)</h3>
-            <p class="text-xs text-slate-400">Levene's test rejected variance equality (F = 5.39, p &lt; .001). Welch's robust test reported:</p>
-            
-            <div class="space-y-2.5 text-xs">
-              <div class="p-2.5 bg-slate-950 rounded-lg flex justify-between items-center">
-                <span class="font-semibold text-emerald-400">1. Finance (Top Performing)</span>
-                <span class="font-mono text-slate-200">Mean: 22.43% · Mdn: 22.73% (SD: 12.4%)</span>
-              </div>
-              <div class="p-2.5 bg-slate-950 rounded-lg flex justify-between items-center">
-                <span class="font-semibold text-purple-400">2. Tech &amp; Comms (High Dispersion)</span>
-                <span class="font-mono text-slate-200">Mean: 16.72% · Mdn: 16.28% (SD: 29.5%)</span>
-              </div>
-              <div class="p-2.5 bg-slate-950 rounded-lg flex justify-between items-center">
-                <span class="font-semibold text-blue-400">3. Consumer</span>
-                <span class="font-mono text-slate-200">Mean: 13.29% · Mdn: 11.05% (SD: 13.7%)</span>
-              </div>
-              <div class="p-2.5 bg-slate-950 rounded-lg flex justify-between items-center">
-                <span class="font-semibold text-slate-300">4. Industrials &amp; Energy (Mode)</span>
-                <span class="font-mono text-slate-200">Mean: 13.10% · Mdn: 11.99% (SD: 8.6%)</span>
-              </div>
-              <div class="p-2.5 bg-slate-950 rounded-lg flex justify-between items-center">
-                <span class="font-semibold text-rose-400">5. Healthcare</span>
-                <span class="font-mono text-slate-200">Mean: 9.36% · Mdn: 9.90% (SD: 22.4%)</span>
-              </div>
-            </div>
-
-            <div class="p-3 bg-slate-950 rounded-xl border border-slate-800 text-xs text-slate-300">
-              <strong>Welch's F(4, 191.2) = 9.302, p &lt; .001*** · Eta² = 0.0405</strong>
-            </div>
-          </div>
-
-          <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 space-y-4">
-            <h3 class="font-bold text-white text-base">Games-Howell Post-Hoc Pairwise Comparisons</h3>
-            <p class="text-xs text-slate-400">Corrected for unequal variances and heterogeneous group sample sizes:</p>
-            <div class="space-y-2 text-xs font-mono">
-              <div class="p-2 bg-slate-950 rounded border border-emerald-900/40 text-emerald-300 flex justify-between">
-                <span>Finance vs. Consumer:</span>
-                <span>Diff = +9.14% (t = 4.69, p &lt; .001***)</span>
-              </div>
-              <div class="p-2 bg-slate-950 rounded border border-emerald-900/40 text-emerald-300 flex justify-between">
-                <span>Finance vs. Healthcare:</span>
-                <span>Diff = +13.07% (t = 4.03, p = .001***)</span>
-              </div>
-              <div class="p-2 bg-slate-950 rounded border border-emerald-900/40 text-emerald-300 flex justify-between">
-                <span>Finance vs. Industrials:</span>
-                <span>Diff = +9.33% (t = 5.71, p &lt; .001***)</span>
-              </div>
-              <div class="p-2 bg-slate-950 rounded text-slate-400 flex justify-between">
-                <span>Finance vs. Tech:</span>
-                <span>Diff = +5.71% (t = 1.79, p = .385 ns)</span>
-              </div>
-              <div class="p-2 bg-slate-950 rounded text-slate-400 flex justify-between">
-                <span>Tech vs. Healthcare:</span>
-                <span>Diff = +7.37% (t = 1.82, p = .366 ns)</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- TAB: SESSION 2 -->
-      <div id="tab-s2" class="tab-content hidden space-y-6">
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
-          <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 space-y-4">
-            <h3 class="font-bold text-white text-base">Chi-Square Test: Sector x Governance Risk Tier</h3>
-            <p class="text-xs text-slate-400">χ²(8, N = 496) = 14.719, p = .065, Cramér's V = 0.122</p>
-            <div class="p-3 bg-slate-950 rounded-xl border border-slate-800 text-xs space-y-2">
-              <p class="text-purple-300 font-semibold">• Tech &amp; Comms: 50.5% in High Risk (Std. Residual = +1.75)</p>
-              <p class="text-slate-400">Driven by dual-class share rights, founder board control, and heavy option dilution.</p>
-              <p class="text-blue-300 font-semibold">• Industrials &amp; Energy: High Compliance (Std. Residual = -1.97)</p>
-              <p class="text-slate-400">Only 29.5% high risk; highest concentration of low-risk boards (54 firms).</p>
-            </div>
-          </div>
-
-          <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 space-y-4">
-            <h3 class="font-bold text-white text-base">Key Correlation Finding: Governance Risk vs. Beta</h3>
-            <p class="text-xs text-slate-400">Pearson r(492) = +0.268, p &lt; .001*** · 95% CI: [0.184, 0.348]</p>
-            <div class="p-3 bg-slate-950 rounded-xl border border-slate-800 text-xs space-y-2">
-              <p class="text-amber-300 font-semibold">• Weak Governance Directly Inflates Market Risk</p>
-              <p class="text-slate-300">Firms with higher ISS governance risk exhibit significantly higher stock volatility. Sub-pillar risks (Compensation Risk r = +0.215, Shareholder Rights r = +0.231) are major volatility drivers.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- TAB: SESSION 1 -->
-      <div id="tab-s1" class="tab-content hidden space-y-6">
-        <div class="p-4 bg-slate-900 border border-slate-800 rounded-2xl space-y-3">
-          <h3 class="font-bold text-white text-base">Artefact 1 Univariate Baseline Summary</h3>
-          <p class="text-xs text-slate-300">5 variables described according to course protocol (Slide 41):</p>
-          <ul class="text-xs text-slate-400 space-y-1 list-disc pl-5">
-            <li><strong>Sector</strong> (Nominal): Mode = Industrials &amp; Energy (148 firms, 29.4%).</li>
-            <li><strong>Governance Tier</strong> (Ordinal): Mode = High Risk (197 firms, 39.7%), Median = Medium tier.</li>
-            <li><strong>Profit Margin</strong> (Continuous): Non-normal (Shapiro-Wilk W = 0.653, p &lt; .001). Median = 13.15%, Mean = 14.79%.</li>
-            <li><strong>ROE</strong> (Continuous): Non-normal (Skew = 20.91, Kurt = 447.6). Median = 16.76%, Mean = 39.52% (distorted by Masco Corp). 32 firms undefined due to buybacks.</li>
-            <li><strong>Market Cap</strong> (Continuous): Extreme Pareto skewness (Median = $44.5B, Mean = $147.6B).</li>
-          </ul>
-        </div>
-      </div>
-
-      <!-- TAB: ACTION MATRIX -->
-      <div id="tab-matrix" class="tab-content hidden space-y-4">
-        <div class="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden">
-          <div class="p-4 border-b border-slate-800">
-            <h3 class="font-bold text-white text-base">The Monday Morning Executive Action Matrix (Slide 41)</h3>
-          </div>
-          <table class="w-full text-left text-xs">
-            <thead class="bg-slate-950 text-slate-400 border-b border-slate-800 font-semibold">
-              <tr>
-                <th class="p-3">Role</th>
-                <th class="p-3">Immediate Action (Monday Morning)</th>
-                <th class="p-3">Medium-Term Initiative</th>
-                <th class="p-3">Monitored Metric</th>
-              </tr>
-            </thead>
-            <tbody class="divide-y divide-slate-800/60 text-[12px]">
-              <tr>
-                <td class="p-3 font-semibold text-blue-400">CEO &amp; Board</td>
-                <td class="p-3 text-slate-300">Audit executive compensation; tie bonuses to ROIC/margins.</td>
-                <td class="p-3 text-slate-400">Eliminate dual-class voting; separate Chair and CEO roles.</td>
-                <td class="p-3 font-mono text-emerald-400">ISS QualityScore &le; 3.0</td>
-              </tr>
-              <tr>
-                <td class="p-3 font-semibold text-emerald-400">CFO</td>
-                <td class="p-3 text-slate-300">Benchmark operating margin against sector medians (13.15%).</td>
-                <td class="p-3 text-slate-400">Capture the +0.59% margin gain per governance decile improvement.</td>
-                <td class="p-3 font-mono text-emerald-400">Net Profit Margin</td>
-              </tr>
-              <tr>
-                <td class="p-3 font-semibold text-amber-400">CRO</td>
-                <td class="p-3 text-slate-300">Apply haircut on portfolio holdings in High Governance Risk tier.</td>
-                <td class="p-3 text-slate-400">Factor the +0.268 beta correlation into VaR risk models.</td>
-                <td class="p-3 font-mono text-emerald-400">Portfolio Beta &amp; Drawdown</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-
-    </div>
-
-  </div>
-
-  <script>
-    function switchTab(tabId) {
-      document.querySelectorAll('.tab-content').forEach(el => el.classList.add('hidden'));
-      document.querySelectorAll('.tab-btn').forEach(el => {
-        el.classList.remove('text-blue-400', 'border-b-2', 'border-blue-400');
-        el.classList.add('text-slate-400');
-      });
-      document.getElementById(tabId).classList.remove('hidden');
-      const btnMap = {
-        'tab-s4': 'btn-s4',
-        'tab-s3': 'btn-s3',
-        'tab-s2': 'btn-s2',
-        'tab-s1': 'btn-s1',
-        'tab-matrix': 'btn-matrix'
-      };
-      const activeBtn = document.getElementById(btnMap[tabId]);
-      activeBtn.classList.remove('text-slate-400');
-      activeBtn.classList.add('text-blue-400', 'border-b-2', 'border-blue-400');
-    }
-  </script>
-</body>
+    <script>
+      function switchTab(tabId) {
+        document
+          .querySelectorAll(".tab-content")
+          .forEach((el) => el.classList.add("hidden"));
+        document.querySelectorAll(".tab-btn").forEach((el) => {
+          el.classList.remove("text-blue-400", "border-b-2", "border-blue-400");
+          el.classList.add("text-slate-400");
+        });
+        document.getElementById(tabId).classList.remove("hidden");
+        const btnMap = {
+          "tab-s4": "btn-s4",
+          "tab-s3": "btn-s3",
+          "tab-s2": "btn-s2",
+          "tab-s1": "btn-s1",
+          "tab-matrix": "btn-matrix",
+        };
+        const activeBtn = document.getElementById(btnMap[tabId]);
+        activeBtn.classList.remove("text-slate-400");
+        activeBtn.classList.add(
+          "text-blue-400",
+          "border-b-2",
+          "border-blue-400",
+        );
+      }
+    </script>
+  </body>
 </html>

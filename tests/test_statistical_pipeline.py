@@ -69,3 +69,4 @@ def test_session4_regression_suite():
     # Verify governance coefficient in Model 3 is negative
     gov_coef = res3["coefficients"].loc[res3["coefficients"]["Predictor"] == "Overall_Governance_Risk", "Coef_B"].values[0]
     assert gov_coef < 0, "Governance risk coefficient in Model 3 must be negative (penalizing margins)."
+

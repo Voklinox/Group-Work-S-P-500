@@ -163,3 +163,4 @@ if __name__ == "__main__":
         (results["correlations"]["Variable_2"] == "Overall_Governance_Risk")
     ]
     print(gov_corrs[["Variable_1", "Variable_2", "N", "Pearson_r", "Pearson_p", "95%_CI", "Spearman_rho"]].to_string(index=False))
+

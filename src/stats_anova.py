@@ -216,3 +216,4 @@ if __name__ == "__main__":
     print(f"Standard ANOVA: F({res_gov['df_between']}, {res_gov['df_within']}) = {res_gov['f_stat']}, p = {res_gov['p_fisher_apa']}, Eta² = {res_gov['eta_squared']}")
     print(f"Welch's ANOVA: F({res_gov['welch']['df1']}, {res_gov['welch']['df2']}) = {res_gov['welch']['f_welch']}, p = {res_gov['welch']['p_val_apa']}")
     print(res_gov["group_stats"].to_string(index=False))
+

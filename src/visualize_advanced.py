@@ -261,3 +261,4 @@ def generate_all_advanced_figures(df: pd.DataFrame) -> list[Path]:
 if __name__ == "__main__":
     df = pd.read_csv(CLEANED_DATA_PATH)
     generate_all_advanced_figures(df)
+
