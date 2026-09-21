@@ -7,34 +7,45 @@ ANOVA sector comparisons with mean diamonds, and econometric diagnostic suites.
 """
 
 from pathlib import Path
+
 import matplotlib
-matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
-import scipy.stats as stats
 import seaborn as sns
 import statsmodels.api as sm
+from scipy import stats
+
+matplotlib.use("Agg")
 
 from src.config import APA_STYLE, CLEANED_DATA_PATH, FIGURES_DIR
 from src.visualize import set_apa_style
 
 
-def plot_contingency_sector_gov(df: pd.DataFrame, output_dir: Path = FIGURES_DIR) -> Path:
+def plot_contingency_sector_gov(
+    df: pd.DataFrame, output_dir: Path = FIGURES_DIR
+) -> Path:
     """Figure 6 (Session 2): Stacked Contingency Chart: Sector x Governance Tier."""
     set_apa_style()
     sub = df[["Sector", "Governance_Risk_Level"]].dropna()
 
     # Create percentage cross-tabulation
-    ct = pd.crosstab(sub["Sector"], sub["Governance_Risk_Level"], normalize="index") * 100
+    ct = (
+        pd.crosstab(sub["Sector"], sub["Governance_Risk_Level"], normalize="index")
+        * 100
+    )
     ct = ct[["Low", "Medium", "High"]]  # ensure ordered columns
 
     fig, ax = plt.subplots(figsize=(8.5, 5))
     colors = ["#2e7d32", "#f57c00", "#c62828"]  # Green, Orange, Red
 
-    ct.plot(kind="bar", stacked=True, color=colors, edgecolor="#333333", ax=ax, width=0.65)
+    ct.plot(
+        kind="bar", stacked=True, color=colors, edgecolor="#333333", ax=ax, width=0.65
+    )
 
-    ax.set_title("Figure 6. Corporate Governance Risk Distribution Across Sectors (Chi-Square Analysis)")
+    ax.set_title(
+        "Figure 6. Corporate Governance Risk Distribution Across Sectors (Chi-Square Analysis)"
+    )
     ax.set_xlabel("Consolidated Sector")
     ax.set_ylabel("Proportion within Sector (%)")
     ax.set_ylim(0, 105)
@@ -46,10 +57,26 @@ def plot_contingency_sector_gov(df: pd.DataFrame, output_dir: Path = FIGURES_DIR
         cum = 0
         for val, col in zip(ct.loc[c], colors):
             if val > 6:
-                ax.text(n, cum + val / 2, f"{val:.1f}%", ha="center", va="center", color="white", fontweight="bold", fontsize=8.5)
+                ax.text(
+                    n,
+                    cum + val / 2,
+                    f"{val:.1f}%",
+                    ha="center",
+                    va="center",
+                    color="white",
+                    fontweight="bold",
+                    fontsize=8.5,
+                )
             cum += val
 
-    fig.text(0.12, -0.05, APA_STYLE["source_annotation"] + " · Chi²(8, N=496) = 14.72, p = .065, V = 0.122", fontsize=8, color="#555555")
+    fig.text(
+        0.12,
+        -0.05,
+        APA_STYLE["source_annotation"]
+        + " · Chi²(8, N=496) = 14.72, p = .065, V = 0.122",
+        fontsize=8,
+        color="#555555",
+    )
 
     outfile = output_dir / "contingency_sector_gov.png"
     fig.tight_layout()
@@ -59,7 +86,9 @@ def plot_contingency_sector_gov(df: pd.DataFrame, output_dir: Path = FIGURES_DIR
     return outfile
 
 
-def plot_scatter_governance_margin(df: pd.DataFrame, output_dir: Path = FIGURES_DIR) -> Path:
+def plot_scatter_governance_margin(
+    df: pd.DataFrame, output_dir: Path = FIGURES_DIR
+) -> Path:
     """Figure 7 (Session 2 & 4): Scatter plot with OLS regression fit & confidence band."""
     set_apa_style()
     sub = df[["Overall_Governance_Risk", "Profit_Margin", "Sector"]].dropna()
@@ -72,11 +101,19 @@ def plot_scatter_governance_margin(df: pd.DataFrame, output_dir: Path = FIGURES_
         data=sub,
         ax=ax,
         scatter_kws={"alpha": 0.35, "color": "#1f77b4", "s": 25},
-        line_kws={"color": "#d32f2f", "linewidth": 2, "label": "OLS Slope: b = -0.0059 (Sector Controlled, p = .037*)"},
+        line_kws={
+            "color": "#d32f2f",
+            "linewidth": 2,
+            "label": "OLS Slope: b = -0.0059 (Sector Controlled, p = .037*)",
+        },
     )
 
-    ax.set_title("Figure 7. Bivariate Relationship: Governance Risk Score vs. Net Profit Margin")
-    ax.set_xlabel("Overall Governance Risk Score (ISS QualityScore: 1 = Low Risk, 10 = High Risk)")
+    ax.set_title(
+        "Figure 7. Bivariate Relationship: Governance Risk Score vs. Net Profit Margin"
+    )
+    ax.set_xlabel(
+        "Overall Governance Risk Score (ISS QualityScore: 1 = Low Risk, 10 = High Risk)"
+    )
     ax.set_ylabel("Net Profit Margin (FY2025 Ratio)")
     ax.set_ylim(-0.5, 0.8)
     ax.axhline(0, color="#666666", linestyle=":", linewidth=1)
@@ -89,7 +126,18 @@ def plot_scatter_governance_margin(df: pd.DataFrame, output_dir: Path = FIGURES_
         "  Scale, slope is significant: b = -0.0059 (p = .037*)\n"
         "• Weaker governance penalizes net margins by 0.59% per decile point."
     )
-    ax.text(0.60, 0.72, note_text, transform=ax.transAxes, fontsize=8, bbox=dict(boxstyle="round,pad=0.5", facecolor="#f8f9fa", edgecolor="#cccccc"))
+    ax.text(
+        0.60,
+        0.72,
+        note_text,
+        transform=ax.transAxes,
+        fontsize=8,
+        bbox={
+            "boxstyle": "round,pad=0.5",
+            "facecolor": "#f8f9fa",
+            "edgecolor": "#cccccc",
+        },
+    )
 
     fig.text(0.12, -0.04, APA_STYLE["source_annotation"], fontsize=8, color="#555555")
 
@@ -101,7 +149,9 @@ def plot_scatter_governance_margin(df: pd.DataFrame, output_dir: Path = FIGURES_
     return outfile
 
 
-def plot_anova_sector_boxplots(df: pd.DataFrame, output_dir: Path = FIGURES_DIR) -> Path:
+def plot_anova_sector_boxplots(
+    df: pd.DataFrame, output_dir: Path = FIGURES_DIR
+) -> Path:
     """Figure 8 (Session 3): Sector Profit Margin boxplots with Mean diamonds and Welch ANOVA."""
     set_apa_style()
     sub = df[["Sector", "Profit_Margin"]].dropna()
@@ -118,10 +168,18 @@ def plot_anova_sector_boxplots(df: pd.DataFrame, output_dir: Path = FIGURES_DIR)
         palette=palette,
         fliersize=3,
         showmeans=True,
-        meanprops={"marker": "D", "markeredgecolor": "black", "markerfacecolor": "#ffeb3b", "markersize": 7, "label": "Mean Diamond"},
+        meanprops={
+            "marker": "D",
+            "markeredgecolor": "black",
+            "markerfacecolor": "#ffeb3b",
+            "markersize": 7,
+            "label": "Mean Diamond",
+        },
     )
 
-    ax.set_title("Figure 8. Profit Margin Comparison Across Consolidated Sectors (One-Way ANOVA)")
+    ax.set_title(
+        "Figure 8. Profit Margin Comparison Across Consolidated Sectors (One-Way ANOVA)"
+    )
     ax.set_xlabel("Consolidated Sector (Nominal Factor)")
     ax.set_ylabel("Net Profit Margin (Ratio)")
     ax.set_ylim(-0.4, 0.8)
@@ -137,7 +195,18 @@ def plot_anova_sector_boxplots(df: pd.DataFrame, output_dir: Path = FIGURES_DIR)
         "• Post-Hoc Games-Howell: Finance significantly outperforms Consumer (+9.1%),\n"
         "  Healthcare (+13.1%), and Industrials (+9.3%) at p < .001."
     )
-    ax.text(0.02, 0.04, stat_box, transform=ax.transAxes, fontsize=8, bbox=dict(boxstyle="round,pad=0.5", facecolor="#ffffff", edgecolor="#bbbbbb"))
+    ax.text(
+        0.02,
+        0.04,
+        stat_box,
+        transform=ax.transAxes,
+        fontsize=8,
+        bbox={
+            "boxstyle": "round,pad=0.5",
+            "facecolor": "#ffffff",
+            "edgecolor": "#bbbbbb",
+        },
+    )
 
     fig.text(0.12, -0.04, APA_STYLE["source_annotation"], fontsize=8, color="#555555")
 
@@ -149,21 +218,31 @@ def plot_anova_sector_boxplots(df: pd.DataFrame, output_dir: Path = FIGURES_DIR)
     return outfile
 
 
-def plot_regression_diagnostics_4panel(df: pd.DataFrame, output_dir: Path = FIGURES_DIR) -> Path:
+def plot_regression_diagnostics_4panel(
+    df: pd.DataFrame, output_dir: Path = FIGURES_DIR
+) -> Path:
     """Figure 9 (Session 4): Four-panel Econometric OLS Regression Diagnostics."""
     set_apa_style()
-    sub = df[[
-        "Profit_Margin",
-        "Overall_Governance_Risk",
-        "Market_Cap_B",
-        "Total_Revenue_B",
-        "Beta",
-    ]].dropna().copy()
+    sub = (
+        df[
+            [
+                "Profit_Margin",
+                "Overall_Governance_Risk",
+                "Market_Cap_B",
+                "Total_Revenue_B",
+                "Beta",
+            ]
+        ]
+        .dropna()
+        .copy()
+    )
 
     sub["Log_Market_Cap"] = np.log(sub["Market_Cap_B"])
     sub["Log_Revenue"] = np.log(sub["Total_Revenue_B"])
 
-    X = sm.add_constant(sub[["Overall_Governance_Risk", "Log_Market_Cap", "Log_Revenue", "Beta"]])
+    X = sm.add_constant(
+        sub[["Overall_Governance_Risk", "Log_Market_Cap", "Log_Revenue", "Beta"]]
+    )
     y = sub["Profit_Margin"]
     model = sm.OLS(y, X).fit()
 
@@ -176,7 +255,14 @@ def plot_regression_diagnostics_4panel(df: pd.DataFrame, output_dir: Path = FIGU
     # Panel 1: Residuals vs Fitted
     axs[0, 0].scatter(fitted, residuals, alpha=0.4, color="#1f77b4", s=20)
     axs[0, 0].axhline(0, color="#d32f2f", linestyle="--", linewidth=1.2)
-    sns.regplot(x=fitted, y=residuals, scatter=False, lowess=True, ax=axs[0, 0], line_kws={"color": "#d32f2f", "linewidth": 1.5})
+    sns.regplot(
+        x=fitted,
+        y=residuals,
+        scatter=False,
+        lowess=True,
+        ax=axs[0, 0],
+        line_kws={"color": "#d32f2f", "linewidth": 1.5},
+    )
     axs[0, 0].set_title("A. Residuals vs. Fitted (Linearity)")
     axs[0, 0].set_xlabel("Fitted Values")
     axs[0, 0].set_ylabel("Residuals")
@@ -193,7 +279,14 @@ def plot_regression_diagnostics_4panel(df: pd.DataFrame, output_dir: Path = FIGU
     # Panel 3: Scale-Location (Homoscedasticity)
     sqrt_abs_resid = np.sqrt(np.abs(std_residuals))
     axs[1, 0].scatter(fitted, sqrt_abs_resid, alpha=0.4, color="#1f77b4", s=20)
-    sns.regplot(x=fitted, y=sqrt_abs_resid, scatter=False, lowess=True, ax=axs[1, 0], line_kws={"color": "#d32f2f", "linewidth": 1.5})
+    sns.regplot(
+        x=fitted,
+        y=sqrt_abs_resid,
+        scatter=False,
+        lowess=True,
+        ax=axs[1, 0],
+        line_kws={"color": "#d32f2f", "linewidth": 1.5},
+    )
     axs[1, 0].set_title("C. Scale-Location (Breusch-Pagan: LM=15.14, p=.004)")
     axs[1, 0].set_xlabel("Fitted Values")
     axs[1, 0].set_ylabel("√|Standardized Residuals|")
@@ -206,7 +299,12 @@ def plot_regression_diagnostics_4panel(df: pd.DataFrame, output_dir: Path = FIGU
     axs[1, 1].set_xlabel("Leverage")
     axs[1, 1].set_ylabel("Studentized Residuals")
 
-    fig.suptitle("Figure 9. Econometric OLS Regression Diagnostics Suite (Model 2)", fontsize=13, fontweight="bold", y=0.98)
+    fig.suptitle(
+        "Figure 9. Econometric OLS Regression Diagnostics Suite (Model 2)",
+        fontsize=13,
+        fontweight="bold",
+        y=0.98,
+    )
     fig.text(0.10, -0.02, APA_STYLE["source_annotation"], fontsize=8, color="#555555")
 
     outfile = output_dir / "regression_diagnostics_4panel.png"
@@ -217,15 +315,27 @@ def plot_regression_diagnostics_4panel(df: pd.DataFrame, output_dir: Path = FIGU
     return outfile
 
 
-def plot_subpillar_governance_radar(df: pd.DataFrame, output_dir: Path = FIGURES_DIR) -> Path:
+def plot_subpillar_governance_radar(
+    df: pd.DataFrame, output_dir: Path = FIGURES_DIR
+) -> Path:
     """Figure 10: Sub-pillar ISS Governance Risk Breakdown across Sectors."""
     set_apa_style()
-    subpillars = ["Audit_Risk", "Board_Risk", "Compensation_Risk", "Shareholder_Rights_Risk"]
+    subpillars = [
+        "Audit_Risk",
+        "Board_Risk",
+        "Compensation_Risk",
+        "Shareholder_Rights_Risk",
+    ]
     sub = df[["Sector"] + subpillars].dropna()
     means = sub.groupby("Sector")[subpillars].mean()
 
     fig, ax = plt.subplots(figsize=(9, 5))
-    clean_labels = ["Audit Risk", "Board Risk", "Compensation Risk", "Shareholder Rights"]
+    clean_labels = [
+        "Audit Risk",
+        "Board Risk",
+        "Compensation Risk",
+        "Shareholder Rights",
+    ]
     means.columns = clean_labels
 
     means.plot(kind="bar", ax=ax, width=0.75, colormap="tab10", edgecolor="#333333")
@@ -261,4 +371,3 @@ def generate_all_advanced_figures(df: pd.DataFrame) -> list[Path]:
 if __name__ == "__main__":
     df = pd.read_csv(CLEANED_DATA_PATH)
     generate_all_advanced_figures(df)
-

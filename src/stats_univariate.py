@@ -7,6 +7,7 @@ and the course analytical protocol (Slides 19-25 & 40-41).
 """
 
 from typing import Any
+
 import numpy as np
 import pandas as pd
 from scipy import stats

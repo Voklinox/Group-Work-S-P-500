@@ -7,17 +7,20 @@ and Games-Howell & Tukey HSD post-hoc pairwise comparisons across sectors.
 """
 
 from typing import Any
+
 import numpy as np
 import pandas as pd
-from scipy import stats
 import statsmodels.api as sm
+from scipy import stats
 from statsmodels.formula.api import ols
 from statsmodels.stats.multicomp import pairwise_tukeyhsd
 
 from src.config import CLEANED_DATA_PATH
 
 
-def compute_welch_anova(df: pd.DataFrame, continuous_var: str, group_var: str) -> dict[str, Any]:
+def compute_welch_anova(
+    df: pd.DataFrame, continuous_var: str, group_var: str
+) -> dict[str, Any]:
     """
     Compute Welch's ANOVA for unequal variances across groups.
     Formula:
@@ -40,11 +43,11 @@ def compute_welch_anova(df: pd.DataFrame, continuous_var: str, group_var: str) -
 
     numerator = np.sum(w_i * (x_bar_i - x_bar_prime) ** 2) / (k - 1)
     lambda_term = np.sum(((1 - w_i / W) ** 2) / (n_i - 1))
-    denominator = 1 + (2 * (k - 2) / (k ** 2 - 1)) * lambda_term
+    denominator = 1 + (2 * (k - 2) / (k**2 - 1)) * lambda_term
 
     f_welch = numerator / denominator
     df1 = k - 1
-    df2 = (k ** 2 - 1) / (3 * lambda_term)
+    df2 = (k**2 - 1) / (3 * lambda_term)
     p_val = 1 - stats.f.cdf(f_welch, df1, df2)
 
     return {
@@ -56,7 +59,9 @@ def compute_welch_anova(df: pd.DataFrame, continuous_var: str, group_var: str) -
     }
 
 
-def compute_games_howell(df: pd.DataFrame, continuous_var: str, group_var: str) -> pd.DataFrame:
+def compute_games_howell(
+    df: pd.DataFrame, continuous_var: str, group_var: str
+) -> pd.DataFrame:
     """
     Compute Games-Howell post-hoc test for all pairwise group comparisons.
     Robust to unequal sample sizes and heterogeneous variances.
@@ -100,21 +105,25 @@ def compute_games_howell(df: pd.DataFrame, continuous_var: str, group_var: str) 
             ci_high = diff + margin
 
             p_apa = "< .001" if p_val < 0.001 else f"{p_val:.3f}"
-            results.append({
-                "Group_1": g1,
-                "Group_2": g2,
-                "Mean_Diff": round(float(diff), 4),
-                "SE": round(float(se_diff), 4),
-                "95%_CI": f"[{ci_low:.3f}, {ci_high:.3f}]",
-                "t_stat": round(float(t_stat), 3),
-                "p_val": p_apa,
-                "Significant": p_val < 0.05,
-            })
+            results.append(
+                {
+                    "Group_1": g1,
+                    "Group_2": g2,
+                    "Mean_Diff": round(float(diff), 4),
+                    "SE": round(float(se_diff), 4),
+                    "95%_CI": f"[{ci_low:.3f}, {ci_high:.3f}]",
+                    "t_stat": round(float(t_stat), 3),
+                    "p_val": p_apa,
+                    "Significant": p_val < 0.05,
+                }
+            )
 
     return pd.DataFrame(results)
 
 
-def run_full_anova_battery(df: pd.DataFrame, continuous_var: str, group_var: str = "Sector") -> dict[str, Any]:
+def run_full_anova_battery(
+    df: pd.DataFrame, continuous_var: str, group_var: str = "Sector"
+) -> dict[str, Any]:
     """
     Run complete ANOVA protocol on continuous_var grouped by group_var:
     1. Group descriptive summaries (N, Mean, SD, Median, IQR)
@@ -128,13 +137,17 @@ def run_full_anova_battery(df: pd.DataFrame, continuous_var: str, group_var: str
     sub = df[[continuous_var, group_var]].dropna()
 
     # 1. Group descriptives
-    group_stats = sub.groupby(group_var)[continuous_var].agg(
-        N="count",
-        Mean="mean",
-        Std="std",
-        Median="median",
-        IQR=lambda x: x.quantile(0.75) - x.quantile(0.25),
-    ).reset_index()
+    group_stats = (
+        sub.groupby(group_var)[continuous_var]
+        .agg(
+            N="count",
+            Mean="mean",
+            Std="std",
+            Median="median",
+            IQR=lambda x: x.quantile(0.75) - x.quantile(0.25),
+        )
+        .reset_index()
+    )
 
     # 2. Levene's Test (center='median' is Brown-Forsythe robust test)
     groups = [group[continuous_var].values for _, group in sub.groupby(group_var)]
@@ -202,9 +215,15 @@ if __name__ == "__main__":
 
     print("=== ANOVA: Profit Margin across Sectors ===")
     res_pm = run_full_anova_battery(df, "Profit_Margin", "Sector")
-    print(f"Levene's Test: F = {res_pm['levene_stat']}, p = {res_pm['levene_apa']} (Equal variances: {res_pm['equal_variances']})")
-    print(f"Standard ANOVA: F({res_pm['df_between']}, {res_pm['df_within']}) = {res_pm['f_stat']}, p = {res_pm['p_fisher_apa']}, Eta² = {res_pm['eta_squared']}")
-    print(f"Welch's ANOVA: F({res_pm['welch']['df1']}, {res_pm['welch']['df2']}) = {res_pm['welch']['f_welch']}, p = {res_pm['welch']['p_val_apa']}")
+    print(
+        f"Levene's Test: F = {res_pm['levene_stat']}, p = {res_pm['levene_apa']} (Equal variances: {res_pm['equal_variances']})"
+    )
+    print(
+        f"Standard ANOVA: F({res_pm['df_between']}, {res_pm['df_within']}) = {res_pm['f_stat']}, p = {res_pm['p_fisher_apa']}, Eta² = {res_pm['eta_squared']}"
+    )
+    print(
+        f"Welch's ANOVA: F({res_pm['welch']['df1']}, {res_pm['welch']['df2']}) = {res_pm['welch']['f_welch']}, p = {res_pm['welch']['p_val_apa']}"
+    )
     print(f"Kruskal-Wallis: H = {res_pm['kruskal_h']}, p = {res_pm['kruskal_apa']}")
     print("\nGroup Statistics:")
     print(res_pm["group_stats"].to_string(index=False))
@@ -213,7 +232,10 @@ if __name__ == "__main__":
 
     print("\n\n=== ANOVA: Overall Governance Risk across Sectors ===")
     res_gov = run_full_anova_battery(df, "Overall_Governance_Risk", "Sector")
-    print(f"Standard ANOVA: F({res_gov['df_between']}, {res_gov['df_within']}) = {res_gov['f_stat']}, p = {res_gov['p_fisher_apa']}, Eta² = {res_gov['eta_squared']}")
-    print(f"Welch's ANOVA: F({res_gov['welch']['df1']}, {res_gov['welch']['df2']}) = {res_gov['welch']['f_welch']}, p = {res_gov['welch']['p_val_apa']}")
+    print(
+        f"Standard ANOVA: F({res_gov['df_between']}, {res_gov['df_within']}) = {res_gov['f_stat']}, p = {res_gov['p_fisher_apa']}, Eta² = {res_gov['eta_squared']}"
+    )
+    print(
+        f"Welch's ANOVA: F({res_gov['welch']['df1']}, {res_gov['welch']['df2']}) = {res_gov['welch']['f_welch']}, p = {res_gov['welch']['p_val_apa']}"
+    )
     print(res_gov["group_stats"].to_string(index=False))
-

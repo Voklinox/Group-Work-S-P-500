@@ -7,10 +7,11 @@ and runs Breusch-Pagan homoscedasticity and residual normality diagnostics.
 """
 
 from typing import Any
+
 import numpy as np
 import pandas as pd
-from scipy import stats
 import statsmodels.api as sm
+from scipy import stats
 from statsmodels.stats.diagnostic import het_breuschpagan
 from statsmodels.stats.outliers_influence import variance_inflation_factor
 
@@ -22,14 +23,20 @@ def prepare_regression_data(df: pd.DataFrame) -> pd.DataFrame:
     Prepare regression variables, apply logarithmic transformations to skewed size variables,
     and drop incomplete records.
     """
-    sub = df[[
-        "Profit_Margin",
-        "Overall_Governance_Risk",
-        "Market_Cap_B",
-        "Total_Revenue_B",
-        "Beta",
-        "Sector",
-    ]].dropna().copy()
+    sub = (
+        df[
+            [
+                "Profit_Margin",
+                "Overall_Governance_Risk",
+                "Market_Cap_B",
+                "Total_Revenue_B",
+                "Beta",
+                "Sector",
+            ]
+        ]
+        .dropna()
+        .copy()
+    )
 
     # Log transformations for highly skewed financial size metrics
     sub["Log_Market_Cap"] = np.log(sub["Market_Cap_B"])
@@ -38,7 +45,9 @@ def prepare_regression_data(df: pd.DataFrame) -> pd.DataFrame:
     return sub
 
 
-def extract_model_summary(model, df_used: pd.DataFrame, feature_names: list[str]) -> dict[str, Any]:
+def extract_model_summary(
+    model, df_used: pd.DataFrame, feature_names: list[str]
+) -> dict[str, Any]:
     """Extract comprehensive coefficients, standardized betas, and model diagnostics."""
     n_obs = int(model.nobs)
     r_squared = float(model.rsquared)
@@ -70,15 +79,17 @@ def extract_model_summary(model, df_used: pd.DataFrame, feature_names: list[str]
                 beta_star = np.nan
 
         p_str = "< .001" if p_val < 0.001 else f"{p_val:.3f}"
-        coef_table.append({
-            "Predictor": name,
-            "Coef_B": round(b, 4),
-            "Std_Error": round(se, 4),
-            "Std_Beta": round(beta_star, 4) if not np.isnan(beta_star) else "-",
-            "t_statistic": round(t_val, 3),
-            "p_value": p_str,
-            "Significant_05": p_val < 0.05,
-        })
+        coef_table.append(
+            {
+                "Predictor": name,
+                "Coef_B": round(b, 4),
+                "Std_Error": round(se, 4),
+                "Std_Beta": round(beta_star, 4) if not np.isnan(beta_star) else "-",
+                "t_statistic": round(t_val, 3),
+                "p_value": p_str,
+                "Significant_05": p_val < 0.05,
+            }
+        )
 
     # Residual diagnostics
     residuals = model.resid
@@ -117,12 +128,14 @@ def compute_vif(df_features: pd.DataFrame) -> pd.DataFrame:
     for i in range(1, x.shape[1]):
         col = x.columns[i]
         val = variance_inflation_factor(x.values, i)
-        vif_data.append({
-            "Predictor": col,
-            "VIF": round(float(val), 3),
-            "Tolerance": round(1.0 / float(val), 3) if val != 0 else 0.0,
-            "Multicollinearity_Risk": "High (VIF > 5)" if val > 5 else "Low",
-        })
+        vif_data.append(
+            {
+                "Predictor": col,
+                "VIF": round(float(val), 3),
+                "Tolerance": round(1.0 / float(val), 3) if val != 0 else 0.0,
+                "Multicollinearity_Risk": "High (VIF > 5)" if val > 5 else "Low",
+            }
+        )
     return pd.DataFrame(vif_data)
 
 
@@ -151,11 +164,15 @@ def run_full_regression_suite():
     # -------------------------------------------------------------
     # Model 3: Sector Fixed Effects Model
     # -------------------------------------------------------------
-    sector_dummies = pd.get_dummies(reg_data["Sector"], prefix="Sector", drop_first=True, dtype=float)
+    sector_dummies = pd.get_dummies(
+        reg_data["Sector"], prefix="Sector", drop_first=True, dtype=float
+    )
     x3_data = pd.concat([reg_data[feat2], sector_dummies], axis=1)
     x3 = sm.add_constant(x3_data)
     m3 = sm.OLS(y, x3).fit()
-    res3 = extract_model_summary(m3, pd.concat([reg_data, sector_dummies], axis=1), list(x3_data.columns))
+    res3 = extract_model_summary(
+        m3, pd.concat([reg_data, sector_dummies], axis=1), list(x3_data.columns)
+    )
     vif3 = compute_vif(x3_data)
 
     return {
@@ -177,13 +194,18 @@ if __name__ == "__main__":
     print(res1["coefficients"].to_string(index=False))
 
     print("\n=== Model 2: Multiple OLS (with Size & Market Risk Controls) ===")
-    print(f"R² = {res2['r_squared']}, Adj R² = {res2['adj_r_squared']}, F = {res2['f_stat']}, p = {res2['f_pvalue_apa']}")
+    print(
+        f"R² = {res2['r_squared']}, Adj R² = {res2['adj_r_squared']}, F = {res2['f_stat']}, p = {res2['f_pvalue_apa']}"
+    )
     print(res2["coefficients"].to_string(index=False))
     print("\nVariance Inflation Factors (VIF):")
     print(vif2.to_string(index=False))
-    print(f"Breusch-Pagan Test: LM = {res2['bp_lm']}, p = {res2['bp_apa']} (Homoscedastic: {res2['homoscedastic']})")
+    print(
+        f"Breusch-Pagan Test: LM = {res2['bp_lm']}, p = {res2['bp_apa']} (Homoscedastic: {res2['homoscedastic']})"
+    )
 
     print("\n=== Model 3: Multiple OLS with Sector Dummies ===")
-    print(f"R² = {res3['r_squared']}, Adj R² = {res3['adj_r_squared']}, F = {res3['f_stat']}, p = {res3['f_pvalue_apa']}")
+    print(
+        f"R² = {res3['r_squared']}, Adj R² = {res3['adj_r_squared']}, F = {res3['f_stat']}, p = {res3['f_pvalue_apa']}"
+    )
     print(res3["coefficients"].to_string(index=False))
-

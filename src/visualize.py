@@ -7,40 +7,43 @@ academic and executive consulting standards.
 """
 
 from pathlib import Path
+
 import matplotlib
-matplotlib.use("Agg")  # Non-interactive backend for server/script execution
 import matplotlib.pyplot as plt
-import numpy as np
 import pandas as pd
-import scipy.stats as stats
 import seaborn as sns
+from scipy import stats
+
+matplotlib.use("Agg")  # Non-interactive backend for server/script execution
 
 from src.config import APA_STYLE, CLEANED_DATA_PATH, FIGURES_DIR
 
 
 def set_apa_style():
     """Apply APA 7th edition clean formatting to Matplotlib/Seaborn."""
-    plt.rcParams.update({
-        "font.family": APA_STYLE["font_family"],
-        "figure.facecolor": "white",
-        "axes.facecolor": "white",
-        "axes.edgecolor": "#333333",
-        "axes.linewidth": 0.8,
-        "axes.grid": True,
-        "grid.color": "#ebebeb",
-        "grid.linestyle": "--",
-        "grid.linewidth": 0.6,
-        "axes.titlesize": APA_STYLE["title_size"],
-        "axes.titleweight": "bold",
-        "axes.titlepad": 12,
-        "axes.labelsize": APA_STYLE["axis_title_size"],
-        "axes.labelweight": "medium",
-        "axes.labelpad": 8,
-        "xtick.labelsize": APA_STYLE["tick_size"],
-        "ytick.labelsize": APA_STYLE["tick_size"],
-        "legend.fontsize": APA_STYLE["legend_size"],
-        "figure.dpi": 300,
-    })
+    plt.rcParams.update(
+        {
+            "font.family": APA_STYLE["font_family"],
+            "figure.facecolor": "white",
+            "axes.facecolor": "white",
+            "axes.edgecolor": "#333333",
+            "axes.linewidth": 0.8,
+            "axes.grid": True,
+            "grid.color": "#ebebeb",
+            "grid.linestyle": "--",
+            "grid.linewidth": 0.6,
+            "axes.titlesize": APA_STYLE["title_size"],
+            "axes.titleweight": "bold",
+            "axes.titlepad": 12,
+            "axes.labelsize": APA_STYLE["axis_title_size"],
+            "axes.labelweight": "medium",
+            "axes.labelpad": 8,
+            "xtick.labelsize": APA_STYLE["tick_size"],
+            "ytick.labelsize": APA_STYLE["tick_size"],
+            "legend.fontsize": APA_STYLE["legend_size"],
+            "figure.dpi": 300,
+        }
+    )
 
 
 def plot_sector_distribution(df: pd.DataFrame, output_dir: Path = FIGURES_DIR) -> Path:
@@ -52,7 +55,13 @@ def plot_sector_distribution(df: pd.DataFrame, output_dir: Path = FIGURES_DIR) -
     n_total = len(df["Sector"].dropna())
     colors = ["#2b5c8f", "#41729f", "#588bae", "#7fa9c6", "#a4c2db"]
 
-    bars = ax.bar(counts.index, counts.values, color=colors[:len(counts)], edgecolor="#1c3b5e", width=0.6)
+    bars = ax.bar(
+        counts.index,
+        counts.values,
+        color=colors[: len(counts)],
+        edgecolor="#1c3b5e",
+        width=0.6,
+    )
 
     # Add frequency and percentage labels
     for bar in bars:
@@ -69,7 +78,9 @@ def plot_sector_distribution(df: pd.DataFrame, output_dir: Path = FIGURES_DIR) -
             fontweight="semibold",
         )
 
-    ax.set_title("Figure 1. Distribution of S&P 500 Firms Across Consolidated Sectors (N = 503)")
+    ax.set_title(
+        "Figure 1. Distribution of S&P 500 Firms Across Consolidated Sectors (N = 503)"
+    )
     ax.set_xlabel("Consolidated Sector (Nominal Factor)")
     ax.set_ylabel("Number of Companies")
     ax.set_ylim(0, max(counts.values) * 1.18)
@@ -85,7 +96,9 @@ def plot_sector_distribution(df: pd.DataFrame, output_dir: Path = FIGURES_DIR) -
     return outfile
 
 
-def plot_governance_risk_distribution(df: pd.DataFrame, output_dir: Path = FIGURES_DIR) -> Path:
+def plot_governance_risk_distribution(
+    df: pd.DataFrame, output_dir: Path = FIGURES_DIR
+) -> Path:
     """Figure 2: Ordinal Governance Risk Level Distribution."""
     set_apa_style()
     fig, ax = plt.subplots(figsize=(7, 4.5))
@@ -93,7 +106,11 @@ def plot_governance_risk_distribution(df: pd.DataFrame, output_dir: Path = FIGUR
     order = ["Low", "Medium", "High"]
     counts = df["Governance_Risk_Level"].value_counts().reindex(order).fillna(0)
     n_total = df["Governance_Risk_Level"].notna().sum()
-    palette = ["#2e7d32", "#f57c00", "#c62828"]  # Green (Low risk), Orange (Medium), Red (High risk)
+    palette = [
+        "#2e7d32",
+        "#f57c00",
+        "#c62828",
+    ]  # Green (Low risk), Orange (Medium), Red (High risk)
 
     bars = ax.bar(order, counts.values, color=palette, edgecolor="#333333", width=0.55)
 
@@ -126,7 +143,9 @@ def plot_governance_risk_distribution(df: pd.DataFrame, output_dir: Path = FIGUR
     return outfile
 
 
-def plot_profit_margin_normality(df: pd.DataFrame, output_dir: Path = FIGURES_DIR) -> Path:
+def plot_profit_margin_normality(
+    df: pd.DataFrame, output_dir: Path = FIGURES_DIR
+) -> Path:
     """
     Figure 3: Multi-panel Normality Diagnostic for Net Profit Margin.
     Demonstrates the 3 converging pieces of evidence:
@@ -140,7 +159,6 @@ def plot_profit_margin_normality(df: pd.DataFrame, output_dir: Path = FIGURES_DI
     mean_val = valid.mean()
     median_val = valid.median()
     mode_val = valid.round(2).mode()[0]
-    std_val = valid.std()
     skew_val = stats.skew(valid, bias=False)
     kurt_val = stats.kurtosis(valid, bias=False)
     w_stat, p_val = stats.shapiro(valid)
@@ -148,10 +166,36 @@ def plot_profit_margin_normality(df: pd.DataFrame, output_dir: Path = FIGURES_DI
     fig, (ax_hist, ax_qq) = plt.subplots(1, 2, figsize=(12, 5))
 
     # Panel A: Histogram & KDE
-    sns.histplot(valid, kde=True, ax=ax_hist, color="#3470a3", edgecolor="#1e4263", bins=35, stat="density")
-    ax_hist.axvline(mean_val, color="#d32f2f", linestyle="--", linewidth=1.5, label=f"Mean = {mean_val:.3f}")
-    ax_hist.axvline(median_val, color="#388e3c", linestyle="-", linewidth=1.5, label=f"Median = {median_val:.3f}")
-    ax_hist.axvline(mode_val, color="#7b1fa2", linestyle=":", linewidth=1.5, label=f"Mode = {mode_val:.3f}")
+    sns.histplot(
+        valid,
+        kde=True,
+        ax=ax_hist,
+        color="#3470a3",
+        edgecolor="#1e4263",
+        bins=35,
+        stat="density",
+    )
+    ax_hist.axvline(
+        mean_val,
+        color="#d32f2f",
+        linestyle="--",
+        linewidth=1.5,
+        label=f"Mean = {mean_val:.3f}",
+    )
+    ax_hist.axvline(
+        median_val,
+        color="#388e3c",
+        linestyle="-",
+        linewidth=1.5,
+        label=f"Median = {median_val:.3f}",
+    )
+    ax_hist.axvline(
+        mode_val,
+        color="#7b1fa2",
+        linestyle=":",
+        linewidth=1.5,
+        label=f"Mode = {mode_val:.3f}",
+    )
 
     ax_hist.set_title("A. Distribution Shape & 3 Centres")
     ax_hist.set_xlabel("Net Profit Margin (Continuous Ratio)")
@@ -178,9 +222,24 @@ def plot_profit_margin_normality(df: pd.DataFrame, output_dir: Path = FIGURES_DI
         f"• Shapiro-Wilk: W = {w_stat:.3f}, p {p_disp}\n"
         f"Conclusion: Severe violation of normality (Reject H0)"
     )
-    fig.text(0.53, 0.20, diag_text, fontsize=8.5, bbox=dict(boxstyle="round,pad=0.5", facecolor="#f8f9fa", edgecolor="#cccccc"))
+    fig.text(
+        0.53,
+        0.20,
+        diag_text,
+        fontsize=8.5,
+        bbox={
+            "boxstyle": "round,pad=0.5",
+            "facecolor": "#f8f9fa",
+            "edgecolor": "#cccccc",
+        },
+    )
 
-    fig.suptitle("Figure 3. Three-Evidence Normality Diagnostic: Net Profit Margin", fontsize=13, fontweight="bold", y=0.98)
+    fig.suptitle(
+        "Figure 3. Three-Evidence Normality Diagnostic: Net Profit Margin",
+        fontsize=13,
+        fontweight="bold",
+        y=0.98,
+    )
     fig.text(0.08, -0.03, APA_STYLE["source_annotation"], fontsize=8, color="#555555")
 
     outfile = output_dir / "profit_margin_normality.png"
@@ -191,7 +250,9 @@ def plot_profit_margin_normality(df: pd.DataFrame, output_dir: Path = FIGURES_DI
     return outfile
 
 
-def plot_market_cap_distribution(df: pd.DataFrame, output_dir: Path = FIGURES_DIR) -> Path:
+def plot_market_cap_distribution(
+    df: pd.DataFrame, output_dir: Path = FIGURES_DIR
+) -> Path:
     """Figure 4: Market Capitalization Distribution & Log Skewness."""
     set_apa_style()
     fig, ax = plt.subplots(figsize=(8, 4.5))
@@ -201,8 +262,20 @@ def plot_market_cap_distribution(df: pd.DataFrame, output_dir: Path = FIGURES_DI
     median_val = valid.median()
 
     sns.histplot(valid, kde=True, ax=ax, color="#2e7d32", bins=40, edgecolor="#1b5e20")
-    ax.axvline(mean_val, color="#d32f2f", linestyle="--", linewidth=1.5, label=f"Mean = ${mean_val:.1f}B")
-    ax.axvline(median_val, color="#0288d1", linestyle="-", linewidth=1.5, label=f"Median = ${median_val:.1f}B")
+    ax.axvline(
+        mean_val,
+        color="#d32f2f",
+        linestyle="--",
+        linewidth=1.5,
+        label=f"Mean = ${mean_val:.1f}B",
+    )
+    ax.axvline(
+        median_val,
+        color="#0288d1",
+        linestyle="-",
+        linewidth=1.5,
+        label=f"Median = ${median_val:.1f}B",
+    )
 
     ax.set_title("Figure 4. Market Capitalization Asymmetry (Extreme Mega-Cap Skew)")
     ax.set_xlabel("Market Capitalization ($ Billion)")
@@ -256,7 +329,9 @@ def plot_correlation_preview(df: pd.DataFrame, output_dir: Path = FIGURES_DIR) -
         ax=ax,
         linewidths=0.5,
     )
-    ax.set_title("Figure 5. Bivariate Pearson Correlation Matrix (Preview for Session 2)")
+    ax.set_title(
+        "Figure 5. Bivariate Pearson Correlation Matrix (Preview for Session 2)"
+    )
     plt.xticks(rotation=30, ha="right")
 
     fig.text(0.12, -0.05, APA_STYLE["source_annotation"], fontsize=8, color="#555555")
@@ -284,4 +359,3 @@ def generate_all_figures(df: pd.DataFrame) -> list[Path]:
 if __name__ == "__main__":
     df = pd.read_csv(CLEANED_DATA_PATH)
     generate_all_figures(df)
-

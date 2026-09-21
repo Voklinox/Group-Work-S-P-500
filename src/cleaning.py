@@ -7,6 +7,7 @@ and exports validated datasets in both CSV and Excel formats.
 """
 
 from pathlib import Path
+
 import numpy as np
 import pandas as pd
 
@@ -204,7 +205,7 @@ def audit_and_clean_pipeline() -> tuple[pd.DataFrame, dict]:
                 })
             pd.DataFrame(codebook).to_excel(writer, sheet_name="Codebook_Jamovi", index=False)
         print(f"✓ Jamovi Excel (with Codebook) saved to: {JAMOVI_XLSX_PATH}")
-    except Exception as e:
+    except (ImportError, ModuleNotFoundError, OSError, ValueError) as e:
         print(f"  Note: Excel export pending openpyxl installation ({e}).")
 
     audit_report = {

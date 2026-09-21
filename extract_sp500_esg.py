@@ -19,6 +19,7 @@ Usage:
 """
 
 import time
+
 import numpy as np
 import pandas as pd
 import requests as _requests
@@ -35,32 +36,33 @@ SLEEP_SECONDS = 0.25  # Pause between API calls to avoid rate-limiting
 # Mapping of the 11 GICS sectors → 5 grouped categories
 SECTOR_MAP = {
     # Tech & Comms
-    "Technology":                "Tech & Comms",
-    "Information Technology":    "Tech & Comms",
-    "Communication Services":    "Tech & Comms",
+    "Technology": "Tech & Comms",
+    "Information Technology": "Tech & Comms",
+    "Communication Services": "Tech & Comms",
     # Healthcare
-    "Healthcare":                "Healthcare",
-    "Health Care":               "Healthcare",
+    "Healthcare": "Healthcare",
+    "Health Care": "Healthcare",
     # Finance
-    "Financial Services":        "Finance",
-    "Financials":                "Finance",
+    "Financial Services": "Finance",
+    "Financials": "Finance",
     # Industrials & Energy
-    "Industrials":               "Industrials & Energy",
-    "Energy":                    "Industrials & Energy",
-    "Utilities":                 "Industrials & Energy",
-    "Basic Materials":           "Industrials & Energy",
-    "Materials":                 "Industrials & Energy",
+    "Industrials": "Industrials & Energy",
+    "Energy": "Industrials & Energy",
+    "Utilities": "Industrials & Energy",
+    "Basic Materials": "Industrials & Energy",
+    "Materials": "Industrials & Energy",
     # Consumer
-    "Consumer Cyclical":         "Consumer",
-    "Consumer Defensive":        "Consumer",
-    "Consumer Discretionary":    "Consumer",
-    "Consumer Staples":          "Consumer",
-    "Real Estate":               "Consumer",
+    "Consumer Cyclical": "Consumer",
+    "Consumer Defensive": "Consumer",
+    "Consumer Discretionary": "Consumer",
+    "Consumer Staples": "Consumer",
+    "Real Estate": "Consumer",
 }
 
 # ---------------------------------------------------------------------------
 # 2. FETCH S&P 500 TICKER LIST FROM WIKIPEDIA
 # ---------------------------------------------------------------------------
+
 
 def get_sp500_tickers() -> list[str]:
     """Scrape the current S&P 500 constituents table from Wikipedia."""
@@ -81,9 +83,11 @@ def get_sp500_tickers() -> list[str]:
     print(f"✓ Fetched {len(tickers)} S&P 500 tickers from Wikipedia.\n")
     return tickers
 
+
 # ---------------------------------------------------------------------------
 # 3. EXTRACT DATA FOR A SINGLE TICKER
 # ---------------------------------------------------------------------------
+
 
 def extract_ticker_data(ticker_symbol: str) -> dict:
     """
@@ -99,21 +103,21 @@ def extract_ticker_data(ticker_symbol: str) -> dict:
         - overallRisk: Composite governance risk score
     """
     record = {
-        "Ticker":                 ticker_symbol,
-        "Company":                np.nan,
-        "Sector_Raw":             np.nan,
-        "Sector":                 np.nan,           # Grouped (5 categories) — NOMINAL
-        "Total_Revenue_B":        np.nan,           # In billions USD
-        "Market_Cap_B":           np.nan,           # In billions USD
-        "ROE":                    np.nan,           # Return on Equity
-        "Profit_Margin":          np.nan,           # Net profit margin
-        "Beta":                   np.nan,           # Market risk (volatility)
-        "Headcount":              np.nan,           # Full-time employees
-        "Audit_Risk":             np.nan,           # ISS (1-10)
-        "Board_Risk":             np.nan,           # ISS (1-10)
-        "Compensation_Risk":      np.nan,           # ISS (1-10)
-        "Shareholder_Rights_Risk": np.nan,          # ISS (1-10)
-        "Overall_Governance_Risk": np.nan,          # ISS (1-10)
+        "Ticker": ticker_symbol,
+        "Company": np.nan,
+        "Sector_Raw": np.nan,
+        "Sector": np.nan,  # Grouped (5 categories) — NOMINAL
+        "Total_Revenue_B": np.nan,  # In billions USD
+        "Market_Cap_B": np.nan,  # In billions USD
+        "ROE": np.nan,  # Return on Equity
+        "Profit_Margin": np.nan,  # Net profit margin
+        "Beta": np.nan,  # Market risk (volatility)
+        "Headcount": np.nan,  # Full-time employees
+        "Audit_Risk": np.nan,  # ISS (1-10)
+        "Board_Risk": np.nan,  # ISS (1-10)
+        "Compensation_Risk": np.nan,  # ISS (1-10)
+        "Shareholder_Rights_Risk": np.nan,  # ISS (1-10)
+        "Overall_Governance_Risk": np.nan,  # ISS (1-10)
     }
 
     try:
@@ -154,21 +158,23 @@ def extract_ticker_data(ticker_symbol: str) -> dict:
             record["Headcount"] = headcount
 
         # --- ISS Governance Risk Scores (1-10, lower = better) ---
-        record["Audit_Risk"]              = info.get("auditRisk", np.nan)
-        record["Board_Risk"]              = info.get("boardRisk", np.nan)
-        record["Compensation_Risk"]       = info.get("compensationRisk", np.nan)
+        record["Audit_Risk"] = info.get("auditRisk", np.nan)
+        record["Board_Risk"] = info.get("boardRisk", np.nan)
+        record["Compensation_Risk"] = info.get("compensationRisk", np.nan)
         record["Shareholder_Rights_Risk"] = info.get("shareHolderRightsRisk", np.nan)
         record["Overall_Governance_Risk"] = info.get("overallRisk", np.nan)
 
-    except Exception as e:
+    except Exception as e:  # noqa: BLE001
         # If the entire ticker fetch fails, the record stays all NaN
         print(f"  ⚠ Error fetching {ticker_symbol}: {e}")
 
     return record
 
+
 # ---------------------------------------------------------------------------
 # 4. MAIN PIPELINE
 # ---------------------------------------------------------------------------
+
 
 def main():
     print("=" * 60)
@@ -222,10 +228,12 @@ def main():
     print(f"  Non-null ROE                : {df['ROE'].notna().sum()}")
     print(f"  Non-null Profit Margin      : {df['Profit_Margin'].notna().sum()}")
     print(f"  Non-null Beta               : {df['Beta'].notna().sum()}")
-    print(f"  Non-null Governance Risk     : {df['Overall_Governance_Risk'].notna().sum()}")
-    print(f"  Sector distribution         :")
+    print(
+        f"  Non-null Governance Risk     : {df['Overall_Governance_Risk'].notna().sum()}"
+    )
+    print("  Sector distribution         :")
     print(df["Sector"].value_counts().to_string(header=False))
-    print(f"\n  Governance Risk Level       :")
+    print("\n  Governance Risk Level       :")
     print(df["Governance_Risk_Level"].value_counts().to_string(header=False))
     print("=" * 60)
 

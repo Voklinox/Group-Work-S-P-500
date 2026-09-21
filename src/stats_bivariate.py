@@ -7,6 +7,7 @@ and exact two-tailed p-values for continuous variables.
 """
 
 from typing import Any
+
 import numpy as np
 import pandas as pd
 from scipy import stats
@@ -14,9 +15,7 @@ from scipy import stats
 from src.config import CLEANED_DATA_PATH
 
 
-def compute_chi2_contingency(
-    df: pd.DataFrame, var1: str, var2: str
-) -> dict[str, Any]:
+def compute_chi2_contingency(df: pd.DataFrame, var1: str, var2: str) -> dict[str, Any]:
     """
     Perform a full Chi-Square test of independence between two categorical variables.
     Computes observed contingency table, expected frequencies, standardized residuals,
@@ -35,7 +34,9 @@ def compute_chi2_contingency(
     )
 
     # Standardized Residuals: (Observed - Expected) / sqrt(Expected)
-    std_residuals = (contingency_observed - contingency_expected) / np.sqrt(contingency_expected)
+    std_residuals = (contingency_observed - contingency_expected) / np.sqrt(
+        contingency_expected
+    )
 
     # Cramér's V effect size
     r, k = contingency_observed.shape
@@ -96,17 +97,19 @@ def compute_bivariate_correlations(
             p_p_str = "< .001" if p_pearson < 0.001 else f"{p_pearson:.3f}"
             p_s_str = "< .001" if p_spearman < 0.001 else f"{p_spearman:.3f}"
 
-            records.append({
-                "Variable_1": v1,
-                "Variable_2": v2,
-                "N": n_pair,
-                "Pearson_r": round(float(r_val), 4),
-                "Pearson_p": p_p_str,
-                "95%_CI": f"[{ci_low:.3f}, {ci_high:.3f}]",
-                "Spearman_rho": round(float(rho_val), 4),
-                "Spearman_p": p_s_str,
-                "Significant_05": p_pearson < 0.05,
-            })
+            records.append(
+                {
+                    "Variable_1": v1,
+                    "Variable_2": v2,
+                    "N": n_pair,
+                    "Pearson_r": round(float(r_val), 4),
+                    "Pearson_p": p_p_str,
+                    "95%_CI": f"[{ci_low:.3f}, {ci_high:.3f}]",
+                    "Spearman_rho": round(float(rho_val), 4),
+                    "Spearman_p": p_s_str,
+                    "Significant_05": p_pearson < 0.05,
+                }
+            )
 
     summary_table = pd.DataFrame(records)
     return summary_table, records
@@ -120,7 +123,9 @@ def run_full_session2_pipeline():
     chi_sector = compute_chi2_contingency(df, "Sector", "Governance_Risk_Level")
 
     # 2. Chi-Square: Market_Cap_Quartile x Governance_Risk_Level
-    chi_size = compute_chi2_contingency(df, "Market_Cap_Quartile", "Governance_Risk_Level")
+    chi_size = compute_chi2_contingency(
+        df, "Market_Cap_Quartile", "Governance_Risk_Level"
+    )
 
     # 3. Continuous Correlations
     core_vars = [
@@ -135,7 +140,7 @@ def run_full_session2_pipeline():
         "Compensation_Risk",
         "Shareholder_Rights_Risk",
     ]
-    corr_table, corr_records = compute_bivariate_correlations(df, core_vars)
+    corr_table, _ = compute_bivariate_correlations(df, core_vars)
 
     return {
         "chi_sector": chi_sector,
@@ -148,19 +153,34 @@ if __name__ == "__main__":
     results = run_full_session2_pipeline()
 
     print("=== Chi-Square Test: Sector x Governance_Risk_Level ===")
-    print(f"Chi2({results['chi_sector']['dof']}, N = {results['chi_sector']['n_total']}) = {results['chi_sector']['chi2_stat']}, p = {results['chi_sector']['p_val_apa']}, Cramér's V = {results['chi_sector']['cramers_v']}")
+    print(
+        f"Chi2({results['chi_sector']['dof']}, N = {results['chi_sector']['n_total']}) = {results['chi_sector']['chi2_stat']}, p = {results['chi_sector']['p_val_apa']}, Cramér's V = {results['chi_sector']['cramers_v']}"
+    )
     print("\nObserved Contingency Table:")
     print(results["chi_sector"]["observed"])
     print("\nStandardized Residuals:")
     print(results["chi_sector"]["std_residuals"])
 
     print("\n=== Chi-Square Test: Market_Cap_Quartile x Governance_Risk_Level ===")
-    print(f"Chi2({results['chi_size']['dof']}, N = {results['chi_size']['n_total']}) = {results['chi_size']['chi2_stat']}, p = {results['chi_size']['p_val_apa']}, Cramér's V = {results['chi_size']['cramers_v']}")
+    print(
+        f"Chi2({results['chi_size']['dof']}, N = {results['chi_size']['n_total']}) = {results['chi_size']['chi2_stat']}, p = {results['chi_size']['p_val_apa']}, Cramér's V = {results['chi_size']['cramers_v']}"
+    )
 
     print("\n=== Key Pearson Correlations with Overall Governance Risk ===")
     gov_corrs = results["correlations"][
-        (results["correlations"]["Variable_1"] == "Overall_Governance_Risk") |
-        (results["correlations"]["Variable_2"] == "Overall_Governance_Risk")
+        (results["correlations"]["Variable_1"] == "Overall_Governance_Risk")
+        | (results["correlations"]["Variable_2"] == "Overall_Governance_Risk")
     ]
-    print(gov_corrs[["Variable_1", "Variable_2", "N", "Pearson_r", "Pearson_p", "95%_CI", "Spearman_rho"]].to_string(index=False))
-
+    print(
+        gov_corrs[
+            [
+                "Variable_1",
+                "Variable_2",
+                "N",
+                "Pearson_r",
+                "Pearson_p",
+                "95%_CI",
+                "Spearman_rho",
+            ]
+        ].to_string(index=False)
+    )
