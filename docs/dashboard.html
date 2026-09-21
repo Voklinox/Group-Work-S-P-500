@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>S&P 500 Governance & Financial Performance Dashboard</title>
+  <script src="https://www.gstatic.com/antigravity/web/dev/tailwindcss.min.js"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+    body { font-family: 'Inter', sans-serif; }
+  </style>
+</head>
+<body class="bg-slate-950 text-slate-100 min-h-screen p-6 md:p-10 antialiased">
+  <div class="max-w-7xl mx-auto space-y-8">
+    
+    <!-- Top Header -->
+    <header class="flex flex-col md:flex-row md:items-center justify-between pb-6 border-b border-slate-800 gap-4">
+      <div>
+        <div class="flex items-center gap-2 mb-2">
+          <span class="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">EM Normandie · M1 S7</span>
+          <span class="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-blue-500/10 text-blue-400 border border-blue-500/20">Artefact 1 Deliverable</span>
+          <span class="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-purple-500/10 text-purple-400 border border-purple-500/20">FY2025 Audited Data</span>
+        </div>
+        <h1 class="text-2xl md:text-3xl font-bold tracking-tight text-white">S&P 500 Corporate Governance & Financial Performance</h1>
+        <p class="text-sm text-slate-400 mt-1">Quantitative Data Analysis Consulting Framework · Dr. NGUYEN Anh-Tuan</p>
+      </div>
+      <div class="flex items-center gap-3">
+        <a href="Artefact_1_Session_1.md" class="px-4 py-2 text-xs font-semibold rounded-lg bg-blue-600 hover:bg-blue-500 text-white transition-all shadow-md shadow-blue-600/20">View Artefact 1 Report</a>
+        <a href="Approval_Slip.md" class="px-4 py-2 text-xs font-semibold rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 transition-all">Approval Slip</a>
+      </div>
+    </header>
+
+    <!-- Problematic Banner -->
+    <div class="bg-gradient-to-r from-blue-900/30 via-indigo-900/20 to-purple-900/30 border border-blue-800/40 rounded-2xl p-6 shadow-xl relative overflow-hidden">
+      <div class="relative z-10 space-y-2">
+        <span class="text-xs uppercase tracking-wider font-bold text-blue-400">Core Managerial Problematic</span>
+        <blockquote class="text-lg md:text-xl font-medium text-slate-100 italic leading-snug">
+          "Does corporate governance risk (ISS QualityScore) compromise financial profitability and market valuation among S&P 500 firms, or does strong governance provide a resilience and performance premium?"
+        </blockquote>
+        <p class="text-xs text-slate-400 pt-1">The 4-Step Protocol: <strong>1. IDENTIFY</strong> (Variable scales) · <strong>2. HYPOTHESISE</strong> (H₀ vs H₁) · <strong>3. DECIDE</strong> (p &lt; .05, effect size) · <strong>4. RECOMMEND</strong> (Monday morning action)</p>
+      </div>
+    </div>
+
+    <!-- KPI Metric Cards -->
+    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
+      <div class="bg-slate-900/80 border border-slate-800 p-4 rounded-xl">
+        <p class="text-xs font-medium text-slate-400">Sample Size</p>
+        <p class="text-2xl font-bold text-white mt-1">503</p>
+        <p class="text-[11px] text-emerald-400 mt-1">✓ Unique firms (N ≥ 100)</p>
+      </div>
+
+      <div class="bg-slate-900/80 border border-slate-800 p-4 rounded-xl">
+        <p class="text-xs font-medium text-slate-400">Nominal Groups</p>
+        <p class="text-2xl font-bold text-blue-400 mt-1">5 Sectors</p>
+        <p class="text-[11px] text-slate-400 mt-1">Mode: Industrials (29.4%)</p>
+      </div>
+
+      <div class="bg-slate-900/80 border border-slate-800 p-4 rounded-xl">
+        <p class="text-xs font-medium text-slate-400">Median Margin</p>
+        <p class="text-2xl font-bold text-emerald-400 mt-1">13.15%</p>
+        <p class="text-[11px] text-slate-400 mt-1">Mean: 14.79% (Skewed)</p>
+      </div>
+
+      <div class="bg-slate-900/80 border border-slate-800 p-4 rounded-xl">
+        <p class="text-xs font-medium text-slate-400">Median ROE</p>
+        <p class="text-2xl font-bold text-amber-400 mt-1">16.76%</p>
+        <p class="text-[11px] text-slate-400 mt-1">Mean: 39.52% (Outlier MAS)</p>
+      </div>
+
+      <div class="bg-slate-900/80 border border-slate-800 p-4 rounded-xl">
+        <p class="text-xs font-medium text-slate-400">Median Market Cap</p>
+        <p class="text-2xl font-bold text-purple-400 mt-1">$44.5B</p>
+        <p class="text-[11px] text-slate-400 mt-1">Mean: $147.6B (Mega-cap skew)</p>
+      </div>
+
+      <div class="bg-slate-900/80 border border-slate-800 p-4 rounded-xl">
+        <p class="text-xs font-medium text-slate-400">High Gov Risk</p>
+        <p class="text-2xl font-bold text-rose-400 mt-1">39.72%</p>
+        <p class="text-[11px] text-slate-400 mt-1">197 High-Risk Firms</p>
+      </div>
+    </div>
+
+    <!-- Interactive Navigation Tabs -->
+    <div class="space-y-6">
+      <div class="flex border-b border-slate-800 gap-6 text-sm font-medium">
+        <button onclick="switchTab('tab-univariate')" id="btn-univariate" class="tab-btn pb-3 text-blue-400 border-b-2 border-blue-400 transition-colors">1. Univariate &amp; Normality (Artefact 1)</button>
+        <button onclick="switchTab('tab-taxonomy')" id="btn-taxonomy" class="tab-btn pb-3 text-slate-400 hover:text-slate-200 transition-colors">2. Variable Taxonomy &amp; Jamovi</button>
+        <button onclick="switchTab('tab-cleaning')" id="btn-cleaning" class="tab-btn pb-3 text-slate-400 hover:text-slate-200 transition-colors">3. Data Cleaning Audit Log</button>
+        <button onclick="switchTab('tab-roadmap')" id="btn-roadmap" class="tab-btn pb-3 text-slate-400 hover:text-slate-200 transition-colors">4. 4-Week Roadmap</button>
+      </div>
+
+      <!-- TAB 1: Univariate & Normality -->
+      <div id="tab-univariate" class="tab-content space-y-6">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+          
+          <!-- Normality 3-Evidence Card -->
+          <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 space-y-4">
+            <div class="flex items-center justify-between">
+              <h3 class="font-bold text-white text-base">Continuous Variable Normality: Net Profit Margin</h3>
+              <span class="px-2 py-0.5 rounded text-xs font-semibold bg-rose-500/10 text-rose-400 border border-rose-500/20">H₀ REJECTED (Non-Normal)</span>
+            </div>
+            <p class="text-xs text-slate-400">Evaluation against the 3 converging pieces of evidence required in Slide 24 &amp; 41:</p>
+            
+            <div class="space-y-3 pt-2">
+              <div class="p-3 bg-slate-950/60 rounded-xl border border-slate-800/80">
+                <div class="flex justify-between items-center text-xs font-semibold">
+                  <span class="text-slate-300">1. Comparison of 3 Centres (Mean ≈ Median ≈ Mode)</span>
+                  <span class="text-rose-400 font-mono">Divergence: 0.038</span>
+                </div>
+                <p class="text-[12px] text-slate-400 mt-1 font-mono">Mean = 0.1479 · Median = 0.1315 · Mode = 0.1100</p>
+                <p class="text-[11px] text-slate-500 mt-1">Arithmetic mean noticeably exceeds median, showing positive operational asymmetry counterbalanced by severe negative tail losses.</p>
+              </div>
+
+              <div class="p-3 bg-slate-950/60 rounded-xl border border-slate-800/80">
+                <div class="flex justify-between items-center text-xs font-semibold">
+                  <span class="text-slate-300">2. Shape Parameters (Rule of Thumb: [-1, +1])</span>
+                  <span class="text-rose-400 font-mono">Breached</span>
+                </div>
+                <p class="text-[12px] text-slate-400 mt-1 font-mono">Skewness = -5.42 · Kurtosis = +69.91</p>
+                <p class="text-[11px] text-slate-500 mt-1">Extreme leptokurtosis and heavy left tail from cyclical distress severely breach the normal boundaries.</p>
+              </div>
+
+              <div class="p-3 bg-slate-950/60 rounded-xl border border-slate-800/80">
+                <div class="flex justify-between items-center text-xs font-semibold">
+                  <span class="text-slate-300">3. Formal Shapiro-Wilk Test (H₀ = Normal)</span>
+                  <span class="text-rose-400 font-mono">p &lt; .001</span>
+                </div>
+                <p class="text-[12px] text-slate-400 mt-1 font-mono">W = 0.6530, p &lt; .001</p>
+                <p class="text-[11px] text-slate-500 mt-1">With p &lt; 0.05, we decisively reject H₀. Welch's ANOVA or Games-Howell post-hoc will be mandatory in Session 3.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Sector Breakdown Card -->
+          <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 space-y-4">
+            <div class="flex items-center justify-between">
+              <h3 class="font-bold text-white text-base">Nominal Variable: Consolidated Sectors (N = 503)</h3>
+              <span class="px-2 py-0.5 rounded text-xs font-semibold bg-blue-500/10 text-blue-400 border border-blue-500/20">Mode: Industrials &amp; Energy</span>
+            </div>
+            <p class="text-xs text-slate-400">Meets course rule: exactly 2 to 5 categories with balanced group sizes (all N ≥ 60):</p>
+
+            <div class="space-y-2.5 pt-2">
+              <div>
+                <div class="flex justify-between text-xs mb-1">
+                  <span class="font-medium text-slate-300">1. Industrials &amp; Energy (Mode)</span>
+                  <span class="font-mono text-slate-400">148 firms (29.4%)</span>
+                </div>
+                <div class="w-full bg-slate-800 rounded-full h-2">
+                  <div class="bg-blue-500 h-2 rounded-full" style="width: 29.4%"></div>
+                </div>
+              </div>
+
+              <div>
+                <div class="flex justify-between text-xs mb-1">
+                  <span class="font-medium text-slate-300">2. Consumer</span>
+                  <span class="font-mono text-slate-400">116 firms (23.1%)</span>
+                </div>
+                <div class="w-full bg-slate-800 rounded-full h-2">
+                  <div class="bg-indigo-500 h-2 rounded-full" style="width: 23.1%"></div>
+                </div>
+              </div>
+
+              <div>
+                <div class="flex justify-between text-xs mb-1">
+                  <span class="font-medium text-slate-300">3. Tech &amp; Comms</span>
+                  <span class="font-mono text-slate-400">108 firms (21.5%)</span>
+                </div>
+                <div class="w-full bg-slate-800 rounded-full h-2">
+                  <div class="bg-purple-500 h-2 rounded-full" style="width: 21.5%"></div>
+                </div>
+              </div>
+
+              <div>
+                <div class="flex justify-between text-xs mb-1">
+                  <span class="font-medium text-slate-300">4. Finance</span>
+                  <span class="font-mono text-slate-400">71 firms (14.1%)</span>
+                </div>
+                <div class="w-full bg-slate-800 rounded-full h-2">
+                  <div class="bg-sky-500 h-2 rounded-full" style="width: 14.1%"></div>
+                </div>
+              </div>
+
+              <div>
+                <div class="flex justify-between text-xs mb-1">
+                  <span class="font-medium text-slate-300">5. Healthcare</span>
+                  <span class="font-mono text-slate-400">60 firms (11.9%)</span>
+                </div>
+                <div class="w-full bg-slate-800 rounded-full h-2">
+                  <div class="bg-teal-500 h-2 rounded-full" style="width: 11.9%"></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Two-Sentence Takeaway -->
+            <div class="mt-4 p-3 bg-emerald-950/30 border border-emerald-800/40 rounded-xl">
+              <span class="text-[11px] font-bold uppercase tracking-wider text-emerald-400">Monday Morning Managerial Directives</span>
+              <p class="text-xs text-slate-300 mt-1 italic leading-relaxed">
+                "Because profit margins and market caps deviate sharply from normal distributions, managers must evaluate profitability against sector medians (13.15%) rather than distorted index averages (14.79%). Corporate leadership should benchmark governance reforms directly against the 39.7% high-risk cohort to preempt activist investor pressures."
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- TAB 2: Taxonomy & Jamovi Types -->
+      <div id="tab-taxonomy" class="tab-content hidden space-y-4">
+        <div class="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden">
+          <div class="p-4 border-b border-slate-800 flex justify-between items-center">
+            <h3 class="font-bold text-white text-base">Variable Taxonomy &amp; Jamovi Configuration (Slide 38)</h3>
+            <span class="text-xs text-slate-400">All names short, ASCII, no accents</span>
+          </div>
+          <div class="overflow-x-auto">
+            <table class="w-full text-left text-xs">
+              <thead class="bg-slate-950 text-slate-400 font-semibold border-b border-slate-800">
+                <tr>
+                  <th class="p-3">Variable Name</th>
+                  <th class="p-3">Jamovi Measure</th>
+                  <th class="p-3">Data Scale</th>
+                  <th class="p-3">Description</th>
+                  <th class="p-3">Levels / Range</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-slate-800/60 font-mono text-[11px]">
+                <tr class="hover:bg-slate-800/40">
+                  <td class="p-3 font-semibold text-blue-400">Ticker</td>
+                  <td class="p-3"><span class="px-2 py-0.5 rounded bg-slate-800 text-slate-300">ID</span></td>
+                  <td class="p-3 text-slate-400">Text</td>
+                  <td class="p-3 text-slate-300 font-sans">Stock equity identifier</td>
+                  <td class="p-3 text-slate-400 font-sans">503 unique tickers</td>
+                </tr>
+                <tr class="hover:bg-slate-800/40">
+                  <td class="p-3 font-semibold text-blue-400">Sector</td>
+                  <td class="p-3"><span class="px-2 py-0.5 rounded bg-purple-900/40 text-purple-300">Nominal</span></td>
+                  <td class="p-3 text-slate-400">Qualitative</td>
+                  <td class="p-3 text-slate-300 font-sans">Consolidated economic sector</td>
+                  <td class="p-3 text-slate-400 font-sans">5 groups (Tech, Health, Finance, Industrials, Consumer)</td>
+                </tr>
+                <tr class="hover:bg-slate-800/40">
+                  <td class="p-3 font-semibold text-blue-400">Governance_Risk_Level</td>
+                  <td class="p-3"><span class="px-2 py-0.5 rounded bg-amber-900/40 text-amber-300">Ordinal</span></td>
+                  <td class="p-3 text-slate-400">Ordered Categorical</td>
+                  <td class="p-3 text-slate-300 font-sans">ISS Governance QualityScore Tier</td>
+                  <td class="p-3 text-slate-400 font-sans">Low (1-3) &lt; Medium (4-6) &lt; High (7-10)</td>
+                </tr>
+                <tr class="hover:bg-slate-800/40">
+                  <td class="p-3 font-semibold text-blue-400">Market_Cap_Quartile</td>
+                  <td class="p-3"><span class="px-2 py-0.5 rounded bg-amber-900/40 text-amber-300">Ordinal</span></td>
+                  <td class="p-3 text-slate-400">Ordered Categorical</td>
+                  <td class="p-3 text-slate-300 font-sans">Size grouping based on market capitalization</td>
+                  <td class="p-3 text-slate-400 font-sans">Q1 &lt; Q2 &lt; Q3 &lt; Q4</td>
+                </tr>
+                <tr class="hover:bg-slate-800/40">
+                  <td class="p-3 font-semibold text-blue-400">Profit_Margin</td>
+                  <td class="p-3"><span class="px-2 py-0.5 rounded bg-emerald-900/40 text-emerald-300">Continuous</span></td>
+                  <td class="p-3 text-slate-400">Numeric (Ratio)</td>
+                  <td class="p-3 text-slate-300 font-sans">Net profit margin for FY2025</td>
+                  <td class="p-3 text-slate-400 font-sans">-2.301 to +0.730</td>
+                </tr>
+                <tr class="hover:bg-slate-800/40">
+                  <td class="p-3 font-semibold text-blue-400">ROE</td>
+                  <td class="p-3"><span class="px-2 py-0.5 rounded bg-emerald-900/40 text-emerald-300">Continuous</span></td>
+                  <td class="p-3 text-slate-400">Numeric (Ratio)</td>
+                  <td class="p-3 text-slate-300 font-sans">Return on Equity for FY2025</td>
+                  <td class="p-3 text-slate-400 font-sans">-2.400 to +58.625 (471 valid)</td>
+                </tr>
+                <tr class="hover:bg-slate-800/40">
+                  <td class="p-3 font-semibold text-blue-400">Total_Revenue_B</td>
+                  <td class="p-3"><span class="px-2 py-0.5 rounded bg-emerald-900/40 text-emerald-300">Continuous</span></td>
+                  <td class="p-3 text-slate-400">Numeric (Ratio)</td>
+                  <td class="p-3 text-slate-300 font-sans">Annual turnover in $ Billion</td>
+                  <td class="p-3 text-slate-400 font-sans">$0.898B to $775.68B</td>
+                </tr>
+                <tr class="hover:bg-slate-800/40">
+                  <td class="p-3 font-semibold text-blue-400">Market_Cap_B</td>
+                  <td class="p-3"><span class="px-2 py-0.5 rounded bg-emerald-900/40 text-emerald-300">Continuous</span></td>
+                  <td class="p-3 text-slate-400">Numeric (Ratio)</td>
+                  <td class="p-3 text-slate-300 font-sans">Market equity capitalization in $ Billion</td>
+                  <td class="p-3 text-slate-400 font-sans">$6.48B to $5,367.15B</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- TAB 3: Data Cleaning Audit Log -->
+      <div id="tab-cleaning" class="tab-content hidden space-y-4">
+        <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 space-y-4">
+          <h3 class="font-bold text-white text-base">Systematic Data Cleaning Audit Matrix (Slide 39)</h3>
+          <div class="space-y-3 text-xs">
+            <div class="p-3 bg-slate-950 rounded-xl border border-slate-800">
+              <div class="flex items-center gap-2 font-bold text-emerald-400 mb-1">
+                <span>✓ Fiserv Ticker Transition Remediated (FISV → FI)</span>
+              </div>
+              <p class="text-slate-300">Fiserv transitioned from NASDAQ to NYSE in 2023, changing ticker to FI. The pipeline re-linked the record to populate $19.09B FY2025 revenue, 16.0% profit margin, and ISS risk scores.</p>
+            </div>
+
+            <div class="p-3 bg-slate-950 rounded-xl border border-slate-800">
+              <div class="flex items-center gap-2 font-bold text-blue-400 mb-1">
+                <span>✓ Accounting Treatment of Negative Book Equity (N = 32 Undefined ROE)</span>
+              </div>
+              <p class="text-slate-300">32 large corporations (AbbVie, Altria, AutoZone, Domino's, etc.) have negative book equity from multi-year share buybacks. ROE is economically undefined for negative equity. Retained without deletion and benchmarked with Profit Margin.</p>
+            </div>
+
+            <div class="p-3 bg-slate-950 rounded-xl border border-slate-800">
+              <div class="flex items-center gap-2 font-bold text-amber-400 mb-1">
+                <span>✓ Outlier Management Doctrine (Masco Corp ROE = 58.625)</span>
+              </div>
+              <p class="text-slate-300">Authentic observation preserved. Follows course doctrine (Slide 21) where the Median (16.76%) and IQR are reported as the primary metric to neutralize mean distortion (39.52%).</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- TAB 4: 4-Week Roadmap -->
+      <div id="tab-roadmap" class="tab-content hidden space-y-4">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+          <div class="p-4 bg-slate-900 border-2 border-blue-500 rounded-2xl space-y-2">
+            <span class="text-[10px] font-bold uppercase tracking-wider text-blue-400">Session 1 (Completed)</span>
+            <h4 class="font-bold text-white text-sm">Univariate &amp; Data Cleaning</h4>
+            <p class="text-xs text-slate-400">Cleaning pipeline, 3 centres, dispersion, shape, and Shapiro-Wilk normality tests.</p>
+            <div class="pt-2 text-[11px] font-semibold text-emerald-400">✓ Artefact 1 (20 pts) + Provenance (10 pts)</div>
+          </div>
+
+          <div class="p-4 bg-slate-900 border border-slate-800 rounded-2xl space-y-2">
+            <span class="text-[10px] font-bold uppercase tracking-wider text-slate-500">Session 2</span>
+            <h4 class="font-bold text-white text-sm">Bivariate Associations</h4>
+            <p class="text-xs text-slate-400">Chi-Square (χ²) on Sector × Gov Risk Tier, Cramér's V, Pearson correlation matrix.</p>
+            <div class="pt-2 text-[11px] font-semibold text-slate-500">Artefact 2 (25 pts)</div>
+          </div>
+
+          <div class="p-4 bg-slate-900 border border-slate-800 rounded-2xl space-y-2">
+            <span class="text-[10px] font-bold uppercase tracking-wider text-slate-500">Session 3</span>
+            <h4 class="font-bold text-white text-sm">Group Comparisons</h4>
+            <p class="text-xs text-slate-400">One-Way ANOVA across 5 Sectors, Levene test, Welch's ANOVA, Games-Howell post-hoc.</p>
+            <div class="pt-2 text-[11px] font-semibold text-slate-500">Artefact 3 (20 pts)</div>
+          </div>
+
+          <div class="p-4 bg-slate-900 border border-slate-800 rounded-2xl space-y-2">
+            <span class="text-[10px] font-bold uppercase tracking-wider text-slate-500">Session 4</span>
+            <h4 class="font-bold text-white text-sm">Regression &amp; Strategy</h4>
+            <p class="text-xs text-slate-400">Multiple regression modeling profitability against Gov Risk, Size, and Beta.</p>
+            <div class="pt-2 text-[11px] font-semibold text-slate-500">Artefact 4 (25 pts)</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <script>
+    function switchTab(tabId) {
+      document.querySelectorAll('.tab-content').forEach(el => el.classList.add('hidden'));
+      document.querySelectorAll('.tab-btn').forEach(el => {
+        el.classList.remove('text-blue-400', 'border-b-2', 'border-blue-400');
+        el.classList.add('text-slate-400');
+      });
+      document.getElementById(tabId).classList.remove('hidden');
+      const btnMap = {
+        'tab-univariate': 'btn-univariate',
+        'tab-taxonomy': 'btn-taxonomy',
+        'tab-cleaning': 'btn-cleaning',
+        'tab-roadmap': 'btn-roadmap'
+      };
+      const activeBtn = document.getElementById(btnMap[tabId]);
+      activeBtn.classList.remove('text-slate-400');
+      activeBtn.classList.add('text-blue-400', 'border-b-2', 'border-blue-400');
+    }
+  </script>
+</body>
+</html>

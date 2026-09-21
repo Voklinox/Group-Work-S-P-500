@@ -1,0 +1,25 @@
+# Python dependencies for S&P 500 ESG & Financial Data Analysis
+# Quantitative Data Analysis (M1 - S7)
+# Install: pip install -r requirements.txt
+
+# Core Data Extraction & Scraping
+yfinance>=1.2.0
+pandas>=2.0.0
+numpy>=1.24.0
+requests>=2.31.0
+tqdm>=4.65.0
+lxml>=4.9.0
+html5lib>=1.1
+
+# Statistical Modeling & Inference
+scipy>=1.11.0
+statsmodels>=0.14.0
+
+# Visualization & Reporting (APA 7th edition standards)
+matplotlib>=3.8.0
+seaborn>=0.13.0
+tabulate>=0.9.0
+openpyxl>=3.1.0
+
+# Testing & Quality Assurance
+pytest>=7.4.0
