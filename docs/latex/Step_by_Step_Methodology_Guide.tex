@@ -1,0 +1,959 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+\documentclass[
+]{article}
+\usepackage{xcolor}
+\usepackage{amsmath,amssymb}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\newenvironment{Shaded}{}{}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{1.00,0.00,0.00}{\textbf{#1}}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.49,0.56,0.16}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{#1}}
+\newcommand{\BuiltInTok}[1]{\textcolor[rgb]{0.00,0.50,0.00}{#1}}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textit{#1}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{#1}}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.53,0.00,0.00}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.56,0.13,0.00}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.73,0.13,0.13}{\textit{#1}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{1.00,0.00,0.00}{\textbf{#1}}}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.02,0.16,0.49}{#1}}
+\newcommand{\ImportTok}[1]{\textcolor[rgb]{0.00,0.50,0.00}{\textbf{#1}}}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{#1}}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.40,0.40,0.40}{#1}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.74,0.48,0.00}{#1}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.73,0.40,0.53}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.10,0.09,0.49}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{#1}}}}
+\usepackage{longtable,booktabs,array}
+\usepackage{caption}
+\captionsetup[table]{skip=6pt}
+\newcounter{none} % for unnumbered tables
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\usepackage{graphicx}
+\makeatletter
+\newsavebox\pandoc@box
+\newcommand*\pandocbounded[1]{% scales image to fit in text height/width
+  \sbox\pandoc@box{#1}%
+  \Gscale@div\@tempa{\textheight}{\dimexpr\ht\pandoc@box+\dp\pandoc@box\relax}%
+  \Gscale@div\@tempb{\linewidth}{\wd\pandoc@box}%
+  \ifdim\@tempb\p@<\@tempa\p@\let\@tempa\@tempb\fi% select the smaller of both
+  \ifdim\@tempa\p@<\p@\scalebox{\@tempa}{\usebox\pandoc@box}%
+  \else\usebox{\pandoc@box}%
+  \fi%
+}
+% Set default figure placement to htbp
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\usepackage{bookmark}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+% fallback for those not using the hyperref driver hyperxmp:
+\makeatletter
+\@ifundefined{xmpquote}{\newcommand{\xmpquote}[1]{#1}}{}
+\makeatother
+\hypersetup{
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\author{}
+\date{}
+
+\begin{document}
+
+\section{S\&P 500 Quantitative Data Analysis --- Step-by-Step
+Methodology
+Guide}\label{sp-500-quantitative-data-analysis-step-by-step-methodology-guide}
+
+\subsection{Complete Mathematical, Econometric \& Operational
+Walkthrough (Sessions 1 to
+4)}\label{complete-mathematical-econometric-operational-walkthrough-sessions-1-to-4}
+
+\begin{quote}
+\textbf{Course}: Quantitative Data Analysis (M1 -- S7, Course Code:
+\texttt{2627\_ECO\_2\_EN\_009})\\
+\textbf{Institution}: EM Normandie Business School · Programme Grande
+École\\
+\textbf{Lecturer}: Dr.~NGUYEN Anh-Tuan\\
+\textbf{Target Audience}: Consulting Team, Academic Evaluators, and Peer
+Group Members\\
+\textbf{Dataset}: \(N = 503\) S\&P 500 Corporations (Audited FY2025
+Financials \& ISS Governance Scores)\\
+\textbf{Software}: Python (Data Science Engine) \& Jamovi (Open-Source
+Point-and-Click Lab Environment)
+\end{quote}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{Table of Contents}\label{table-of-contents}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \hyperref[1-introduction-pedagogical-objectives--research-problematic]{Introduction:
+  Pedagogical Objectives \& Research Problematic}
+\item
+  \hyperref[2-phase-1-data-acquisition-provenance--architecture]{Phase
+  1: Data Acquisition, Provenance \& Architecture}
+\item
+  \hyperref[3-phase-2-data-cleaning-audit--anomaly-remediation]{Phase 2:
+  Data Cleaning, Audit \& Anomaly Remediation}
+\item
+  \hyperref[4-phase-3-session-1--univariate-analysis--normality-diagnostics]{Phase
+  3: Session 1 --- Univariate Analysis \& Normality Diagnostics}
+\item
+  \hyperref[5-phase-4-session-2--bivariate-analysis-categorical--continuous-associations]{Phase
+  4: Session 2 --- Bivariate Analysis: Categorical \& Continuous
+  Associations}
+\item
+  \hyperref[6-phase-5-session-3--group-comparisons-welchs-anova--games-howell]{Phase
+  5: Session 3 --- Group Comparisons: Welch's ANOVA \& Games-Howell}
+\item
+  \hyperref[7-phase-6-session-4--multiple-linear-regression--econometric-modeling]{Phase
+  6: Session 4 --- Multiple Linear Regression \& Econometric Modeling}
+\item
+  \hyperref[8-phase-7-jamovi-software-step-by-step-execution-manual]{Phase
+  7: Jamovi Software Step-by-Step Execution Manual}
+\item
+  \hyperref[9-conclusion-the-executive-synthesis--defense-strategy]{Conclusion:
+  The Executive Synthesis \& Defense Strategy}
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{1. Introduction: Pedagogical Objectives \& Research
+Problematic}\label{introduction-pedagogical-objectives-research-problematic}
+
+\subsubsection{1.1 The Core Research Question (The
+``Problematic'')}\label{the-core-research-question-the-problematic}
+
+In corporate management and institutional investment, a major strategic
+dilemma persists:
+
+\[\text{Does dedicated corporate governance compliance compromise financial profitability, or does it confer a resilience and performance premium?}\]
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{The Traditional Shareholder Theory View (Milton Friedman,
+  1970)}: Governance compliance, board diversity committees, independent
+  audit mandates, and compensation oversight generate bureaucratic
+  friction and operational costs that drag down bottom-line profit
+  margins.
+\item
+  \textbf{The Modern Stakeholder / Agency View (Jensen \& Meckling,
+  1976)}: Poor corporate governance fosters agency conflicts,
+  manager-shareholder misalignment, excessive executive compensation,
+  and heightened systematic market risk (\(\beta\)). Strong governance
+  reduces risk and improves capital allocation efficiency.
+\end{itemize}
+
+\subsubsection{1.2 The Course 4-Step Answering Protocol (Slide 9 \&
+41)}\label{the-course-4-step-answering-protocol-slide-9-41}
+
+In quantitative data analysis, calculating a test statistic without
+structured business interpretation earns zero credit. Every single
+statistical question in this project strictly follows this 4-step
+sequence:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{flowchart LR}
+\NormalTok{    A["1. IDENTIFY\textless{}br/\textgreater{}(Variable Scales)"] {-}{-}\textgreater{} B["2. HYPOTHESISE\textless{}br/\textgreater{}(H0 vs H1 in plain English)"]}
+\NormalTok{    B {-}{-}\textgreater{} C["3. DECIDE\textless{}br/\textgreater{}(p \textless{} .05 \& Effect Size)"]}
+\NormalTok{    C {-}{-}\textgreater{} D["4. RECOMMEND\textless{}br/\textgreater{}(Monday Morning Action)"]}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \textbf{IDENTIFY}: Which statistical test to execute? Justified solely
+  from the scale types of the variables involved (Nominal, Ordinal,
+  Continuous).
+\item
+  \textbf{HYPOTHESISE}: Formulate the Null (\(H_0\)) and Alternative
+  (\(H_1\)) hypotheses in plain business language.
+\item
+  \textbf{DECIDE}: Is the test statistically significant (\(p < 0.05\))?
+  What is the practical strength/magnitude of the effect size?
+\item
+  \textbf{RECOMMEND}: Actionable operational advice answering:
+  \emph{``What does the portfolio manager or corporate executive do on
+  Monday morning?''}
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{2. Phase 1: Data Acquisition, Provenance \&
+Architecture}\label{phase-1-data-acquisition-provenance-architecture}
+
+\subsubsection{2.1 The 6 Non-Negotiable Course Constraints (AQD Session
+1, Slide
+29)}\label{the-6-non-negotiable-course-constraints-aqd-session-1-slide-29}
+
+Every dataset submitted for this course must satisfy six strict rules:
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}
+  >{\centering\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.3125}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.1875}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.1875}}
+  >{\centering\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.3125}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\centering
+Criterion \#
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Rule Description
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Dataset Implementation
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+Verification
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\textbf{1} & \textbf{Unit of Observation} & 1 row = 1 firm (Zero
+duplicates across rows) & Passed
+(\texttt{Ticker.is\_unique\ =\ True}) \\
+\textbf{2} & \textbf{Sample Size} & \(N \ge 100\) valid corporate
+entities & Passed (\(N = 503\) firms) \\
+\textbf{3} & \textbf{Nominal Variable} & Exactly \textbf{2 to 5}
+categories (Grouping factor) & Passed (\texttt{Sector} = 5 consolidated
+groups) \\
+\textbf{4} & \textbf{Ordinal Variable} & At least 1 ranked categorical
+variable & Passed (\texttt{Governance\_Risk\_Level} \&
+\texttt{Market\_Cap\_Quartile}) \\
+\textbf{5} & \textbf{Continuous Variables} & At least 3 ratio/interval
+scale numeric variables & Passed (9 continuous metrics available) \\
+\textbf{6} & \textbf{Jamovi Header Format} & Short headers, no spaces,
+no accents, no special chars & Passed
+(\texttt{sp500\_esg\_jamovi.csv}) \\
+\end{longtable}
+}
+
+\subsubsection{2.2 Data Provenance \& Why Full Fiscal Year 2025
+(FY2025)?}\label{data-provenance-why-full-fiscal-year-2025-fy2025}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Universe}: 503 constituent firms of the S\&P 500 equity index,
+  dynamically scraped from the official Wikipedia constituent directory.
+\item
+  \textbf{Corporate Governance Quality}: Extracted from
+  \textbf{Institutional Shareholder Services (ISS)} Governance
+  QualityScore.
+\item
+  \textbf{Financial Statements}: Extracted via \texttt{yfinance}
+  querying official SEC Form 10-K audited regulatory filings for the
+  completed \textbf{Fiscal Year 2025 (FY2025)}.
+\item
+  \textbf{Why FY2025 instead of 2026?} Partial 2026 data suffers from
+  seasonal distortion, un-audited quarterly noise, and incomplete
+  reporting. Using full FY2025 guarantees 12 months of audited
+  operational performance for every firm.
+\end{itemize}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{3. Phase 2: Data Cleaning, Audit \& Anomaly
+Remediation}\label{phase-2-data-cleaning-audit-anomaly-remediation}
+
+Real-world financial data is never clean. Students who fail to clean
+data make erroneous conclusions. Our pipeline executes 6 programmatic
+cleaning steps:
+
+\subsubsection{\texorpdfstring{Step 1: Ticker Rebranding Remediation
+(Fiserv \texttt{FISV} \(\rightarrow\)
+\texttt{FI})}{Step 1: Ticker Rebranding Remediation (Fiserv FISV \textbackslash rightarrow FI)}}\label{step-1-ticker-rebranding-remediation-fiserv-fisv-rightarrow-fi}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Issue}: In the raw extract, row 199 (\texttt{FISV}) was full
+  of missing values.
+\item
+  \textbf{Cause}: Fiserv transferred its listing from NASDAQ to the NYSE
+  in 2023 and changed its ticker to \texttt{FI}.
+\item
+  \textbf{Solution}: Script programmatically remaps \texttt{FISV} to
+  \texttt{FI}, restoring sector (\emph{Finance}), FY2025 revenue
+  (\$19.09B), profit margin (\(16.0\%\)), and ISS scores.
+\end{itemize}
+
+\subsubsection{\texorpdfstring{Step 2: Negative Book Equity \& Undefined
+ROE (\(N = 32\)
+Firms)}{Step 2: Negative Book Equity \& Undefined ROE (N = 32 Firms)}}\label{step-2-negative-book-equity-undefined-roe-n-32-firms}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Issue}: 32 premier corporations (AbbVie, Altria, AutoZone,
+  Booking Holdings, Domino's Pizza, etc.) have \texttt{NaN} for Return
+  on Equity (\texttt{ROE}).
+\item
+  \textbf{Financial Theory}:
+  \[\text{ROE} = \frac{\text{Net Income}}{\text{Shareholders' Equity}}\]
+  These mature corporations engaged in aggressive, debt-funded share
+  buybacks for over a decade. Cumulative buybacks exceeded retained
+  earnings, pushing accounting book equity below zero. Because net
+  income divided by negative equity is mathematically meaningless,
+  financial databases suppress ROE.
+\item
+  \textbf{Remediation}: Deleting these 32 firms would introduce
+  catastrophic survival and industry bias. We document this phenomenon
+  and introduce \textbf{Net Profit Margin}
+  (\(\frac{\text{Net Income}}{\text{Revenue}}\)) as our universal
+  profitability metric, available for all \(N = 503\) firms.
+\end{itemize}
+
+\subsubsection{\texorpdfstring{Step 3: Extreme Outlier Treatment (Masco
+Corp
+\texttt{MAS})}{Step 3: Extreme Outlier Treatment (Masco Corp MAS)}}\label{step-3-extreme-outlier-treatment-masco-corp-mas}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Issue}: Masco Corp showed an ROE of \(5,862.5\%\).
+\item
+  \textbf{Cause}: Tiny book equity balance (\(\approx \$80\text{M}\))
+  against \(\$1\text{B}\) in profits.
+\item
+  \textbf{Remediation}: In accordance with course guidelines (Slide 21),
+  we do \textbf{not} winsorize or delete authentic data. We report both
+  the mean (\(\bar{x} = 39.5\%\)) and median (\(\text{Mdn} = 16.8\%\))
+  and use the median as the true managerial measure of central tendency.
+\end{itemize}
+
+\subsubsection{\texorpdfstring{Step 4: Sector Consolidation (11 GICS
+\(\rightarrow\) 5
+Groups)}{Step 4: Sector Consolidation (11 GICS \textbackslash rightarrow 5 Groups)}}\label{step-4-sector-consolidation-11-gics-rightarrow-5-groups}
+
+The Global Industry Classification Standard has 11 sectors. To satisfy
+Criterion 3 (2 to 5 groups), sectors are mapped into: 1. \textbf{Tech \&
+Comms} (\(n = 99\), \(19.7\%\)) 2. \textbf{Healthcare} (\(n = 63\),
+\(12.5\%\)) 3. \textbf{Finance} (\(n = 74\), \(14.7\%\)) 4.
+\textbf{Industrials \& Energy} (\(n = 143\), \(28.4\%\), Mode) 5.
+\textbf{Consumer} (\(n = 124\), \(24.7\%\))
+
+\subsubsection{Step 5: Ordinal Variable
+Engineering}\label{step-5-ordinal-variable-engineering}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \textbf{\texttt{Market\_Cap\_Quartile}}: Q1 (Smallest:
+  \(\$6.5\text{B}–\$22.2\text{B}\)), Q2
+  (\(\$22.2\text{B}–\$44.5\text{B}\)), Q3
+  (\(\$44.5\text{B}–\$94.0\text{B}\)), Q4 (Mega-Cap:
+  \(\$94.0\text{B}–\$5,367.1\text{B}\)).
+\item
+  \textbf{\texttt{Governance\_Risk\_Level}}: Low (1--3), Medium (4--6),
+  High (7--10).
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{4. Phase 3: Session 1 --- Univariate Analysis \& Normality
+Diagnostics}\label{phase-3-session-1-univariate-analysis-normality-diagnostics}
+
+\subsubsection{4.1 Continuous Descriptive Metrics \& The Three
+Centres}\label{continuous-descriptive-metrics-the-three-centres}
+
+For any continuous variable \(X\) with valid sample size \(n\):
+
+\[\text{Mean: } \bar{x} = \frac{1}{n} \sum_{i=1}^n x_i \quad | \quad \text{Variance: } s^2 = \frac{\sum_{i=1}^n (x_i - \bar{x})^2}{n - 1} \quad | \quad \text{Std Dev: } s = \sqrt{s^2}\]
+
+\[\text{Interquartile Range: } IQR = Q_3 - Q_1 \quad | \quad \text{Mode: Most frequent rounded value}\]
+
+\subsubsection{4.2 Distribution Shape
+Parameters}\label{distribution-shape-parameters}
+
+\[\text{Skewness } (g_1) = \frac{n}{(n-1)(n-2)} \sum_{i=1}^n \left(\frac{x_i - \bar{x}}{s}\right)^3\]
+
+\[\text{Fisher Excess Kurtosis } (g_2) = \frac{n(n+1)}{(n-1)(n-2)(n-3)} \sum_{i=1}^n \left(\frac{x_i - \bar{x}}{s}\right)^4 - \frac{3(n-1)^2}{(n-2)(n-3)}\]
+
+\subsubsection{4.3 Normality Evaluation Protocol: Three Converging
+Evidences (Slide
+24)}\label{normality-evaluation-protocol-three-converging-evidences-slide-24}
+
+Never conclude on normality with a single test. Evaluate all three
+simultaneously:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{flowchart TD}
+\NormalTok{    E1["Evidence 1: The 3 Centres\textless{}br/\textgreater{}Mean ≈ Median ≈ Mode ?"] {-}{-}\textgreater{} Verdict["Convergence Decision"]}
+\NormalTok{    E2["Evidence 2: Shape Rules\textless{}br/\textgreater{}Skewness \& Kurtosis in [{-}1, +1] ?"] {-}{-}\textgreater{} Verdict}
+\NormalTok{    E3["Evidence 3: Shapiro{-}Wilk Test\textless{}br/\textgreater{}p \textgreater{} 0.05 (H0: Normal) ?"] {-}{-}\textgreater{} Verdict}
+\NormalTok{    Verdict {-}{-}\textgreater{} Result["Verdict: Non{-}Normal\textless{}br/\textgreater{}Use Median, IQR \& Welch ANOVA"]}
+\end{Highlighting}
+\end{Shaded}
+
+\paragraph{\texorpdfstring{Application to Net Profit Margin
+(\texttt{Profit\_Margin}):}{Application to Net Profit Margin (Profit\_Margin):}}\label{application-to-net-profit-margin-profit_margin}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \textbf{Centres Divergence}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \(\text{Mean} = 0.1479\) (\(14.79\%\))
+  \item
+    \(\text{Median} = 0.1315\) (\(13.15\%\))
+  \item
+    \(\text{Mode} = 0.0800\) (\(8.00\%\))
+  \item
+    Significant divergence
+    (\(\text{Mean} > \text{Median} > \text{Mode}\)).
+  \end{itemize}
+\item
+  \textbf{Shape Violation}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \(\text{Skewness} = -3.23\) (Severely violates \([-1.0, +1.0]\),
+    long left tail of distressed firms).
+  \item
+    \(\text{Kurtosis} = +28.91\) (Extreme leptokurtic peakedness, heavy
+    fat tails).
+  \end{itemize}
+\item
+  \textbf{Formal Shapiro-Wilk Test}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Statistic: \(W = 0.6530, N = 503\)
+  \item
+    \(p\text{-value} < .001\)
+  \item
+    \textbf{Crucial Inverted Logic (Slide 24)}: Because \(p < 0.05\), we
+    \textbf{REJECT the null hypothesis of normality}!
+  \item
+    \textbf{Managerial Conclusion}: Net Profit Margin is non-normal.
+    Parametric standard ANOVA is invalid; robust Welch ANOVA and
+    non-parametric tests are mandatory.
+  \end{itemize}
+\end{enumerate}
+
+\begin{figure}
+\centering
+\pandocbounded{\includegraphics[keepaspectratio,alt={Figure 1: Net Profit Margin Normality Diagnostics}]{figures/profit_margin_normality.png}}
+\caption{Figure 1: Net Profit Margin Normality Diagnostics}
+\end{figure}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{5. Phase 4: Session 2 --- Bivariate Analysis: Categorical \&
+Continuous
+Associations}\label{phase-4-session-2-bivariate-analysis-categorical-continuous-associations}
+
+\subsubsection{\texorpdfstring{5.1 Categorical Association: Chi-Square
+(\(\chi^2\)) Test of
+Independence}{5.1 Categorical Association: Chi-Square (\textbackslash chi\^{}2) Test of Independence}}\label{categorical-association-chi-square-chi2-test-of-independence}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Variables}: \texttt{Sector} (Nominal, 5 groups) \(\times\)
+  \texttt{Governance\_Risk\_Level} (Ordinal, 3 tiers).
+\item
+  \textbf{Hypotheses}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \(H_0\): Corporate governance risk tier is independent of business
+    sector.
+  \item
+    \(H_1\): Corporate governance risk tier is significantly associated
+    with business sector.
+  \end{itemize}
+\end{itemize}
+
+\paragraph{Mathematical Steps:}\label{mathematical-steps}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \textbf{Expected Frequencies}:
+  \[E_{ij} = \frac{\text{Row Total}_i \times \text{Column Total}_j}{N}\]
+\item
+  \textbf{Chi-Square Statistic}:
+  \[\chi^2 = \sum_{i=1}^5 \sum_{j=1}^3 \frac{(O_{ij} - E_{ij})^2}{E_{ij}} = 14.719\]
+\item
+  \textbf{Degrees of Freedom}:
+  \[df = (r - 1)(c - 1) = (5 - 1)(3 - 1) = 4 \times 2 = 8\]
+\item
+  \textbf{\(p\)-value \& Decision}: \[p = .0648 \quad (p > 0.05)\] At
+  the standard \(\alpha = 0.05\) threshold, we fail to reject \(H_0\)
+  globally. However, it is marginally significant (\(p < 0.10\)).
+\item
+  \textbf{Effect Size: Cramér's \(V\)}:
+  \[V = \sqrt{\frac{\chi^2}{N \times \min(r - 1, c - 1)}} = \sqrt{\frac{14.719}{496 \times 2}} = \sqrt{0.01484} = 0.1218 \approx 0.122\]
+  Indicates a weak-to-moderate association.
+\item
+  \textbf{Standardized Residuals}:
+  \[\text{Residual} = \frac{O - E}{\sqrt{E}}\]
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \emph{Tech \& Comms \(\times\) High Risk}:
+    \(\text{Residual} = +1.75\) (\(50.5\%\) High Risk vs expected
+    \(39.7\%\)).
+  \item
+    \emph{Industrials \& Energy \(\times\) High Risk}:
+    \(\text{Residual} = -1.97\) (Significantly under-represented in High
+    Risk, exceptional compliance).
+  \end{itemize}
+\end{enumerate}
+
+\begin{figure}
+\centering
+\pandocbounded{\includegraphics[keepaspectratio,alt={Figure 2: Contingency Table Heatmap --- Sector vs.~Governance Risk Tier}]{figures/contingency_sector_gov.png}}
+\caption{Figure 2: Contingency Table Heatmap --- Sector vs.~Governance
+Risk Tier}
+\end{figure}
+
+\subsubsection{\texorpdfstring{5.2 Continuous Association: Pearson \(r\)
+\& Fisher \(z\) 95\% Confidence
+Interval}{5.2 Continuous Association: Pearson r \& Fisher z 95\% Confidence Interval}}\label{continuous-association-pearson-r-fisher-z-95-confidence-interval}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Variables}: \texttt{Overall\_Governance\_Risk} (Continuous,
+  1--10) vs \texttt{Beta} (Systematic Risk).
+\item
+  \textbf{Formula}:
+  \[r = \frac{\sum (x_i - \bar{x})(y_i - \bar{y})}{\sqrt{\sum (x_i - \bar{x})^2 \sum (y_i - \bar{y})^2}} = +0.2677\]
+\item
+  \textbf{Significance}:
+  \[t = r \sqrt{\frac{n - 2}{1 - r^2}} = 0.2677 \sqrt{\frac{490}{1 - 0.07166}} = 6.15 \implies p < .001^{***}\]
+\item
+  \textbf{Fisher \(z\)-Transformation \& 95\% Confidence Interval}:
+  \[z = \frac{1}{2} \ln \left(\frac{1 + 0.2677}{1 - 0.2677}\right) = 0.2744 \quad | \quad SE_z = \frac{1}{\sqrt{n - 3}} = \frac{1}{\sqrt{489}} = 0.0452\]
+  \[z_{\text{low}} = 0.2744 - 1.96(0.0452) = 0.1858 \implies r_{\text{low}} = \tanh(0.1858) = +0.183\]
+  \[z_{\text{high}} = 0.2744 + 1.96(0.0452) = 0.3630 \implies r_{\text{high}} = \tanh(0.3630) = +0.348\]
+  \[\text{95% CI: } [+0.183, +0.348]
+  \]
+\item
+  \textbf{Managerial Verdict}: Weak governance (higher ISS risk score)
+  significantly inflates systematic market risk (\(\beta\)). The
+  relationship is positive, moderately strong, and statistically robust.
+\end{itemize}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{6. Phase 5: Session 3 --- Group Comparisons: Welch's ANOVA
+\&
+Games-Howell}\label{phase-5-session-3-group-comparisons-welchs-anova-games-howell}
+
+\subsubsection{6.1 The Homogeneity of Variances Test (Levene's
+Test)}\label{the-homogeneity-of-variances-test-levenes-test}
+
+Before running ANOVA, we test the assumption of equal variances: -
+\(H_0: \sigma_1^2 = \sigma_2^2 = \dots = \sigma_5^2\) - \textbf{Result}:
+\(F = 5.394, p < .001^{***}\) - \textbf{Decision}: Reject \(H_0\). Group
+variances are severely unequal (\textbf{heteroscedasticity}). Standard
+Fisher's ANOVA is invalid. We must report \textbf{Welch's Robust ANOVA}.
+
+\subsubsection{\texorpdfstring{6.2 Welch's Robust ANOVA
+(\(F_{\text{Welch}}\))}{6.2 Welch's Robust ANOVA (F\_\{\textbackslash text\{Welch\}\})}}\label{welchs-robust-anova-f_textwelch}
+
+Weighting each group by its sample variance (\(w_i = n_i / s_i^2\)):
+
+\[w_i = \frac{n_i}{s_i^2}, \quad W = \sum w_i, \quad \bar{x}' = \sum \frac{w_i \bar{x}_i}{W}\]
+
+\[F_{\text{Welch}} = \frac{\frac{1}{k - 1} \sum w_i (\bar{x}_i - \bar{x}')^2}{1 + \frac{2(k - 2)}{k^2 - 1} \sum \frac{(1 - w_i/W)^2}{n_i - 1}} = 9.302\]
+
+\begin{itemize}
+\tightlist
+\item
+  Degrees of Freedom: \(df_1 = 4\), \(df_2 = 191.21\)
+\item
+  \(p\text{-value} < .001^{***}\)
+\item
+  \textbf{Effect Size (Eta-Squared)}:
+  \[\eta^2 = \frac{SS_{\text{between}}}{SS_{\text{total}}} = \frac{1.748}{43.149} = 0.0405 \quad (4.05\% \text{ of margin variance is explained by sector})\]
+\end{itemize}
+
+\begin{figure}
+\centering
+\pandocbounded{\includegraphics[keepaspectratio,alt={Figure 3: One-Way ANOVA Boxplots --- Profit Margin Across Sectors}]{figures/anova_sector_boxplots.png}}
+\caption{Figure 3: One-Way ANOVA Boxplots --- Profit Margin Across
+Sectors}
+\end{figure}
+
+\subsubsection{6.3 Post-Hoc Pairwise Comparisons:
+Games-Howell}\label{post-hoc-pairwise-comparisons-games-howell}
+
+Because Levene's test failed, Tukey's HSD cannot be trusted. We run the
+\textbf{Games-Howell post-hoc test}:
+
+\[t = \frac{\bar{x}_i - \bar{x}_j}{\sqrt{\frac{s_i^2}{n_i} + \frac{s_j^2}{n_j}}}, \quad df = \frac{\left(\frac{s_i^2}{n_i} + \frac{s_j^2}{n_j}\right)^2}{\frac{(s_i^2/n_i)^2}{n_i - 1} + \frac{(s_j^2/n_j)^2}{n_j - 1}}\]
+
+\paragraph{Key Empirical Pairwise
+Results:}\label{key-empirical-pairwise-results}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \textbf{Finance vs.~Healthcare}: Mean difference \(= +0.1311\)
+  (\(+13.1\%\)), \(t = 4.38\), \(p < .001^{***}\)
+\item
+  \textbf{Finance vs.~Consumer}: Mean difference \(= +0.0913\)
+  (\(+9.1\%\)), \(t = 4.09\), \(p < .001^{***}\)
+\item
+  \textbf{Finance vs.~Industrials}: Mean difference \(= +0.0934\)
+  (\(+9.3\%\)), \(t = 4.34\), \(p < .001^{***}\)
+\end{enumerate}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Takeaway}: The Financial sector achieves significantly higher
+  profit margins than all non-tech sectors.
+\end{itemize}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{7. Phase 6: Session 4 --- Multiple Linear Regression \&
+Econometric
+Modeling}\label{phase-6-session-4-multiple-linear-regression-econometric-modeling}
+
+\subsubsection{7.1 Three-Stage Model
+Progression}\label{three-stage-model-progression}
+
+\[\text{Model 1: } \text{Margin} = \beta_0 + \beta_1 \text{Gov\_Risk} + \epsilon\]
+
+\[\text{Model 2: } \text{Margin} = \beta_0 + \beta_1 \text{Gov\_Risk} + \beta_2 \ln(\text{Cap}) + \beta_3 \ln(\text{Rev}) + \beta_4 \text{Beta} + \epsilon\]
+
+\[\text{Model 3: } \text{Margin} = \beta_0 + \beta_1 \text{Gov\_Risk} + \text{Scale Controls} + \sum_{j=1}^4 \gamma_j \text{Sector\_Dummy}_j + \epsilon\]
+
+\subsubsection{7.2 Model Estimation Results
+Table}\label{model-estimation-results-table}
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.1667}}
+  >{\centering\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2778}}
+  >{\centering\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2778}}
+  >{\centering\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2778}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Parameter / Metric
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+Model 1 (Simple)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+Model 2 (Controls)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+Model 3 (Sector Fixed Effects)
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\textbf{Intercept (\(\beta_0\))} & \(0.1652^{***}\) & \(-0.0984\) &
+\(-0.1084\) \\
+\textbf{Governance Risk (\(\beta_1\))} & \(-0.0039\) (\(p = .304\)) &
+\(-0.0051\) (\(p = .172\)) & \textbf{\(-0.0059^{*}\) (\(p = .037\))} \\
+\textbf{Log Market Cap} & --- & \(+0.0468^{***}\) (\(p < .001\)) &
+\(+0.0494^{***}\) (\(p < .001\)) \\
+\textbf{Log Revenue} & --- & \(-0.0347^{***}\) (\(p < .001\)) &
+\(-0.0371^{***}\) (\(p < .001\)) \\
+\textbf{Beta (Market Risk)} & --- & \(+0.0121\) (\(p = .492\)) &
+\(+0.0184\) (\(p = .295\)) \\
+\textbf{Sector: Finance} & --- & --- & \(+0.0882^{***}\)
+(\(p = .001\)) \\
+\textbf{Sector: Consumer} & --- & --- & \(-0.0118\) (\(p = .642\)) \\
+\textbf{Sector: Healthcare} & --- & --- & \(-0.0463\) (\(p = .114\)) \\
+\textbf{Sector: Industrials} & --- & --- & \(-0.0123\) (\(p = .625\)) \\
+\textbf{\(R^2\)} & \(0.0022\) & \(0.0614\) & \textbf{\(0.1562\)
+(\(15.6\%\))} \\
+\textbf{Adjusted \(R^2\)} & \(0.0002\) & \(0.0537\) & \textbf{\(0.1423\)
+(\(14.2\%\))} \\
+\textbf{Model \(F\)-Statistic} & \(F(1, 494) = 1.06\) &
+\(F(4, 489) = 8.00^{***}\) & \textbf{\(F(8, 485) = 11.23^{***}\)} \\
+\end{longtable}
+}
+
+\subsubsection{7.3 The Critical Econometric Breakthrough: Simpson's
+Paradox
+Resolved}\label{the-critical-econometric-breakthrough-simpsons-paradox-resolved}
+
+\begin{itemize}
+\tightlist
+\item
+  In Model 1, the governance slope was non-significant
+  (\(b = -0.0039, p = .304\)).
+\item
+  When controlling for scale and sector fixed effects in Model 3, the
+  governance risk coefficient becomes \textbf{statistically
+  significant}:
+  \[b_{\text{Gov}} = -0.0059, \quad t(485) = -2.087, \quad p = .037^{*}\]
+\item
+  \textbf{Economic Interpretation}: For two companies in the same sector
+  and of equal market scale, each 1-point increase in ISS Governance
+  Risk score \textbf{reduces net profit margin by 0.59 percentage
+  points}! Improving governance from High Risk (Tier 8) to Low Risk
+  (Tier 2) yields a \textbf{\(+3.54\%\) profit margin expansion}.
+\end{itemize}
+
+\subsubsection{7.4 Econometric Diagnostic
+Suite}\label{econometric-diagnostic-suite}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \textbf{Multicollinearity}: All Variance Inflation Factors
+  (\(\text{VIF}\)) are \(< 1.89\) (well below the threshold of \(5.0\)).
+  Zero multicollinearity risk.
+\item
+  \textbf{Heteroscedasticity}: Breusch-Pagan test yielded
+  \(LM = 15.14, p = .004\). We report White's HC3 robust standard
+  errors.
+\item
+  \textbf{Influential Points}: Max Cook's distance
+  \(D_i = 0.082 < 1.0\). No single firm distorts the estimated
+  coefficients.
+\end{enumerate}
+
+\begin{figure}
+\centering
+\pandocbounded{\includegraphics[keepaspectratio,alt={Figure 4: Four-Panel OLS Econometric Regression Diagnostics}]{figures/regression_diagnostics_4panel.png}}
+\caption{Figure 4: Four-Panel OLS Econometric Regression Diagnostics}
+\end{figure}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{8. Phase 7: Jamovi Software Step-by-Step Execution
+Manual}\label{phase-7-jamovi-software-step-by-step-execution-manual}
+
+To reproduce all results in Jamovi, open \texttt{sp500\_esg\_jamovi.csv}
+and follow these menu commands:
+
+\subsubsection{Session 1: Descriptives \&
+Normality}\label{session-1-descriptives-normality}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Path}: \texttt{Analyses} \(\rightarrow\) \texttt{Exploration}
+  \(\rightarrow\) \texttt{Descriptives}
+\item
+  \textbf{Variables Box}: Move \texttt{Profit\_Margin}, \texttt{ROE},
+  \texttt{Market\_Cap\_B}, \texttt{Total\_Revenue\_B},
+  \texttt{Overall\_Governance\_Risk}, \texttt{Beta}
+\item
+  \textbf{Checkboxes}: Tick \texttt{Mean}, \texttt{Median},
+  \texttt{Mode}, \texttt{Std.\ deviation}, \texttt{Variance},
+  \texttt{IQR}, \texttt{Skewness}, \texttt{Kurtosis},
+  \texttt{Shapiro-Wilk}
+\item
+  \textbf{Plots}: Tick \texttt{Histogram}, \texttt{Density},
+  \texttt{Box\ plot}, \texttt{Q-Q\ plot}
+\end{itemize}
+
+\subsubsection{Session 2: Chi-Square \&
+Correlations}\label{session-2-chi-square-correlations}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Chi-Square}: \texttt{Analyses} \(\rightarrow\)
+  \texttt{Frequencies} \(\rightarrow\)
+  \texttt{Contingency\ Tables\ (Independent\ Samples)}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Rows: \texttt{Sector} \textbar{} Columns:
+    \texttt{Governance\_Risk\_Level}
+  \item
+    Statistics: Tick \texttt{\$\textbackslash{}chi\^{}2\$},
+    \texttt{\$\textbackslash{}chi\^{}2\$\ continuity\ correction},
+    \texttt{Cramér\textquotesingle{}s\ V}
+  \item
+    Cells: Tick \texttt{Row\ percentages}, \texttt{Expected\ counts},
+    \texttt{Standardized\ residuals}
+  \end{itemize}
+\item
+  \textbf{Correlations}: \texttt{Analyses} \(\rightarrow\)
+  \texttt{Regression} \(\rightarrow\) \texttt{Correlation\ Matrix}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Move continuous variables
+  \item
+    Tick \texttt{Pearson}, \texttt{Spearman},
+    \texttt{Flag\ significant\ correlations},
+    \texttt{Confidence\ intervals\ (95\%)}
+  \end{itemize}
+\end{itemize}
+
+\subsubsection{Session 3: One-Way ANOVA \&
+Post-Hoc}\label{session-3-one-way-anova-post-hoc}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Path}: \texttt{Analyses} \(\rightarrow\) \texttt{ANOVA}
+  \(\rightarrow\) \texttt{One-Way\ ANOVA}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Dependent Variable: \texttt{Profit\_Margin}
+  \item
+    Grouping Variable: \texttt{Sector}
+  \item
+    Variances: Select
+    \textbf{\texttt{Don\textquotesingle{}t\ assume\ equal\ (Welch\textquotesingle{}s)}}
+  \item
+    Homogeneity Test: Tick
+    \textbf{\texttt{Homogeneity\ test\ (Levene\textquotesingle{}s)}}
+  \item
+    Post-Hoc Tests: Select \textbf{\texttt{Games-Howell}}
+  \item
+    Effect Size: Tick \textbf{\texttt{\$\textbackslash{}eta\^{}2\$}}
+  \end{itemize}
+\end{itemize}
+
+\subsubsection{Session 4: Linear
+Regression}\label{session-4-linear-regression}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Path}: \texttt{Analyses} \(\rightarrow\) \texttt{Regression}
+  \(\rightarrow\) \texttt{Linear\ Regression}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Dependent Variable: \texttt{Profit\_Margin}
+  \item
+    Covariates: \texttt{Overall\_Governance\_Risk},
+    \texttt{Log\_Market\_Cap}, \texttt{Log\_Revenue}, \texttt{Beta}
+  \item
+    Factors: \texttt{Sector}
+  \item
+    Model Coefficients: Tick \texttt{Standardized\ estimate},
+    \texttt{Confidence\ interval\ (95\%)}
+  \item
+    Assumption Checks: Tick \texttt{Collinearity\ statistics\ (VIF)},
+    \texttt{Q-Q\ plot\ of\ residuals}, \texttt{Residuals\ vs\ fitted}
+  \end{itemize}
+\end{itemize}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{9. Conclusion: The Executive Synthesis \& Defense
+Strategy}\label{conclusion-the-executive-synthesis-defense-strategy}
+
+\subsubsection{9.1 The Executive 4-Point Summary to Defend to
+Dr.~Nguyen:}\label{the-executive-4-point-summary-to-defend-to-dr.-nguyen}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \textbf{Normality is Severe Fiction}: Net profit margin violates
+  normality across all 3 criteria (\(W = 0.653, p < .001\)). Relying on
+  standard mean and standard ANOVA is a fatal methodological error;
+  Welch's robust ANOVA is required.
+\item
+  \textbf{Sector Frictions}: Technology exhibits disproportionately high
+  governance risk (\(50.5\%\) High Risk), whereas Industrials \& Energy
+  demonstrates the highest governance compliance.
+\item
+  \textbf{Market Volatility Penalty}: Poor governance directly inflates
+  systematic market volatility (\(r = +0.268, p < .001^{***}\)). Weakly
+  governed firms are inherently riskier in equity markets.
+\item
+  \textbf{The Governance Profitability Dividend}: Once sector
+  differences and firm scale are properly controlled, \textbf{weaker
+  governance significantly penalizes profit margins
+  (\(b = -0.0059, p = .037^{*}\))}. Governance is not an overhead
+  cost---it is a measurable driver of bottom-line operational
+  efficiency.
+\end{enumerate}
+
+\end{document}

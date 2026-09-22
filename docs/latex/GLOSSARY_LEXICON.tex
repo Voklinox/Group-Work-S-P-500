@@ -1,0 +1,1472 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+\documentclass[
+]{article}
+\usepackage{xcolor}
+\usepackage{amsmath,amssymb}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{longtable,booktabs,array}
+\usepackage{caption}
+\captionsetup[table]{skip=6pt}
+\newcounter{none} % for unnumbered tables
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\usepackage{bookmark}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+% fallback for those not using the hyperref driver hyperxmp:
+\makeatletter
+\@ifundefined{xmpquote}{\newcommand{\xmpquote}[1]{#1}}{}
+\makeatother
+\hypersetup{
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\author{}
+\date{}
+
+\begin{document}
+
+\section{S\&P 500 Quantitative Data Analysis --- Master Glossary \&
+Lexicon (Grand Lexique
+Bilingue)}\label{sp-500-quantitative-data-analysis-master-glossary-lexicon-grand-lexique-bilingue}
+
+\begin{quote}
+\textbf{Course}: Quantitative Data Analysis (M1 -- S7, Course code:
+\texttt{2627\_ECO\_2\_EN\_009}) \textbf{Institution}: EM Normandie
+Business School · Programme Grande École \textbf{Lecturer}: Dr.~NGUYEN
+Anh-Tuan \textbf{Purpose}: A comprehensive, beginner-friendly bilingual
+guide (English concepts with detailed French explanations) covering all
+Financial, Data, Statistical, Econometric, ESG, and Jamovi terminology
+across all 4 sessions of the project.
+\end{quote}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{Table of Contents}\label{table-of-contents}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \hyperref[1-data-fundamentals--variable-typology]{Data Fundamentals \&
+  Variable Typology}
+\item
+  \hyperref[2-financial--corporate-accounting-terminology]{Financial \&
+  Corporate Accounting Terminology}
+\item
+  \hyperref[3-esg--corporate-governance-iss-framework]{ESG \& Corporate
+  Governance (ISS Framework)}
+\item
+  \hyperref[4-session-1-univariate-statistics--shape-parameters]{Session
+  1: Univariate Statistics \& Shape Parameters}
+\item
+  \hyperref[5-session-2-bivariate-associations-chi-square--correlations]{Session
+  2: Bivariate Associations, Chi-Square \& Correlations}
+\item
+  \hyperref[6-session-3-group-comparisons-welchs-anova--games-howell]{Session
+  3: Group Comparisons, Welch's ANOVA \& Games-Howell}
+\item
+  \hyperref[7-session-4-multiple-linear-regression--econometric-diagnostics]{Session
+  4: Multiple Linear Regression \& Econometric Diagnostics}
+\item
+  \hyperref[8-jamovi-software-operations--costly-student-traps]{Jamovi
+  Software Operations \& Costly Student Traps}
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{1. Data Fundamentals \& Variable
+Typology}\label{data-fundamentals-variable-typology}
+
+\subsubsection{Unit of Observation (Unité
+d'observation)}\label{unit-of-observation-unituxe9-dobservation}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Definition}: Exactly what a single row represents in your
+  database.
+\item
+  \textbf{In our project}: \textbf{1 row = 1 publicly traded S\&P 500
+  company}.
+\item
+  \textbf{Why it matters (Slide 11)}: If you cannot finish the sentence
+  \emph{``One row = one\ldots{}''}, you do not understand your dataset.
+  Having 1 row = 1 firm ensures independence of observations for ANOVA
+  and regression.
+\end{itemize}
+
+\subsubsection{\texorpdfstring{Sample Size (\(N\) / Observation
+count)}{Sample Size (N / Observation count)}}\label{sample-size-n-observation-count}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Definition}: The total number of valid entities observed in
+  the study.
+\item
+  \textbf{In our project}: \(N = 503\) companies (exceeds the course
+  minimum requirement of \(N \ge 100\)).
+\end{itemize}
+
+\subsubsection{Qualitative / Categorical Variable (Variable
+qualitative)}\label{qualitative-categorical-variable-variable-qualitative}
+
+Variables that express names, categories, or labels rather than numeric
+quantities. You can count their frequency, but you \textbf{cannot}
+compute a mathematical average.
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Nominal Variable (Variable nominale)}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Categories with \textbf{no natural order or ranking}.
+  \item
+    \emph{Examples}: Industry sector (\texttt{Sector}), country of
+    listing, legal status.
+  \item
+    \emph{Course rule (Slide 29)}: Must have between \textbf{2 and 5
+    categories}. Our project has exactly 5: \emph{Tech \& Comms,
+    Healthcare, Finance, Industrials \& Energy, Consumer}.
+  \item
+    \emph{Golden Rule (Slide 19)}: \textbf{Never compute a mean for a
+    nominal variable!} Saying \emph{``Average sector = 2.4''} is
+    completely meaningless and results in lost marks.
+  \end{itemize}
+\item
+  \textbf{Ordinal Variable (Variable ordinale)}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Categories that possess a \textbf{clear, natural ranking or order},
+    but where the distance (gap) between categories is \textbf{not
+    equal} or mathematically measurable.
+  \item
+    \emph{Examples}: Credit rating (AAA \textgreater{} AA \textgreater{}
+    A), Customer satisfaction (1 star to 5 stars), Governance tier
+    (\emph{Low \textless{} Medium \textless{} High}), Size quartile
+    (\emph{Q1 \textless{} Q2 \textless{} Q3 \textless{} Q4}).
+  \item
+    \emph{Golden Rule (Slide 13)}: The distance between A and B is not
+    the same as between B and C. Central tendency is captured by the
+    \textbf{mode} or the \textbf{median category}.
+  \end{itemize}
+\end{itemize}
+
+\subsubsection{Quantitative / Numerical Variable (Variable
+quantitative)}\label{quantitative-numerical-variable-variable-quantitative}
+
+Variables that represent measurable or countable numerical values where
+arithmetic operations (addition, subtraction, averaging) are valid.
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Discrete Variable (Variable discrète)}: Countable integer
+  values with no decimals (e.g., Number of employees \texttt{Headcount},
+  number of factories, number of board members).
+\item
+  \textbf{Continuous Variable (Variable continue)}: Measured on an
+  unbroken numerical continuum, allowing decimals (e.g.,
+  \texttt{Profit\_Margin}, \texttt{Total\_Revenue\_B},
+  \texttt{Market\_Cap\_B}, \texttt{Beta}).
+\item
+  \textbf{Scale Types: Interval vs.~Ratio (Échelle d'intervalle
+  vs.~Échelle de rapport)}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \emph{Interval scale}: Has an arbitrary zero point (e.g.,
+    Temperature in °C: 0°C does not mean ``absence of temperature'', so
+    20°C is not ``twice as hot'' as 10°C).
+  \item
+    \emph{Ratio scale}: Has a \textbf{true, absolute zero} indicating
+    complete absence of the quantity (e.g., Turnover = \$0 means zero
+    sales; \$20M is truly twice as much as \$10M).
+  \item
+    \emph{In our project}: \texttt{Total\_Revenue\_B},
+    \texttt{Market\_Cap\_B}, and \texttt{Profit\_Margin} are ratio-scale
+    continuous variables, enabling full correlation and regression
+    modeling.
+  \end{itemize}
+\end{itemize}
+
+\subsubsection{Dataset Structure: Cross-Sectional vs.~Time-Series
+vs.~Panel}\label{dataset-structure-cross-sectional-vs.-time-series-vs.-panel}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Cross-Sectional Dataset (Coupe transversale)}: Multiple
+  entities (503 firms) observed at a \textbf{single point in time}
+  (e.g., FY2025). This is our project structure.
+\item
+  \textbf{Time-Series (Série temporelle)}: A single entity observed over
+  multiple consecutive periods (e.g., Apple's stock price daily from
+  2020 to 2026).
+\item
+  \textbf{Panel Data (Données de panel)}: Multiple entities observed
+  across multiple time periods (\(1\text{ row} = 1\text{ firm-year}\)).
+  \emph{Caution}: Panel data introduces autocorrelation, which violates
+  standard ANOVA and OLS regression assumptions taught in this course.
+\end{itemize}
+
+\subsubsection{Outliers: Detection \& Handling (Valeurs aberrantes /
+extrêmes)}\label{outliers-detection-handling-valeurs-aberrantes-extruxeames}
+
+Data points that deviate substantially from the overall pattern of the
+distribution. Outliers can distort arithmetic means, inflate standard
+deviations, and invalidate normality:
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Tukey's \(1.5 \times IQR\) Rule (Règle des moustaches de
+  Tukey)}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Any observation below the lower fence:
+    \(\text{LF} = Q_1 - 1.5 \times IQR\)
+  \item
+    Any observation above the upper fence:
+    \(\text{UF} = Q_3 + 1.5 \times IQR\)
+  \item
+    Points outside this range appear as individual dots outside the
+    boxplot whiskers (e.g., NVIDIA or Apple's extreme market cap; highly
+    negative profit margins in turnaround firms).
+  \end{itemize}
+\item
+  \textbf{Z-Score Method (Seuil en écarts-types)}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Standardized distance: \(z_i = \frac{x_i - \bar{x}}{s}\). An
+    observation with \(|z_i| > 3.0\) is traditionally flagged as an
+    extreme outlier in normally distributed data.
+  \end{itemize}
+\item
+  \textbf{Management Strategy (Slide 21)}: Never delete legitimate
+  business outliers (like mega-cap firms) without justification!
+  Instead, document them, apply non-parametric/robust tests (Median,
+  IQR, Welch ANOVA), or use logarithmic transformations.
+\end{itemize}
+
+\subsubsection{Missing Data: Mechanisms \& Treatment (Données
+manquantes)}\label{missing-data-mechanisms-treatment-donnuxe9es-manquantes}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Missing Completely at Random (MCAR --- Manquant complètement
+  au hasard)}: The probability of missingness is unrelated to any
+  observed or unobserved variable (e.g., accidental scraping network
+  drop on a random ticker).
+\item
+  \textbf{Missing at Random (MAR --- Manquant au hasard conditionnel)}:
+  Missingness depends on other observed variables (e.g., smaller firms
+  failing to disclose certain governance sub-scores).
+\item
+  \textbf{Missing Not at Random (MNAR --- Manquant non au hasard)}:
+  Missingness depends on the unobserved value itself (e.g., firms with
+  catastrophic ROE having negative equity, making ROE mathematically
+  undefined).
+\item
+  \textbf{Treatment Strategies}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \textbf{Listwise Deletion (Suppression par liste / Complete Case
+    Analysis)}: Dropping any row containing a missing value across the
+    analyzed variables. Safe when MCAR and sample size is large
+    (\(N = 503\)).
+  \item
+    \textbf{Pairwise Deletion (Suppression par paire)}: Used in
+    bivariate correlation matrices (calculating \(r\) between variables
+    \(X\) and \(Y\) using all rows where both \(X\) and \(Y\) are valid,
+    preserving sample size per pair).
+  \item
+    \textbf{Data Imputation (Imputation de données)}: Replacing missing
+    values with mean/median or predictive regression (avoided here to
+    prevent artificial variance deflation).
+  \end{itemize}
+\end{itemize}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{2. Financial \& Corporate Accounting
+Terminology}\label{financial-corporate-accounting-terminology}
+
+\subsubsection{S\&P 500 Index (Standard \& Poor's
+500)}\label{sp-500-index-standard-poors-500}
+
+A market-capitalization-weighted equity index tracking the 500 largest
+public companies listed on stock exchanges in the United States (NYSE
+and NASDAQ), representing approximately 80\% of total U.S. equity market
+capitalization.
+
+\subsubsection{Ticker Symbol (Symbole
+boursier)}\label{ticker-symbol-symbole-boursier}
+
+A unique arrangement of 1 to 5 letters identifying a specific publicly
+traded security on an exchange (e.g., \texttt{AAPL} for Apple,
+\texttt{MSFT} for Microsoft, \texttt{NVDA} for Nvidia, \texttt{FI} for
+Fiserv). Serves as the primary \texttt{ID} variable in our dataset.
+
+\subsubsection{\texorpdfstring{Market Capitalization
+(\texttt{Market\_Cap\_B} --- Capitalisation
+boursière)}{Market Capitalization (Market\_Cap\_B --- Capitalisation boursière)}}\label{market-capitalization-market_cap_b-capitalisation-boursiuxe8re}
+
+\[\text{Market Cap} = \text{Current Share Price} \times \text{Total Shares Outstanding}\]
+The total equity market value of a public company, expressed in
+\textbf{Billions of USD (\$B)} in our dataset.
+
+\begin{itemize}
+\tightlist
+\item
+  \emph{Market Cap Quartiles (\texttt{Market\_Cap\_Quartile})}: The S\&P
+  500 divided into 4 equal tiers of firm size:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \textbf{Q1}: Smallest quartile in the index (\$6.5B to \$22.2B)
+  \item
+    \textbf{Q2}: Mid-sized large-cap (\$22.2B to \$44.5B)
+  \item
+    \textbf{Q3}: Upper large-cap (\$44.5B to \$94.0B)
+  \item
+    \textbf{Q4}: Mega-cap giants (\$94.0B to \$5,367.1B, including
+    Apple, Microsoft, Nvidia)
+  \end{itemize}
+\end{itemize}
+
+\subsubsection{\texorpdfstring{Total Revenue (\texttt{Total\_Revenue\_B}
+--- Chiffre d'affaires /
+Turnover)}{Total Revenue (Total\_Revenue\_B --- Chiffre d'affaires / Turnover)}}\label{total-revenue-total_revenue_b-chiffre-daffaires-turnover}
+
+The total gross amount of income generated by the sale of goods or
+services related to the company's primary operations before deducting
+any expenses, taxes, or depreciation. Reported in \textbf{Billions of
+USD (\$B)}.
+
+\subsubsection{Fiscal Year (FY --- Exercice fiscal) vs.~Calendar Year
+(Année
+calendaire)}\label{fiscal-year-fy-exercice-fiscal-vs.-calendar-year-annuxe9e-calendaire}
+
+\begin{itemize}
+\tightlist
+\item
+  \emph{Calendar Year}: Strictly January 1 to December 31.
+\item
+  \emph{Fiscal Year (FY2025)}: The official 12-month accounting period
+  used by a corporation to prepare audited financial reports (SEC Form
+  10-K).
+\item
+  \emph{Why it matters}: Many US companies do not close their books on
+  December 31. Apple closes in September; Nvidia and Walmart close in
+  January; Microsoft closes in June. Using \textbf{FY2025} ensures we
+  analyze 12 full months of audited operating figures for every single
+  corporation.
+\end{itemize}
+
+\subsubsection{Trailing Twelve Months (TTM --- Douze derniers mois
+glissants)}\label{trailing-twelve-months-ttm-douze-derniers-mois-glissants}
+
+A financial reporting measurement window that calculates performance
+over the most recent 12-month period (the last 4 quarters) regardless of
+the fiscal year-end date.
+
+\subsubsection{\texorpdfstring{Net Profit Margin
+(\texttt{Profit\_Margin} --- Marge bénéficiaire
+nette)}{Net Profit Margin (Profit\_Margin --- Marge bénéficiaire nette)}}\label{net-profit-margin-profit_margin-marge-buxe9nuxe9ficiaire-nette}
+
+\[\text{Profit Margin} = \frac{\text{Net Income}}{\text{Total Revenue}}\]
+The percentage of revenue that remains as bottom-line profit after
+paying all operating expenses, interest, and taxes. Expressed as a
+decimal in our dataset (e.g., \(0.15 = 15\%\)).
+
+\begin{itemize}
+\tightlist
+\item
+  \emph{Advantage in Data Analysis}: Revenue is positive for all
+  operating firms, meaning \texttt{Profit\_Margin} is 100\% defined and
+  available for all 503 firms without accounting distortion.
+\end{itemize}
+
+\subsubsection{\texorpdfstring{Return on Equity (\texttt{ROE} ---
+Rentabilité des capitaux
+propres)}{Return on Equity (ROE --- Rentabilité des capitaux propres)}}\label{return-on-equity-roe-rentabilituxe9-des-capitaux-propres}
+
+\[\text{ROE} = \frac{\text{Net Income}}{\text{Shareholders' Equity}}\]
+Measures how efficiently a company's management uses shareholders'
+capital to generate net profits. Expressed as a decimal (e.g.,
+\(0.20 = 20\%\)).
+
+\subsubsection{Negative Shareholders' Equity \& Missing ROE (Capitaux
+propres
+négatifs)}\label{negative-shareholders-equity-missing-roe-capitaux-propres-nuxe9gatifs}
+
+\begin{itemize}
+\tightlist
+\item
+  \emph{The Phenomenon}: In our dataset, 32 prominent corporations
+  (AbbVie, Altria, AutoZone, Booking Holdings, Domino's Pizza, etc.)
+  show missing/NaN values for ROE.
+\item
+  \emph{The Financial Reason}: These mature, highly cash-generative
+  firms engaged in aggressive, debt-funded \textbf{share buybacks
+  (rachats d'actions)} over 10+ years. Buying back stock reduces the
+  accounting book equity on the balance sheet. When cumulative buybacks
+  exceed retained earnings, book equity becomes negative.
+\item
+  \emph{Econometric Implication}: Net income divided by negative equity
+  produces a mathematically meaningless or negative number. Financial
+  databases (Yahoo Finance, Bloomberg) set ROE to \texttt{NaN}. Rather
+  than deleting these premier companies (which would introduce survival
+  and industry bias), we document this in the \emph{Data Cleaning Log}
+  and utilize \texttt{Profit\_Margin} as our universal profitability
+  indicator.
+\end{itemize}
+
+\subsubsection{\texorpdfstring{Market Beta (\texttt{Beta} --- Volatilité
+systématique)}{Market Beta (Beta --- Volatilité systématique)}}\label{market-beta-beta-volatilituxe9-systuxe9matique}
+
+A quantitative measure of a stock's volatility (systematic market risk)
+in comparison to the overall market (S\&P 500 index), calculated from a
+\textbf{5-year window of monthly returns}:
+
+\begin{itemize}
+\tightlist
+\item
+  \(\beta = 1.0\): Stock moves in tandem with the market.
+\item
+  \(\beta > 1.0\): Aggressive / high-volatility stock (e.g., high-growth
+  tech).
+\item
+  \(\beta < 1.0\): Defensive / low-volatility stock (e.g., consumer
+  staples, utilities).
+\item
+  \(\beta < 0\): Inverted movement (extremely rare in equities).
+\end{itemize}
+
+\subsubsection{Form 10-K (Rapport annuel
+SEC)}\label{form-10-k-rapport-annuel-sec}
+
+The comprehensive annual regulatory filing required by the U.S.
+Securities and Exchange Commission (SEC) providing a detailed, audited
+breakdown of a public company's financial performance.
+
+\subsubsection{GICS (Global Industry Classification Standard ---
+Classification
+sectorielle)}\label{gics-global-industry-classification-standard-classification-sectorielle}
+
+An industry taxonomy developed in 1999 by MSCI and S\&P Dow Jones
+Indices. Classifies all public companies into \textbf{11 primary
+sectors}: \emph{Information Technology, Communication Services,
+Financials, Health Care, Consumer Discretionary, Consumer Staples,
+Industrials, Energy, Utilities, Real Estate, Materials}.
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Course Mapping (Slide 29)}: The course strictly limits the
+  nominal grouping factor to 2--5 categories. We consolidated the 11 raw
+  GICS sectors into \textbf{5 economically coherent groups}: \emph{Tech
+  \& Comms, Healthcare, Finance, Industrials \& Energy, Consumer}.
+\end{itemize}
+
+\subsubsection{The Fundamental Accounting Equation (Équation
+fondamentale du
+bilan)}\label{the-fundamental-accounting-equation-uxe9quation-fondamentale-du-bilan}
+
+\[\text{Assets} = \text{Liabilities} + \text{Shareholders' Equity}\]
+\[\text{Actif} = \text{Dettes} + \text{Capitaux Propres}\] A company's
+economic resources (Assets) are financed either by borrowing from
+creditors (Liabilities) or by capital provided and accumulated by owners
+(Equity). When liabilities exceed assets (often due to massive
+debt-funded share repurchases), accounting equity turns negative.
+
+\subsubsection{The P\&L Income Statement Waterfall (Cascade du compte de
+résultat)}\label{the-pl-income-statement-waterfall-cascade-du-compte-de-ruxe9sultat}
+
+The sequential deduction of operating and non-operating costs to arrive
+at net bottom-line earnings:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \textbf{Gross Revenue (Chiffre d'affaires)}: Total operational sales
+  inflow (\texttt{Total\_Revenue\_B}).
+\item
+  \textbf{Gross Profit (Marge brute)}: Revenue minus Cost of Goods Sold
+  (COGS).
+\item
+  \textbf{EBITDA (Excédent Brut d'Exploitation)}: Earnings Before
+  Interest, Taxes, Depreciation, and Amortization. A pure measure of
+  operational cash generation.
+\item
+  \textbf{EBIT / Operating Income (Résultat d'exploitation)}:
+  Operational profit after depreciation of physical plant and equipment.
+\item
+  \textbf{EBT (Résultat avant impôts)}: Operating income minus interest
+  on debt.
+\item
+  \textbf{Net Income (Résultat net)}: Final accounting earnings
+  distributed to shareholders after corporate income tax. Divided by
+  revenue, this yields our key outcome variable:
+  \texttt{Profit\_Margin}.
+\end{enumerate}
+
+\subsubsection{Systematic Risk vs.~Idiosyncratic Risk (CAPM /
+MEDAF)}\label{systematic-risk-vs.-idiosyncratic-risk-capm-medaf}
+
+Under the Capital Asset Pricing Model (CAPM):
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Systematic Market Risk (Risque systématique --- \(\beta\))}:
+  Macroeconomic risks affecting the entire market (interest rates,
+  inflation, recessions, geopolitical crises). Cannot be eliminated by
+  diversification.
+\item
+  \textbf{Idiosyncratic / Unsystematic Risk (Risque spécifique /
+  idiosyncratique)}: Firm-specific risks (e.g., product failure,
+  executive fraud, board scandal). Completely diversifiable in a large
+  portfolio.
+\item
+  \textbf{Our Empirical Finding}: Poor corporate governance is often
+  assumed to be purely idiosyncratic, but our Session 2 correlation
+  proves that weak governance significantly inflates \textbf{systematic
+  market sensitivity} (\(r = +0.268, p < .001^{***}\))!
+\end{itemize}
+
+\subsubsection{Earnings Per Share (EPS / BPA) \& Financial
+Engineering}\label{earnings-per-share-eps-bpa-financial-engineering}
+
+\[\text{EPS} = \frac{\text{Net Income}}{\text{Total Shares Outstanding}}\]
+Because executive bonuses and stock option vestings are heavily tied to
+EPS targets, corporate executives often use low-interest corporate debt
+to buy back company shares from the open market. This reduces the
+denominator (Shares Outstanding), artificially boosting EPS even when
+top-line business growth is stagnant.
+
+\subsubsection{Weighted Average Cost of Capital (WACC /
+CMPC)}\label{weighted-average-cost-of-capital-wacc-cmpc}
+
+The average after-tax rate of return a company must pay to all its
+security holders (debt-holders and equity-holders) to finance its
+assets. Poor corporate governance increases perceived risk among lenders
+and investors, resulting in a \textbf{governance risk premium} that
+elevates the firm's WACC and reduces valuation.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{3. ESG \& Corporate Governance (ISS
+Framework)}\label{esg-corporate-governance-iss-framework}
+
+\subsubsection{ESG (Environmental, Social, and
+Governance)}\label{esg-environmental-social-and-governance}
+
+A tri-pillar framework used by institutional investors to evaluate
+corporate sustainability, societal impact, and ethical leadership
+alongside traditional financial statements.
+
+\subsubsection{ISS (Institutional Shareholder
+Services)}\label{iss-institutional-shareholder-services}
+
+The global leader in proxy voting advisory and corporate governance
+research. ISS evaluates publicly listed firms and assigns quantitative
+risk ratings based on regulatory disclosures.
+
+\subsubsection{\texorpdfstring{ISS Governance QualityScore
+(\texttt{Overall\_Governance\_Risk})}{ISS Governance QualityScore (Overall\_Governance\_Risk)}}\label{iss-governance-qualityscore-overall_governance_risk}
+
+A composite decile score measuring corporate governance risk across 4
+core pillars on a \textbf{1 to 10 scale}:
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Audit Risk (\texttt{Audit\_Risk})}: Financial integrity,
+  accounting oversight, auditor independence, and financial
+  restatements.
+\item
+  \textbf{Board Structure Risk (\texttt{Board\_Risk})}: Independence of
+  directors, board diversity, committee structures, and separation of
+  CEO and Chairman roles.
+\item
+  \textbf{Compensation Risk (\texttt{Compensation\_Risk})}: Alignment
+  between executive pay and shareholder returns, clawback policies, and
+  golden parachutes.
+\item
+  \textbf{Shareholder Rights Risk (\texttt{Shareholder\_Rights\_Risk})}:
+  Voting rights, poison pills, classified boards, and takeover defense
+  mechanisms.
+\end{itemize}
+
+\begin{quote}
+{[}!CAUTION{]} \textbf{Crucial Inversion}: In the ISS methodology,
+\textbf{1 represents the lowest risk (best governance practices)}, while
+\textbf{10 represents the highest risk (poorest governance practices)}!
+A negative correlation between Governance Risk and Profit Margin
+therefore implies that \emph{better governance (lower risk score) is
+associated with higher profitability}!
+\end{quote}
+
+\subsubsection{\texorpdfstring{Governance Risk Tier
+(\texttt{Governance\_Risk\_Level} --- Variable
+ordinale)}{Governance Risk Tier (Governance\_Risk\_Level --- Variable ordinale)}}\label{governance-risk-tier-governance_risk_level-variable-ordinale}
+
+To enable categorical contingency tables (Chi-Square) and group tests,
+the 1--10 continuous score is classified into three ordered tiers:
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Low Risk} (Scores 1 to 3): Premier governance compliance
+  (\(n = 150\), \(30.2\%\)).
+\item
+  \textbf{Medium Risk} (Scores 4 to 6): Standard market governance
+  (\(n = 149\), \(30.0\%\)).
+\item
+  \textbf{High Risk} (Scores 7 to 10): Elevated governance friction
+  (\(n = 197\), \(39.7\%\), Modal tier).
+\end{itemize}
+
+\subsubsection{Agency Theory \& Corporate Governance (Théorie de
+l'agence)}\label{agency-theory-corporate-governance-thuxe9orie-de-lagence}
+
+The foundational financial theory of corporate governance (Jensen \&
+Meckling, 1976; Fama \& Jensen, 1983):
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{The Core Conflict}: The \textbf{separation of ownership}
+  (principals = shareholders who provide capital) from
+  \textbf{operational control} (agents = managers and CEOs who run the
+  day-to-day business).
+\item
+  \textbf{Agency Costs (Coûts d'agence)}: Self-interested managers may
+  maximize their own private benefits (excessive pay, corporate jets,
+  empire building through unprofitable mergers) rather than maximizing
+  long-term shareholder value.
+\item
+  \textbf{The Role of Governance}: Board oversight, independent
+  auditing, executive pay alignment, and shareholder voting rights exist
+  precisely to minimize agency friction and ensure managers work in the
+  interest of owners.
+\end{itemize}
+
+\subsubsection{Key Governance Mechanisms Monitored by
+ISS}\label{key-governance-mechanisms-monitored-by-iss}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{CEO Duality (Cumul des mandats de PDG et Président du
+  Conseil)}: When the Chief Executive Officer also serves as Chairman of
+  the Board of Directors. ISS considers this a major conflict of
+  interest because the board's primary role is to evaluate and supervise
+  the CEO. Having an \textbf{Independent Lead Director} mitigates this
+  risk.
+\item
+  \textbf{Say-on-Pay (Vote consultatif sur la rémunération)}: A
+  non-binding shareholder vote mandated under the Dodd-Frank Act
+  allowing investors to approve or reject executive compensation
+  packages. Repeated low approval (\textless{} 70\%) triggers elevated
+  ISS Compensation Risk.
+\item
+  \textbf{Clawback Provision (Clause de restitution des bonus)}: A
+  contractual clause enabling the board to claw back previously awarded
+  executive bonuses in the event of financial restatements, fraud, or
+  material misconduct.
+\item
+  \textbf{Poison Pill / Shareholder Rights Plan (Pilule empoisonnée)}: A
+  defense mechanism allowing existing shareholders to purchase newly
+  issued shares at a steep discount during an uninvited hostile takeover
+  bid, severely diluting the hostile acquirer. ISS heavily penalizes
+  companies adopting poison pills without shareholder approval.
+\item
+  \textbf{Classified / Staggered Board (Conseil d'administration
+  échelonné)}: A board structure where only a fraction (typically
+  one-third) of directors stand for election each year. Prevents an
+  activist shareholder or acquirer from replacing the entire board in a
+  single proxy contest.
+\end{itemize}
+
+\subsubsection{Proxy Advisory \& The ``Big Three'' Asset
+Managers}\label{proxy-advisory-the-big-three-asset-managers}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Proxy Advisors (Agences de conseil en vote)}: Firms like ISS
+  and Glass Lewis that research shareholder proposals, analyse corporate
+  filings, and issue vote recommendations for annual general meetings
+  (AGMs).
+\item
+  \textbf{The Big Three (BlackRock, Vanguard, State Street)}: The
+  largest passive index asset managers in the world, holding on average
+  over 20\% of the voting shares of S\&P 500 corporations. Because they
+  manage passive index funds and cannot simply ``sell'' the stock of a
+  poorly run company, they rely heavily on \textbf{ISS governance scores
+  and proxy voting} to force corporate governance reform.
+\end{itemize}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{4. Session 1: Univariate Statistics \& Shape
+Parameters}\label{session-1-univariate-statistics-shape-parameters}
+
+\subsubsection{Univariate Analysis (Analyse
+univariée)}\label{univariate-analysis-analyse-univariuxe9e}
+
+The statistical examination of \textbf{one single variable in
+isolation}, without analyzing causes, relationships, or predictive
+influences (Slide 19).
+
+\subsubsection{Central Tendency: The Three Centres (Tendance
+centrale)}\label{central-tendency-the-three-centres-tendance-centrale}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \textbf{Arithmetic Mean (\(\bar{x}\) --- Moyenne)}:
+  \[\bar{x} = \frac{1}{n} \sum_{i=1}^n x_i\] The mathematical average.
+  Takes every data point into account. \textbf{Weakness (Slide 21)}:
+  Completely distorted and destroyed by extreme outliers and skewness.
+\item
+  \textbf{Median (\(\text{Mdn}\) --- Médiane)}: The exact middle value
+  (50th percentile) dividing the ordered dataset into two equal halves.
+  \textbf{Strength}: Robust and immune to extreme outliers.
+\item
+  \textbf{Mode (Mode)}: The most frequently occurring value or category
+  in a distribution. \textbf{The only valid measure of central tendency
+  for nominal data} (Slide 20).
+\end{enumerate}
+
+\subsubsection{Dispersion \& Variability (Mesures de
+dispersion)}\label{dispersion-variability-mesures-de-dispersion}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Standard Deviation (\(s\) --- Écart-type)}:
+  \[s = \sqrt{\frac{\sum (x_i - \bar{x})^2}{n - 1}}\] The average
+  distance of an observation from the mean. Tells you whether the mean
+  accurately represents the typical case (Slide 22).
+\item
+  \textbf{Variance (\(s^2\))}: The square of the standard deviation.
+\item
+  \textbf{Range (Étendue)}: The absolute distance between maximum and
+  minimum (\(\text{Max} - \text{Min}\)).
+\item
+  \textbf{Interquartile Range (\(IQR\) --- Écart interquartile)}:
+  \[IQR = Q_3 - Q_1\] The range covering the central 50\% of
+  observations. Highly robust against outliers.
+\end{itemize}
+
+\subsubsection{Distribution Shape: Skewness \& Kurtosis (Forme de
+distribution)}\label{distribution-shape-skewness-kurtosis-forme-de-distribution}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Skewness (\(g_1\) --- Asymétrie)}:
+  \[g_1 = \frac{n}{(n-1)(n-2)} \sum_{i=1}^n \left(\frac{x_i - \bar{x}}{s}\right)^3\]
+  Measures the lack of symmetry in a distribution.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \(g_1 \approx 0\): Symmetric distribution
+    (\(\text{Mean} \approx \text{Median} \approx \text{Mode}\)).
+  \item
+    \(g_1 > 0\) (\textbf{Positive / Right Skew}): Mean \textgreater{}
+    Median \textgreater{} Mode. A long tail extending to the right
+    (typical of income, revenue, market cap).
+  \item
+    \(g_1 < 0\) (\textbf{Negative / Left Skew}): Mean \textless{} Median
+    \textless{} Mode. A long tail extending to the left (typical of
+    profit margins with distressed outliers).
+  \end{itemize}
+\item
+  \textbf{Kurtosis (\(g_2\) --- Aplatissement / Acuité)}:
+  \[g_2 = \frac{n(n+1)}{(n-1)(n-2)(n-3)} \sum_{i=1}^n \left(\frac{x_i - \bar{x}}{s}\right)^4 - \frac{3(n-1)^2}{(n-2)(n-3)}\]
+  Measures the ``tailedness'' and peakedness of the distribution
+  relative to a normal curve.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \(g_2 = 0\) (Mesokurtic): Standard bell-shaped normal curve.
+  \item
+    \(g_2 > 0\) (Leptokurtic): Sharply peaked with heavy, fat tails
+    (higher probability of extreme outliers).
+  \item
+    \(g_2 < 0\) (Platykurtic): Flatter peak with thin tails.
+  \end{itemize}
+\item
+  \textbf{The Normality Rule of Thumb (Slide 23)}: Both skewness and
+  kurtosis falling within \textbf{\([-1.0, +1.0]\)} is consistent with
+  normality.
+\end{itemize}
+
+\subsubsection{Normality Testing: The Three Converging Pieces of
+Evidence (Slide
+24)}\label{normality-testing-the-three-converging-pieces-of-evidence-slide-24}
+
+Never rely on a single metric; evaluate all three simultaneously:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \textbf{Compare the Three Centres}: If
+  \(\text{Mean} \approx \text{Median} \approx \text{Mode}\), the
+  distribution is roughly symmetric.
+\item
+  \textbf{Evaluate Skewness and Kurtosis}: Verify whether both reside
+  inside the \([-1.0, +1.0]\) window.
+\item
+  \textbf{Visual Inspection \& Formal Shapiro-Wilk Test}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \emph{Visual Inspection}: Inspect Histogram, Density curve, and Q-Q
+    Plot.
+  \item
+    \emph{Shapiro-Wilk Test}: Formal statistical test with null
+    hypothesis \(H_0\): \emph{``The data are normally distributed''}.
+  \item
+    \textbf{The Inverted Logic (Slide 24)}: Unlike almost every other
+    test in the course, \textbf{\(p > 0.05\) means you KEEP normality}.
+    If \(p < 0.05\), you \textbf{REJECT normality}.
+  \end{itemize}
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{5. Session 2: Bivariate Associations, Chi-Square \&
+Correlations}\label{session-2-bivariate-associations-chi-square-correlations}
+
+\subsubsection{Bivariate Analysis (Analyse
+bivariée)}\label{bivariate-analysis-analyse-bivariuxe9e}
+
+The statistical examination of the relationship or association between
+\textbf{two variables simultaneously} (Slide 17 \& Session 2).
+
+\subsubsection{The Four-Step Protocol (Slide 9 \&
+41)}\label{the-four-step-protocol-slide-9-41}
+
+The mandatory answer template for every analytical question:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \textbf{IDENTIFY}: Which statistical test to execute? Fully justified
+  by the variable scales.
+\item
+  \textbf{HYPOTHESISE}: Formulate \(H_0\) and \(H_1\) in clear,
+  non-technical business language.
+\item
+  \textbf{DECIDE}: Is \(p < 0.05\)? If yes, what is the
+  magnitude/strength of the effect?
+\item
+  \textbf{RECOMMEND}: Actionable executive guidance answering:
+  \emph{``What does the manager do on Monday morning?''}
+\end{enumerate}
+
+\subsubsection{\texorpdfstring{Hypotheses: Null (\(H_0\))
+vs.~Alternative
+(\(H_1\))}{Hypotheses: Null (H\_0) vs.~Alternative (H\_1)}}\label{hypotheses-null-h_0-vs.-alternative-h_1}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Null Hypothesis (\(H_0\))}: The hypothesis of ``no
+  difference'', ``no relationship'', or ``status quo'' (e.g.,
+  \emph{``Governance risk has no relationship with sector''}).
+\item
+  \textbf{Alternative Hypothesis (\(H_1\))}: The research hypothesis
+  proposing an active relationship or group difference (e.g.,
+  \emph{``Governance risk varies significantly across sectors''}).
+\end{itemize}
+
+\subsubsection{\texorpdfstring{Statistical Significance (\(p\)-value)
+vs.~Effect Size (Slide
+42)}{Statistical Significance (p-value) vs.~Effect Size (Slide 42)}}\label{statistical-significance-p-value-vs.-effect-size-slide-42}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{\(p\)-value (Significance)}: The probability of observing
+  results at least as extreme as the sample data assuming \(H_0\) is
+  true. If \(p < 0.05\), we reject \(H_0\) and conclude that an effect
+  exists.
+\item
+  \textbf{Reporting Standard (Slide 42)}: Never write \(p = 0.000\)!
+  Software printing \texttt{.000} means the value is below three decimal
+  places. Report strictly as \textbf{\(p < .001\)}.
+\item
+  \textbf{Effect Size (Strength)}: While \(p\)-value tells you
+  \emph{whether} an effect exists, effect size tells you \emph{how
+  strong} it is (whether it practically matters to a manager).
+\end{itemize}
+
+\subsubsection{\texorpdfstring{Decision Errors: Type I (\(\alpha\))
+vs.~Type II (\(\beta\)) \& Statistical
+Power}{Decision Errors: Type I (\textbackslash alpha) vs.~Type II (\textbackslash beta) \& Statistical Power}}\label{decision-errors-type-i-alpha-vs.-type-ii-beta-statistical-power}
+
+In hypothesis testing, two types of erroneous conclusions are possible:
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.2349}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3916}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3735}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Reality ~Decision
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Fail to Reject \(H_0\) (Accept Status Quo)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Reject \(H_0\) (Conclude Effect Exists)
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\textbf{\(H_0\) is True} (No real effect) & \textbf{Correct Decision}
+(\(1 - \alpha = 95\%\)) & \textbf{Type I Error (\(\alpha = 5\%\))}
+\emph{(False Positive)} \\
+\textbf{\(H_0\) is False} (Real effect exists) & \textbf{Type II Error
+(\(\beta\))} \emph{(False Negative / Missed Discovery)} &
+\textbf{Correct Decision: Statistical Power (\(1 - \beta \ge 80\%\))} \\
+\end{longtable}
+}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Type I Error (\(\alpha = 0.05\) --- Faux positif)}: Claiming a
+  governance relationship exists when it is purely due to random chance.
+  The significance threshold \(\alpha\) fixes this maximum acceptable
+  risk at 5\%.
+\item
+  \textbf{Type II Error (\(\beta\) --- Faux négatif)}: Missing a genuine
+  governance impact because the sample is too small or noisy.
+\item
+  \textbf{Statistical Power (\(1 - \beta\) --- Puissance statistique)}:
+  The probability of successfully detecting a genuine effect. By having
+  \(N = 503\) (well above the course minimum of 100), our study achieves
+  high statistical power (\(> 95\%\)), minimizing Type II errors.
+\end{itemize}
+
+\subsubsection{95\% Confidence Interval (Intervalle de confiance à 95\%
+--- CI)}\label{confidence-interval-intervalle-de-confiance-uxe0-95-ci}
+
+\[\text{CI}_{95\%} = \text{Point Estimate} \pm t_{\text{crit}} \times \text{Standard Error}\]
+A range of values calculated from the sample data that has a 95\%
+probability of containing the true population parameter:
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Interpretation Rule}: If the 95\% Confidence Interval for a
+  difference or correlation contains zero (e.g., \([-0.05, +0.12]\)),
+  the effect is \textbf{not statistically significant} at
+  \(\alpha = 0.05\). If zero is excluded (e.g., Pearson \(r\) for
+  Governance Risk and Beta: \([+0.18, +0.35]\)), the relationship is
+  statistically significant.
+\item
+  \textbf{Margin of Error (Marge d'erreur)}: Half the width of the
+  confidence interval (\(t_{\text{crit}} \times SE\)), quantifying
+  sampling uncertainty.
+\end{itemize}
+
+\subsubsection{\texorpdfstring{Chi-Square Test of Independence
+(\(\chi^2\) --- Nominal \(\times\)
+Ordinal)}{Chi-Square Test of Independence (\textbackslash chi\^{}2 --- Nominal \textbackslash times Ordinal)}}\label{chi-square-test-of-independence-chi2-nominal-times-ordinal}
+
+Tests whether two qualitative categorical variables are independent or
+statistically associated.
+\[\chi^2 = \sum_{i=1}^r \sum_{j=1}^c \frac{(O_{ij} - E_{ij})^2}{E_{ij}}\]
+Where \(O_{ij}\) is the observed cell count, and
+\(E_{ij} = \frac{\text{Row Total} \times \text{Column Total}}{N}\) is
+the expected count under independence. Degrees of freedom:
+\(df = (r - 1)(c - 1)\).
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Cramér's \(V\) (Effect Size for Chi-Square)}:
+  \[V = \sqrt{\frac{\chi^2}{N \min(r - 1, c - 1)}}\] Measures
+  association strength from \(0\) (no relationship) to \(1\) (perfect
+  association):
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \(V < 0.10\): Negligible
+  \item
+    \(0.10 \le V < 0.30\): Weak to moderate association (Our result:
+    \(V = 0.122\))
+  \item
+    \(V \ge 0.30\): Strong association
+  \end{itemize}
+\item
+  \textbf{Standardized Residuals (Résidus standardisés)}:
+  \[\text{Residual}_{ij} = \frac{O_{ij} - E_{ij}}{\sqrt{E_{ij}}}\]
+  Identifies which specific cells drive the overall Chi-Square result. A
+  residual \(> +2.0\) indicates significant over-representation;
+  \(< -2.0\) indicates significant under-representation. (In our data,
+  Tech \& Comms had \(+1.75\) in High Risk; Industrials had \(-1.97\)).
+\end{itemize}
+
+\subsubsection{\texorpdfstring{Pearson Correlation Coefficient (\(r\)
+--- Continuous \(\times\)
+Continuous)}{Pearson Correlation Coefficient (r --- Continuous \textbackslash times Continuous)}}\label{pearson-correlation-coefficient-r-continuous-times-continuous}
+
+\[r = \frac{\sum (x_i - \bar{x})(y_i - \bar{y})}{\sqrt{\sum (x_i - \bar{x})^2 \sum (y_i - \bar{y})^2}}\]
+Measures the linear strength and direction of the association between
+two continuous variables:
+
+\begin{itemize}
+\tightlist
+\item
+  Ranges from \(-1.0\) (perfect inverse link) to \(+1.0\) (perfect
+  direct link).
+\item
+  \textbf{Fisher \(z\)-Transformation \& 95\% Confidence Interval}:
+  Constructs exact lower and upper confidence bounds:
+  \[z = \frac{1}{2} \ln \left(\frac{1+r}{1-r}\right), \quad SE_z = \frac{1}{\sqrt{n - 3}}\]
+\end{itemize}
+
+\subsubsection{\texorpdfstring{Spearman's Rank Correlation (\(\rho\) ---
+Non-Paramétrique)}{Spearman's Rank Correlation (\textbackslash rho --- Non-Paramétrique)}}\label{spearmans-rank-correlation-rho-non-paramuxe9trique}
+
+Calculates Pearson's correlation on the \textbf{ranks} of data rather
+than raw values. Robust to non-normality and monotonic non-linear
+patterns.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{6. Session 3: Group Comparisons, Welch's ANOVA \&
+Games-Howell}\label{session-3-group-comparisons-welchs-anova-games-howell}
+
+\subsubsection{\texorpdfstring{One-Way Analysis of Variance (ANOVA ---
+Qualitative 3+ groups \(\times\)
+Quantitative)}{One-Way Analysis of Variance (ANOVA --- Qualitative 3+ groups \textbackslash times Quantitative)}}\label{one-way-analysis-of-variance-anova-qualitative-3-groups-times-quantitative}
+
+Tests whether the population means of a continuous outcome variable
+differ significantly across 3 or more categorical groups.
+\[F = \frac{MS_{\text{between}}}{MS_{\text{within}}} = \frac{SS_{\text{between}} / (k - 1)}{SS_{\text{within}} / (N - k)}\]
+
+\subsubsection{Levene's Test of Homogeneity of Variances (Test de
+Levene)}\label{levenes-test-of-homogeneity-of-variances-test-de-levene}
+
+Tests whether variances are equal across groups
+(\(H_0: \sigma_1^2 = \sigma_2^2 = \dots = \sigma_k^2\)).
+
+\begin{itemize}
+\tightlist
+\item
+  \emph{If \(p > 0.05\)}: Variances are equal (homoscedasticity
+  confirmed; standard Fisher ANOVA is valid).
+\item
+  \emph{If \(p < 0.05\)}: Variances are significantly unequal
+  (\textbf{heteroscedasticity}; standard Fisher ANOVA is invalid and
+  Welch's ANOVA must be used!).
+\item
+  \emph{In our project}: Levene's test yielded \(F = 5.39, p < .001\)
+  for Profit Margin across sectors.
+\end{itemize}
+
+\subsubsection{\texorpdfstring{Welch's Robust ANOVA
+(\(F_{\text{Welch}}\))}{Welch's Robust ANOVA (F\_\{\textbackslash text\{Welch\}\})}}\label{welchs-robust-anova-f_textwelch}
+
+An adjusted ANOVA formulation that weights each group's variance by its
+sample size (\(w_i = n_i / s_i^2\)). Valid even when group variances and
+sample sizes are severely unequal.
+
+\subsubsection{\texorpdfstring{Effect Size: Eta-Squared (\(\eta^2\)) \&
+Omega-Squared
+(\(\omega^2\))}{Effect Size: Eta-Squared (\textbackslash eta\^{}2) \& Omega-Squared (\textbackslash omega\^{}2)}}\label{effect-size-eta-squared-eta2-omega-squared-omega2}
+
+\[\eta^2 = \frac{SS_{\text{between}}}{SS_{\text{total}}}\] The
+percentage of variance in the dependent variable accounted for by group
+membership:
+
+\begin{itemize}
+\tightlist
+\item
+  \(\eta^2 \approx 0.01\): Small effect
+\item
+  \(\eta^2 \approx 0.06\): Medium effect
+\item
+  \(\eta^2 \ge 0.14\): Large effect
+\item
+  \emph{In our project}: \(\eta^2 = 0.0405\) (\(4.05\%\) of profit
+  margin variance is explained by sector).
+\end{itemize}
+
+\subsubsection{\texorpdfstring{Kruskal-Wallis Non-Parametric Test
+(\(H\))}{Kruskal-Wallis Non-Parametric Test (H)}}\label{kruskal-wallis-non-parametric-test-h}
+
+The non-parametric rank-based equivalent of One-Way ANOVA. Used when
+both normality and variance homogeneity are severely violated.
+
+\subsubsection{Post-Hoc Pairwise Comparisons: Tukey HSD
+vs.~Games-Howell}\label{post-hoc-pairwise-comparisons-tukey-hsd-vs.-games-howell}
+
+When ANOVA indicates that at least one group differs (\(p < 0.05\)),
+post-hoc tests identify \emph{which specific pairs} differ:
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Tukey's HSD (Honestly Significant Difference)}: Assumes equal
+  variances across all groups.
+\item
+  \textbf{Games-Howell Post-Hoc Test}:
+  \[t = \frac{\bar{x}_i - \bar{x}_j}{\sqrt{\frac{s_i^2}{n_i} + \frac{s_j^2}{n_j}}}\]
+  Adjusts degrees of freedom via the Welch-Satterthwaite equation and
+  applies the Studentized Range distribution (\(q\)). \textbf{Required
+  when Levene's test fails!}
+\end{itemize}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{7. Session 4: Multiple Linear Regression \& Econometric
+Diagnostics}\label{session-4-multiple-linear-regression-econometric-diagnostics}
+
+\subsubsection{Multiple Linear Regression (Régression linéaire multiple
+MCO /
+OLS)}\label{multiple-linear-regression-ruxe9gression-linuxe9aire-multiple-mco-ols}
+
+Models the expected value of a continuous dependent variable (\(Y\)) as
+a linear combination of explanatory variables
+(\(X_1, X_2, \dots, X_k\)):
+\[Y_i = \beta_0 + \beta_1 X_{1i} + \beta_2 X_{2i} + \dots + \beta_k X_{ki} + \epsilon_i\]
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{\(\beta_0\) (Intercept / Constante)}: The predicted baseline
+  value of \(Y\) when all predictors are equal to zero.
+\item
+  \textbf{\(\beta_k\) (Unstandardized Regression Coefficient)}: The
+  expected change in \(Y\) for a 1-unit increase in \(X_k\), holding all
+  other variables constant (\emph{ceteris paribus}).
+\item
+  \textbf{Standardized Beta (\(\beta^*\))}:
+  \[\beta_k^* = \beta_k \times \frac{s_{X_k}}{s_Y}\] Allows direct
+  comparison of predictor importance on a common standard-deviation
+  scale.
+\end{itemize}
+
+\subsubsection{\texorpdfstring{Coefficient of Determination (\(R^2\) and
+Adjusted
+\(R^2\))}{Coefficient of Determination (R\^{}2 and Adjusted R\^{}2)}}\label{coefficient-of-determination-r2-and-adjusted-r2}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{\(R^2\)}: The proportion of variance in \(Y\) explained by the
+  regression model:
+  \[R^2 = 1 - \frac{SS_{\text{residual}}}{SS_{\text{total}}}\]
+\item
+  \textbf{Adjusted \(R^2\)}: Corrects \(R^2\) for the number of
+  predictors (\(k\)) and sample size (\(N\)):
+  \[R_{\text{adj}}^2 = 1 - \left[\frac{(1 - R^2)(N - 1)}{N - k - 1}\right]\]
+\end{itemize}
+
+\subsubsection{\texorpdfstring{Logarithmic Transformations
+(\(\ln(X)\))}{Logarithmic Transformations (\textbackslash ln(X))}}\label{logarithmic-transformations-lnx}
+
+Applying natural logarithms to positively skewed financial metrics
+(Market Capitalization and Revenue).
+
+\begin{itemize}
+\tightlist
+\item
+  \emph{Econometric Rationale}: Compresses extreme mega-cap outliers
+  (NVIDIA, Apple) and transforms multiplicative scale dynamics into
+  linear additive relationships.
+\end{itemize}
+
+\subsubsection{Econometric Assumptions \& Diagnostic Suite (Slide
+133--137)}\label{econometric-assumptions-diagnostic-suite-slide-133137}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \textbf{Linearity}: Evaluated via the Residuals vs.~Fitted plot
+  (should show a flat horizontal band with no curvature).
+\item
+  \textbf{Normality of Residuals}: Model errors (\(\epsilon\)) must be
+  normally distributed (Q-Q plot of residuals).
+\item
+  \textbf{Homoscedasticity (Equal Error Variance)}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \textbf{Breusch-Pagan Test}: Regresses squared residuals on
+    explanatory variables.
+  \item
+    \emph{If \(p < 0.05\)}: Heteroscedasticity is present (White's
+    robust standard errors HC3 are required).
+  \end{itemize}
+\item
+  \textbf{Absence of Multicollinearity (VIF \& Tolerance)}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \textbf{Variance Inflation Factor (VIF)}:
+    \[\text{VIF}_j = \frac{1}{1 - R_j^2}\] Measures how much the
+    variance of an estimated regression coefficient increases due to
+    collinearity with other predictors:
+
+    \begin{itemize}
+    \tightlist
+    \item
+      \(\text{VIF} < 5.0\): Safe / Low collinearity (Our maximum VIF was
+      \(1.89\)).
+    \item
+      \(\text{VIF} > 10.0\): Severe multicollinearity (distorts
+      \(t\)-statistics and inflates standard errors).
+    \end{itemize}
+  \item
+    \textbf{Tolerance}: The inverse of VIF
+    (\(\text{Tol} = 1 / \text{VIF}\)). Tolerance \(< 0.20\) signals high
+    collinearity risk.
+  \end{itemize}
+\end{enumerate}
+
+\subsubsection{Dummy Variables \& Reference Category (Variables
+indicatrices /
+muettes)}\label{dummy-variables-reference-category-variables-indicatrices-muettes}
+
+To include a qualitative nominal variable (like \texttt{Sector} with 5
+groups) in an OLS regression, it must be converted into
+\textbf{\(k - 1 = 4\) binary dummy variables} taking values \(0\) or
+\(1\):
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Reference Group (Catégorie de référence)}: \emph{Tech \&
+  Comms} is omitted from the equation to serve as the baseline
+  (\(X_{\text{all\_dummies}} = 0\)).
+\item
+  \textbf{Interpretation of Dummy Coefficients
+  (\(\beta_{\text{Sector}}\))}: The coefficient represents the expected
+  difference in profit margin between that sector and the reference
+  sector (Tech \& Comms), holding all financial and governance variables
+  constant.
+\item
+  \textbf{Dummy Variable Trap (Piège de la colinéarité parfaite)}: If
+  all 5 dummy variables were included alongside the constant
+  (\(\beta_0\)), the sum of dummies would equal \(1\), causing perfect
+  multicollinearity (\(\text{VIF} = \infty\)) and rendering matrix
+  inversion mathematically impossible.
+\end{itemize}
+
+\subsubsection{\texorpdfstring{Overall Model Utility: The Regression
+\(F\)-Test}{Overall Model Utility: The Regression F-Test}}\label{overall-model-utility-the-regression-f-test}
+
+Tests the global null hypothesis that \emph{none} of the explanatory
+variables predict \(Y\)
+(\(H_0: \beta_1 = \beta_2 = \dots = \beta_k = 0\)):
+\[F = \frac{MS_{\text{model}}}{MS_{\text{residual}}} = \frac{R^2 / k}{(1 - R^2) / (N - k - 1)}\]
+If \(p_F < 0.05\), we reject \(H_0\) and conclude that the model as a
+whole has genuine explanatory power beyond pure chance. (In our Model 3:
+\(F(8, 485) = 11.23, p < .001^{***}\)).
+
+\subsubsection{\texorpdfstring{Influential Observations: Leverage
+(\(h_{ii}\)) \& Cook's Distance
+(\(D_i\))}{Influential Observations: Leverage (h\_\{ii\}) \& Cook's Distance (D\_i)}}\label{influential-observations-leverage-h_ii-cooks-distance-d_i}
+
+Not all outliers exert the same distortive pull on regression slopes:
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Leverage (\(h_{ii}\) --- Valeur levier)}: Measures how far an
+  observation's predictor values (\(X\)) are from the center of the
+  predictor space. High leverage points (e.g., massive revenue
+  conglomerates) have high potential to swing the regression line.
+  Warning threshold: \(h_{ii} > 2(k + 1) / N\).
+\item
+  \textbf{Studentized Residual (\(r_i\))}: The residual divided by its
+  estimated standard deviation, flagging outliers in the \(Y\)-dimension
+  (\(|r_i| > 3.0\)).
+\item
+  \textbf{Cook's Distance (\(D_i\) --- Distance de Cook)}:
+  \[D_i = \frac{\sum (\hat{y}_j - \hat{y}_{j(i)})^2}{(k + 1) s^2}\]
+  Measures the aggregate shift in all model predictions when observation
+  \(i\) is excluded. Any observation with \(D_i > 1.0\) (or
+  \(D_i > 4/N\)) is an \textbf{influential observation} requiring close
+  inspection. (Panel D of Figure 9 visualizes studentized residuals
+  against leverage).
+\end{itemize}
+
+\subsubsection{\texorpdfstring{Autocorrelation of Residuals \&
+Durbin-Watson Test
+(\(d\))}{Autocorrelation of Residuals \& Durbin-Watson Test (d)}}\label{autocorrelation-of-residuals-durbin-watson-test-d}
+
+Assumption that error terms are independent
+(\(\text{Cov}(\epsilon_i, \epsilon_j) = 0\)):
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Durbin-Watson Statistic (\(d\))}:
+  \[d = \frac{\sum_{i=2}^N (e_i - e_{i-1})^2}{\sum_{i=1}^N e_i^2}\]
+  Ranges from \(0\) to \(4\):
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \(d \approx 2.0\): No autocorrelation (residuals are completely
+    independent).
+  \item
+    \(d < 1.5\): Positive autocorrelation (common in time-series data).
+  \item
+    \(d > 2.5\): Negative autocorrelation.
+  \end{itemize}
+\item
+  \textbf{In our Cross-Sectional Data}: Because 1 row = 1 independent
+  firm, autocorrelation is naturally absent (\(d \approx 1.98\)).
+\end{itemize}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{8. Jamovi Software Operations \& Costly Student
+Traps}\label{jamovi-software-operations-costly-student-traps}
+
+\subsubsection{What is Jamovi?}\label{what-is-jamovi}
+
+A free, open-source, point-and-click statistical software package built
+on top of the R statistical programming language, providing SPSS-style
+output tables and real-time reactive calculations (Slide 37).
+
+\subsubsection{Jamovi Measure Types (Slide
+38)}\label{jamovi-measure-types-slide-38}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{ID}: Column used solely to identify entities (e.g.,
+  \texttt{Ticker}). Jamovi never computes statistics on ID columns.
+\item
+  \textbf{Nominal}: Unordered qualitative categories (icon: three
+  colored circles).
+\item
+  \textbf{Ordinal}: Ranked qualitative categories (icon: small step
+  chart).
+\item
+  \textbf{Continuous}: Numeric measurements with decimals (icon: small
+  ruler).
+\end{itemize}
+
+\subsubsection{\texorpdfstring{The \texttt{.omv} File
+Format}{The .omv File Format}}\label{the-.omv-file-format}
+
+The proprietary Jamovi file format that bundles the spreadsheet dataset,
+variable configurations, and all statistical output tables and graphs
+together into a single file. \textbf{This is the primary file submitted
+for lab coursework} (Slide 37).
+
+\subsubsection{Top 6 Errors That Cost Marks Every Year (Slide
+42)}\label{top-6-errors-that-cost-marks-every-year-slide-42}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \textbf{Reporting a mean for a nominal variable}: e.g., writing
+  \emph{``average sector = 2.4''}.
+\item
+  \textbf{Setting the wrong measure type in Jamovi}: e.g., setting
+  \texttt{Sector} as Continuous or \texttt{Profit\_Margin} as Nominal,
+  causing Jamovi to hide the required statistical tests.
+\item
+  \textbf{Reading ``Sig. = 0.000'' as \(p = 0\)}: Always format as
+  \textbf{\(p < .001\)}.
+\item
+  \textbf{Confusing significance with strength}: A test can be
+  statistically significant (\(p < 0.05\)) because sample size \(N\) is
+  large, but have a tiny, negligible effect size (\(r = 0.08\)).
+\item
+  \textbf{Pasting output tables without interpretation}: Half the marks
+  are awarded for explaining what the numbers mean in plain English.
+\item
+  \textbf{Stopping at the statistic without recommending action}: Always
+  conclude with what the executive or portfolio manager does on Monday
+  morning.
+\end{enumerate}
+
+\end{document}

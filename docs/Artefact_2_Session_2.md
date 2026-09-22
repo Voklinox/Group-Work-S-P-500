@@ -72,6 +72,8 @@ $$\chi^2(8, N = 496) = 14.719, \quad p = .065, \quad \text{Cramér's } V = 0.122
   - **Tech & Comms** firms display an elevated concentration of high governance risk ($50.5\%$ of tech firms fall in the High tier, residual $= +1.75$). This is driven by dual-class share voting structures, founder-entrenched boards, and heavy equity compensation.
   - **Industrials & Energy** firms exhibit high compliance ($54$ low-risk firms, residual $= +1.48$; only $29.5\%$ high-risk, residual $= -1.97$). Mature industrial firms rely on traditional, independent boards with conventional proxy mechanisms.
 
+![Figure 1: Contingency Table Heatmap — Sector vs. Governance Risk Tier](figures/contingency_sector_gov.png)
+
 ---
 
 ### 2.4 Protocol Step 4 — RECOMMEND (What Does the Manager Do on Monday Morning?)
@@ -122,6 +124,8 @@ $$\chi^2(8, N = 496) = 14.719, \quad p = .065, \quad \text{Cramér's } V = 0.122
 - `Board_Risk` vs. $\beta$: $r = +0.198$, $p < .001^{***}$ [95% CI: 0.112, 0.281]
 - `Compensation_Risk` vs. $\beta$: $r = +0.215$, $p < .001^{***}$ [95% CI: 0.130, 0.297]
 - `Shareholder_Rights_Risk` vs. $\beta$: $r = +0.231$, $p < .001^{***}$ [95% CI: 0.146, 0.312]
+
+![Figure 2: Correlation Matrix Heatmap with 95% Confidence Intervals](figures/correlation_preview.png)
 
 #### Statistical Decisions in APA 7th Edition Format:
 

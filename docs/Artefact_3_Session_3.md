@@ -72,6 +72,8 @@ Every test adheres strictly to the **4-Step Answering Protocol** (Slide 9).
 - **Decision**: Decisively **reject $H_0$ ($p < .001$)**. Across all parametric, robust, and non-parametric tests, economic sectors display highly significant differences in operating profit margins.
 - **Effect Size**: $\eta^2 = 0.0405$ indicates that **$4.05\%$ of the total cross-sectional variance** in profit margins among S&P 500 companies is directly explained by sector classification.
 
+![Figure 1: One-Way ANOVA Boxplots — Net Profit Margin across Economic Sectors](figures/anova_sector_boxplots.png)
+
 ---
 
 ### 2.4 Games-Howell Post-Hoc Pairwise Comparisons
@@ -104,6 +106,8 @@ Because group variances and sample sizes are unequal, the **Games-Howell procedu
 - **Welch's Robust ANOVA**:
   $$F_{\text{Welch}}(4, 207.84) = 3.960, \quad p = .004, \quad \eta^2 = 0.0311$$
 - **Finding**: Governance risk varies significantly across industries ($p = .004$). **Tech & Comms** registers the highest mean governance risk ($\bar{x} = 6.08$, $\text{Mdn} = 7.0$), whereas **Industrials & Energy** achieves the lowest risk ($\bar{x} = 4.77$, $\text{Mdn} = 5.0$).
+
+![Figure 2: Scatter Plot of Governance Risk Score vs. Net Profit Margin](figures/scatter_governance_margin.png)
 
 ---
 

@@ -1,0 +1,568 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+\documentclass[
+]{article}
+\usepackage{xcolor}
+\usepackage{amsmath,amssymb}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{graphicx}
+\makeatletter
+\newsavebox\pandoc@box
+\newcommand*\pandocbounded[1]{% scales image to fit in text height/width
+  \sbox\pandoc@box{#1}%
+  \Gscale@div\@tempa{\textheight}{\dimexpr\ht\pandoc@box+\dp\pandoc@box\relax}%
+  \Gscale@div\@tempb{\linewidth}{\wd\pandoc@box}%
+  \ifdim\@tempb\p@<\@tempa\p@\let\@tempa\@tempb\fi% select the smaller of both
+  \ifdim\@tempa\p@<\p@\scalebox{\@tempa}{\usebox\pandoc@box}%
+  \else\usebox{\pandoc@box}%
+  \fi%
+}
+% Set default figure placement to htbp
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\usepackage{bookmark}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+% fallback for those not using the hyperref driver hyperxmp:
+\makeatletter
+\@ifundefined{xmpquote}{\newcommand{\xmpquote}[1]{#1}}{}
+\makeatother
+\hypersetup{
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\author{}
+\date{}
+
+\begin{document}
+
+\section{Artefact 1 --- Clean Database \& Univariate Description
+Report}\label{artefact-1-clean-database-univariate-description-report}
+
+\begin{quote}
+\textbf{Course}: Quantitative Data Analysis (M1 -- S7) \textbf{Course
+Code}: \texttt{2627\_ECO\_2\_EN\_009} --- Academic Year 2026--2027
+\textbf{Institution}: EM Normandie Business School \textbf{Lecturer}:
+Dr.~NGUYEN Anh-Tuan \textbf{Deliverable}: \textbf{Artefact 1 (20 Marks)}
+\textbf{Accompanying Files}: \texttt{sp500\_esg\_jamovi.csv},
+\texttt{sp500\_esg\_jamovi.xlsx}, \texttt{Approval\_Slip.md},
+\texttt{Data\_Cleaning\_Log.md}
+\end{quote}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{1. Submission Overview \& Dataset
+Access}\label{submission-overview-dataset-access}
+
+This report constitutes the official submission for \textbf{Artefact 1},
+fulfilling all requirements specified in Slide 41 of the course
+syllabus. The underlying dataset comprises \(N = 503\) publicly traded
+corporations from the S\&P 500 index for Fiscal Year 2025 (FY2025).
+
+\subsubsection{Available Data Files}\label{available-data-files}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \textbf{Jamovi Ready CSV}:
+  \href{file:///Users/david/Library/Mobile\%20Documents/com~apple~CloudDocs/Etudes\%20Supp/EMN\%20M1\%20/M1\%20-\%20S7/Data\%20Analysis\%20Quantitative/Group\%20Work\%20S&P\%20500/data/processed/sp500_esg_jamovi.csv}{\texttt{data/processed/sp500\_esg\_jamovi.csv}}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Formatted with standardized short headers, no spaces, no accents,
+    and period decimals. Ready for instant import via Jamovi
+    (\texttt{≡\ menu\ →\ Open\ →\ Browse}).
+  \end{itemize}
+\item
+  \textbf{Jamovi / Excel Master Workbook}:
+  \href{file:///Users/david/Library/Mobile\%20Documents/com~apple~CloudDocs/Etudes\%20Supp/EMN\%20M1\%20/M1\%20-\%20S7/Data\%20Analysis\%20Quantitative/Group\%20Work\%20S&P\%20500/data/processed/sp500_esg_jamovi.xlsx}{\texttt{data/processed/sp500\_esg\_jamovi.xlsx}}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Includes two dedicated sheets: \texttt{Data} (the full analytical
+    matrix) and \texttt{Codebook\_Jamovi} (detailed metadata with
+    variable definitions and measurement types).
+  \end{itemize}
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{2. Summary of Provenance \& Approval Slip (Slide
+35)}\label{summary-of-provenance-approval-slip-slide-35}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Dataset Title}: S\&P 500 Corporate Governance \& Financial
+  Performance Dataset (FY2025).
+\item
+  \textbf{Producers}: Standard \& Poor's, Institutional Shareholder
+  Services (ISS), and Yahoo Finance (SEC 10-K audited filings).
+\item
+  \textbf{Unit of Observation}: 1 row = 1 publicly traded S\&P 500 firm
+  (\(N = 503\)).
+\item
+  \textbf{Research Question}: \emph{``Does corporate governance risk
+  (ISS QualityScore) compromise financial profitability and market
+  valuation among S\&P 500 firms, or does strong governance provide a
+  resilience and performance premium?''}
+\item
+  \textbf{Complete Details}: Refer to
+  \href{file:///Users/david/Library/Mobile\%20Documents/com~apple~CloudDocs/Etudes\%20Supp/EMN\%20M1\%20/M1\%20-\%20S7/Data\%20Analysis\%20Quantitative/Group\%20Work\%20S&P\%20500/docs/Approval_Slip.md}{\texttt{docs/Approval\_Slip.md}}.
+\end{itemize}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{3. Data Cleaning Summary (Slide
+39)}\label{data-cleaning-summary-slide-39}
+
+Prior to statistical computation, the raw extract underwent systematic
+verification against the 6 student traps (Slide 39):
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \textbf{Fiserv Remediation}: Ticker updated from \texttt{FISV} to
+  \texttt{FI} to resolve a missing observation caused by its 2023 NYSE
+  transfer, restoring full financial and governance coverage.
+\item
+  \textbf{Zero Duplicates}: Verified 100\% uniqueness across all 503
+  equity tickers.
+\item
+  \textbf{Negative Equity Treatment}: Identified 32 firms with undefined
+  \texttt{ROE} due to multi-year share buybacks driving book equity
+  below zero (e.g.~AbbVie, Altria, Domino's). Documented transparently
+  without dropping observations, using \texttt{Profit\_Margin} as the
+  universal profitability metric.
+\item
+  \textbf{Outlier Documentation}: Retained Masco Corp's authentic
+  \(58.625\) ROE while establishing the Median (\(16.8\%\)) as the true
+  managerial benchmark to avoid mean distortion (Slide 21).
+\item
+  \textbf{Sector Consolidation}: Grouped 11 GICS sectors into exactly 5
+  nominal categories (\(n = 60\) to \(148\)).
+\item
+  \textbf{Full Audit}: Refer to
+  \href{file:///Users/david/Library/Mobile\%20Documents/com~apple~CloudDocs/Etudes\%20Supp/EMN\%20M1\%20/M1\%20-\%20S7/Data\%20Analysis\%20Quantitative/Group\%20Work\%20S&P\%20500/docs/Data_Cleaning_Log.md}{\texttt{docs/Data\_Cleaning\_Log.md}}.
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{4. Univariate Description of Five Variables (Slide
+41)}\label{univariate-description-of-five-variables-slide-41}
+
+In accordance with course directives (\emph{``Half the marks are for
+points 4--6 --- the interpretation. Producing output is not analysis.
+Explaining it is''}), the following five variables are profiled in
+complete sentences adhering to statistical protocol.
+
+\subsubsection{\texorpdfstring{4.1 Variable 1: \texttt{Sector} (Nominal
+Variable --- 5
+Categories)}{4.1 Variable 1: Sector (Nominal Variable --- 5 Categories)}}\label{variable-1-sector-nominal-variable-5-categories}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Nature}: Qualitative nominal factor representing the primary
+  industry classification of the firm. Because categories possess no
+  mathematical rank or numerical magnitude, computing a mean or median
+  is strictly invalid (Slide 19); the distribution must be described
+  exclusively through frequency tables and the \textbf{mode} (Slide 20).
+\item
+  \textbf{Distribution \& Mode}: Across the \(N = 503\) firms, the modal
+  category is \textbf{Industrials \& Energy}, representing \(148\) firms
+  (\(29.42\%\)), followed by \textbf{Consumer} with \(116\) firms
+  (\(23.06\%\)), \textbf{Tech \& Comms} with \(108\) firms
+  (\(21.47\%\)), \textbf{Finance} with \(71\) firms (\(14.12\%\)), and
+  \textbf{Healthcare} with \(60\) firms (\(11.93\%\)).
+\item
+  \textbf{Managerial Interpretation}: The S\&P 500 is structurally
+  anchored in industrial, cyclical, and technological infrastructure
+  rather than consumer staples or pure healthcare. Every sector retains
+  at least 60 observations, satisfying statistical power requirements
+  for the upcoming One-Way ANOVA in Session 3.
+\end{itemize}
+
+\begin{verbatim}
+Sector Frequency Breakdown:
+1. Industrials & Energy : 148 (29.4%) [MODE]
+2. Consumer             : 116 (23.1%)
+3. Tech & Comms         : 108 (21.5%)
+4. Finance              :  71 (14.1%)
+5. Healthcare           :  60 (11.9%)
+Total Valid Observations: 503 (100.0%)
+\end{verbatim}
+
+\begin{figure}
+\centering
+\pandocbounded{\includegraphics[keepaspectratio,alt={Figure 1: S\&P 500 Sector Distribution across 5 Consolidated Categories}]{figures/sector_distribution.png}}
+\caption{Figure 1: S\&P 500 Sector Distribution across 5 Consolidated
+Categories}
+\end{figure}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsubsection{\texorpdfstring{4.2 Variable 2:
+\texttt{Governance\_Risk\_Level} (Ordinal Variable --- 3
+Tiers)}{4.2 Variable 2: Governance\_Risk\_Level (Ordinal Variable --- 3 Tiers)}}\label{variable-2-governance_risk_level-ordinal-variable-3-tiers}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Nature}: Qualitative ordinal factor classifying firms into
+  three ordered governance risk tiers derived from the ISS Overall
+  QualityScore: \emph{Low} (scores 1--3, best governance), \emph{Medium}
+  (scores 4--6), and \emph{High} (scores 7--10, poorest governance).
+  While categories follow a natural sequence, intervals between tiers
+  are not mathematically identical (Slide 13); central tendency is
+  captured by the mode and median rank.
+\item
+  \textbf{Distribution \& Central Tendency}: Among the \(496\) reporting
+  corporations (\(7\) firms unrated by ISS), the modal tier is
+  \textbf{High Governance Risk}, encompassing \(197\) firms
+  (\(39.72\%\)), while \textbf{Low Governance Risk} accounts for \(150\)
+  firms (\(30.24\%\)) and \textbf{Medium Governance Risk} accounts for
+  \(149\) firms (\(30.04\%\)). The median firm falls exactly in the
+  \textbf{Medium} tier.
+\item
+  \textbf{Managerial Interpretation}: Contrary to common assumptions,
+  nearly \(40\%\) of S\&P 500 corporations exhibit high institutional
+  governance risk scores, predominantly driven by contentious executive
+  compensation packages and shareholder rights restrictions. This
+  substantial variance provides an ideal foundation for testing risk
+  differentials in Session 2 (Chi-Square) and Session 4 (Regression).
+\end{itemize}
+
+\begin{figure}
+\centering
+\pandocbounded{\includegraphics[keepaspectratio,alt={Figure 2: Distribution of Institutional Governance Risk Tiers}]{figures/governance_risk_distribution.png}}
+\caption{Figure 2: Distribution of Institutional Governance Risk Tiers}
+\end{figure}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsubsection{\texorpdfstring{4.3 Variable 3: \texttt{Profit\_Margin}
+(Continuous Variable --- Ratio
+Scale)}{4.3 Variable 3: Profit\_Margin (Continuous Variable --- Ratio Scale)}}\label{variable-3-profit_margin-continuous-variable-ratio-scale}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Nature}: Quantitative continuous ratio variable measuring net
+  income as a proportion of total revenue for FY2025. Because zero
+  represents a true economic threshold (break-even), ratios and
+  parametric moments are mathematically defined (Slide 14).
+\item
+  \textbf{Statistical Profile (\(N = 503\))}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \emph{Central Tendency}: Mean \(\bar{x} = 0.1479\) (\(14.79\%\)),
+    Median \(\text{Mdn} = 0.1315\) (\(13.15\%\)), Rounded Mode
+    \(= 0.1100\) (\(11.00\%\)).
+  \item
+    \emph{Dispersion}: Standard Deviation \(s = 0.1856\) (\(18.56\%\)),
+    Variance \(s^2 = 0.0345\), Interquartile Range \(IQR = 0.1446\)
+    (\(14.46\%\), spanning \(Q_1 = 7.50\%\) to \(Q_3 = 21.97\%\)). Full
+    range spans from \(-2.3010\) (Lumentum Holdings) to \(+0.7295\)
+    (Western Digital).
+  \item
+    \emph{Shape}: Fisher-Pearson Skewness \(g_1 = -5.4205\) (severe
+    negative/left skewness), Excess Kurtosis \(g_2 = 69.9129\) (extreme
+    leptokurtosis with heavy loss-making tails).
+  \end{itemize}
+\item
+  \textbf{Managerial Interpretation}: The median S\&P 500 company
+  generates \(13.15\) cents of bottom-line profit for every dollar of
+  turnover. However, the substantial standard deviation (\(18.56\%\))
+  relative to the mean confirms pronounced profit dispersion across
+  business models, with a small cluster of tech/semiconductor companies
+  posting massive margins while distressed or restructuring firms pull
+  down the arithmetic average.
+\end{itemize}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsubsection{\texorpdfstring{4.4 Variable 4: \texttt{ROE} (Continuous
+Variable --- Ratio
+Scale)}{4.4 Variable 4: ROE (Continuous Variable --- Ratio Scale)}}\label{variable-4-roe-continuous-variable-ratio-scale}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Nature}: Quantitative continuous variable measuring annual net
+  earnings generated per dollar of book equity.
+\item
+  \textbf{Statistical Profile (\(N = 471\) valid, \(32\) negative-equity
+  firms)}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \emph{Central Tendency}: Mean \(\bar{x} = 0.3952\) (\(39.52\%\)),
+    Median \(\text{Mdn} = 0.1676\) (\(16.76\%\)), Rounded Mode
+    \(= 0.1200\) (\(12.00\%\)).
+  \item
+    \emph{Dispersion}: Standard Deviation \(s = 2.7231\) (\(272.31\%\)),
+    Interquartile Range \(IQR = 0.2195\) (\(21.95\%\), \(Q_1 = 9.32\%\)
+    to \(Q_3 = 31.27\%\)). Range spans from \(-2.4003\) to \(+58.6250\)
+    (Masco Corp).
+  \item
+    \emph{Shape}: Skewness \(g_1 = 20.9053\), Kurtosis
+    \(g_2 = 447.6009\).
+  \end{itemize}
+\item
+  \textbf{Managerial Interpretation}: The massive divergence between the
+  arithmetic mean (\(39.52\%\)) and the median (\(16.76\%\)) illustrates
+  the textbook danger highlighted in Slide 21 (\emph{``The mean is
+  destroyed by outliers. The median is robust''}). Masco Corp's
+  near-zero equity balance inflates its ROE to \(5,862.5\%\), heavily
+  distorting the mean. A manager analyzing corporate performance must
+  rely on the median ROE of \(16.76\%\) as the true representative
+  baseline.
+\end{itemize}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsubsection{\texorpdfstring{4.5 Variable 5: \texttt{Market\_Cap\_B}
+(Continuous Variable --- Ratio
+Scale)}{4.5 Variable 5: Market\_Cap\_B (Continuous Variable --- Ratio Scale)}}\label{variable-5-market_cap_b-continuous-variable-ratio-scale}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Nature}: Quantitative continuous ratio variable measuring the
+  total equity market valuation in billions of USD.
+\item
+  \textbf{Statistical Profile (\(N = 503\))}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \emph{Central Tendency}: Mean \(\bar{x} = \$147.60\text{B}\), Median
+    \(\text{Mdn} = \$44.47\text{B}\), Mode Cluster
+    \(\approx \$20.00\text{B}\).
+  \item
+    \emph{Dispersion}: Standard Deviation \(s = \$490.01\text{B}\),
+    Interquartile Range \(IQR = \$71.79\text{B}\)
+    (\(Q_1 = \$22.21\text{B}\) to \(Q_3 = \$94.00\text{B}\)). Range
+    spans from \(\$6.48\text{B}\) to \(\$5,367.15\text{B}\).
+  \item
+    \emph{Shape}: Skewness \(g_1 = 7.8532\), Kurtosis \(g_2 = 68.1146\).
+  \end{itemize}
+\item
+  \textbf{Managerial Interpretation}: S\&P 500 capitalization exhibits
+  acute right-skewness (\emph{Pareto distribution}): while half the
+  index is valued below \(\$44.5\text{B}\), a handful of multi-trillion
+  mega-cap tech conglomerates (NVIDIA, Apple, Microsoft, Alphabet,
+  Amazon) inflate the average valuation to \(\$147.6\text{B}\). Size
+  must therefore be modeled via quartiles
+  (\texttt{Market\_Cap\_Quartile}) or logarithmic transformations in
+  subsequent regression modeling.
+\end{itemize}
+
+\begin{figure}
+\centering
+\pandocbounded{\includegraphics[keepaspectratio,alt={Figure 3: S\&P 500 Market Capitalization Distribution and Pareto Skewness}]{figures/market_cap_distribution.png}}
+\caption{Figure 3: S\&P 500 Market Capitalization Distribution and
+Pareto Skewness}
+\end{figure}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{\texorpdfstring{5. Normality Evaluation of a Continuous
+Variable
+(\texttt{Profit\_Margin})}{5. Normality Evaluation of a Continuous Variable (Profit\_Margin)}}\label{normality-evaluation-of-a-continuous-variable-profit_margin}
+
+In strict accordance with Slide 24 (\emph{``Three converging pieces of
+evidence --- use all three, never just one''}), we evaluate whether
+\texttt{Profit\_Margin} satisfies the assumption of normality:
+
+\begin{verbatim}
+========================================================================================
+NORMALITY DIAGNOSTIC MATRIX: Net Profit Margin (N = 503)
+========================================================================================
+Test Component        Empirical Value            Normality Criterion           Verdict
+----------------------------------------------------------------------------------------
+1. Three Centres      Mean   = 0.1479            Mean ≈ Median ≈ Mode          VIOLATED
+                      Median = 0.1315            (Centres diverge by > 0.035)
+                      Mode   = 0.1100
+
+2. Shape Parameters   Skewness = -5.42           Both strictly in [-1, +1]     VIOLATED
+                      Kurtosis = 69.91           (Severe left skew & leptokurtic)
+
+3. Formal Test        Shapiro-Wilk W = 0.6530    p > 0.05 (Fail to reject H0)  REJECTED
+                      p-value < .001                                            (p < .001)
+========================================================================================
+FINAL VERDICT: Severe violation of normality. Parametric normality assumption REJECTED.
+========================================================================================
+\end{verbatim}
+
+\begin{figure}
+\centering
+\pandocbounded{\includegraphics[keepaspectratio,alt={Figure 4: Net Profit Margin Normality Diagnostics --- Histogram, Density, and Q-Q Plot}]{figures/profit_margin_normality.png}}
+\caption{Figure 4: Net Profit Margin Normality Diagnostics ---
+Histogram, Density, and Q-Q Plot}
+\end{figure}
+
+\subsubsection{The Three Converging Pieces of Evidence
+Explained:}\label{the-three-converging-pieces-of-evidence-explained}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \textbf{Evidence 1: Comparison of the Three Centres (Slide 24)} In a
+  normal distribution, the curve is perfectly symmetric and
+  \(\text{Mean} \approx \text{Median} \approx \text{Mode}\). Here, the
+  arithmetic mean (\(0.1479\)) noticeably exceeds the median
+  (\(0.1315\)), which in turn exceeds the modal cluster (\(0.1100\)).
+  This clear divergence indicates positive asymmetry across typical
+  operating firms, countered by severe negative tail outliers.
+\item
+  \textbf{Evidence 2: Skewness and Kurtosis Rule of Thumb (Slide 23 \&
+  24)} The course rule of thumb dictates that both skewness and kurtosis
+  must fall within \([-1.0, +1.0]\) for a distribution to be considered
+  normal. \texttt{Profit\_Margin} yields a skewness of \(-5.42\) and an
+  excess kurtosis of \(+69.91\), violently breaching the normative
+  boundaries due to extreme loss-making firms in cyclical sectors.
+\item
+  \textbf{Evidence 3: Graphical Inspection \& Formal Shapiro-Wilk Test
+  (Slide 24)}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \emph{Graphical Inspection}: The density plot demonstrates a sharp,
+    narrow peak with long heavy tails, while the Normal Q-Q plot reveals
+    severe departures from the 45-degree theoretical reference line at
+    both extremities.
+  \item
+    \emph{Formal Test}: The Shapiro-Wilk test tests the null hypothesis
+    \(H_0\): \emph{``The population is normally distributed''}. The test
+    statistic is \(W = 0.6530\) with a significance level of
+    \(p < .001\). Because \(p < 0.05\), we decisively \textbf{reject
+    \(H_0\)}.
+  \end{itemize}
+\end{enumerate}
+
+\textbf{Methodological Implication for Sessions 2, 3, and 4}: Because
+normality is violated, Session 3 group comparisons must employ
+\textbf{Welch's ANOVA} or \textbf{Kruskal-Wallis} tests, with post-hoc
+comparisons using \textbf{Games-Howell} rather than standard Tukey HSD
+whenever variance homogeneity is also breached.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{6. Two-Sentence Managerial Takeaways (Slide
+41)}\label{two-sentence-managerial-takeaways-slide-41}
+
+\begin{quote}
+\textbf{``Because profit margins and market valuations deviate sharply
+from normal distributions with high positive and negative tail skewness,
+managers and corporate analysts must evaluate operating performance
+against sector medians (\(13.15\%\)) rather than distorted index
+averages (\(14.79\%\)). On Monday morning, leadership should benchmark
+corporate governance policies not to arbitrary peer averages, but
+against the \(39.7\%\) high-risk corporate governance cohort to preempt
+investor pushback on executive compensation and board independence.''}
+\end{quote}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{7. Jamovi Navigation Guide for Session
+1}\label{jamovi-navigation-guide-for-session-1}
+
+To replicate these findings directly in the Jamovi desktop environment
+(Slides 36--40):
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \textbf{Import Data}: Launch Jamovi \(\rightarrow\) Click
+  \texttt{≡\ menu} \(\rightarrow\) \texttt{Open} \(\rightarrow\)
+  \texttt{Browse} \(\rightarrow\) Select
+  \texttt{sp500\_esg\_jamovi.csv}.
+\item
+  \textbf{Verify Measure Types (Slide 38)}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \texttt{Ticker}: Set to \texttt{ID}.
+  \item
+    \texttt{Sector}: Set to \texttt{Nominal}.
+  \item
+    \texttt{Market\_Cap\_Quartile} \& \texttt{Governance\_Risk\_Level}:
+    Set to \texttt{Ordinal}.
+  \item
+    \texttt{Total\_Revenue\_B}, \texttt{Market\_Cap\_B},
+    \texttt{Profit\_Margin}, \texttt{ROE}, \texttt{Beta},
+    \texttt{Overall\_Governance\_Risk}: Set to \texttt{Continuous}.
+  \end{itemize}
+\item
+  \textbf{Run Descriptive Statistics (Slide 40)}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Navigate to \texttt{Analyses} \(\rightarrow\) \texttt{Exploration}
+    \(\rightarrow\) \texttt{Descriptives}.
+  \item
+    For continuous variables: Check \texttt{Mean}, \texttt{Median},
+    \texttt{Mode}, \texttt{Std.\ deviation}, \texttt{Min}, \texttt{Max},
+    \texttt{IQR}, \texttt{Skewness}, \texttt{Kurtosis},
+    \texttt{Shapiro-Wilk}, and select \texttt{Histogram},
+    \texttt{Density}, and \texttt{Box\ plot}.
+  \item
+    For categorical variables: Move \texttt{Sector} and
+    \texttt{Governance\_Risk\_Level} to Variables \(\rightarrow\) Check
+    \texttt{Frequency\ tables} and select \texttt{Bar\ plot}.
+  \end{itemize}
+\item
+  \textbf{Save Session}: Click \texttt{≡\ menu} \(\rightarrow\)
+  \texttt{Save\ As} \(\rightarrow\) Save as
+  \texttt{sp500\_esg\_session1.omv}.
+\end{enumerate}
+
+\end{document}

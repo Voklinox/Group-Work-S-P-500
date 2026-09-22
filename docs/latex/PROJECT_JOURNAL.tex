@@ -1,0 +1,433 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+\documentclass[
+]{article}
+\usepackage{xcolor}
+\usepackage{amsmath,amssymb}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{longtable,booktabs,array}
+\usepackage{caption}
+\captionsetup[table]{skip=6pt}
+\newcounter{none} % for unnumbered tables
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\usepackage{bookmark}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+% fallback for those not using the hyperref driver hyperxmp:
+\makeatletter
+\@ifundefined{xmpquote}{\newcommand{\xmpquote}[1]{#1}}{}
+\makeatother
+\hypersetup{
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\author{}
+\date{}
+
+\begin{document}
+
+\section{Project Master Journal \& Audit Trail (Journal de
+Bord)}\label{project-master-journal-audit-trail-journal-de-bord}
+
+\begin{quote}
+\textbf{Project}: S\&P 500 Corporate Governance \& Financial Performance
+Analysis \textbf{Course}: Quantitative Data Analysis (M1 -- S7, Course
+code: 2627\_ECO\_2\_EN\_009) \textbf{Institution}: EM Normandie Business
+School \textbf{Lecturer}: Dr.~NGUYEN Anh-Tuan \textbf{Lead Researcher}:
+David \& Consulting Project Team \textbf{Academic Year}: 2026--2027
+\textbf{Language}: English (Academic \& Executive Standard)
+\end{quote}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{1. Executive Summary \& Research
+Framework}\label{executive-summary-research-framework}
+
+\subsubsection{1.1 The Managerial Problematic (Research
+Question)}\label{the-managerial-problematic-research-question}
+
+Corporate executives, board directors, and ESG fund managers face an
+ongoing debate: \emph{Does dedicating significant capital and
+operational focus to institutional corporate governance and social
+responsibility enhance shareholder value, or does it impose costly
+bureaucratic frictions that compromise financial profitability?}
+
+To resolve this question empirically, this project establishes a 4-week
+analytical trajectory centered on:
+
+\begin{quote}
+\textbf{``Does corporate governance risk (ISS QualityScore) compromise
+financial profitability and market valuation among S\&P 500 firms, or
+does strong governance provide a resilience and performance premium?''}
+\end{quote}
+
+\subsubsection{1.2 The 4-Step Answering
+Protocol}\label{the-4-step-answering-protocol}
+
+In accordance with course guidelines (Slide 9 \& Slide 41), every
+hypothesis and statistical result follows a strict four-step protocol:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \textbf{IDENTIFY}: Justify the statistical test exclusively from the
+  measurement scale of the variables (Nominal, Ordinal, Continuous).
+\item
+  \textbf{HYPOTHESISE}: Formulate the Null (\(H_0\)) and Alternative
+  (\(H_1\)) hypotheses in plain business language.
+\item
+  \textbf{DECIDE}: Evaluate the significance level (\(\alpha = 0.05\),
+  report exact \(p\)-value or \(p < .001\)) and assess the
+  magnitude/effect size (\(r\), \(\eta^2\), Cramér's \(V\), \(R^2\)).
+\item
+  \textbf{RECOMMEND}: Provide concrete operational directives answering:
+  \emph{``What does the manager do on Monday morning?''}
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{2. Chronological Log of Project
+Milestones}\label{chronological-log-of-project-milestones}
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.1190}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.1548}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.6726}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.0536}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Date \& Time
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Phase
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Actions Performed
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Status
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\textbf{2026-09-21 11:38} & Project Inception & Initial virtual
+environment \texttt{.venv} and preliminary requirements established. &
+Completed \\
+\textbf{2026-09-21 11:48} & Data Scrape (Initial) & Initial execution of
+\texttt{extract\_sp500\_esg.py} pulling 503 S\&P 500 tickers via
+\texttt{yfinance}. & Completed \\
+\textbf{2026-09-21 18:07} & Diagnostic Review & Full audit of course
+brief \texttt{AQD\_Session1\ copie.pdf} and existing repository files. &
+Completed \\
+\textbf{2026-09-21 18:37} & Repository Re-architecture & Git initialized
+(\texttt{main} branch), directory tree restructured into \texttt{data/},
+\texttt{src/}, \texttt{docs/}, \texttt{figures/}, \texttt{tests/}. &
+Completed \\
+\textbf{2026-09-21 18:41} & Dependency Hardening & Installed verified
+scientific stack: \texttt{scipy}, \texttt{statsmodels},
+\texttt{matplotlib}, \texttt{seaborn}, \texttt{openpyxl},
+\texttt{pytest}. & Completed \\
+\textbf{2026-09-21 18:42} & Data Cleaning Pipeline & Automated
+\texttt{src/cleaning.py} executed: remediated Fiserv (\texttt{FISV}
+\(\rightarrow\) \texttt{FI}), built Jamovi CSV \& Excel. & Completed \\
+\textbf{2026-09-21 18:42} & Automated Testing & Built and executed
+\texttt{tests/test\_dataset\_integrity.py} with \texttt{pytest} (6/6
+tests passed). & Completed \\
+\textbf{2026-09-21 18:43} & Univariate Engine & Ran
+\texttt{src/stats\_univariate.py} generating 3-centre statistics,
+dispersion, skewness, kurtosis, Shapiro-Wilk tests. & Completed \\
+\textbf{2026-09-21 18:43} & APA Visualizations & Ran
+\texttt{src/visualize.py} generating publication-grade figures in
+\texttt{figures/}. & Completed \\
+\textbf{2026-09-21 18:45} & Deliverable Authoring & Authored
+\texttt{Approval\_Slip.md}, \texttt{Data\_Cleaning\_Log.md},
+\texttt{Artefact\_1\_Session\_1.md}, and Jamovi guide. & Completed \\
+\end{longtable}
+}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{3. Data Provenance, Acquisition \& Temporal
+Grounding}\label{data-provenance-acquisition-temporal-grounding}
+
+\subsubsection{3.1 Data Sources}\label{data-sources}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \textbf{Constituent Universe}: The list of 503 constituent companies
+  of the S\&P 500 index was scraped dynamically from the official
+  Wikipedia directory of S\&P 500 companies (maintained from S\&P Dow
+  Jones Indices releases).
+\item
+  \textbf{Corporate Governance Scores}: Sourced from
+  \textbf{Institutional Shareholder Services (ISS)} Governance
+  QualityScore ratings accessed via the Yahoo Finance query
+  infrastructure.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Scale: Decile scores from 1 (lowest risk, highest governance
+    quality) to 10 (highest risk, poorest governance quality).
+  \item
+    Core sub-pillars: \emph{Audit Risk}, \emph{Board Structure Risk},
+    \emph{Compensation Risk}, \emph{Shareholder Rights Risk}, and
+    composite \emph{Overall Governance Risk}.
+  \end{itemize}
+\item
+  \textbf{Financial Fundamentals}: Extracted via Yahoo Finance API
+  (\texttt{yfinance}), retrieving audited 10-K SEC regulatory filings.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Core variables: \emph{Total Revenue
+    (\(B)_, _Market Capitalization (\)B)}, \emph{Net Profit Margin},
+    \emph{Return on Equity (ROE)}, \emph{Market Beta (5Y monthly)}, and
+    \emph{Headcount}.
+  \end{itemize}
+\end{enumerate}
+
+\subsubsection{3.2 Why Full Fiscal Year 2025
+(FY2025)?}\label{why-full-fiscal-year-2025-fy2025}
+
+In empirical quantitative finance, using partial current-year figures
+(e.g.~Q1/Q2 2026) creates severe seasonal distortion, annualized
+extrapolation errors, and interim accounting noise.
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Audited Completeness}: FY2025 provides complete, 12-month
+  audited financial statements filed with the U.S. Securities and
+  Exchange Commission (SEC).
+\item
+  \textbf{Macroeconomic Stability}: Captures the full annual economic
+  cycle, ensuring valid comparability across sectors with contrasting
+  seasonality (e.g., Retail peak in Q4 vs.~Energy fluctuations).
+\item
+  \textbf{Synchronicity}: Financial ratios for FY2025 align with Q3/Q4
+  2025 ISS governance evaluations, ensuring cross-sectional validity.
+\end{itemize}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{4. Comprehensive Data Cleaning \& Remediation
+Audit}\label{comprehensive-data-cleaning-remediation-audit}
+
+\subsubsection{\texorpdfstring{4.1 Remediation of Ticker Anomalies:
+Fiserv (\texttt{FISV} \(\rightarrow\)
+\texttt{FI})}{4.1 Remediation of Ticker Anomalies: Fiserv (FISV \textbackslash rightarrow FI)}}\label{remediation-of-ticker-anomalies-fiserv-fisv-rightarrow-fi}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Diagnosis}: In the raw extract, row 199 (\texttt{FISV})
+  exhibited missing values across sector, revenue, profit margin, beta,
+  headcount, and governance risk.
+\item
+  \textbf{Root Cause Analysis}: In 2023, Fiserv, Inc.~transferred its
+  listing from NASDAQ to the New York Stock Exchange (NYSE) and
+  rebranded its ticker symbol from \texttt{FISV} to \texttt{FI}. The raw
+  extraction script relied on the legacy ticker symbol, causing Yahoo
+  Finance API calls to return null objects.
+\item
+  \textbf{Remediation}: The pipeline programmatically maps \texttt{FISV}
+  to \texttt{FI}, populating its proper sector (\emph{Financial
+  Services} \(\rightarrow\) \emph{Finance}), FY2025 revenue (\$19.09B),
+  profit margin (16.0\%), beta (0.88), headcount (42,000), and ISS
+  governance risk scores.
+\end{itemize}
+
+\subsubsection{\texorpdfstring{4.2 The Case of Negative Book Equity \&
+Undefined ROE
+(\(N = 32\))}{4.2 The Case of Negative Book Equity \& Undefined ROE (N = 32)}}\label{the-case-of-negative-book-equity-undefined-roe-n-32}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Diagnosis}: 32 major blue-chip corporations exhibited missing
+  values (\texttt{NaN}) in the \texttt{ROE} column.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Affected firms include: AbbVie (\texttt{ABBV}), Altria Group
+    (\texttt{MO}), AutoZone (\texttt{AZO}), Booking Holdings
+    (\texttt{BKNG}), Cardinal Health (\texttt{CAH}), Domino's Pizza
+    (\texttt{DPZ}), Fair Isaac (\texttt{FICO}), HCA Healthcare
+    (\texttt{HCA}), Hilton Worldwide (\texttt{HLT}), HP
+    Inc.~(\texttt{HPQ}), and Philip Morris.
+  \end{itemize}
+\item
+  \textbf{Root Cause (Corporate Finance Theory)}:
+  \[\text{ROE} = \frac{\text{Net Income}}{\text{Shareholders' Equity}}\]
+  Over the past decade, these mature corporations executed aggressive,
+  debt-financed share repurchase programs (\emph{treasury stock
+  buybacks}). Cumulative buybacks subtracted from retained earnings have
+  driven total book value of equity into negative territory. When book
+  equity is negative, computing a standard ROE yields either a
+  mathematically positive number for loss-making firms or a negative
+  ratio for highly profitable firms---rendering ROE economically
+  meaningless. Consequently, standard financial databases (including
+  Yahoo Finance and Bloomberg) suppress ROE for negative-equity firms.
+\item
+  \textbf{Remediation \& Pedagogical Strategy}:
+
+  \begin{enumerate}
+  \def\labelenumi{\arabic{enumi}.}
+  \tightlist
+  \item
+    We do \textbf{not} arbitrarily impute or drop these corporations;
+    doing so would delete 32 of America's most prominent firms and
+    introduce severe selection bias.
+  \item
+    We retain \texttt{ROE} for the 471 firms where equity is positive
+    (\(N = 471\)), while reporting missingness transparently.
+  \item
+    We introduce \textbf{Net Profit Margin}
+    (\(\frac{\text{Net Income}}{\text{Revenue}}\)) as our co-primary
+    profitability metric. Because revenue is always positive for
+    operating firms, \texttt{Profit\_Margin} is 100\% defined for all
+    \(N = 503\) firms.
+  \end{enumerate}
+\end{itemize}
+
+\subsubsection{\texorpdfstring{4.3 Extreme Outlier Treatment: Masco
+Corporation
+(\texttt{MAS})}{4.3 Extreme Outlier Treatment: Masco Corporation (MAS)}}\label{extreme-outlier-treatment-masco-corporation-mas}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Diagnosis}: Masco Corp displayed an extreme ROE of \(58.625\)
+  (\(5,862.5\%\)).
+\item
+  \textbf{Root Cause}: Masco held a tiny positive equity balance
+  (\(\approx \$80\text{M}\)) against nearly \$1B in net profits, causing
+  the ratio denominator to approach zero.
+\item
+  \textbf{Remediation}: In accordance with course guidelines (Slide 21:
+  \emph{``The mean is destroyed by outliers. The median is robust to
+  outliers and skew''}), we preserve the authentic observation without
+  artificial truncation or winsorization. We explicitly report both the
+  mean (\(\bar{x} = 39.5\%\)) and median (\(\text{Mdn} = 16.8\%\)) and
+  use the median as the true managerial measure of central tendency.
+\end{itemize}
+
+\subsubsection{4.4 Sector Consolidation (Course Constraint: 2 to 5
+Categories)}\label{sector-consolidation-course-constraint-2-to-5-categories}
+
+The Global Industry Classification Standard (GICS) specifies 11 raw
+sectors. To satisfy the mandatory course rule (\emph{Nominal grouping
+variable MUST have between 2 and 5 categories}), sectors were mapped
+into 5 homogeneous business groups:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \textbf{Industrials \& Energy} (\(n = 148\), \(29.4\%\),
+  \textbf{Mode})
+\item
+  \textbf{Consumer} (\(n = 116\), \(23.1\%\))
+\item
+  \textbf{Tech \& Comms} (\(n = 108\), \(21.5\%\))
+\item
+  \textbf{Finance} (\(n = 71\), \(14.1\%\))
+\item
+  \textbf{Healthcare} (\(n = 60\), \(11.9\%\))
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{5. Summary of Cleaned Dataset
+Files}\label{summary-of-cleaned-dataset-files}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \textbf{\texttt{data/raw/sp500\_esg\_dataset\_raw.csv}}: Pristine
+  original scrape preserved for replication audits.
+\item
+  \textbf{\texttt{data/processed/sp500\_esg\_cleaned.csv}}: Cleaned,
+  imputed, and validated dataset for Python and R pipelines.
+\item
+  \textbf{\texttt{data/processed/sp500\_esg\_jamovi.csv}}: Formatted
+  specifically for Jamovi with standardized short headers
+  (\texttt{Ticker}, \texttt{Company}, \texttt{Sector},
+  \texttt{Revenue\_B}, etc.).
+\item
+  \textbf{\texttt{data/processed/sp500\_esg\_jamovi.xlsx}}: Excel
+  workbook featuring sheet 1 (\texttt{Data}) and sheet 2
+  (\texttt{Codebook\_Jamovi}) with explicit variable definitions,
+  measure types, and measurement levels.
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{6. Git Version Control Log}\label{git-version-control-log}
+
+The project repository is under strict local Git version control:
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Repository}: \texttt{Group\ Work\ S\&P\ 500}
+\item
+  \textbf{Active Branch}: \texttt{main}
+\item
+  \textbf{Initial Commit}: Project baseline structure and raw data
+  assets.
+\item
+  \textbf{Pipeline Commit}: Modular data cleaning, univariate engine,
+  APA visualizations, automated test suite, and submission
+  documentation.
+\end{itemize}
+
+\end{document}

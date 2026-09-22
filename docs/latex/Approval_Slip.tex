@@ -1,0 +1,222 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+\documentclass[
+]{article}
+\usepackage{xcolor}
+\usepackage{amsmath,amssymb}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{longtable,booktabs,array}
+\usepackage{caption}
+\captionsetup[table]{skip=6pt}
+\newcounter{none} % for unnumbered tables
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\usepackage{bookmark}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+% fallback for those not using the hyperref driver hyperxmp:
+\makeatletter
+\@ifundefined{xmpquote}{\newcommand{\xmpquote}[1]{#1}}{}
+\makeatother
+\hypersetup{
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\author{}
+\date{}
+
+\begin{document}
+
+\section{Coursework Approval Slip --- Dataset Provenance \&
+Specification}\label{coursework-approval-slip-dataset-provenance-specification}
+
+\begin{quote}
+\textbf{Course}: Quantitative Data Analysis (M1 -- S7) \textbf{Course
+Code}: \texttt{2627\_ECO\_2\_EN\_009} --- Academic Year 2026--2027
+\textbf{Institution}: EM Normandie Business School \textbf{Lecturer}:
+Dr.~NGUYEN Anh-Tuan \textbf{Grade Weight}: \textbf{10 Marks (Provenance
+\& Dataset Quality)} \textbf{Submission Milestone}: Session 1 Approval
+Gate (Slide 35)
+\end{quote}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{1. Administrative
+Identification}\label{administrative-identification}
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.2138}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.7862}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Field
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Description / Value
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\textbf{Team Members} & David \& Group Consulting Team (M1 S7 PGE) \\
+\textbf{Programme \& Campus} & Programme Grande École --- EM
+Normandie \\
+\textbf{Dataset Title} & \textbf{S\&P 500 Corporate Governance \&
+Financial Performance Dataset (FY2025)} \\
+\textbf{Source URL 1 (Constituents)} &
+\href{https://en.wikipedia.org/wiki/List_of_S\%26P_500_companies}{Wikipedia
+S\&P 500 Directory} (sourced from S\&P Dow Jones Indices) \\
+\textbf{Source URL 2 (Fundamentals)} &
+\href{https://finance.yahoo.com}{Yahoo Finance} (sourced from SEC 10-K
+audited annual filings) \\
+\textbf{Source URL 3 (Governance Risk)} &
+\href{https://www.issgovernance.com}{Institutional Shareholder Services
+(ISS)} via Yahoo Finance API \\
+\textbf{Producer \& Year} & Standard \& Poor's, ISS Governance, and
+Yahoo Finance / SEC filings (Audited FY2025, ratings Q3/Q4 2025) \\
+\textbf{Downloadable File Format} & \texttt{.csv}
+(\texttt{sp500\_esg\_cleaned.csv} / \texttt{sp500\_esg\_jamovi.csv}) and
+\texttt{.xlsx} (\texttt{sp500\_esg\_jamovi.xlsx}) \\
+\end{longtable}
+}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{2. Dataset Structural Compliance (All Boxes
+Ticked)}\label{dataset-structural-compliance-all-boxes-ticked}
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.0914}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.8840}}
+  >{\centering\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.0247}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Requirement (Slide 29)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Project Specification
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+Compliance
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\textbf{One row = one\ldots{}} & \textbf{One row = one publicly traded
+S\&P 500 corporation} & ✅ \textbf{YES} \\
+\textbf{\(N\) (Observations)} & \textbf{\(N = 503\) firms} (exceeds the
+\(\ge 100\) minimum threshold) & ✅ \textbf{YES} \\
+\textbf{Nominal Variable (2--5 categories)} & \texttt{Sector} ---
+exactly \textbf{5 consolidated categories}:1. \emph{Industrials \&
+Energy} (\(n=148\), \(29.4\%\), Mode)2. \emph{Consumer} (\(n=116\),
+\(23.1\%\))3. \emph{Tech \& Comms} (\(n=108\), \(21.5\%\))4.
+\emph{Finance} (\(n=71\), \(14.1\%\))5. \emph{Healthcare} (\(n=60\),
+\(11.9\%\)) & ✅ \textbf{YES} \\
+\textbf{Ordinal Variable (\(\ge 1\))} & 1.
+\texttt{Governance\_Risk\_Level} (3 ordered tiers: Low, Medium, High)2.
+\texttt{Market\_Cap\_Quartile} (4 ordered tiers: Q1, Q2, Q3, Q4) & ✅
+\textbf{YES} \\
+\textbf{Continuous Variables (\(\ge 3\))} & 6 continuous variables
+available:1. \texttt{Profit\_Margin} (Net profit margin, FY2025)2.
+\texttt{ROE} (Return on Equity, FY2025)3. \texttt{Market\_Cap\_B}
+(Market capitalization in \$ Billion)4. \texttt{Total\_Revenue\_B}
+(Annual turnover in \$ Billion)5. \texttt{Beta} (Systematic risk
+coefficient, 5Y monthly)6. \texttt{Overall\_Governance\_Risk} (ISS
+QualityScore, 1 to 10 scale) & ✅ \textbf{YES} \\
+\textbf{Raw \& Authentic Data} & Live extracted from financial APIs;
+zero pre-processed, synthetic, or beginner datasets (Iris, Titanic,
+Boston Housing strictly excluded). & ✅ \textbf{YES} \\
+\end{longtable}
+}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{3. Managerial Research Question
+(Problematic)}\label{managerial-research-question-problematic}
+
+\begin{quote}
+\textbf{``Does corporate governance risk (ISS QualityScore) compromise
+financial profitability and market valuation among S\&P 500 firms, or
+does strong governance provide a resilience and performance premium?''}
+\end{quote}
+
+\subsubsection{Alignment with the 4 Course
+Sessions:}\label{alignment-with-the-4-course-sessions}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Session 1 (Univariate)}: What are the distribution profiles,
+  central tendencies, and dispersions of profitability and governance
+  risk? (Skewness, kurtosis, normality checks).
+\item
+  \textbf{Session 2 (Bivariate)}: Are high-risk governance firms
+  disproportionately concentrated in certain sectors or size quartiles
+  (Chi-Square)? Is governance risk correlated with profit margins
+  (Pearson \(r\))?
+\item
+  \textbf{Session 3 (ANOVA)}: Does profitability or governance risk
+  differ significantly across the 5 economic sectors (One-Way ANOVA \&
+  Games-Howell/Tukey HSD)?
+\item
+  \textbf{Session 4 (Regression)}: Does governance risk predict profit
+  margins when controlling for firm size (\texttt{Market\_Cap\_B}) and
+  market volatility (\texttt{Beta})?
+\end{itemize}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{4. Lecturer Validation Gate}\label{lecturer-validation-gate}
+
+\begin{verbatim}
+Lecturer Name:      Dr. NGUYEN Anh-Tuan
+Approval Decision:  [   ] APPROVED (10 / 10 marks awarded)
+                    [   ] REVISION REQUIRED
+
+Signature:          __________________________________________
+
+Date:               ____ / ____ / 2026
+\end{verbatim}
+
+\end{document}

@@ -1,0 +1,307 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+\documentclass[
+]{article}
+\usepackage{xcolor}
+\usepackage{amsmath,amssymb}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{longtable,booktabs,array}
+\usepackage{caption}
+\captionsetup[table]{skip=6pt}
+\newcounter{none} % for unnumbered tables
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\usepackage{bookmark}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+% fallback for those not using the hyperref driver hyperxmp:
+\makeatletter
+\@ifundefined{xmpquote}{\newcommand{\xmpquote}[1]{#1}}{}
+\makeatother
+\hypersetup{
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\author{}
+\date{}
+
+\begin{document}
+
+\section{Jamovi Step-by-Step Lab Guide --- Session
+1}\label{jamovi-step-by-step-lab-guide-session-1}
+
+\begin{quote}
+\textbf{Course}: Quantitative Data Analysis (M1 -- S7)
+\textbf{Software}: \href{https://www.jamovi.org/}{Jamovi} (Version 2.3+)
+\textbf{Session}: Session 1 --- Data Setup \& Univariate Descriptives
+\textbf{Target File}: \texttt{data/processed/sp500\_esg\_jamovi.csv}
+\textbf{Final Output}: \texttt{sp500\_esg\_session1.omv}
+\end{quote}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{Step 1: Open the Dataset in
+Jamovi}\label{step-1-open-the-dataset-in-jamovi}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Launch \textbf{Jamovi} on your computer.
+\item
+  Click the top-left \textbf{\texttt{≡} menu} (hamburger icon).
+\item
+  Select \textbf{\texttt{Open}} \(\rightarrow\)
+  \textbf{\texttt{Browse}}.
+\item
+  Navigate to your project folder:
+  \texttt{Group\ Work\ S\&P\ 500/data/processed/}
+\item
+  Select \textbf{\texttt{sp500\_esg\_jamovi.csv}} (or
+  \texttt{sp500\_esg\_jamovi.xlsx}).
+\item
+  Click \textbf{\texttt{Open}}.
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{Step 2: Configure Variable Measure Types (Crucial
+Step!)}\label{step-2-configure-variable-measure-types-crucial-step}
+
+\begin{quote}
+{[}!CAUTION{]} As Dr.~NGUYEN Anh-Tuan warns in \textbf{Slide 38}:
+\emph{``If the measure type is wrong, Jamovi will silently refuse to
+offer you the right test in week 2. This is the number one cause of a
+lost lab session.''}
+\end{quote}
+
+Double-click on each column header in the \textbf{Data} tab and set the
+\textbf{Measure type} and \textbf{Data type}:
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.1880}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.1654}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.0677}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.5789}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Column Name
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Measure Type in Jamovi
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Data Type
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Missing Values / Levels
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\texttt{Ticker} & \textbf{ID} & Text & Identifier (never analysed) \\
+\texttt{Company} & \textbf{Nominal} & Text & Company names \\
+\texttt{Sector} & \textbf{Nominal} & Text & 5 levels: \emph{Consumer,
+Finance, Healthcare, Industrials \& Energy, Tech \& Comms} \\
+\texttt{Total\_Revenue\_B} & \textbf{Continuous} & Decimal & None \\
+\texttt{Market\_Cap\_B} & \textbf{Continuous} & Decimal & None \\
+\texttt{Market\_Cap\_Quartile} & \textbf{Ordinal} & Text & 4 ordered
+levels: \emph{Q1 \textless{} Q2 \textless{} Q3 \textless{} Q4} \\
+\texttt{Profit\_Margin} & \textbf{Continuous} & Decimal & None \\
+\texttt{ROE} & \textbf{Continuous} & Decimal & 32 missing values (leave
+empty) \\
+\texttt{Beta} & \textbf{Continuous} & Decimal & 4 missing values \\
+\texttt{Headcount} & \textbf{Continuous} & Integer & 3 missing values \\
+\texttt{Overall\_Governance\_Risk} & \textbf{Continuous} & Integer &
+Scores 1 to 10 \\
+\texttt{Governance\_Risk\_Level} & \textbf{Ordinal} & Text & 3 ordered
+levels: \emph{Low \textless{} Medium \textless{} High} \\
+\end{longtable}
+}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{Step 3: Run Univariate Analysis on Categorical Variables
+(Slide
+40)}\label{step-3-run-univariate-analysis-on-categorical-variables-slide-40}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Click on the \textbf{\texttt{Analyses}} tab in the top ribbon.
+\item
+  Click \textbf{\texttt{Exploration}} \(\rightarrow\)
+  \textbf{\texttt{Descriptives}}.
+\item
+  In the variable selection box:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Move \textbf{\texttt{Sector}} and
+    \textbf{\texttt{Governance\_Risk\_Level}} into the
+    \textbf{\texttt{Variables}} box.
+  \end{itemize}
+\item
+  Expand the \textbf{\texttt{Statistics}} panel below:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Check \textbf{\texttt{Frequency\ tables}} (for qualitative
+    variables).
+  \item
+    Uncheck Mean/Median/SD for qualitative variables (avoids the
+    ``average sector = 2.4'' trap!).
+  \end{itemize}
+\item
+  Expand the \textbf{\texttt{Plots}} panel:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Check \textbf{\texttt{Bar\ plot}}.
+  \end{itemize}
+\item
+  \textbf{Expected Output in Jamovi}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \texttt{Sector}: Industrials \& Energy (148, 29.4\%), Consumer (116,
+    23.1\%), Tech \& Comms (108, 21.5\%), Finance (71, 14.1\%),
+    Healthcare (60, 11.9\%).
+  \item
+    \texttt{Governance\_Risk\_Level}: High (197, 39.7\%), Low (150,
+    30.2\%), Medium (149, 30.0\%).
+  \end{itemize}
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{Step 4: Run Univariate Analysis \& Normality Tests on
+Continuous
+Variables}\label{step-4-run-univariate-analysis-normality-tests-on-continuous-variables}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Still in \textbf{\texttt{Analyses}} \(\rightarrow\)
+  \textbf{\texttt{Exploration}} \(\rightarrow\)
+  \textbf{\texttt{Descriptives}} (or create a new Descriptives block):
+\item
+  Move the continuous variables into \textbf{\texttt{Variables}}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \texttt{Profit\_Margin}
+  \item
+    \texttt{ROE}
+  \item
+    \texttt{Market\_Cap\_B}
+  \item
+    \texttt{Total\_Revenue\_B}
+  \item
+    \texttt{Overall\_Governance\_Risk}
+  \end{itemize}
+\item
+  Expand \textbf{\texttt{Statistics}}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \textbf{Central Tendency}: Check \texttt{Mean}, \texttt{Median},
+    \texttt{Mode}.
+  \item
+    \textbf{Dispersion}: Check \texttt{Std.\ deviation},
+    \texttt{Variance}, \texttt{Minimum}, \texttt{Maximum}, \texttt{IQR}
+    (Interquartile range).
+  \item
+    \textbf{Distribution Shape}: Check \texttt{Skewness} and
+    \texttt{Kurtosis}.
+  \item
+    \textbf{Normality}: Check \textbf{\texttt{Shapiro-Wilk}}.
+  \end{itemize}
+\item
+  Expand \textbf{\texttt{Plots}}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Check \textbf{\texttt{Histogram}}.
+  \item
+    Check \textbf{\texttt{Density}}.
+  \item
+    Check \textbf{\texttt{Box\ plot}} (and check \texttt{Outliers}).
+  \item
+    Check \textbf{\texttt{Q-Q\ plot}}.
+  \end{itemize}
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{\texorpdfstring{Step 5: Save and Export Your \texttt{.omv}
+File (Slide 37 \&
+41)}{Step 5: Save and Export Your .omv File (Slide 37 \& 41)}}\label{step-5-save-and-export-your-.omv-file-slide-37-41}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Click the top-left \textbf{\texttt{≡} menu}.
+\item
+  Select \textbf{\texttt{Save\ As}} \(\rightarrow\)
+  \textbf{\texttt{Browse}}.
+\item
+  Name your file: \textbf{\texttt{sp500\_esg\_session1.omv}}.
+\item
+  Save it in your project folder. \emph{(The \texttt{.omv} format
+  bundles both your dataset and all interactive analysis output tables
+  together into a single file ready for submission to Dr.~NGUYEN
+  Anh-Tuan).}
+\end{enumerate}
+
+\end{document}

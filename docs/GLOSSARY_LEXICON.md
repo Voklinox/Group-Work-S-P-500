@@ -64,6 +64,28 @@ Variables that represent measurable or countable numerical values where arithmet
 - **Time-Series (Série temporelle)**: A single entity observed over multiple consecutive periods (e.g., Apple's stock price daily from 2020 to 2026).
 - **Panel Data (Données de panel)**: Multiple entities observed across multiple time periods ($1\text{ row} = 1\text{ firm-year}$). _Caution_: Panel data introduces autocorrelation, which violates standard ANOVA and OLS regression assumptions taught in this course.
 
+### Outliers: Detection & Handling (Valeurs aberrantes / extrêmes)
+
+Data points that deviate substantially from the overall pattern of the distribution. Outliers can distort arithmetic means, inflate standard deviations, and invalidate normality:
+
+- **Tukey's $1.5 \times IQR$ Rule (Règle des moustaches de Tukey)**:
+  - Any observation below the lower fence: $\text{LF} = Q_1 - 1.5 \times IQR$
+  - Any observation above the upper fence: $\text{UF} = Q_3 + 1.5 \times IQR$
+  - Points outside this range appear as individual dots outside the boxplot whiskers (e.g., NVIDIA or Apple's extreme market cap; highly negative profit margins in turnaround firms).
+- **Z-Score Method (Seuil en écarts-types)**:
+  - Standardized distance: $z_i = \frac{x_i - \bar{x}}{s}$. An observation with $|z_i| > 3.0$ is traditionally flagged as an extreme outlier in normally distributed data.
+- **Management Strategy (Slide 21)**: Never delete legitimate business outliers (like mega-cap firms) without justification! Instead, document them, apply non-parametric/robust tests (Median, IQR, Welch ANOVA), or use logarithmic transformations.
+
+### Missing Data: Mechanisms & Treatment (Données manquantes)
+
+- **Missing Completely at Random (MCAR — Manquant complètement au hasard)**: The probability of missingness is unrelated to any observed or unobserved variable (e.g., accidental scraping network drop on a random ticker).
+- **Missing at Random (MAR — Manquant au hasard conditionnel)**: Missingness depends on other observed variables (e.g., smaller firms failing to disclose certain governance sub-scores).
+- **Missing Not at Random (MNAR — Manquant non au hasard)**: Missingness depends on the unobserved value itself (e.g., firms with catastrophic ROE having negative equity, making ROE mathematically undefined).
+- **Treatment Strategies**:
+  - **Listwise Deletion (Suppression par liste / Complete Case Analysis)**: Dropping any row containing a missing value across the analyzed variables. Safe when MCAR and sample size is large ($N = 503$).
+  - **Pairwise Deletion (Suppression par paire)**: Used in bivariate correlation matrices (calculating $r$ between variables $X$ and $Y$ using all rows where both $X$ and $Y$ are valid, preserving sample size per pair).
+  - **Data Imputation (Imputation de données)**: Replacing missing values with mean/median or predictive regression (avoided here to prevent artificial variance deflation).
+
 ---
 
 ## 2. Financial & Corporate Accounting Terminology
@@ -132,6 +154,46 @@ A quantitative measure of a stock's volatility (systematic market risk) in compa
 
 The comprehensive annual regulatory filing required by the U.S. Securities and Exchange Commission (SEC) providing a detailed, audited breakdown of a public company's financial performance.
 
+### GICS (Global Industry Classification Standard — Classification sectorielle)
+
+An industry taxonomy developed in 1999 by MSCI and S&P Dow Jones Indices. Classifies all public companies into **11 primary sectors**: _Information Technology, Communication Services, Financials, Health Care, Consumer Discretionary, Consumer Staples, Industrials, Energy, Utilities, Real Estate, Materials_.
+
+- **Course Mapping (Slide 29)**: The course strictly limits the nominal grouping factor to 2–5 categories. We consolidated the 11 raw GICS sectors into **5 economically coherent groups**: _Tech & Comms, Healthcare, Finance, Industrials & Energy, Consumer_.
+
+### The Fundamental Accounting Equation (Équation fondamentale du bilan)
+
+$$\text{Assets} = \text{Liabilities} + \text{Shareholders' Equity}$$
+$$\text{Actif} = \text{Dettes} + \text{Capitaux Propres}$$
+A company's economic resources (Assets) are financed either by borrowing from creditors (Liabilities) or by capital provided and accumulated by owners (Equity). When liabilities exceed assets (often due to massive debt-funded share repurchases), accounting equity turns negative.
+
+### The P&L Income Statement Waterfall (Cascade du compte de résultat)
+
+The sequential deduction of operating and non-operating costs to arrive at net bottom-line earnings:
+
+1. **Gross Revenue (Chiffre d'affaires)**: Total operational sales inflow (`Total_Revenue_B`).
+2. **Gross Profit (Marge brute)**: Revenue minus Cost of Goods Sold (COGS).
+3. **EBITDA (Excédent Brut d'Exploitation)**: Earnings Before Interest, Taxes, Depreciation, and Amortization. A pure measure of operational cash generation.
+4. **EBIT / Operating Income (Résultat d'exploitation)**: Operational profit after depreciation of physical plant and equipment.
+5. **EBT (Résultat avant impôts)**: Operating income minus interest on debt.
+6. **Net Income (Résultat net)**: Final accounting earnings distributed to shareholders after corporate income tax. Divided by revenue, this yields our key outcome variable: `Profit_Margin`.
+
+### Systematic Risk vs. Idiosyncratic Risk (CAPM / MEDAF)
+
+Under the Capital Asset Pricing Model (CAPM):
+
+- **Systematic Market Risk (Risque systématique — $\beta$)**: Macroeconomic risks affecting the entire market (interest rates, inflation, recessions, geopolitical crises). Cannot be eliminated by diversification.
+- **Idiosyncratic / Unsystematic Risk (Risque spécifique / idiosyncratique)**: Firm-specific risks (e.g., product failure, executive fraud, board scandal). Completely diversifiable in a large portfolio.
+- **Our Empirical Finding**: Poor corporate governance is often assumed to be purely idiosyncratic, but our Session 2 correlation proves that weak governance significantly inflates **systematic market sensitivity** ($r = +0.268, p < .001^{***}$)!
+
+### Earnings Per Share (EPS / BPA) & Financial Engineering
+
+$$\text{EPS} = \frac{\text{Net Income}}{\text{Total Shares Outstanding}}$$
+Because executive bonuses and stock option vestings are heavily tied to EPS targets, corporate executives often use low-interest corporate debt to buy back company shares from the open market. This reduces the denominator (Shares Outstanding), artificially boosting EPS even when top-line business growth is stagnant.
+
+### Weighted Average Cost of Capital (WACC / CMPC)
+
+The average after-tax rate of return a company must pay to all its security holders (debt-holders and equity-holders) to finance its assets. Poor corporate governance increases perceived risk among lenders and investors, resulting in a **governance risk premium** that elevates the firm's WACC and reduces valuation.
+
 ---
 
 ## 3. ESG & Corporate Governance (ISS Framework)
@@ -164,6 +226,27 @@ To enable categorical contingency tables (Chi-Square) and group tests, the 1–1
 - **Low Risk** (Scores 1 to 3): Premier governance compliance ($n = 150$, $30.2\%$).
 - **Medium Risk** (Scores 4 to 6): Standard market governance ($n = 149$, $30.0\%$).
 - **High Risk** (Scores 7 to 10): Elevated governance friction ($n = 197$, $39.7\%$, Modal tier).
+
+### Agency Theory & Corporate Governance (Théorie de l'agence)
+
+The foundational financial theory of corporate governance (Jensen & Meckling, 1976; Fama & Jensen, 1983):
+
+- **The Core Conflict**: The **separation of ownership** (principals = shareholders who provide capital) from **operational control** (agents = managers and CEOs who run the day-to-day business).
+- **Agency Costs (Coûts d'agence)**: Self-interested managers may maximize their own private benefits (excessive pay, corporate jets, empire building through unprofitable mergers) rather than maximizing long-term shareholder value.
+- **The Role of Governance**: Board oversight, independent auditing, executive pay alignment, and shareholder voting rights exist precisely to minimize agency friction and ensure managers work in the interest of owners.
+
+### Key Governance Mechanisms Monitored by ISS
+
+- **CEO Duality (Cumul des mandats de PDG et Président du Conseil)**: When the Chief Executive Officer also serves as Chairman of the Board of Directors. ISS considers this a major conflict of interest because the board's primary role is to evaluate and supervise the CEO. Having an **Independent Lead Director** mitigates this risk.
+- **Say-on-Pay (Vote consultatif sur la rémunération)**: A non-binding shareholder vote mandated under the Dodd-Frank Act allowing investors to approve or reject executive compensation packages. Repeated low approval (< 70%) triggers elevated ISS Compensation Risk.
+- **Clawback Provision (Clause de restitution des bonus)**: A contractual clause enabling the board to claw back previously awarded executive bonuses in the event of financial restatements, fraud, or material misconduct.
+- **Poison Pill / Shareholder Rights Plan (Pilule empoisonnée)**: A defense mechanism allowing existing shareholders to purchase newly issued shares at a steep discount during an uninvited hostile takeover bid, severely diluting the hostile acquirer. ISS heavily penalizes companies adopting poison pills without shareholder approval.
+- **Classified / Staggered Board (Conseil d'administration échelonné)**: A board structure where only a fraction (typically one-third) of directors stand for election each year. Prevents an activist shareholder or acquirer from replacing the entire board in a single proxy contest.
+
+### Proxy Advisory & The "Big Three" Asset Managers
+
+- **Proxy Advisors (Agences de conseil en vote)**: Firms like ISS and Glass Lewis that research shareholder proposals, analyse corporate filings, and issue vote recommendations for annual general meetings (AGMs).
+- **The Big Three (BlackRock, Vanguard, State Street)**: The largest passive index asset managers in the world, holding on average over 20% of the voting shares of S&P 500 corporations. Because they manage passive index funds and cannot simply "sell" the stock of a poorly run company, they rely heavily on **ISS governance scores and proxy voting** to force corporate governance reform.
 
 ---
 
@@ -248,6 +331,27 @@ The mandatory answer template for every analytical question:
 - **$p$-value (Significance)**: The probability of observing results at least as extreme as the sample data assuming $H_0$ is true. If $p < 0.05$, we reject $H_0$ and conclude that an effect exists.
 - **Reporting Standard (Slide 42)**: Never write $p = 0.000$! Software printing `.000` means the value is below three decimal places. Report strictly as **$p < .001$**.
 - **Effect Size (Strength)**: While $p$-value tells you _whether_ an effect exists, effect size tells you _how strong_ it is (whether it practically matters to a manager).
+
+### Decision Errors: Type I ($\alpha$) vs. Type II ($\beta$) & Statistical Power
+
+In hypothesis testing, two types of erroneous conclusions are possible:
+
+| Reality \ Decision                      | Fail to Reject $H_0$ (Accept Status Quo)                          | Reject $H_0$ (Conclude Effect Exists)                          |
+| --------------------------------------- | ----------------------------------------------------------------- | -------------------------------------------------------------- |
+| **$H_0$ is True** (No real effect)      | **Correct Decision** ($1 - \alpha = 95\%$)                        | **Type I Error ($\alpha = 5\%$)** _(False Positive)_           |
+| **$H_0$ is False** (Real effect exists) | **Type II Error ($\beta$)** _(False Negative / Missed Discovery)_ | **Correct Decision: Statistical Power ($1 - \beta \ge 80\%$)** |
+
+- **Type I Error ($\alpha = 0.05$ — Faux positif)**: Claiming a governance relationship exists when it is purely due to random chance. The significance threshold $\alpha$ fixes this maximum acceptable risk at 5%.
+- **Type II Error ($\beta$ — Faux négatif)**: Missing a genuine governance impact because the sample is too small or noisy.
+- **Statistical Power ($1 - \beta$ — Puissance statistique)**: The probability of successfully detecting a genuine effect. By having $N = 503$ (well above the course minimum of 100), our study achieves high statistical power ($> 95\%$), minimizing Type II errors.
+
+### 95% Confidence Interval (Intervalle de confiance à 95% — CI)
+
+$$\text{CI}_{95\%} = \text{Point Estimate} \pm t_{\text{crit}} \times \text{Standard Error}$$
+A range of values calculated from the sample data that has a 95% probability of containing the true population parameter:
+
+- **Interpretation Rule**: If the 95% Confidence Interval for a difference or correlation contains zero (e.g., $[-0.05, +0.12]$), the effect is **not statistically significant** at $\alpha = 0.05$. If zero is excluded (e.g., Pearson $r$ for Governance Risk and Beta: $[+0.18, +0.35]$), the relationship is statistically significant.
+- **Margin of Error (Marge d'erreur)**: Half the width of the confidence interval ($t_{\text{crit}} \times SE$), quantifying sampling uncertainty.
 
 ### Chi-Square Test of Independence ($\chi^2$ — Nominal $\times$ Ordinal)
 
@@ -365,6 +469,42 @@ Applying natural logarithms to positively skewed financial metrics (Market Capit
      - $\text{VIF} < 5.0$: Safe / Low collinearity (Our maximum VIF was $1.89$).
      - $\text{VIF} > 10.0$: Severe multicollinearity (distorts $t$-statistics and inflates standard errors).
    - **Tolerance**: The inverse of VIF ($\text{Tol} = 1 / \text{VIF}$). Tolerance $< 0.20$ signals high collinearity risk.
+
+### Dummy Variables & Reference Category (Variables indicatrices / muettes)
+
+To include a qualitative nominal variable (like `Sector` with 5 groups) in an OLS regression, it must be converted into **$k - 1 = 4$ binary dummy variables** taking values $0$ or $1$:
+
+- **Reference Group (Catégorie de référence)**: _Tech & Comms_ is omitted from the equation to serve as the baseline ($X_{\text{all\_dummies}} = 0$).
+- **Interpretation of Dummy Coefficients ($\beta_{\text{Sector}}$)**: The coefficient represents the expected difference in profit margin between that sector and the reference sector (Tech & Comms), holding all financial and governance variables constant.
+- **Dummy Variable Trap (Piège de la colinéarité parfaite)**: If all 5 dummy variables were included alongside the constant ($\beta_0$), the sum of dummies would equal $1$, causing perfect multicollinearity ($\text{VIF} = \infty$) and rendering matrix inversion mathematically impossible.
+
+### Overall Model Utility: The Regression $F$-Test
+
+Tests the global null hypothesis that _none_ of the explanatory variables predict $Y$ ($H_0: \beta_1 = \beta_2 = \dots = \beta_k = 0$):
+$$F = \frac{MS_{\text{model}}}{MS_{\text{residual}}} = \frac{R^2 / k}{(1 - R^2) / (N - k - 1)}$$
+If $p_F < 0.05$, we reject $H_0$ and conclude that the model as a whole has genuine explanatory power beyond pure chance. (In our Model 3: $F(8, 485) = 11.23, p < .001^{***}$).
+
+### Influential Observations: Leverage ($h_{ii}$) & Cook's Distance ($D_i$)
+
+Not all outliers exert the same distortive pull on regression slopes:
+
+- **Leverage ($h_{ii}$ — Valeur levier)**: Measures how far an observation's predictor values ($X$) are from the center of the predictor space. High leverage points (e.g., massive revenue conglomerates) have high potential to swing the regression line. Warning threshold: $h_{ii} > 2(k + 1) / N$.
+- **Studentized Residual ($r_i$)**: The residual divided by its estimated standard deviation, flagging outliers in the $Y$-dimension ($|r_i| > 3.0$).
+- **Cook's Distance ($D_i$ — Distance de Cook)**:
+  $$D_i = \frac{\sum (\hat{y}_j - \hat{y}_{j(i)})^2}{(k + 1) s^2}$$
+  Measures the aggregate shift in all model predictions when observation $i$ is excluded. Any observation with $D_i > 1.0$ (or $D_i > 4/N$) is an **influential observation** requiring close inspection. (Panel D of Figure 9 visualizes studentized residuals against leverage).
+
+### Autocorrelation of Residuals & Durbin-Watson Test ($d$)
+
+Assumption that error terms are independent ($\text{Cov}(\epsilon_i, \epsilon_j) = 0$):
+
+- **Durbin-Watson Statistic ($d$)**:
+  $$d = \frac{\sum_{i=2}^N (e_i - e_{i-1})^2}{\sum_{i=1}^N e_i^2}$$
+  Ranges from $0$ to $4$:
+  - $d \approx 2.0$: No autocorrelation (residuals are completely independent).
+  - $d < 1.5$: Positive autocorrelation (common in time-series data).
+  - $d > 2.5$: Negative autocorrelation.
+- **In our Cross-Sectional Data**: Because 1 row = 1 independent firm, autocorrelation is naturally absent ($d \approx 1.98$).
 
 ---
 

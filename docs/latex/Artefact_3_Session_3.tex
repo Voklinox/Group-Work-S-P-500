@@ -1,0 +1,448 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+\documentclass[
+]{article}
+\usepackage{xcolor}
+\usepackage{amsmath,amssymb}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{longtable,booktabs,array}
+\usepackage{caption}
+\captionsetup[table]{skip=6pt}
+\newcounter{none} % for unnumbered tables
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\usepackage{graphicx}
+\makeatletter
+\newsavebox\pandoc@box
+\newcommand*\pandocbounded[1]{% scales image to fit in text height/width
+  \sbox\pandoc@box{#1}%
+  \Gscale@div\@tempa{\textheight}{\dimexpr\ht\pandoc@box+\dp\pandoc@box\relax}%
+  \Gscale@div\@tempb{\linewidth}{\wd\pandoc@box}%
+  \ifdim\@tempb\p@<\@tempa\p@\let\@tempa\@tempb\fi% select the smaller of both
+  \ifdim\@tempa\p@<\p@\scalebox{\@tempa}{\usebox\pandoc@box}%
+  \else\usebox{\pandoc@box}%
+  \fi%
+}
+% Set default figure placement to htbp
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\usepackage{bookmark}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+% fallback for those not using the hyperref driver hyperxmp:
+\makeatletter
+\@ifundefined{xmpquote}{\newcommand{\xmpquote}[1]{#1}}{}
+\makeatother
+\hypersetup{
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\author{}
+\date{}
+
+\begin{document}
+
+\section{Artefact 3 --- Group Comparisons \& ANOVA
+Report}\label{artefact-3-group-comparisons-anova-report}
+
+\begin{quote}
+\textbf{Course}: Quantitative Data Analysis (M1 -- S7) \textbf{Course
+Code}: \texttt{2627\_ECO\_2\_EN\_009} --- Academic Year 2026--2027
+\textbf{Institution}: EM Normandie Business School · Programme Grande
+École \textbf{Lecturer}: Dr.~NGUYEN Anh-Tuan \textbf{Deliverable}:
+\textbf{Artefact 3 (20 Marks)} \textbf{Prerequisites Completed}:
+\href{Artefact_1_Session_1.md}{Artefact 1 (Univariate)},
+\href{Artefact_2_Session_2.md}{Artefact 2 (Bivariate)}
+\end{quote}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{1. Executive Summary \& Analytical
+Scope}\label{executive-summary-analytical-scope}
+
+Session 3 tests whether the means of quantitative financial and
+governance metrics differ significantly across the 5 economic sectors of
+the S\&P 500 index (\(N = 503\)). In accordance with course directives
+(Slide 17 \& Slide 109--125), the analysis focuses on:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \textbf{Primary ANOVA}: Does \textbf{Net Profit Margin} differ
+  significantly across the 5 consolidated sectors?
+\item
+  \textbf{Secondary ANOVA}: Does \textbf{Corporate Governance Risk}
+  differ significantly across the 5 sectors?
+\item
+  \textbf{Parametric Assumption Checks}: Testing homogeneity of
+  variances (\textbf{Levene's Test}) and normality of group residuals.
+\item
+  \textbf{Robust Inferential Modeling}: Executing \textbf{Welch's ANOVA}
+  and non-parametric \textbf{Kruskal-Wallis} tests due to severe
+  empirical variance heterogeneity.
+\item
+  \textbf{Post-Hoc Pairwise Comparisons}: Executing \textbf{Games-Howell
+  post-hoc tests} (robust to unequal variances and group sizes) to
+  pinpoint which exact industry sectors drive the differences.
+\end{enumerate}
+
+Every test adheres strictly to the \textbf{4-Step Answering Protocol}
+(Slide 9).
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{2. Primary Analysis: Sector Differences in Profit
+Margin}\label{primary-analysis-sector-differences-in-profit-margin}
+
+\subsubsection{2.1 Protocol Step 1 ---
+IDENTIFY}\label{protocol-step-1-identify}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Variables}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Independent Variable (\(X\)): \texttt{Sector} (Nominal grouping
+    factor, exactly 5 categories: \emph{Consumer, Finance, Healthcare,
+    Industrials \& Energy, Tech \& Comms}).
+  \item
+    Dependent Variable (\(Y\)): \texttt{Profit\_Margin} (Quantitative
+    continuous ratio variable, FY2025 net profit margin).
+  \end{itemize}
+\item
+  \textbf{Test Selection}: \textbf{One-Way ANOVA}, followed by
+  \textbf{Levene's Test of Homogeneity of Variances}, \textbf{Welch's
+  Robust ANOVA}, and \textbf{Games-Howell Post-Hoc Pairwise
+  Comparisons}.
+\item
+  \textbf{Methodological Justification (Slide 17 \& 118)}: When
+  comparing a continuous outcome across 3 or more qualitative groups,
+  multiple independent \(t\)-tests cause severe alpha inflation
+  (accumulation of Type I error). One-Way ANOVA controls the family-wise
+  error rate. Because financial margins exhibit heterogeneous sector
+  variances, standard Fisher ANOVA is invalid; Welch's ANOVA and
+  Games-Howell adjustments are statistically required.
+\end{itemize}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsubsection{2.2 Protocol Step 2 ---
+HYPOTHESISE}\label{protocol-step-2-hypothesise}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Null Hypothesis (\(H_0\))}: There is no significant difference
+  in mean profit margin across the 5 economic sectors
+  (\(\mu_{\text{Consumer}} = \mu_{\text{Finance}} = \mu_{\text{Healthcare}} = \mu_{\text{Industrials}} = \mu_{\text{Tech}}\)).
+  Industry sector has no bearing on average corporate profitability.
+\item
+  \textbf{Alternative Hypothesis (\(H_1\))}: At least one sector's
+  population mean profit margin differs significantly from the others.
+\end{itemize}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsubsection{2.3 Protocol Step 3 ---
+DECIDE}\label{protocol-step-3-decide}
+
+\paragraph{\texorpdfstring{Sector Group Descriptive Summary
+(\(N = 503\))}{Sector Group Descriptive Summary (N = 503)}}\label{sector-group-descriptive-summary-n-503}
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 10\tabcolsep) * \real{0.2162}}
+  >{\centering\arraybackslash}p{(\linewidth - 10\tabcolsep) * \real{0.0270}}
+  >{\centering\arraybackslash}p{(\linewidth - 10\tabcolsep) * \real{0.1892}}
+  >{\centering\arraybackslash}p{(\linewidth - 10\tabcolsep) * \real{0.1351}}
+  >{\centering\arraybackslash}p{(\linewidth - 10\tabcolsep) * \real{0.1892}}
+  >{\centering\arraybackslash}p{(\linewidth - 10\tabcolsep) * \real{0.2432}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Consolidated Sector
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+\(n\)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+Mean (\(\bar{x}\))
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+Std. Dev. (\(s\))
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+Median (\(\text{Mdn}\))
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+Interquartile Range (\(IQR\))
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\textbf{Finance} & 71 & \textbf{0.2243} (\(22.4\%\)) & 0.1241 &
+\textbf{0.2273} (\(22.7\%\)) & 0.1541 \\
+\textbf{Tech \& Comms} & 108 & 0.1672 (\(16.7\%\)) & \textbf{0.2947} &
+0.1628 (\(16.3\%\)) & 0.1882 \\
+\textbf{Consumer} & 116 & 0.1329 (\(13.3\%\)) & 0.1374 & 0.1105
+(\(11.1\%\)) & 0.1565 \\
+\textbf{Industrials \& Energy} & 148 & 0.1310 (\(13.1\%\)) &
+\textbf{0.0861} & 0.1199 (\(12.0\%\)) & \textbf{0.0900} \\
+\textbf{Healthcare} & 60 & \textbf{0.0936} (\(9.4\%\)) & 0.2237 &
+\textbf{0.0990} (\(9.9\%\)) & 0.1500 \\
+\end{longtable}
+}
+
+\paragraph{1. Checking ANOVA Assumptions: Homogeneity of
+Variances}\label{checking-anova-assumptions-homogeneity-of-variances}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Levene's Test (Brown-Forsythe center = median)}:
+  \[F(4, 498) = 5.392, \quad p < .001\]
+\item
+  \textbf{Evaluation}: The Levene test decisively \textbf{rejects the
+  assumption of equal variances (\(p < .001\))}. Standard deviation
+  ranges from a tight \(8.61\%\) in \emph{Industrials \& Energy} to a
+  massive \(29.47\%\) in \emph{Tech \& Comms}. Standard Fisher's ANOVA
+  is violated; \textbf{Welch's ANOVA must be reported} (Slide 118).
+\end{itemize}
+
+\paragraph{2. Welch's Robust ANOVA \& Non-Parametric
+Verification}\label{welchs-robust-anova-non-parametric-verification}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Welch's ANOVA}:
+  \[F_{\text{Welch}}(4, 191.21) = 9.302, \quad p < .001\]
+\item
+  \textbf{Standard Fisher's ANOVA (for comparison)}:
+  \[F(4, 498) = 5.257, \quad p < .001, \quad \eta^2 = 0.0405, \quad \omega^2 = 0.0327\]
+\item
+  \textbf{Kruskal-Wallis Non-Parametric Test}:
+  \[H(4) = 45.984, \quad p < .001\]
+\item
+  \textbf{Decision}: Decisively \textbf{reject \(H_0\) (\(p < .001\))}.
+  Across all parametric, robust, and non-parametric tests, economic
+  sectors display highly significant differences in operating profit
+  margins.
+\item
+  \textbf{Effect Size}: \(\eta^2 = 0.0405\) indicates that
+  \textbf{\(4.05\%\) of the total cross-sectional variance} in profit
+  margins among S\&P 500 companies is directly explained by sector
+  classification.
+\end{itemize}
+
+\begin{figure}
+\centering
+\pandocbounded{\includegraphics[keepaspectratio,alt={Figure 1: One-Way ANOVA Boxplots --- Net Profit Margin across Economic Sectors}]{figures/anova_sector_boxplots.png}}
+\caption{Figure 1: One-Way ANOVA Boxplots --- Net Profit Margin across
+Economic Sectors}
+\end{figure}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsubsection{2.4 Games-Howell Post-Hoc Pairwise
+Comparisons}\label{games-howell-post-hoc-pairwise-comparisons}
+
+Because group variances and sample sizes are unequal, the
+\textbf{Games-Howell procedure} is applied across all 10 pairwise sector
+comparisons:
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 12\tabcolsep) * \real{0.2590}}
+  >{\centering\arraybackslash}p{(\linewidth - 12\tabcolsep) * \real{0.1079}}
+  >{\centering\arraybackslash}p{(\linewidth - 12\tabcolsep) * \real{0.1007}}
+  >{\centering\arraybackslash}p{(\linewidth - 12\tabcolsep) * \real{0.1655}}
+  >{\centering\arraybackslash}p{(\linewidth - 12\tabcolsep) * \real{0.0935}}
+  >{\centering\arraybackslash}p{(\linewidth - 12\tabcolsep) * \real{0.1295}}
+  >{\centering\arraybackslash}p{(\linewidth - 12\tabcolsep) * \real{0.1439}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Comparison Pair
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+Mean Difference
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+Standard Error
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+95\% Confidence Interval
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+\(t\)-statistic
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+Adjusted \(p\)-value
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+Significant?
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\textbf{Finance vs.~Consumer} & \textbf{+0.0914} & 0.0195 &
+\textbf{{[}+0.038, +0.145{]}} & \textbf{4.689} & \textbf{\textless{}
+.001} & \textbf{YES (\(p < .001\))} \\
+\textbf{Finance vs.~Healthcare} & \textbf{+0.1307} & 0.0324 &
+\textbf{{[}+0.040, +0.221{]}} & \textbf{4.032} & \textbf{.001} &
+\textbf{YES (\(p = .001\))} \\
+\textbf{Finance vs.~Industrials \& Energy} & \textbf{+0.0933} & 0.0163 &
+\textbf{{[}+0.048, +0.139{]}} & \textbf{5.713} & \textbf{\textless{}
+.001} & \textbf{YES (\(p < .001\))} \\
+\textbf{Finance vs.~Tech \& Comms} & +0.0571 & 0.0320 & {[}-0.031,
++0.145{]} & 1.786 & .385 & NO \\
+\textbf{Tech \& Comms vs.~Healthcare} & +0.0737 & 0.0405 & {[}-0.038,
++0.185{]} & 1.820 & .366 & NO \\
+\textbf{Tech \& Comms vs.~Consumer} & +0.0343 & 0.0311 & {[}-0.052,
++0.120{]} & 1.103 & .805 & NO \\
+\textbf{Tech \& Comms vs.~Industrials} & +0.0363 & 0.0292 & {[}-0.045,
++0.117{]} & 1.241 & .727 & NO \\
+\textbf{Consumer vs.~Healthcare} & +0.0394 & 0.0316 & {[}-0.049,
++0.127{]} & 1.247 & .724 & NO \\
+\textbf{Consumer vs.~Industrials} & +0.0020 & 0.0146 & {[}-0.038,
++0.042{]} & 0.136 & 1.000 & NO \\
+\textbf{Healthcare vs.~Industrials} & -0.0374 & 0.0297 & {[}-0.121,
++0.046{]} & -1.257 & .718 & NO \\
+\end{longtable}
+}
+
+\paragraph{Substantive Findings:}\label{substantive-findings}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \textbf{The Financial Premium}: The \textbf{Finance} sector generates
+  a significantly higher average profit margin (\(22.43\%\)) than
+  Consumer (\(13.29\%\)), Industrials \& Energy (\(13.10\%\)), and
+  Healthcare (\(9.36\%\)), with differences exceeding \(9\) to \(13\)
+  percentage points (\(p \le .001\)).
+\item
+  \textbf{Tech Dispersion}: Although Technology exhibits the
+  second-highest mean (\(16.72\%\)) and median (\(16.28\%\)), its
+  massive standard deviation (\(29.47\%\)) prevents its pairwise
+  differences from reaching statistical significance after Games-Howell
+  penalty adjustments.
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsubsection{2.5 Secondary Analysis: Governance Risk Across
+Sectors}\label{secondary-analysis-governance-risk-across-sectors}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{ANOVA Model}:
+  \texttt{Overall\_Governance\_Risk\ \textasciitilde{}\ Sector}
+\item
+  \textbf{Welch's Robust ANOVA}:
+  \[F_{\text{Welch}}(4, 207.84) = 3.960, \quad p = .004, \quad \eta^2 = 0.0311\]
+\item
+  \textbf{Finding}: Governance risk varies significantly across
+  industries (\(p = .004\)). \textbf{Tech \& Comms} registers the
+  highest mean governance risk (\(\bar{x} = 6.08\),
+  \(\text{Mdn} = 7.0\)), whereas \textbf{Industrials \& Energy} achieves
+  the lowest risk (\(\bar{x} = 4.77\), \(\text{Mdn} = 5.0\)).
+\end{itemize}
+
+\begin{figure}
+\centering
+\pandocbounded{\includegraphics[keepaspectratio,alt={Figure 2: Scatter Plot of Governance Risk Score vs.~Net Profit Margin}]{figures/scatter_governance_margin.png}}
+\caption{Figure 2: Scatter Plot of Governance Risk Score vs.~Net Profit
+Margin}
+\end{figure}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsubsection{2.6 Protocol Step 4 --- RECOMMEND (What Does the Manager
+Do on Monday
+Morning?)}\label{protocol-step-4-recommend-what-does-the-manager-do-on-monday-morning}
+
+\begin{quote}
+\textbf{``Corporate strategists and capital allocators must not
+benchmark financial profitability against a generic index-wide hurdle
+rate; on Monday morning, finance executives should establish
+sector-specific profitability floors (\(22\%\) in Finance vs.~\(13\%\)
+in Industrials and \(10\%\) in Healthcare). Furthermore, boards in
+Technology and Communications must prioritize corporate governance
+reforms---particularly dismantling dual-class share rights and tying
+executive pay to operating margins---to eliminate the industry's
+elevated governance risk premium (\(6.08/10\)) identified by ISS.''}
+\end{quote}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{3. Jamovi Session 3 Execution
+Guide}\label{jamovi-session-3-execution-guide}
+
+To replicate these ANOVA and Post-Hoc analyses in Jamovi:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Menu: \texttt{Analyses} \(\rightarrow\) \texttt{ANOVA} \(\rightarrow\)
+  \texttt{One-Way\ ANOVA}.
+\item
+  Move \textbf{\texttt{Profit\_Margin}} to \texttt{Dependent\ Variable}.
+\item
+  Move \textbf{\texttt{Sector}} to \texttt{Grouping\ Variable}.
+\item
+  Under \texttt{Variances}: Select
+  \textbf{\texttt{Don\textquotesingle{}t\ assume\ equal\ (Welch\textquotesingle{}s)}}.
+\item
+  Under \texttt{Assumption\ Checks}: Check
+  \textbf{\texttt{Homogeneity\ test\ (Levene\textquotesingle{}s)}} and
+  \textbf{\texttt{Normality\ test\ (Q-Q\ plot)}}.
+\item
+  Under \texttt{Post-Hoc\ Tests}: Select \textbf{\texttt{Games-Howell}},
+  check \texttt{Mean\ difference},
+  \texttt{Confidence\ intervals\ (95\%)}, and
+  \texttt{Test\ significance}.
+\item
+  Under \texttt{Plots}: Check \texttt{Descriptives\ plot}, select
+  \texttt{Box\ plot}, check \texttt{Show\ mean} and \texttt{Outliers}.
+\end{enumerate}
+
+\end{document}

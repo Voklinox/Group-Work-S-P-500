@@ -66,6 +66,8 @@ Sector Frequency Breakdown:
 Total Valid Observations: 503 (100.0%)
 ```
 
+![Figure 1: S&P 500 Sector Distribution across 5 Consolidated Categories](figures/sector_distribution.png)
+
 ---
 
 ### 4.2 Variable 2: `Governance_Risk_Level` (Ordinal Variable — 3 Tiers)
@@ -74,6 +76,8 @@ Total Valid Observations: 503 (100.0%)
 - **Distribution & Central Tendency**:
   Among the $496$ reporting corporations ($7$ firms unrated by ISS), the modal tier is **High Governance Risk**, encompassing $197$ firms ($39.72\%$), while **Low Governance Risk** accounts for $150$ firms ($30.24\%$) and **Medium Governance Risk** accounts for $149$ firms ($30.04\%$). The median firm falls exactly in the **Medium** tier.
 - **Managerial Interpretation**: Contrary to common assumptions, nearly $40\%$ of S&P 500 corporations exhibit high institutional governance risk scores, predominantly driven by contentious executive compensation packages and shareholder rights restrictions. This substantial variance provides an ideal foundation for testing risk differentials in Session 2 (Chi-Square) and Session 4 (Regression).
+
+![Figure 2: Distribution of Institutional Governance Risk Tiers](figures/governance_risk_distribution.png)
 
 ---
 
@@ -108,6 +112,8 @@ Total Valid Observations: 503 (100.0%)
   - _Shape_: Skewness $g_1 = 7.8532$, Kurtosis $g_2 = 68.1146$.
 - **Managerial Interpretation**: S&P 500 capitalization exhibits acute right-skewness (_Pareto distribution_): while half the index is valued below $\$44.5\text{B}$, a handful of multi-trillion mega-cap tech conglomerates (NVIDIA, Apple, Microsoft, Alphabet, Amazon) inflate the average valuation to $\$147.6\text{B}$. Size must therefore be modeled via quartiles (`Market_Cap_Quartile`) or logarithmic transformations in subsequent regression modeling.
 
+![Figure 3: S&P 500 Market Capitalization Distribution and Pareto Skewness](figures/market_cap_distribution.png)
+
 ---
 
 ## 5. Normality Evaluation of a Continuous Variable (`Profit_Margin`)
@@ -133,6 +139,8 @@ Test Component        Empirical Value            Normality Criterion           V
 FINAL VERDICT: Severe violation of normality. Parametric normality assumption REJECTED.
 ========================================================================================
 ```
+
+![Figure 4: Net Profit Margin Normality Diagnostics — Histogram, Density, and Q-Q Plot](figures/profit_margin_normality.png)
 
 ### The Three Converging Pieces of Evidence Explained:
 

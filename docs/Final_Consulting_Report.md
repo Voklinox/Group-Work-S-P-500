@@ -67,6 +67,8 @@ All data were extracted live from official financial infrastructure (Yahoo Finan
   3. _Formal Test_: Shapiro-Wilk test decisively **rejects normality ($W = 0.6530, p < .001$)**.
 - _Econometric Consequence_: Confirmed that subsequent sessions require Welch's robust ANOVA, Games-Howell post-hoc tests, and logarithmic size transformations.
 
+![Figure 1: Net Profit Margin Normality Diagnostics](figures/profit_margin_normality.png)
+
 ---
 
 ### Session 2 — Bivariate Associations (Chi-Square & Correlations)
@@ -77,6 +79,8 @@ All data were extracted live from official financial infrastructure (Yahoo Finan
 - **Pearson & Spearman Correlation Analysis**:
   - Raw link between Governance Risk and Profit Margin: $r = -0.046, p = .304$.
   - **Link between Governance Risk and Market Beta**: $r = +0.268, p < .001^{***}$ ($95\% \text{ CI } [0.184, 0.348]$). Sub-pillar risks (Compensation Risk $r = +0.215$, Shareholder Rights $r = +0.231$) significantly inflate systematic volatility.
+
+![Figure 2: Contingency Heatmap — Sector vs. Governance Risk Tier](figures/contingency_sector_gov.png)
 
 ---
 
@@ -91,6 +95,8 @@ All data were extracted live from official financial infrastructure (Yahoo Finan
   - _Finance vs. Industrials_: $+9.33$ percentage points ($p < .001^{***}$).
 - **Secondary Model**: `Overall_Governance_Risk ~ Sector`
   - Welch's ANOVA: $F_{\text{Welch}}(4, 207.84) = 3.960, p = .004^{**}$. Tech firms average $6.08/10$ risk vs. $4.77/10$ in Industrials.
+
+![Figure 3: One-Way ANOVA Boxplots across Sectors](figures/anova_sector_boxplots.png)
 
 ---
 
@@ -108,6 +114,8 @@ $$\text{Model 3: } \text{Profit\_Margin}_i = \beta_0 + \beta_1 \text{Gov\_Risk}_
 - **Multicollinearity Diagnostic**: Maximum VIF is $1.89$, confirming zero collinearity bias.
 - **Econometric Conclusion**: We decisively reject the null hypothesis ($p = .037$). Weaker corporate governance systematically penalizes bottom-line profit margins.
 
+![Figure 4: Four-Panel OLS Regression Diagnostics](figures/regression_diagnostics_4panel.png)
+
 ---
 
 ## 3. The Monday Morning Executive Action Matrix
@@ -120,6 +128,8 @@ In accordance with Step 4 of the course protocol (_"What does the manager do on 
 | **Chief Financial Officer (CFO)**         | Re-evaluate capital allocation: balance share repurchases against book equity health to avoid negative equity status.    | Target an operational margin expansion of $+0.59\%$ per decile reduction in governance risk.                   | Net Profit Margin ($\ge 13.15\%$ sector median)           |
 | **Chief Risk Officer (CRO)**              | Mandate a $+15\%$ haircut on risk-weighted assets for portfolio holdings in the High Governance Risk tier ($ISS \ge 7$). | Factor the $+0.268$ beta correlation into value-at-risk (VaR) and stress-testing models.                       | Portfolio Beta ($\beta$) and Downside Volatility          |
 | **ESG & Portfolio Manager**               | Overweight high-compliance Industrial and Financial firms; underweight un-reformed Tech & Consumer firms.                | Launch targeted proxy-voting engagements against excessive dilution and poison-pill provisions.                | Active Alpha & ESG Decile Tilt                            |
+
+![Figure 5: ISS Governance Sub-Pillar Radar Profiles Across Performance Tiers](figures/subpillar_governance_radar.png)
 
 ---
 

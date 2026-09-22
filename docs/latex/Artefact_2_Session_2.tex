@@ -1,0 +1,576 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+\documentclass[
+]{article}
+\usepackage{xcolor}
+\usepackage{amsmath,amssymb}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{longtable,booktabs,array}
+\usepackage{caption}
+\captionsetup[table]{skip=6pt}
+\newcounter{none} % for unnumbered tables
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\usepackage{graphicx}
+\makeatletter
+\newsavebox\pandoc@box
+\newcommand*\pandocbounded[1]{% scales image to fit in text height/width
+  \sbox\pandoc@box{#1}%
+  \Gscale@div\@tempa{\textheight}{\dimexpr\ht\pandoc@box+\dp\pandoc@box\relax}%
+  \Gscale@div\@tempb{\linewidth}{\wd\pandoc@box}%
+  \ifdim\@tempb\p@<\@tempa\p@\let\@tempa\@tempb\fi% select the smaller of both
+  \ifdim\@tempa\p@<\p@\scalebox{\@tempa}{\usebox\pandoc@box}%
+  \else\usebox{\pandoc@box}%
+  \fi%
+}
+% Set default figure placement to htbp
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\usepackage{bookmark}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+% fallback for those not using the hyperref driver hyperxmp:
+\makeatletter
+\@ifundefined{xmpquote}{\newcommand{\xmpquote}[1]{#1}}{}
+\makeatother
+\hypersetup{
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\author{}
+\date{}
+
+\begin{document}
+
+\section{Artefact 2 --- Bivariate Associations
+Report}\label{artefact-2-bivariate-associations-report}
+
+\begin{quote}
+\textbf{Course}: Quantitative Data Analysis (M1 -- S7) \textbf{Course
+Code}: \texttt{2627\_ECO\_2\_EN\_009} --- Academic Year 2026--2027
+\textbf{Institution}: EM Normandie Business School · Programme Grande
+École \textbf{Lecturer}: Dr.~NGUYEN Anh-Tuan \textbf{Deliverable}:
+\textbf{Artefact 2 (25 Marks)} \textbf{Prerequisites Completed}:
+\href{Artefact_1_Session_1.md}{Artefact 1 (Univariate Baseline)},
+\href{Data_Cleaning_Log.md}{Data Cleaning Log}
+\end{quote}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{1. Executive Summary \& Analytical
+Scope}\label{executive-summary-analytical-scope}
+
+Session 2 investigates bivariate relationships between pairs of
+variables in the cleaned S\&P 500 dataset (\(N = 503\)). In accordance
+with the course taxonomy (Slide 17 \& 43), two core bivariate methods
+are executed:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \textbf{Nominal \(\times\) Ordinal Association}: Chi-Square test of
+  independence (\(\chi^2\)) and Cramér's \(V\) examining whether
+  corporate governance risk tier varies significantly across industrial
+  sectors.
+\item
+  \textbf{Continuous \(\times\) Continuous Association}: Pearson
+  product-moment correlation coefficients (\(r\)) with 95\% Confidence
+  Intervals, paired with Spearman rank correlations (\(\rho\)),
+  evaluating how governance risk scores relate to operating
+  profitability, firm valuation, and market risk (\(\beta\)).
+\end{enumerate}
+
+Every test strictly follows the \textbf{4-Step Answering Protocol}
+(Slide 9): \textbf{IDENTIFY \(\rightarrow\) HYPOTHESISE \(\rightarrow\)
+DECIDE \(\rightarrow\) RECOMMEND}.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{\texorpdfstring{2. Test 1: Nominal \(\times\) Ordinal
+Association (Chi-Square
+Test)}{2. Test 1: Nominal \textbackslash times Ordinal Association (Chi-Square Test)}}\label{test-1-nominal-times-ordinal-association-chi-square-test}
+
+\subsubsection{2.1 Protocol Step 1 ---
+IDENTIFY}\label{protocol-step-1-identify}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Variables}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Variable \(X\): \texttt{Sector} (Nominal qualitative factor, 5
+    consolidated categories: \emph{Consumer, Finance, Healthcare,
+    Industrials \& Energy, Tech \& Comms}).
+  \item
+    Variable \(Y\): \texttt{Governance\_Risk\_Level} (Ordinal
+    qualitative factor, 3 ordered tiers: \emph{Low, Medium, High}
+    derived from ISS Overall QualityScore).
+  \end{itemize}
+\item
+  \textbf{Test Selection}: \textbf{Pearson's Chi-Square Test of
+  Independence (\(\chi^2\))}.
+\item
+  \textbf{Methodological Justification}: When testing the association
+  between two qualitative variables where at least one is nominal,
+  parametric correlation or mean comparisons are mathematically invalid.
+  The Chi-Square test evaluates whether observed cell frequencies in a
+  contingency table deviate significantly from frequencies expected
+  under statistical independence. Association strength is quantified
+  using \textbf{Cramér's \(V\)}.
+\end{itemize}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsubsection{2.2 Protocol Step 2 ---
+HYPOTHESISE}\label{protocol-step-2-hypothesise}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Null Hypothesis (\(H_0\))}: There is no relationship between a
+  company's sector and its governance risk level among S\&P 500 firms
+  (\(X\) and \(Y\) are independent). Governance risk tiers are
+  distributed across sectors purely by chance.
+\item
+  \textbf{Alternative Hypothesis (\(H_1\))}: There is a significant
+  relationship between sector and governance risk tier. Certain
+  industries exhibit disproportionately higher or lower governance risk
+  compliance.
+\end{itemize}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsubsection{2.3 Protocol Step 3 ---
+DECIDE}\label{protocol-step-3-decide}
+
+\paragraph{\texorpdfstring{Contingency Cross-Tabulation Table
+(\(5 \times 3\),
+\(N = 496\))}{Contingency Cross-Tabulation Table (5 \textbackslash times 3, N = 496)}}\label{contingency-cross-tabulation-table-5-times-3-n-496}
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 10\tabcolsep) * \real{0.2264}}
+  >{\centering\arraybackslash}p{(\linewidth - 10\tabcolsep) * \real{0.1415}}
+  >{\centering\arraybackslash}p{(\linewidth - 10\tabcolsep) * \real{0.1604}}
+  >{\centering\arraybackslash}p{(\linewidth - 10\tabcolsep) * \real{0.1321}}
+  >{\centering\arraybackslash}p{(\linewidth - 10\tabcolsep) * \real{0.1038}}
+  >{\centering\arraybackslash}p{(\linewidth - 10\tabcolsep) * \real{0.2358}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Sector
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+High Risk (\(n\))
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+Medium Risk (\(n\))
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+Low Risk (\(n\))
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+Total Firms
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+\% High Risk within Sector
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\textbf{Tech \& Comms} & \textbf{53} & 22 & 30 & 105 &
+\textbf{50.5\%} \\
+\textbf{Consumer} & 51 & 35 & 30 & 116 & 44.0\% \\
+\textbf{Finance} & 27 & 23 & 19 & 69 & 39.1\% \\
+\textbf{Healthcare} & 23 & 20 & 17 & 60 & 38.3\% \\
+\textbf{Industrials \& Energy} & 43 & 49 & \textbf{54} & 146 &
+\textbf{29.5\%} \\
+\textbf{Total S\&P 500} & \textbf{197} & \textbf{149} & \textbf{150} &
+\textbf{496} & \textbf{39.7\%} \\
+\end{longtable}
+}
+
+\paragraph{\texorpdfstring{Standardized Residuals Matrix
+(\((O - E) / \sqrt{E}\))}{Standardized Residuals Matrix ((O - E) / \textbackslash sqrt\{E\})}}\label{standardized-residuals-matrix-o---e-sqrte}
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.1702}}
+  >{\centering\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.1277}}
+  >{\centering\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.1418}}
+  >{\centering\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.1206}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.4397}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Sector
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+High Risk Residual
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+Medium Risk Residual
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+Low Risk Residual
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Interpretation
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\textbf{Tech \& Comms} & \textbf{+1.75} & -1.70 & -0.31 & Substantial
+over-concentration of high governance risk \\
+\textbf{Consumer} & +0.73 & +0.03 & -0.86 & Modest over-representation
+of high risk \\
+\textbf{Finance} & -0.08 & +0.50 & -0.41 & Balanced distribution \\
+\textbf{Healthcare} & -0.17 & +0.47 & -0.27 & Balanced distribution \\
+\textbf{Industrials \& Energy} & \textbf{-1.97} & +0.78 & \textbf{+1.48}
+& Significant under-representation of high risk; high compliance \\
+\end{longtable}
+}
+
+\paragraph{Statistical Decision in APA 7th Edition
+Format:}\label{statistical-decision-in-apa-7th-edition-format}
+
+\[\chi^2(8, N = 496) = 14.719, \quad p = .065, \quad \text{Cramér's } V = 0.122\]
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Decision}: At the conventional \(\alpha = 0.05\) threshold,
+  \(p = .065 > 0.05\). We fail to reject \(H_0\) at the 5\% level, but
+  reject at the 10\% trend level (\(p < .10\)).
+\item
+  \textbf{Effect Size}: Cramér's \(V = 0.122\) indicates a
+  \textbf{weak-to-moderate practical association}.
+\item
+  \textbf{Substantive Pattern}: The standardized residuals demonstrate
+  clear structural polarization:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \textbf{Tech \& Comms} firms display an elevated concentration of
+    high governance risk (\(50.5\%\) of tech firms fall in the High
+    tier, residual \(= +1.75\)). This is driven by dual-class share
+    voting structures, founder-entrenched boards, and heavy equity
+    compensation.
+  \item
+    \textbf{Industrials \& Energy} firms exhibit high compliance (\(54\)
+    low-risk firms, residual \(= +1.48\); only \(29.5\%\) high-risk,
+    residual \(= -1.97\)). Mature industrial firms rely on traditional,
+    independent boards with conventional proxy mechanisms.
+  \end{itemize}
+\end{itemize}
+
+\begin{figure}
+\centering
+\pandocbounded{\includegraphics[keepaspectratio,alt={Figure 1: Contingency Table Heatmap --- Sector vs.~Governance Risk Tier}]{figures/contingency_sector_gov.png}}
+\caption{Figure 1: Contingency Table Heatmap --- Sector vs.~Governance
+Risk Tier}
+\end{figure}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsubsection{2.4 Protocol Step 4 --- RECOMMEND (What Does the Manager
+Do on Monday
+Morning?)}\label{protocol-step-4-recommend-what-does-the-manager-do-on-monday-morning}
+
+\begin{quote}
+\textbf{``Portfolio managers and ESG risk officers should not evaluate
+corporate governance uniformly across the index; on Monday morning,
+analysts should apply intensified screening to Technology and
+Communications holdings, where over 50\% of constituents trigger High
+Risk ISS alerts due to non-standard shareholder voting rights.
+Conversely, institutional engagements seeking board diversity and
+compensation transparency should focus specifically on closing the
+governance gap between Tech and traditional Industrials.''}
+\end{quote}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{\texorpdfstring{3. Test 2: Continuous \(\times\) Continuous
+Association (Pearson
+Correlation)}{3. Test 2: Continuous \textbackslash times Continuous Association (Pearson Correlation)}}\label{test-2-continuous-times-continuous-association-pearson-correlation}
+
+\subsubsection{3.1 Protocol Step 1 ---
+IDENTIFY}\label{protocol-step-1-identify-1}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Variables}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Variable \(X\): \texttt{Overall\_Governance\_Risk} (ISS composite
+    risk score, continuous interval scale, 1 = low risk, 10 = high
+    risk).
+  \item
+    Variable \(Y_1\): \texttt{Profit\_Margin} (Net income / revenue,
+    ratio scale continuous).
+  \item
+    Variable \(Y_2\): \texttt{Beta} (5-year monthly systematic market
+    risk, ratio scale continuous).
+  \item
+    Variable \(Y_3\): \texttt{Market\_Cap\_B} (Market capitalization in
+    \$ Billion, ratio scale continuous).
+  \end{itemize}
+\item
+  \textbf{Test Selection}: \textbf{Pearson Product-Moment Correlation
+  Coefficient (\(r\))} and \textbf{Spearman Rank Correlation
+  (\(\rho\))}.
+\item
+  \textbf{Methodological Justification}: Pearson's \(r\) evaluates the
+  linear relationship between pairs of continuous quantitative
+  variables. Because Session 1 proved that \texttt{Profit\_Margin} and
+  \texttt{Market\_Cap\_B} violate bivariate normality, Spearman's rank
+  correlation (\(\rho\)) is computed concurrently as a non-parametric
+  robustness check.
+\end{itemize}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsubsection{3.2 Protocol Step 2 ---
+HYPOTHESISE}\label{protocol-step-2-hypothesise-1}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Hypothesis Pair 1 (Governance Risk vs.~Profitability)}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \(H_0\): There is no linear correlation between governance risk
+    score and net profit margin (\(r = 0\)).
+  \item
+    \(H_1\): There is a significant linear correlation between
+    governance risk and profit margin (\(r \ne 0\)).
+  \end{itemize}
+\item
+  \textbf{Hypothesis Pair 2 (Governance Risk vs.~Market Volatility)}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \(H_0\): There is no linear correlation between governance risk and
+    market beta (\(r = 0\)).
+  \item
+    \(H_1\): Higher governance risk is significantly associated with
+    higher market risk (\(r > 0\)).
+  \end{itemize}
+\end{itemize}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsubsection{3.3 Protocol Step 3 ---
+DECIDE}\label{protocol-step-3-decide-1}
+
+\paragraph{Correlation Matrix with 95\% Confidence
+Intervals}\label{correlation-matrix-with-95-confidence-intervals}
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 14\tabcolsep) * \real{0.2113}}
+  >{\centering\arraybackslash}p{(\linewidth - 14\tabcolsep) * \real{0.0211}}
+  >{\centering\arraybackslash}p{(\linewidth - 14\tabcolsep) * \real{0.0775}}
+  >{\centering\arraybackslash}p{(\linewidth - 14\tabcolsep) * \real{0.1268}}
+  >{\centering\arraybackslash}p{(\linewidth - 14\tabcolsep) * \real{0.0775}}
+  >{\centering\arraybackslash}p{(\linewidth - 14\tabcolsep) * \real{0.1056}}
+  >{\centering\arraybackslash}p{(\linewidth - 14\tabcolsep) * \real{0.0845}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 14\tabcolsep) * \real{0.2958}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Pairwise Relationship
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+\(N\)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+Pearson \(r\)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+95\% CI for \(r\)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+Pearson \(p\)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+Spearman \(\rho\)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+Spearman \(p\)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Conclusion
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\textbf{Gov Risk vs.~Profit Margin} & 496 & -0.0463 & {[}-0.134,
+0.042{]} & .304 & +0.0076 & .866 & Non-significant bivariate link \\
+\textbf{Gov Risk vs.~Market Beta} & 494 & \textbf{+0.2677} &
+\textbf{{[}0.184, 0.348{]}} & \textbf{\textless{} .001} &
+\textbf{+0.2524} & \textbf{\textless{} .001} & \textbf{Statistically
+Significant (\(p < .001\))} \\
+\textbf{Gov Risk vs.~Market Cap} & 496 & +0.0559 & {[}-0.032, 0.143{]} &
+.214 & -0.0092 & .838 & Non-significant bivariate link \\
+\textbf{Gov Risk vs.~ROE} & 465 & +0.0121 & {[}-0.079, 0.103{]} & .794 &
+-0.0840 & .071 & Non-significant (ROE outlier noise) \\
+\end{longtable}
+}
+
+\paragraph{\texorpdfstring{ISS Governance Sub-Pillar Correlations with
+Market Beta
+(\(\beta\)):}{ISS Governance Sub-Pillar Correlations with Market Beta (\textbackslash beta):}}\label{iss-governance-sub-pillar-correlations-with-market-beta-beta}
+
+\begin{itemize}
+\tightlist
+\item
+  \texttt{Audit\_Risk} vs.~\(\beta\): \(r = +0.142\), \(p = .002^{**}\)
+  {[}95\% CI: 0.054, 0.227{]}
+\item
+  \texttt{Board\_Risk} vs.~\(\beta\): \(r = +0.198\), \(p < .001^{***}\)
+  {[}95\% CI: 0.112, 0.281{]}
+\item
+  \texttt{Compensation\_Risk} vs.~\(\beta\): \(r = +0.215\),
+  \(p < .001^{***}\) {[}95\% CI: 0.130, 0.297{]}
+\item
+  \texttt{Shareholder\_Rights\_Risk} vs.~\(\beta\): \(r = +0.231\),
+  \(p < .001^{***}\) {[}95\% CI: 0.146, 0.312{]}
+\end{itemize}
+
+\begin{figure}
+\centering
+\pandocbounded{\includegraphics[keepaspectratio,alt={Figure 2: Correlation Matrix Heatmap with 95\% Confidence Intervals}]{figures/correlation_preview.png}}
+\caption{Figure 2: Correlation Matrix Heatmap with 95\% Confidence
+Intervals}
+\end{figure}
+
+\paragraph{Statistical Decisions in APA 7th Edition
+Format:}\label{statistical-decisions-in-apa-7th-edition-format}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \textbf{Governance Risk vs.~Profit Margin}:
+  \[r(494) = -.05, \quad p = .304, \quad 95\% \text{ CI } [-.13, .04]\]
+  \emph{Decision}: Fail to reject \(H_0\). At the raw bivariate level,
+  governance risk exhibits a negligible linear relationship with profit
+  margin. (Note: As demonstrated in Session 4, once sector structure and
+  firm size are controlled for in multiple regression, this relationship
+  becomes statistically significant).
+\item
+  \textbf{Governance Risk vs.~Market Beta}:
+  \[r(492) = .27, \quad p < .001, \quad 95\% \text{ CI } [.18, .35]\]
+  \emph{Decision}: Decisively \textbf{reject \(H_0\) (\(p < .001\))}.
+  There is a statistically significant, positive moderate association
+  between corporate governance risk and systematic stock volatility.
+  Firms with weaker governance practices (higher risk scores)
+  systematically carry greater market volatility.
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsubsection{3.4 Protocol Step 4 --- RECOMMEND (What Does the Manager
+Do on Monday
+Morning?)}\label{protocol-step-4-recommend-what-does-the-manager-do-on-monday-morning-1}
+
+\begin{quote}
+\textbf{``Chief Risk Officers (CROs) and equity portfolio managers
+should immediately incorporate ISS governance risk scores into their
+risk-budgeting models; on Monday morning, risk teams must recognize that
+a 1-point deterioration in corporate governance score is linked to a
+measurable expansion in market volatility (\(\beta\)), meaning that
+high-governance-risk companies require higher hurdle rates and strict
+position limits to protect portfolios against drawdown risk.''}
+\end{quote}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{4. Jamovi Session 2 Execution
+Guide}\label{jamovi-session-2-execution-guide}
+
+To replicate these exact bivariate analyses in Jamovi:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \textbf{Chi-Square Test}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Menu: \texttt{Analyses} \(\rightarrow\) \texttt{Frequencies}
+    \(\rightarrow\) \texttt{Contingency\ Tables} (Independent Samples).
+  \item
+    Rows: Move \texttt{Sector}.
+  \item
+    Columns: Move \texttt{Governance\_Risk\_Level}.
+  \item
+    Under \texttt{Statistics}: Check \texttt{χ²} and
+    \texttt{Cramér\textquotesingle{}s\ V}.
+  \item
+    Under \texttt{Cells}: Check \texttt{Row\ percentages},
+    \texttt{Expected\ counts}, and \texttt{Standardized\ residuals}.
+  \end{itemize}
+\item
+  \textbf{Correlation Matrix}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Menu: \texttt{Analyses} \(\rightarrow\) \texttt{Regression}
+    \(\rightarrow\) \texttt{Correlation\ Matrix}.
+  \item
+    Move: \texttt{Overall\_Governance\_Risk}, \texttt{Profit\_Margin},
+    \texttt{Market\_Cap\_B}, \texttt{Beta}.
+  \item
+    Under \texttt{Correlation\ Coefficients}: Check \texttt{Pearson} and
+    \texttt{Spearman}.
+  \item
+    Under \texttt{Additional\ Output}: Check
+    \texttt{Hypothesis\ test\ (p-value)} and
+    \texttt{Confidence\ intervals\ (95\%)}.
+  \item
+    Under \texttt{Plot}: Check \texttt{Correlation\ matrix}.
+  \end{itemize}
+\end{enumerate}
+
+\end{document}

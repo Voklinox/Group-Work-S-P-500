@@ -40,6 +40,8 @@ $$\text{Profit\_Margin}_i = \beta_0 + \beta_1 \text{Overall\_Governance\_Risk}_i
   $$R^2 = 0.0028, \quad \text{Adjusted } R^2 = 0.0007, \quad F(1, 494) = 1.358, \quad p = .244, \quad N = 496$$
 - **Interpretation**: In an unadjusted bivariate model, corporate governance risk explains only $0.28\%$ of the variation in profit margins and fails to reach statistical significance ($p = .244$). However, as demonstrated in corporate finance theory, estimating governance without controlling for firm scale and capital structure suffers from severe **omitted variable bias**.
 
+![Figure 1: Bivariate Scatter and Regression Trendline — Governance Risk vs Profit Margin](figures/scatter_governance_margin.png)
+
 ---
 
 ### 2.2 Model 2: Multivariate OLS with Financial Controls
@@ -94,6 +96,8 @@ Controlling for baseline sector profitability differentials using dummy variable
 3. **Homoscedasticity**: The Breusch-Pagan test yields $LM = 15.139, p = .004$. Because variance expands slightly for ultra-profitable firms, robust standard errors (White's HC3 standard errors) confirm that the governance coefficient remains statistically significant ($p = .041$).
 4. **Multicollinearity**: Maximum VIF in the final model is $1.89$ (all tolerance values $> 0.53$), guaranteeing completely stable coefficient estimates.
 
+![Figure 2: Four-Panel OLS Econometric Regression Diagnostics](figures/regression_diagnostics_4panel.png)
+
 ---
 
 ## 4. The 4-Step Protocol Summary (Slide 9)
@@ -105,6 +109,8 @@ Controlling for baseline sector profitability differentials using dummy variable
 3. **DECIDE**: At $\alpha = 0.05$, $t(485) = -2.087, p = .037$. We decisively **reject $H_0$**. Corporate governance risk exhibits a statistically significant negative relationship with operating profitability.
 4. **RECOMMEND**:
    > **"Executive boards and CFOs should not treat corporate governance compliance as a mere legal cost center; on Monday morning, corporate treasurers should present the econometric evidence demonstrating that a 1-point reduction in ISS governance risk yields an estimated +0.59% net margin improvement. Governance committees should immediately eliminate dual-class voting structures and cap discretionary executive compensation to capture this documented profitability premium."**
+
+![Figure 3: ISS Governance Sub-Pillar Radar Profiles](figures/subpillar_governance_radar.png)
 
 ---
 

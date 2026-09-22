@@ -1,0 +1,273 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+\documentclass[
+]{article}
+\usepackage{xcolor}
+\usepackage{amsmath,amssymb}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{longtable,booktabs,array}
+\usepackage{caption}
+\captionsetup[table]{skip=6pt}
+\newcounter{none} % for unnumbered tables
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\usepackage{bookmark}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+% fallback for those not using the hyperref driver hyperxmp:
+\makeatletter
+\@ifundefined{xmpquote}{\newcommand{\xmpquote}[1]{#1}}{}
+\makeatother
+\hypersetup{
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\author{}
+\date{}
+
+\begin{document}
+
+\section{Systematic Data Cleaning \& Audit Log (Cleaning
+Log)}\label{systematic-data-cleaning-audit-log-cleaning-log}
+
+\begin{quote}
+\textbf{Course}: Quantitative Data Analysis (M1 -- S7)
+\textbf{Coursework Deliverable}: Artefact 1 --- Audit Component (Slide
+39 \& 41) \textbf{Dataset}: S\&P 500 Corporate Governance \& Financial
+Performance (FY2025) \textbf{Total Records Audited}: \(N = 503\)
+observations, 17 raw features
+\end{quote}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{1. Executive Cleaning
+Summary}\label{executive-cleaning-summary}
+
+In professional consulting and econometric modeling, an unexamined
+dataset produces indefensible conclusions. As established in the course
+doctrine (\emph{``Garbage in, garbage out. Software never refuses to
+print a number. Sanity-checking output is your job''} --- Slides 25 \&
+34), this log systematically documents all anomalies identified, the
+corrective actions taken, and the methodological justifications.
+
+\begin{verbatim}
+Total Raw Rows Extracted:        503
+Total Cleaned Analytical Rows:   503
+Duplicate Tickers / Rows:        0 (100% Unique)
+Remediated Ticker Entities:      1 (Fiserv, Inc.)
+Categorical Formatting Fixes:    503 (Standardized to 5 GICS groups)
+Decimal / Type Harmonization:    100% Validated (Period decimal separators, numeric floats)
+\end{verbatim}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{2. Granular Audit Matrix: What Was Wrong, What Was Done,
+Why}\label{granular-audit-matrix-what-was-wrong-what-was-done-why}
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.0079}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.0745}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.1759}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.4485}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.2932}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+\#
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Inspection Category (Slide 39)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Anomaly Detected in Raw Data
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Corrective Action Taken
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Methodological \& Business Justification
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\textbf{1} & \textbf{Missing Values in Disguise} & Row 199
+(\texttt{FISV}) returned \texttt{NaN} across sector, turnover, margin,
+and governance scores. & Identified corporate ticker transition from
+\texttt{FISV} to \texttt{FI} on NYSE. Programmatically re-mapped to
+\texttt{FI} and populated audited FY2025 financials and ISS risk scores.
+& Prevents silent data attrition. Fiserv is an S\&P 500 fintech market
+leader (\$19.09B revenue); retaining it eliminates sample truncation
+bias. \\
+\textbf{2} & \textbf{Duplicate Rows} & Evaluated ticker column
+uniqueness
+(\texttt{df{[}\textquotesingle{}Ticker\textquotesingle{}{]}.is\_unique}).
+& Zero duplicate rows detected (\(503\) unique equity symbols). &
+Guarantees that each observation represents exactly one independent
+firm. \\
+\textbf{3} & \textbf{Impossible / Extreme Values: ROE} & Masco Corp
+(\texttt{MAS}) exhibited an ROE of \(58.625\) (\(5,862.5\%\)). &
+Retained raw observation without arbitrary deletion or trimming.
+Documented in statistical tables that \(\text{Mean} = 39.5\%\) is
+distorted and declared the \textbf{Median (\(16.8\%\))} as the official
+reporting metric. & Preserves empirical authenticity. Trimming
+eliminates real accounting phenomena (Masco had \$80M equity vs \$1B net
+income). Using median protects against outlier distortion (Slide 21). \\
+\textbf{4} & \textbf{Structural Missingness: Negative Equity ROE} & 32
+blue-chip corporations (e.g., AbbVie, Altria, AutoZone, Booking,
+Domino's, HP Inc.) had \texttt{NaN} for \texttt{ROE}. & Evaluated
+balance sheets; confirmed negative book equity driven by cumulative
+share repurchases (\emph{treasury stock buybacks}). Retained
+\texttt{ROE} for \(N = 471\) positive-equity firms, and established
+\textbf{Net Profit Margin} (\(N = 503\) valid) as the primary cross-firm
+profitability benchmark. & Deleting 32 premier firms would cause severe
+survivorship and industry bias (Retail, Tobacco, Pharma). Profit Margin
+is unaffected by capital structure and valid across all 503 firms. \\
+\textbf{5} & \textbf{Inconsistent Categories} & Raw data contained 11
+distinct GICS sectors, exceeding the mandatory course limit of 2 to 5
+nominal categories. & Mapped all 11 sectors into 5 homogeneous business
+groups (\texttt{Tech\ \&\ Comms}, \texttt{Healthcare}, \texttt{Finance},
+\texttt{Industrials\ \&\ Energy}, \texttt{Consumer}). & Mandatory
+requirement for ANOVA (Session 3) and Chi-Square (Session 2). Prevents
+statistical fragmentation and ensures adequate cell frequencies
+(\(n \ge 60\) per sector). \\
+\textbf{6} & \textbf{Number Stored as Text \& Formatting} & Risk of
+string-type formatting, thousand separators, or French comma decimals
+(\texttt{56,7} vs \texttt{56.7}). & Enforced standard float casting on
+all financial metrics, removed commas, stripped whitespace, and
+formatted for Jamovi import. & Prevents Jamovi from mistakenly
+misclassifying continuous numeric variables as Nominal factors (Slide 38
+\& 39). \\
+\textbf{7} & \textbf{Variable Naming for Jamovi} & Column headers with
+spaces or special characters can disrupt statistical scripts in
+Jamovi/R. & Standardized all column names to strict ASCII alphanumeric
+format (\texttt{Ticker}, \texttt{Total\_Revenue\_B},
+\texttt{Market\_Cap\_B}, \texttt{ROE}, \texttt{Profit\_Margin},
+\texttt{Governance\_Risk\_Level}). & Conforms strictly to Slide 38
+requirement: \emph{``Name --- short, no spaces, no accents''}. \\
+\end{longtable}
+}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{3. Data Completeness Profile (Before vs.~After
+Cleaning)}\label{data-completeness-profile-before-vs.-after-cleaning}
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 10\tabcolsep) * \real{0.1553}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 10\tabcolsep) * \real{0.1118}}
+  >{\centering\arraybackslash}p{(\linewidth - 10\tabcolsep) * \real{0.1491}}
+  >{\centering\arraybackslash}p{(\linewidth - 10\tabcolsep) * \real{0.1739}}
+  >{\centering\arraybackslash}p{(\linewidth - 10\tabcolsep) * \real{0.1056}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 10\tabcolsep) * \real{0.3043}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Variable Name
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Jamovi Type
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+Valid Observations (Raw)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+Valid Observations (Cleaned)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+Completeness Rate
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Treatment Rationale
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\texttt{Ticker} & ID & 503 & 503 & 100.0\% & Primary key, unique \\
+\texttt{Company} & Nominal & 503 & 503 & 100.0\% & Complete \\
+\texttt{Sector} & Nominal (5 groups) & 502 & 503 & 100.0\% & Fiserv
+mapped to \emph{Finance} \\
+\texttt{Total\_Revenue\_B} & Continuous & 502 & 503 & 100.0\% & Fiserv
+updated (\$19.09B) \\
+\texttt{Market\_Cap\_B} & Continuous & 503 & 503 & 100.0\% & Complete \\
+\texttt{Market\_Cap\_Quartile} & Ordinal (4 tiers) & 503 & 503 & 100.0\%
+& Perfect quartile distribution (\(n \approx 126\)) \\
+\texttt{Profit\_Margin} & Continuous & 502 & 503 & 100.0\% & Primary
+uncorrupted profitability metric \\
+\texttt{ROE} & Continuous & 471 & 471 & 93.6\% & 32 firms negative
+equity (transparently reported) \\
+\texttt{Beta} & Continuous & 498 & 499 & 99.2\% & Standard 5Y monthly
+volatility \\
+\texttt{Headcount} & Continuous & 499 & 500 & 99.4\% & Full-time
+employees \\
+\texttt{Overall\_Governance\_Risk} & Continuous & 495 & 496 & 98.6\% &
+ISS composite score (1--10) \\
+\texttt{Governance\_Risk\_Level} & Ordinal (3 tiers) & 495 & 496 &
+98.6\% & Low (\(n=150\)), Med (\(n=149\)), High (\(n=197\)) \\
+\end{longtable}
+}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{4. Verification Check against Costly Student Traps (Slide
+42)}\label{verification-check-against-costly-student-traps-slide-42}
+
+\begin{itemize}
+\tightlist
+\item[$\boxtimes$]
+  \textbf{Trap 1: Reporting a mean for a nominal variable}: Avoided.
+  \texttt{Sector} is analyzed strictly via frequency distributions and
+  mode.
+\item[$\boxtimes$]
+  \textbf{Trap 2: Setting the measure type wrong in Jamovi}: Avoided.
+  Every variable has a documented Jamovi Measure Type in
+  \texttt{Codebook\_Jamovi}.
+\item[$\boxtimes$]
+  \textbf{Trap 3: Reading ``Sig. = 0.000'' as \(p = 0\)}: Avoided.
+  Formatted rigorously in APA style as \(p < .001\).
+\item[$\boxtimes$]
+  \textbf{Trap 4: Confusing statistical significance with strength}:
+  Addressed. We report effect sizes (\(IQR\), \(SD\), Skewness,
+  Kurtosis) alongside hypothesis tests.
+\item[$\boxtimes$]
+  \textbf{Trap 5: Copying output with no interpretation}: Addressed.
+  Full narrative interpretations written for all variables.
+\item[$\boxtimes$]
+  \textbf{Trap 6: Stopping at the statistic}: Addressed. Formulated
+  executive Monday-morning recommendations.
+\end{itemize}
+
+\end{document}
