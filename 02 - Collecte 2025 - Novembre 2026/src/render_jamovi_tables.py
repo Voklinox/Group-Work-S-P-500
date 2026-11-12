@@ -11,6 +11,8 @@ from PIL import Image, ImageChops
 OMV = pathlib.Path("data/processed/sp500_2025.omv")
 OUT = pathlib.Path("outputs/jamovi_export/tables_png")
 CHROME = "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
+COMPACT = {8, 9}  # tableaux très larges : marges de cellules réduites pour rester lisibles dans le rapport
+COMPACT_CSS = "<style>td,th{padding-left:4px!important;padding-right:7px!important}th{white-space:normal}</style>"
 PAGE = ('<!doctype html><meta charset="utf-8"><body style="margin:0;padding:12px;'
         'font-family:Helvetica,Arial,sans-serif;font-size:12px;color:#333;background:#fff;'
         'display:inline-block">{}</body>')
@@ -43,7 +45,7 @@ def main():
             cap = caption(t)
             slug = re.sub(r"[^a-z0-9]+", "_", cap.lower()).strip("_")[:40] or "table"
             src = pathlib.Path(tmp) / f"t{k:02d}.html"
-            src.write_text(PAGE.format(t), encoding="utf-8")
+            src.write_text(PAGE.format((COMPACT_CSS if k in COMPACT else "") + t), encoding="utf-8")
             out = OUT / f"t{k:02d}_{slug}.png"
             subprocess.run([CHROME, "--headless=new", "--disable-gpu", "--hide-scrollbars",
                             "--force-device-scale-factor=3", "--window-size=1400,1800",
