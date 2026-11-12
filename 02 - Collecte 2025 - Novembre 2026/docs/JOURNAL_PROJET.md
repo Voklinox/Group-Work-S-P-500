@@ -223,6 +223,12 @@ Le point d’accès à la racine Git renvoie à cette version complète unique. 
 - **Choix de David pour le Doc** : environ 12 pages ; tous les graphiques Jamovi nets ; tableaux sous forme de captures Jamovi ; anglais B2 (TOEIC 900) ; police Montserrat ; document soigné, titres hiérarchisés ; étape par étape.
 - **Prochaine action** : valider le plan avec David, puis rédiger le Doc section par section.
 
+## 12 novembre 2026 (soir, fin) — Google Doc : mise en forme et section 3 rédigée
+
+- **Doc modifié sur place** (même lien) : police Montserrat sur tout le texte (10 pt, titres 16 et 12 pt en bleu marine, titre 24 pt), couverture aérée, libellés en gras, espacements. L'API Docs ne modifie pas les styles nommés : la mise en forme est appliquée directement sur le texte.
+- **Section 3 « Company profile » rédigée en anglais britannique** (protocole IDENTIFY, HYPOTHESISE, DECIDE, RECOMMEND pour la normalité) : tableau des descriptives, tableaux de fréquences côte à côte, grille 3 × 3 de graphiques Jamovi nets (insérés depuis les URL publiques raw.githubusercontent.com du dépôt), analyse de la normalité de la marge sur trois preuves, conclusion pour un gestionnaire. Rendu vérifié par export PDF (7 pages à ce stade).
+- **Reste** : résumé exécutif, sections 4 à 6, limites et références à compléter, notes d'évaluation (groupe), contrôle final du PDF.
+
 ## Format pour les prochaines entrées
 
 Ajouter une section datée avec : demande ou objectif ; action et motif ; fichiers/preuves ; résultat et nombre de cas vérifiés ; tâche terminée ou restant ouverte ; décision éventuelle ; prochaine action. Conserver les entrées précédentes. Si une ancienne conclusion est corrigée, ajouter la correction et sa raison au lieu d’effacer l’historique.
