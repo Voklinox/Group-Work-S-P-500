@@ -215,6 +215,14 @@ Le point d’accès à la racine Git renvoie à cette version complète unique. 
 - **Limites** : noms des distances de Cook non lus dans Jamovi ; VIF généralisé ; HC3, Breusch-Pagan, bootstrap, Huber, régression médiane restent « référence » ; bar plots des secteurs à agrandir pour le rapport ; les graphiques du `.omv` ont un fond transparent.
 - **Verdict** : travaux Jamovi complets et conformes. Reste à exporter les sorties utiles (J06) et à rédiger le Google Doc.
 
+## 12 novembre 2026 (soir, suite) — export Jamovi et préparation du Google Doc
+
+- **Push GitHub** du commit 0c1310d (accord de David ; le `.omv` peut rester dans le dépôt public : données publiques uniquement).
+- **Export Jamovi** dans `outputs/jamovi_export/` (demande de David : dans le dossier de travail) : PDF complet des sorties ; 18 graphiques exportés un par un en PDF vectoriel puis convertis en PNG 300 dpi (`src/convert_jamovi_figures.py`) ; 46 tableaux rendus en PNG à partir du HTML de Jamovi avec Chrome sans fenêtre (`src/render_jamovi_tables.py`) car le PDF de Jamovi coupe les tableaux entre les pages et contient les graphiques en 350 px seulement. Index dans `outputs/jamovi_export/README.md`. PyMuPDF ajouté à requirements-analysis.txt.
+- **Limites** : deux graphiques à libellés de secteurs superposés et la matrice de nuages sont peu lisibles ; Jamovi 2.7 ne permet pas de les redimensionner : le rapport utilisera les tableaux correspondants.
+- **Choix de David pour le Doc** : environ 12 pages ; tous les graphiques Jamovi nets ; tableaux sous forme de captures Jamovi ; anglais B2 (TOEIC 900) ; police Montserrat ; document soigné, titres hiérarchisés ; étape par étape.
+- **Prochaine action** : valider le plan avec David, puis rédiger le Doc section par section.
+
 ## Format pour les prochaines entrées
 
 Ajouter une section datée avec : demande ou objectif ; action et motif ; fichiers/preuves ; résultat et nombre de cas vérifiés ; tâche terminée ou restant ouverte ; décision éventuelle ; prochaine action. Conserver les entrées précédentes. Si une ancienne conclusion est corrigée, ajouter la correction et sa raison au lieu d’effacer l’historique.
