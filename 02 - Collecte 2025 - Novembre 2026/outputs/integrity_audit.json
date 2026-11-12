@@ -1,0 +1,17 @@
+{
+  "issuers": 500,
+  "source_files_hash_checked": 1599,
+  "selected_financial_facts": 3264,
+  "derived_values": 996,
+  "integrity_errors": [],
+  "definition_warnings": 9,
+  "income_concepts": {
+    "NetIncomeLoss": 455,
+    "computed:ProfitLoss-NetIncomeLossAttributableToNoncontrollingInterest": 30,
+    "verified_concept:NetIncomeLossAvailableToCommonStockholdersBasic": 2,
+    "ProfitLoss": 9,
+    "manual_report:": 1,
+    "verified_concept:ProfitLoss": 1
+  },
+  "note": "Integrity checks do not certify accounting comparability or the complete universe; review lists still apply"
+}

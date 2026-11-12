@@ -1,0 +1,78 @@
+{
+  "revenue_usd": {
+    "n": 498,
+    "missing": 2,
+    "min": 798190000.0,
+    "median": 14440632500.0,
+    "max": 716924000000.0,
+    "iqr_fence": [
+      -62626713000.0,
+      99584222250.0
+    ]
+  },
+  "net_income_usd": {
+    "n": 498,
+    "missing": 2,
+    "min": -8182000000.0,
+    "median": 1568500000.0,
+    "max": 132170000000.0,
+    "iqr_fence": [
+      -7675341000.0,
+      11986943250.0
+    ]
+  },
+  "assets_usd": {
+    "n": 498,
+    "missing": 2,
+    "min": 1325900000.0,
+    "median": 31092866500.0,
+    "max": 4424900000000.0,
+    "iqr_fence": [
+      -166837231000.0,
+      253809798250.0
+    ]
+  },
+  "equity_usd": {
+    "n": 498,
+    "missing": 2,
+    "min": -14231000000.0,
+    "median": 10035000000.0,
+    "max": 717419000000.0,
+    "iqr_fence": [
+      -51425050000.0,
+      77889100000.0
+    ]
+  },
+  "net_margin_pct": {
+    "n": 498,
+    "missing": 2,
+    "min": -145.16460905349794,
+    "median": 12.902609375587955,
+    "max": 72.7096922698623,
+    "iqr_fence": [
+      -33.20268470028613,
+      60.42867180687586
+    ]
+  },
+  "roa_pct": {
+    "n": 498,
+    "missing": 2,
+    "min": -41.86357348487681,
+    "median": 5.774382706240419,
+    "max": 82.19749730726502,
+    "iqr_fence": [
+      -20.851819510215275,
+      34.31457631364647
+    ]
+  },
+  "flag_counts": {
+    "net_margin_pct_iqr_outlier": 7,
+    "roa_pct_iqr_outlier": 7,
+    "negative_equity": 32,
+    "balance_gap_over_5pct": 23,
+    "financial_revenue_to_assets_high": 10,
+    "roa_beyond_40pct": 4,
+    "missing_core": 2,
+    "margin_beyond_100pct": 1
+  }
+}

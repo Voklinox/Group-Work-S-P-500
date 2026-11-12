@@ -1,0 +1,444 @@
+{
+ "shard": "15",
+ "observations": [
+  {
+   "cik": "0000922224",
+   "company": "PPL Corporation",
+   "accession": "0000950170-25-048978",
+   "publication_date": "2025-04-02",
+   "board_size": 10,
+   "independent_directors": 9,
+   "board_leadership": "Separate CEO and chair",
+   "ceo_name": "Vincent Sorgi",
+   "chair_name": "Craig A. Rogerson",
+   "independence_standard": "NYSE",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/922224/000095017025048978/ppl-20250402.htm",
+   "archive_file": "data/raw/governance/0000922224_0000950170-25-048978.htm",
+   "evidence": [
+    {
+     "group": "board_counts",
+     "locator": "Proposal 1: Election of Directors",
+     "quote": "The Board of Directors is asking you to elect all 10 director nominees to hold office until the next Annual Meeting of Shareowners.",
+     "note": "10 nominees; each has a 'Director since' date (2005-2023), so all are incumbents. 9 non-employee directors + CEO Sorgi = 10."
+    },
+    {
+     "group": "independence",
+     "locator": "Board of Directors, Independence of Directors",
+     "quote": "The Board determined that nine directors, constituting all of PPL’s non-employee directors, are independent from the company and management pursuant to its independence guidelines",
+     "note": "Nine of the 10 incumbents declared independent under NYSE-conforming guidelines; the tenth is CEO Sorgi (employee)."
+    },
+    {
+     "group": "leadership",
+     "locator": "Board of Directors, Board Leadership Structure",
+     "quote": "Mr. Rogerson has served as independent Chair of the Board since his appointment in March, 2021.",
+     "note": "Independent chair Craig A. Rogerson; CEO is Vincent Sorgi (President and CEO since June 2020). No lead director since chair is independent."
+    }
+   ],
+   "date_basis": "publication date of 2025 proxy; current board described therein, not a year-end or annual-average measure",
+   "board_scope": "incumbent directors; nominee roster reconciled to current membership",
+   "checked_at": "2026-11-11",
+   "capture_status": "raw_document_archived",
+   "review_status": "agent_read_pending_audit"
+  },
+  {
+   "cik": "0001126328",
+   "company": "Principal Financial Group",
+   "accession": "0001104659-25-032660",
+   "publication_date": "2025-04-07",
+   "board_size": 13,
+   "independent_directors": 11,
+   "board_leadership": "Separate CEO and chair",
+   "ceo_name": "Deanna D. Strable-Soethout",
+   "chair_name": "Daniel J. Houston",
+   "lead_director_name": "Scott M. Mills",
+   "independence_standard": "Nasdaq",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/1126328/000110465925032660/tm2418549-3_def14a.htm",
+   "archive_file": "data/raw/governance/0001126328_0001104659-25-032660.htm",
+   "evidence": [
+    {
+     "group": "board_counts",
+     "locator": "Corporate governance, best practices",
+     "quote": "Super-majority of independent Directors (11 out of 13);",
+     "note": "Current board stated as 13 (11 independent). Cross-check: 11 named independent directors plus Houston and Strable-Soethout, the only two ever employed, = 13."
+    },
+    {
+     "group": "independence",
+     "locator": "Corporate governance, Director independence",
+     "quote": "The Board affirmatively determined that the following Directors have no material relationship with the Company and are independent: Mr. Auerbach, Ms. Beams, Ms. Carter-Miller, Mr. Hochschild, Mr. Mills, Ms. Mitchell, Mr. Muruzabal, Ms. Nordin, Mr. Pickerell, Ms. Richer, and Mr. Rivera.",
+     "note": "Eleven named independent directors; Nasdaq listing standards referenced for committees."
+    },
+    {
+     "group": "leadership",
+     "locator": "Corporate governance, Board leadership structure",
+     "quote": "Effective January 7, 2025, Mr. Houston retired from his role as CEO and continued as Executive Chairman, and Ms. Strable-Soethout assumed the role of CEO.",
+     "note": "CEO transition completed before the 4/7/2025 document; Executive Chairman (non-CEO) = separate. Lead Director Scott M. Mills (Lead Director since 2020)."
+    }
+   ],
+   "date_basis": "publication date of 2025 proxy; current board described therein, not a year-end or annual-average measure",
+   "board_scope": "incumbent directors; nominee roster reconciled to current membership",
+   "checked_at": "2026-11-11",
+   "capture_status": "raw_document_archived",
+   "review_status": "agent_read_pending_audit"
+  },
+  {
+   "cik": "0000080661",
+   "company": "Progressive Corporation",
+   "accession": "0000080661-25-000018",
+   "publication_date": "2025-03-24",
+   "board_size": 11,
+   "independent_directors": 10,
+   "board_leadership": "Separate CEO and chair",
+   "ceo_name": "Susan Patricia Griffith",
+   "chair_name": "Lawton W. Fitt",
+   "independence_standard": "NYSE",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/80661/000008066125000018/pgr-20250324.htm",
+   "archive_file": "data/raw/governance/0000080661_0000080661-25-000018.htm",
+   "evidence": [
+    {
+     "group": "board_counts",
+     "locator": "Item 1: Election of Directors",
+     "quote": "The number of directors has been fixed at 11, and there are currently 11 directors on the Board.",
+     "note": "Explicit current board of 11; 11 nominees, all with Director since dates."
+    },
+    {
+     "group": "independence",
+     "locator": "Other Board of Directors Information, Board of Directors Independence Determinations",
+     "quote": "Based on this review, the Board determined that each director is independent under the NYSE listing standards, other than Mrs. Griffith, who is an executive officer of the company.",
+     "note": "11 directors, all independent except Griffith (CEO) = 10."
+    },
+    {
+     "group": "leadership",
+     "locator": "Other Board of Directors Information, Board Leadership Structure",
+     "quote": "Lawton W. Fitt has been Chairperson of the Board since May 2018.",
+     "note": "Independent Chairperson Fitt; CEO is Susan Patricia Griffith (President and CEO). Separate roles."
+    }
+   ],
+   "date_basis": "publication date of 2025 proxy; current board described therein, not a year-end or annual-average measure",
+   "board_scope": "incumbent directors; nominee roster reconciled to current membership",
+   "checked_at": "2026-11-11",
+   "capture_status": "raw_document_archived",
+   "review_status": "agent_read_pending_audit"
+  },
+  {
+   "cik": "0000857005",
+   "company": "PTC Inc.",
+   "accession": "0001104659-25-000041",
+   "publication_date": "2025-01-02",
+   "board_size": 9,
+   "independent_directors": 8,
+   "board_leadership": "Separate CEO and chair",
+   "ceo_name": "Neil Barua",
+   "chair_name": "Janice Chaffin",
+   "independence_standard": "Nasdaq",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/857005/000110465925000041/tm2422941-5_def14a.htm",
+   "archive_file": "data/raw/governance/0000857005_0001104659-25-000041.htm",
+   "evidence": [
+    {
+     "group": "board_counts",
+     "locator": "Corporate Governance, Board Diversity Matrix as of January 2, 2025",
+     "quote": "Total Number of Directors: 9",
+     "note": "Matrix gives 9 directors at 2 January 2025. Eight nominees ('Elect eight directors'); the ninth is Robert Schechter, whose term ended at the 12 Feb 2025 meeting (stated in the later PTC proxy) and who appears on the Audit Committee."
+    },
+    {
+     "group": "board_counts",
+     "locator": "Proposal 1: Election of Directors",
+     "quote": "All director nominees are current directors of the company.",
+     "note": "All 8 nominees are incumbents; 8 nominees + Schechter = 9."
+    },
+    {
+     "group": "independence",
+     "locator": "Corporate Governance, Independence of Our Directors",
+     "quote": "Our Board of Directors has determined that all the director nominees, other than our Chief Executive Officer, Mr. Barua, are independent.",
+     "note": "7 of 8 nominees independent (all except CEO Barua)."
+    },
+    {
+     "group": "independence",
+     "locator": "Board Committees, Audit Committee",
+     "quote": "All Committee members are “independent directors” under both SEC and The Nasdaq Stock Market listing rules.",
+     "note": "Schechter sits on the Audit Committee (listed with Lacy, who is chair; both named audit committee financial experts), so he is declared independent via the committee statement, not by a named list: 7 + 1 = 8 independent of 9. Reviewer should audit this inference."
+    },
+    {
+     "group": "leadership",
+     "locator": "Corporate Governance, Independent Board Chair",
+     "quote": "Our Board is led by an independent Chair.",
+     "note": "Independent Chair Janice Chaffin (named 'Chair of the Board of Directors'); CEO is Neil Barua. No lead independent director needed."
+    }
+   ],
+   "date_basis": "publication date of 2025 proxy; current board described therein, not a year-end or annual-average measure",
+   "board_scope": "incumbent directors; nominee roster reconciled to current membership",
+   "checked_at": "2026-11-11",
+   "capture_status": "raw_document_archived",
+   "review_status": "agent_read_pending_audit",
+   "selection_note": "Deux DEF 14A en 2025 pour PTC: 2025-01-02 (assemblée annuelle du 12 février 2025) et 2025-12-23 (avis de l'assemblée annuelle 2026). Retenu le premier car c'est le document de l'assemblée annuelle 2025 (GOUVERNANCE_2025: document d'assemblée annuelle 2025); le second décrit l'assemblée de 2026."
+  },
+  {
+   "cik": "0000788784",
+   "company": "Public Service Enterprise Group",
+   "accession": "0001193125-25-053984",
+   "publication_date": "2025-03-13",
+   "board_size": 11,
+   "independent_directors": 10,
+   "board_leadership": "Combined CEO and chair",
+   "ceo_name": "Ralph A. LaRossa",
+   "chair_name": "Ralph A. LaRossa",
+   "lead_director_name": "Susan Tomasky",
+   "independence_standard": "NYSE",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/788784/000119312525053984/d796078ddef14a.htm",
+   "archive_file": "data/raw/governance/0000788784_0001193125-25-053984.htm",
+   "evidence": [
+    {
+     "group": "board_counts",
+     "locator": "Highlights / Overview of Board Nominees",
+     "quote": "Balanced Board tenure and age, 10 out of 11 Directors are independent",
+     "note": "Board of 11; 11 nominees listed, each with a Director Since year (2012-2022 range), so all are incumbents."
+    },
+    {
+     "group": "independence",
+     "locator": "Overview of Board Nominees, Board Independence",
+     "quote": "The Board has determined that all of the current Directors and nominees for election are independent except Ralph A. LaRossa, our Chair of the Board, President and CEO.",
+     "note": "10 of 11 independent under NYSE requirements; exception is the CEO-Chair."
+    },
+    {
+     "group": "leadership",
+     "locator": "Our Director Nominees table / Board Independence",
+     "quote": "The Board has determined that all of the current Directors and nominees for election are independent except Ralph A. LaRossa, our Chair of the Board, President and CEO.",
+     "note": "LaRossa is Chair of the Board, President and CEO (combined). Lead Independent Director is Susan Tomasky (table)."
+    }
+   ],
+   "date_basis": "publication date of 2025 proxy; current board described therein, not a year-end or annual-average measure",
+   "board_scope": "incumbent directors; nominee roster reconciled to current membership",
+   "checked_at": "2026-11-11",
+   "capture_status": "raw_document_archived",
+   "review_status": "agent_read_pending_audit"
+  },
+  {
+   "cik": "0001393311",
+   "company": "Public Storage",
+   "accession": "0000950170-25-046747",
+   "publication_date": "2025-03-28",
+   "board_size": 12,
+   "independent_directors": 10,
+   "board_leadership": "Separate CEO and chair",
+   "ceo_name": "Joseph D. Russell, Jr.",
+   "chair_name": "Ronald L. Havner, Jr.",
+   "lead_director_name": "Kristy M. Pipes",
+   "independence_standard": "NYSE",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/1393311/000095017025046747/psa-20250327.htm",
+   "archive_file": "data/raw/governance/0001393311_0000950170-25-046747.htm",
+   "evidence": [
+    {
+     "group": "board_counts",
+     "locator": "Proposal 1: Election of Trustees",
+     "quote": "The Board has nominated twelve trustees, all of whom are incumbents, for election at the Annual Meeting.",
+     "note": "12 nominees all incumbents (Trustee since 2002-2024); no departing trustee mentioned, so the board in place is 12."
+    },
+    {
+     "group": "independence",
+     "locator": "Corporate Governance, Independence of Trustees",
+     "quote": "The Board has determined that all of our trustee nominees are independent except for Ronald L. Havner, Jr. and Joseph D. Russell, Jr.",
+     "note": "10 of the 12 incumbent trustees independent (83%); NYSE rules cited for committees."
+    },
+    {
+     "group": "leadership",
+     "locator": "Corporate Governance, Board Leadership Structure",
+     "quote": "Prior to January 1, 2019, when Ronald L. Havner, Jr., retired as CEO, the roles of Chairman and CEO were combined and held by Mr. Havner.",
+     "note": "Chairman Ronald L. Havner, Jr. and CEO Joseph D. Russell, Jr. are separate persons since 2019; Lead Independent Trustee Kristy M. Pipes."
+    }
+   ],
+   "date_basis": "publication date of 2025 proxy; current board described therein, not a year-end or annual-average measure",
+   "board_scope": "incumbent directors; nominee roster reconciled to current membership",
+   "checked_at": "2026-11-11",
+   "capture_status": "raw_document_archived",
+   "review_status": "agent_read_pending_audit"
+  },
+  {
+   "cik": "0000822416",
+   "company": "PulteGroup",
+   "accession": "0000822416-25-000018",
+   "publication_date": "2025-03-14",
+   "board_size": 11,
+   "independent_directors": 10,
+   "board_leadership": "Separate CEO and chair",
+   "ceo_name": "Ryan R. Marshall",
+   "chair_name": "Thomas J. Folliard",
+   "independence_standard": "NYSE",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/822416/000082241625000018/phm-20250313.htm",
+   "archive_file": "data/raw/governance/0000822416_0000822416-25-000018.htm",
+   "evidence": [
+    {
+     "group": "board_counts",
+     "locator": "Proposal 1, Election of Directors",
+     "quote": "The exact number of directors is set by the Board and is currently eleven.",
+     "note": "Eleven current directors (includes J. Phillip Holloman, who is not standing for re-election but sits until the meeting); 10 nominees."
+    },
+    {
+     "group": "independence",
+     "locator": "Corporate Governance, Director independence",
+     "quote": "The Board further determined that Ryan R. Marshall, who is a current PulteGroup employee, is not independent",
+     "note": "Board affirmatively determined 10 named directors independent (Actis-Grande, Anderson, Blair, Folliard, Grisé, Hawaux, Holloman, Peshkin, Powers, Snyder); Marshall (employee, CEO) is the eleventh and not independent."
+    },
+    {
+     "group": "leadership",
+     "locator": "Corporate Governance, Non-Executive Chairman of the Board",
+     "quote": "Since January 1, 2023, Mr. Folliard has served in the position of Non-Executive Chairman of the Board.",
+     "note": "Non-executive Chairman Thomas J. Folliard; CEO Ryan R. Marshall (President and CEO since 2016). No lead director."
+    }
+   ],
+   "date_basis": "publication date of 2025 proxy; current board described therein, not a year-end or annual-average measure",
+   "board_scope": "incumbent directors; nominee roster reconciled to current membership",
+   "checked_at": "2026-11-11",
+   "capture_status": "raw_document_archived",
+   "review_status": "agent_read_pending_audit"
+  },
+  {
+   "cik": "0000804328",
+   "company": "Qualcomm",
+   "accession": "0001104659-25-005602",
+   "publication_date": "2025-01-23",
+   "board_size": 11,
+   "independent_directors": 10,
+   "board_leadership": "Separate CEO and chair",
+   "ceo_name": "Cristiano R. Amon",
+   "chair_name": "Mark D. McLaughlin",
+   "independence_standard": "Nasdaq",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/804328/000110465925005602/tm2430012d3_def14a.htm",
+   "archive_file": "data/raw/governance/0000804328_0001104659-25-005602.htm",
+   "evidence": [
+    {
+     "group": "board_counts",
+     "locator": "Proposal 1: Election of Directors",
+     "quote": "Shares of common stock represented by executed proxies will be voted, if authority to do so is not withheld, for the election of the 11 nominees named below.",
+     "note": "Board size inferred: 11 nominees, each with a 'DIRECTOR SINCE' year (all 11 are incumbents); no director leaving or new nominee is mentioned, and the document gives no separate board-size statement. Reviewer should audit this inference."
+    },
+    {
+     "group": "independence",
+     "locator": "Corporate Governance, Director Independence",
+     "quote": "The Board has determined that, except for Mr. Amon, all of the members of the Board are independent directors within the meaning of NASDAQ Rule 5605.",
+     "note": "All members except CEO Amon are independent: 10 of 11."
+    },
+    {
+     "group": "leadership",
+     "locator": "Corporate Governance, Chair of the Board / Lead Independent Director",
+     "quote": "Principally because our current Chair is an independent director, the Board has elected not to fill the role of Lead Independent Director at this time.",
+     "note": "Chair Mark D. McLaughlin (independent, 'CHAIR OF THE BOARD' in nominee profile); CEO Cristiano R. Amon (President and CEO). No lead director."
+    }
+   ],
+   "date_basis": "publication date of 2025 proxy; current board described therein, not a year-end or annual-average measure",
+   "board_scope": "incumbent directors; nominee roster reconciled to current membership",
+   "checked_at": "2026-11-11",
+   "capture_status": "raw_document_archived",
+   "review_status": "agent_read_pending_audit"
+  },
+  {
+   "cik": "0001050915",
+   "company": "Quanta Services",
+   "accession": "0001193125-25-078453",
+   "publication_date": "2025-04-11",
+   "board_size": 11,
+   "independent_directors": 10,
+   "board_leadership": "Separate CEO and chair",
+   "ceo_name": "Earl C. (Duke) Austin, Jr.",
+   "chair_name": "Doyle N. Beneby",
+   "independence_standard": "NYSE",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/1050915/000119312525078453/d689988ddef14a.htm",
+   "archive_file": "data/raw/governance/0001050915_0001193125-25-078453.htm",
+   "evidence": [
+    {
+     "group": "board_counts",
+     "locator": "Proposal 1: Election of Directors",
+     "quote": "The Board currently consists of eleven directors, whose current terms of office all expire at the Annual Meeting.",
+     "note": "Eleven current directors; Vincent Foster (a current member) is not standing, so 10 nominees. Board in place = 11 incl. Foster."
+    },
+    {
+     "group": "independence",
+     "locator": "Corporate Governance, Director Independence",
+     "quote": "The Board has determined that each of our current directors, other than our Chief Executive Officer, Mr. Austin, has no material relationship with Quanta",
+     "note": "All current directors except the CEO are independent (NYSE standards): 10 of 11, including Foster."
+    },
+    {
+     "group": "leadership",
+     "locator": "Corporate Governance, Board Leadership Structure",
+     "quote": "In May 2024, the Board appointed Doyle Beneby, an independent director, as non-executive Chairman of the Board",
+     "note": "Independent non-executive Chairman Doyle N. Beneby; CEO Earl C. (Duke) Austin, Jr. No lead director (independent chair)."
+    }
+   ],
+   "date_basis": "publication date of 2025 proxy; current board described therein, not a year-end or annual-average measure",
+   "board_scope": "incumbent directors; nominee roster reconciled to current membership",
+   "checked_at": "2026-11-11",
+   "capture_status": "raw_document_archived",
+   "review_status": "agent_read_pending_audit"
+  },
+  {
+   "cik": "0001022079",
+   "company": "Quest Diagnostics",
+   "accession": "0000930413-25-001171",
+   "publication_date": "2025-04-04",
+   "board_size": 10,
+   "independent_directors": 9,
+   "board_leadership": "Combined CEO and chair",
+   "ceo_name": "James E. Davis",
+   "chair_name": "James E. Davis",
+   "lead_director_name": "Timothy M. Ring",
+   "independence_standard": "NYSE",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/1022079/000093041325001171/c111937_def14a-ixbrl.htm",
+   "archive_file": "data/raw/governance/0001022079_0000930413-25-001171.htm",
+   "evidence": [
+    {
+     "group": "board_counts",
+     "locator": "Proposal 1, Election of Directors",
+     "quote": "Each nominee currently is a director of the Company whose term expires at the Annual Meeting.",
+     "note": "Ten nominees, all current directors; no departing director mentioned, so the board in place is 10."
+    },
+    {
+     "group": "independence",
+     "locator": "Corporate Governance, Director Independence",
+     "quote": "The Board has determined that a substantial majority (nine of ten) of our director nominees are independent.",
+     "note": "Nine of ten current directors independent under NYSE; the only non-independent is CEO Davis (named list of six plus others)."
+    },
+    {
+     "group": "leadership",
+     "locator": "Board Leadership Structure",
+     "quote": "Currently, the roles of Board Chair and Chief Executive Officer are combined with James E. Davis.",
+     "note": "Davis is Chairman, CEO and President; Lead Independent Director is Timothy M. Ring."
+    }
+   ],
+   "date_basis": "publication date of 2025 proxy; current board described therein, not a year-end or annual-average measure",
+   "board_scope": "incumbent directors; nominee roster reconciled to current membership",
+   "checked_at": "2026-11-11",
+   "capture_status": "raw_document_archived",
+   "review_status": "agent_read_pending_audit"
+  }
+ ],
+ "unresolved": [
+  {
+   "cik": "0000080424",
+   "company": "Procter & Gamble",
+   "reason": "CEO et président en transition annoncée à la date du document",
+   "detail": "Procuration du 29 août 2025: 14 candidats dont Shailesh Jejurikar, seul non encore administrateur (13 en place); indépendants: tous les candidats sauf Moeller et Jejurikar, soit 12 sur 13 en place. Jon R. Moeller est encore Chairman, President et CEO à la date du document (Lead Director: M. Jimenez), mais le conseil a élu Jejurikar CEO et Moeller Executive Chairman, effectifs le 1er janvier 2026 (rôles séparés annoncés). Si le relecteur retient l'état au 29/08/2025: board_size 13, independent 12, Combined CEO and chair (Jon R. Moeller), NYSE. Citations utiles: 'All of the Director nominees other than Shailesh Jejurikar currently serve on the Board'; 'The Board has determined that all of the Company’s Director nominees, with the exception of Mr. Moeller and Mr. Jejurikar, are independent under the NYSE listing standards'."
+  },
+  {
+   "cik": "0001045609",
+   "company": "Prologis",
+   "reason": "CEO/chairman en transition annoncée; indépendance de l'administrateur sortant non déclarée explicitement",
+   "detail": "Procuration du 28 mars 2025: 'The Board is currently composed of 12 directors, all of whom, other than Carl B. Webb, are standing'; Sarah A. Slusser est nouvelle candidate (pas administratrice). Indépendance déclarée seulement pour les candidats (tous sauf Moghadam et Letter); celle de Carl B. Webb (président du comité d'audit, ne se représente pas) n'est pas déclarée nommément (déduite seulement du comité d'audit entièrement indépendant). Le président du conseil et CEO Hamid Moghadam deviendra executive chairman et Daniel Letter (président) CEO au 1er janvier 2026 (transition annoncée). Lead independent director: Lyons (waiver d'âge). Si le relecteur retient: 12 administrateurs en place; 9 indépendants certains (candidats sauf Moghadam, Letter, Slusser) + Webb probable = 10; Combined CEO and chair (Hamid Moghadam); NYSE."
+  },
+  {
+   "cik": "0001137774",
+   "company": "Prudential Financial",
+   "reason": "CEO en transition (4 jours après la date du document) et effectif en place non rapprochable proprement",
+   "detail": "Procuration du 27 mars 2025: Charles F. Lowrey (Chairman et CEO) cède le poste de CEO le 31 mars 2025 à Andrew Sullivan et devient Executive Chairman; Sullivan (nouveau candidat) rejoint le conseil le 31 mars 2025; le vice-président Robert Falzon quitte le conseil le 31 mars 2025 (donc encore en poste à la date du document, indépendance non déclarée). 9 candidats, tous indépendants sauf Lowrey et Sullivan; l'ensemble des administrateurs en place (8 candidats déjà administrateurs + Falzon) ne correspond pas au nombre de candidats. Lead Independent Director: Mr. Todman."
+  },
+  {
+   "cik": "0001037038",
+   "company": "Ralph Lauren Corporation",
+   "reason": "Effectif en place non rapprochable sans déduction: administrateur sortant dont l'indépendance n'est pas déclarée nommément",
+   "detail": "Procuration du 20 juin 2025 (société à double classe contrôlée par Ralph Lauren). 11 candidats, tous déjà administrateurs (Ahrendts administratrice depuis 2018 mais première nomination en Class A); la procuration déclare: 'all non-management director nominees are independent: Angela Ahrendts, Frank A. Bennack, Jr., Debra Cupp, Linda Findley, Michael A. George, Valerie Jarrett, Darren Walker, and Wei Zhang' (8 sur 11 candidats). Hubert Joly, Lead Independent Director sortant, siège encore mais ne se représente pas; son indépendance n'est pas déclarée nommément (seulement son titre de Lead Independent Director). Si le relecteur accepte l'inférence: board_size 12, independent 9, Separate CEO and chair (Executive Chairman Ralph Lauren; CEO Patrice Louvet), lead director Hubert Joly (successeur Angela Ahrendts après l'assemblée), NYSE. Sinon candidats seulement: 11 / 8."
+  },
+  {
+   "cik": "0000720005",
+   "company": "Raymond James Financial",
+   "reason": "CEO/chair en transition annoncée à la date du document",
+   "detail": "Procuration du 8 janvier 2025: 'The Board currently consists of twelve (12) directors' (12 candidats, tous administrateurs en place), 'Ten of our current 12 directors ... have been deemed independent' (NYSE). Paul C. Reilly est Chair et CEO, mais 'At the Annual Meeting, Paul will formally step down as CEO, though he will remain Executive Chair'; Paul Shoukry (président, administrateur) devient CEO à l'assemblée (février 2025). Lead Independent Director: Jeffrey N. Edwards. Si le relecteur retient l'état au 8/01/2025: 12 / 10, Combined CEO and chair (Paul C. Reilly), NYSE."
+  }
+ ]
+}

@@ -1,0 +1,87 @@
+cik,company,sector,flag,value,detail
+0001035443,Alexandria Real Estate Equities,Real Estate,net_margin_pct_iqr_outlier,-47.23,fence -33.2 to 60.4
+0001751008,AppLovin,Information Technology,net_margin_pct_iqr_outlier,60.83,fence -33.2 to 60.4
+0001156375,CME Group,Financials,net_margin_pct_iqr_outlier,62.45,fence -33.2 to 60.4
+0001682852,Moderna,Health Care,net_margin_pct_iqr_outlier,-145.16,fence -33.2 to 60.4
+0001063761,Simon Property Group,Real Estate,net_margin_pct_iqr_outlier,72.71,fence -33.2 to 60.4
+0000946581,Take-Two Interactive,Communication Services,net_margin_pct_iqr_outlier,-79.5,fence -33.2 to 60.4
+0001705696,Vici Properties,Real Estate,net_margin_pct_iqr_outlier,69.28,fence -33.2 to 60.4
+0001751008,AppLovin,Information Technology,roa_pct_iqr_outlier,50.79,fence -20.9 to 34.3
+0001286681,Domino's,Consumer Discretionary,roa_pct_iqr_outlier,34.85,fence -20.9 to 34.3
+0000814547,Fair Isaac,Information Technology,roa_pct_iqr_outlier,36.36,fence -20.9 to 34.3
+0001682852,Moderna,Health Care,roa_pct_iqr_outlier,-21.31,fence -20.9 to 34.3
+0001045810,Nvidia,Information Technology,roa_pct_iqr_outlier,82.2,fence -20.9 to 34.3
+0000946581,Take-Two Interactive,Communication Services,roa_pct_iqr_outlier,-41.86,fence -20.9 to 34.3
+0001014473,Verisign,Information Technology,roa_pct_iqr_outlier,60.44,fence -20.9 to 34.3
+0001551152,AbbVie,Health Care,negative_equity,-3270000000.0,kept; interpret ROE-type ratios with care
+0000002969,Air Products,Materials,balance_gap_over_5pct,5.7,assets - equity - liabilities as % of assets (minority interests / mezzanine items)
+0001035443,Alexandria Real Estate Equities,Real Estate,balance_gap_over_5pct,10.8,assets - equity - liabilities as % of assets (minority interests / mezzanine items)
+0000899051,Allstate,Financials,financial_revenue_to_assets_high,0.57,check revenue definition
+0000764180,Altria,Consumer Staples,negative_equity,-3502000000.0,kept; interpret ROE-type ratios with care
+0001053507,American Tower,Real Estate,balance_gap_over_5pct,10.6,assets - equity - liabilities as % of assets (minority interests / mezzanine items)
+0001751008,AppLovin,Information Technology,roa_beyond_40pct,50.8,"net income 3333751000.0, assets 7259610000.0"
+0001176948,Ares Management,Financials,balance_gap_over_5pct,15.5,assets - equity - liabilities as % of assets (minority interests / mezzanine items)
+0000866787,AutoZone,Consumer Discretionary,negative_equity,-3414313000.0,kept; interpret ROE-type ratios with care
+0001037540,"BXP, Inc.",Real Estate,balance_gap_over_5pct,9.7,assets - equity - liabilities as % of assets (minority interests / mezzanine items)
+0001393818,Blackstone Inc.,Financials,balance_gap_over_5pct,27.7,assets - equity - liabilities as % of assets (minority interests / mezzanine items)
+0001512673,"Block, Inc.",Financials,financial_revenue_to_assets_high,0.61,check revenue definition
+0001075531,Booking Holdings,Consumer Discretionary,negative_equity,-5578000000.0,kept; interpret ROE-type ratios with care
+0000721371,Cardinal Health,Health Care,negative_equity,-2781000000.0,kept; interpret ROE-type ratios with care
+0001690820,Carvana,Consumer Discretionary,balance_gap_over_5pct,5.8,assets - equity - liabilities as % of assets (minority interests / mezzanine items)
+0001374310,Cboe Global Markets,Financials,financial_revenue_to_assets_high,0.51,check revenue definition
+0001051470,Crown Castle,Real Estate,negative_equity,-1635000000.0,kept; interpret ROE-type ratios with care
+0000927066,DaVita,Health Care,negative_equity,-651082000.0,kept; interpret ROE-type ratios with care
+0000927066,DaVita,Health Care,balance_gap_over_5pct,10.4,assets - equity - liabilities as % of assets (minority interests / mezzanine items)
+0001725057,Dayforce,Industrials,missing_core,,"revenue_usd,net_income_usd,assets_usd"
+0001571996,Dell Technologies,Information Technology,negative_equity,-1482000000.0,kept; interpret ROE-type ratios with care
+0001539838,Diamondback Energy,Energy,balance_gap_over_5pct,8.4,assets - equity - liabilities as % of assets (minority interests / mezzanine items)
+0001286681,Domino's,Consumer Discretionary,negative_equity,-3901142000.0,kept; interpret ROE-type ratios with care
+0000033213,EQT Corporation,Energy,balance_gap_over_5pct,8.6,assets - equity - liabilities as % of assets (minority interests / mezzanine items)
+0000922621,Erie Indemnity,Financials,financial_revenue_to_assets_high,1.21,check revenue definition
+0001013237,FactSet,Financials,financial_revenue_to_assets_high,0.54,check revenue definition
+0000814547,Fair Isaac,Information Technology,negative_equity,-1745784000.0,kept; interpret ROE-type ratios with care
+0000038777,Franklin Resources,Financials,balance_gap_over_5pct,6.5,assets - equity - liabilities as % of assets (minority interests / mezzanine items)
+0000831259,Freeport-McMoRan,Materials,balance_gap_over_5pct,20.4,assets - equity - liabilities as % of assets (minority interests / mezzanine items)
+0000860730,HCA Healthcare,Health Care,negative_equity,-6027000000.0,kept; interpret ROE-type ratios with care
+0000047217,HP Inc.,Information Technology,negative_equity,-346000000.0,kept; interpret ROE-type ratios with care
+0001000228,Henry Schein,Health Care,balance_gap_over_5pct,13.8,assets - equity - liabilities as % of assets (minority interests / mezzanine items)
+0001585689,Hilton Worldwide,Consumer Discretionary,negative_equity,-5388000000.0,kept; interpret ROE-type ratios with care
+0001381197,Interactive Brokers,Financials,balance_gap_over_5pct,7.4,assets - equity - liabilities as % of assets (minority interests / mezzanine items)
+0001020569,Iron Mountain,Real Estate,negative_equity,-981007000.0,kept; interpret ROE-type ratios with care
+0000779152,Jack Henry & Associates,Financials,financial_revenue_to_assets_high,0.78,check revenue definition
+0001404912,KKR & Co.,Financials,balance_gap_over_5pct,12.4,assets - equity - liabilities as % of assets (minority interests / mezzanine items)
+0000060667,Lowe's,Consumer Discretionary,negative_equity,-14231000000.0,kept; interpret ROE-type ratios with care
+0001408198,MSCI Inc.,Financials,negative_equity,-2654540000.0,kept; interpret ROE-type ratios with care
+0001408198,MSCI Inc.,Financials,financial_revenue_to_assets_high,0.55,check revenue definition
+0001510295,Marathon Petroleum,Energy,balance_gap_over_5pct,8.1,assets - equity - liabilities as % of assets (minority interests / mezzanine items)
+0001048286,Marriott International,Consumer Discretionary,negative_equity,-3771000000.0,kept; interpret ROE-type ratios with care
+0000062996,Masco,Industrials,negative_equity,-185000000.0,kept; interpret ROE-type ratios with care
+0000062996,Masco,Industrials,balance_gap_over_5pct,5.0,assets - equity - liabilities as % of assets (minority interests / mezzanine items)
+0001141391,Mastercard,Financials,financial_revenue_to_assets_high,0.61,check revenue definition
+0000891103,Match Group,Communication Services,negative_equity,-253504000.0,kept; interpret ROE-type ratios with care
+0000063908,McDonald's,Consumer Discretionary,negative_equity,-1791000000.0,kept; interpret ROE-type ratios with care
+0000927653,McKesson Corporation,Health Care,negative_equity,-2074000000.0,kept; interpret ROE-type ratios with care
+0001037646,Mettler Toledo,Health Care,negative_equity,-23636000.0,kept; interpret ROE-type ratios with care
+0001682852,Moderna,Health Care,margin_beyond_100pct,-145.2,"revenue 1944000000.0, net income -2822000000.0"
+0000753308,NextEra Energy,Utilities,balance_gap_over_5pct,5.6,assets - equity - liabilities as % of assets (minority interests / mezzanine items)
+0001045810,Nvidia,Information Technology,roa_beyond_40pct,82.2,"net income 72880000000.0, assets 111601000000.0"
+0001781335,Otis Worldwide,Industrials,negative_equity,-5392000000.0,kept; interpret ROE-type ratios with care
+0000898173,O’Reilly Automotive,Consumer Discretionary,negative_equity,-763352000.0,kept; interpret ROE-type ratios with care
+0002041610,Paramount Skydance Corporation,Communication Services,missing_core,,"revenue_usd,net_income_usd,assets_usd"
+0001413329,Philip Morris International,Consumer Staples,negative_equity,-9994000000.0,kept; interpret ROE-type ratios with care
+0000080661,Progressive Corporation,Financials,financial_revenue_to_assets_high,0.71,check revenue definition
+0000064040,S&P Global,Financials,balance_gap_over_5pct,8.2,assets - equity - liabilities as % of assets (minority interests / mezzanine items)
+0001034054,SBA Communications,Real Estate,negative_equity,-4853519000.0,kept; interpret ROE-type ratios with care
+0001137789,Seagate Technology,Information Technology,negative_equity,-453000000.0,kept; interpret ROE-type ratios with care
+0000829224,Starbucks,Consumer Discretionary,negative_equity,-8096600000.0,kept; interpret ROE-type ratios with care
+0001113169,T. Rowe Price,Financials,balance_gap_over_5pct,8.3,assets - equity - liabilities as % of assets (minority interests / mezzanine items)
+0001113169,T. Rowe Price,Financials,financial_revenue_to_assets_high,0.51,check revenue definition
+0001973266,TKO Group Holdings,Communication Services,balance_gap_over_5pct,35.6,assets - equity - liabilities as % of assets (minority interests / mezzanine items)
+0000946581,Take-Two Interactive,Communication Services,roa_beyond_40pct,-41.9,"net income -4478900000.0, assets 9180700000.0"
+0001260221,TransDigm Group,Industrials,negative_equity,-9686000000.0,kept; interpret ROE-type ratios with care
+0000074208,"UDR, Inc.",Real Estate,balance_gap_over_5pct,8.1,assets - equity - liabilities as % of assets (minority interests / mezzanine items)
+0001014473,Verisign,Information Technology,negative_equity,-2154200000.0,kept; interpret ROE-type ratios with care
+0001014473,Verisign,Information Technology,roa_beyond_40pct,60.4,"net income 825700000.0, assets 1325900000.0"
+0001174922,Wynn Resorts,Consumer Discretionary,negative_equity,-275492000.0,kept; interpret ROE-type ratios with care
+0001174922,Wynn Resorts,Consumer Discretionary,balance_gap_over_5pct,-5.8,assets - equity - liabilities as % of assets (minority interests / mezzanine items)
+0001041061,Yum! Brands,Consumer Discretionary,negative_equity,-7325000000.0,kept; interpret ROE-type ratios with care

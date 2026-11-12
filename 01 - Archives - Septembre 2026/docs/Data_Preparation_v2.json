@@ -1,0 +1,63 @@
+{
+  "initial": {
+    "initial_rows": 503,
+    "initial_columns": 17,
+    "initial_nan_counts": {
+      "Ticker": 0,
+      "Company": 0,
+      "Sector_Raw": 1,
+      "Sector": 1,
+      "Total_Revenue_B": 1,
+      "Market_Cap_B": 0,
+      "ROE": 32,
+      "Profit_Margin": 1,
+      "Beta": 5,
+      "Headcount": 4,
+      "Audit_Risk": 8,
+      "Board_Risk": 8,
+      "Compensation_Risk": 8,
+      "Shareholder_Rights_Risk": 8,
+      "Overall_Governance_Risk": 8,
+      "Market_Cap_Quartile": 0,
+      "Governance_Risk_Level": 8
+    }
+  },
+  "final": {
+    "cleaned_rows": 500,
+    "cleaned_columns": 17,
+    "cleaned_nan_counts": {
+      "Ticker": 0,
+      "Company": 0,
+      "Sector": 0,
+      "Sector_Raw": 1,
+      "Total_Revenue_B": 1,
+      "Market_Cap_B": 0,
+      "Market_Cap_Quartile": 0,
+      "ROE": 32,
+      "Profit_Margin": 1,
+      "Beta": 5,
+      "Headcount": 4,
+      "Audit_Risk": 5,
+      "Board_Risk": 5,
+      "Compensation_Risk": 5,
+      "Shareholder_Rights_Risk": 5,
+      "Overall_Governance_Risk": 5,
+      "Governance_Risk_Level": 5
+    }
+  },
+  "removed_share_classes": [
+    "GOOG",
+    "FOX",
+    "NWS"
+  ],
+  "retained_share_classes": [
+    "GOOGL",
+    "FOXA",
+    "NWSA"
+  ],
+  "fiserv_sector": "Finance: analyst classification; original Sector_Raw remains missing",
+  "imputed_financial_or_governance_values": 0,
+  "temporal_scope": "Archived Yahoo Finance snapshot; fiscal periods not harmonised or verified",
+  "raw_sha256": "b8fc87bff29711c3be3c722c576e25f2a033d54beb5c3dcafe2419702c3ccdc2",
+  "prepared_sha256": "5f6a959cb5dcc9997229fa48114271611028a73d039020af3865c0560495b7df"
+}

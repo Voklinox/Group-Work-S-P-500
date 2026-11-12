@@ -1,0 +1,686 @@
+{
+ "shard": "17",
+ "observations": [
+  {
+   "cik": "0001601712",
+   "company": "Synchrony Financial",
+   "accession": "0001601712-25-000149",
+   "publication_date": "2025-04-25",
+   "board_size": 11,
+   "independent_directors": 10,
+   "board_leadership": "Separate CEO and chair",
+   "ceo_name": "Brian D. Doubles",
+   "chair_name": "Jeffrey G. Naylor",
+   "independence_standard": "NYSE",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/1601712/000160171225000149/syf-20250425.htm",
+   "archive_file": "data/raw/governance/0001601712_0001601712-25-000149.htm",
+   "evidence": [
+    {
+     "group": "board_counts",
+     "locator": "Corporate Governance, Board of Directors / Director Independence",
+     "quote": "The Board consists of 11 directors: our President and CEO, Brian D. Doubles, and 10 directors who are “independent” under the listing standards of the New York Stock Exchange (“NYSE”) and our own independence standards set forth in our Governance Principles.",
+     "note": "Board of 11 in place: CEO plus 10 independent directors."
+    },
+    {
+     "group": "independence",
+     "locator": "Corporate Governance, Board of Directors / Director Independence",
+     "quote": "The independent directors are Fernando Aguirre, Paget L. Alves, Kamila Chytil, Daniel Colao, Arthur W. Coviello, Jr., Roy A. Guthrie, Jeffrey G. Naylor, Bill Parker, Laurel J. Richie and Ellen M. Zane (together, the “Independent Directors”).",
+     "note": "Ten named independent directors, same set as the 11-member board minus the CEO."
+    },
+    {
+     "group": "leadership",
+     "locator": "Corporate Governance, Board Leadership Structure",
+     "quote": "Our Board is led by Jeffrey Naylor, our non-executive chair of the Board (“Chair”).",
+     "note": "Non-executive independent chair; CEO is Brian D. Doubles."
+    }
+   ],
+   "date_basis": "publication date of 2025 proxy; current board described therein, not a year-end or annual-average measure",
+   "board_scope": "incumbent directors; nominee roster reconciled to current membership",
+   "checked_at": "2026-11-11",
+   "capture_status": "raw_document_archived",
+   "review_status": "agent_read_pending_audit"
+  },
+  {
+   "cik": "0000883241",
+   "company": "Synopsys",
+   "accession": "0000883241-25-000008",
+   "publication_date": "2025-02-14",
+   "board_size": 11,
+   "independent_directors": 9,
+   "board_leadership": "Separate CEO and chair",
+   "ceo_name": "Sassine Ghazi",
+   "chair_name": "Aart J. de Geus",
+   "lead_director_name": "Roy Vallee",
+   "independence_standard": "Nasdaq",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/883241/000088324125000008/snps-20250214.htm",
+   "archive_file": "data/raw/governance/0000883241_0000883241-25-000008.htm",
+   "evidence": [
+    {
+     "group": "board_counts",
+     "locator": "Proposal 1, Election of Directors",
+     "quote": "Our Board currently consists of eleven directors.",
+     "note": "Eleven current directors (nine standing for re-election, two retiring at the meeting but still seated)."
+    },
+    {
+     "group": "independence",
+     "locator": "Corporate Governance, Director Independence",
+     "quote": "Currently, each member of our Board, other than our President and Chief Executive Officer, Mr. Ghazi, and our Executive Chair of the Board, Dr. de Geus, is an independent director.",
+     "note": "11 current directors minus Ghazi and de Geus = 9; matches the nine independent directors named in the following sentence (Vallee, Borgen, Casper, Chaffin, Chizen, Johnson, Painter, Sargent, Schwarz)."
+    },
+    {
+     "group": "leadership",
+     "locator": "Corporate Governance, Lead Independent Director",
+     "quote": "Roy Vallee has served as our Lead Independent Director since February 2017.",
+     "note": "Chair is Executive Chair Dr. Aart J. de Geus (non-CEO); CEO is Sassine Ghazi; Roy Vallee is the Lead Independent Director in place at publication (Schwarz succeeds him after the annual meeting)."
+    }
+   ],
+   "date_basis": "publication date of 2025 proxy; current board described therein, not a year-end or annual-average measure",
+   "board_scope": "incumbent directors; nominee roster reconciled to current membership",
+   "checked_at": "2026-11-11",
+   "capture_status": "raw_document_archived",
+   "review_status": "agent_read_pending_audit"
+  },
+  {
+   "cik": "0000096021",
+   "company": "Sysco",
+   "accession": "0000096021-25-000147",
+   "publication_date": "2025-10-02",
+   "board_size": 11,
+   "independent_directors": 10,
+   "board_leadership": "Combined CEO and chair",
+   "ceo_name": "Kevin P. Hourican",
+   "chair_name": "Kevin P. Hourican",
+   "lead_director_name": "Larry C. Glasscock",
+   "independence_standard": "NYSE",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/96021/000009602125000147/syy-20251001.htm",
+   "archive_file": "data/raw/governance/0000096021_0000096021-25-000147.htm",
+   "evidence": [
+    {
+     "group": "board_counts",
+     "locator": "Proxy Statement Summary, Item 1 Election of Directors (printed p.7-8)",
+     "quote": "Elect 11 directors for a one-year term",
+     "note": "Eleven nominees listed in the Director Nominees table; every nominee has a Director Since date between 2010 and August 2024 (Marques), so all 11 are incumbent; no incumbent is described as not standing, so board in place = 11."
+    },
+    {
+     "group": "independence",
+     "locator": "Board of Directors Matters, Director Independence (printed p.22)",
+     "quote": "After reviewing this information, the Board has determined that no Board nominee, other than Mr. Hourican, has a material relationship with Sysco and that all nominees, other than Mr. Hourican, are independent under the NYSE standards",
+     "note": "All 11 nominees are independent except CEO Hourican, so 10 of 11."
+    },
+    {
+     "group": "leadership",
+     "locator": "Corporate Governance, Board Leadership Structure (printed p.23)",
+     "quote": "We currently have a combined Chair of the Board and CEO leadership structure.",
+     "note": "Hourican is CEO and Chair; Larry C. Glasscock is Lead Independent Director (since April 2024)."
+    }
+   ],
+   "date_basis": "publication date of 2025 proxy; current board described therein, not a year-end or annual-average measure",
+   "board_scope": "incumbent directors; nominee roster reconciled to current membership",
+   "checked_at": "2026-11-11",
+   "capture_status": "raw_document_archived",
+   "review_status": "agent_read_pending_audit"
+  },
+  {
+   "cik": "0001283699",
+   "company": "T-Mobile US",
+   "accession": "0001193125-25-085753",
+   "publication_date": "2025-04-18",
+   "board_size": 13,
+   "independent_directors": 6,
+   "board_leadership": "Separate CEO and chair",
+   "ceo_name": "G. Michael Sievert",
+   "chair_name": "Timotheus Höttges",
+   "lead_director_name": "Teresa A. Taylor",
+   "independence_standard": "Nasdaq",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/1283699/000119312525085753/d877179ddef14a.htm",
+   "archive_file": "data/raw/governance/0001283699_0001193125-25-085753.htm",
+   "evidence": [
+    {
+     "group": "board_counts",
+     "locator": "Corporate Governance, Board Composition",
+     "quote": "Our Board currently consists of 13 directors.",
+     "note": "Current board = 13. Reconciliation: 13 nominees, of whom Dannenfeldt is new (see next quote) = 12 incumbents, plus Westbrook (not a nominee, still seated until the meeting) = 13."
+    },
+    {
+     "group": "board_counts",
+     "locator": "Proposal 1, 2025 Director Nominees",
+     "quote": "Other than Mr. Dannenfeldt, all nominees were elected at the 2024 annual meeting of stockholders.",
+     "note": "Dannenfeldt is a new nominee, not yet a director; Westbrook is seated but not standing (next sentence of the same paragraph: his Board service ends at the conclusion of the Annual Meeting)."
+    },
+    {
+     "group": "independence",
+     "locator": "Corporate Governance, Director Independence",
+     "quote": "Each of the following directors or director nominees is an “independent director” under NASDAQ rules and our Corporate Governance Guidelines:",
+     "note": "List contains 7 names: Claure, Dannenfeldt, Datar, Kavanaugh, Long, Taylor, Westbrook. Removing nominee Dannenfeldt (not yet a director) leaves 6 independent among the 13 sitting directors (Claure, Datar, Kavanaugh, Long, Taylor, Westbrook). Controlled company (Deutsche Telekom) but independence is declared for each."
+    },
+    {
+     "group": "leadership",
+     "locator": "Corporate Governance, Board Leadership",
+     "quote": "We believe that separating the roles of Chief Executive Officer and Chairman of the Board is appropriate for the Company and in the best interests of the Company and its stockholders at this time.",
+     "note": "Chairman is Timotheus Höttges (Deutsche Telekom CEO); CEO is G. Michael Sievert; Teresa A. Taylor is lead independent director."
+    }
+   ],
+   "date_basis": "publication date of 2025 proxy; current board described therein, not a year-end or annual-average measure",
+   "board_scope": "incumbent directors; nominee roster reconciled to current membership",
+   "checked_at": "2026-11-11",
+   "capture_status": "raw_document_archived",
+   "review_status": "agent_read_pending_audit"
+  },
+  {
+   "cik": "0001113169",
+   "company": "T. Rowe Price",
+   "accession": "0001104659-25-028002",
+   "publication_date": "2025-03-26",
+   "board_size": 11,
+   "independent_directors": 9,
+   "board_leadership": "Combined CEO and chair",
+   "ceo_name": "Robert W. Sharps",
+   "chair_name": "Robert W. Sharps",
+   "lead_director_name": "Alan D. Wilson",
+   "independence_standard": "Nasdaq",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/1113169/000110465925028002/tm253700-4_def14a.htm",
+   "archive_file": "data/raw/governance/0001113169_0001104659-25-028002.htm",
+   "evidence": [
+    {
+     "group": "board_counts",
+     "locator": "Board of Directors, Board Qualifications, Skills, and Experience",
+     "quote": "The following are highlights of the composition of our current director nominees, all of whom currently serve on the Board:",
+     "note": "All 11 nominees currently serve on the Board; no departing director is mentioned for 2025 (Hrabowski retired in 2024), and the document states the Board will have 11 directors after the meeting."
+    },
+    {
+     "group": "independence",
+     "locator": "Board of Directors, Board Qualifications, Skills, and Experience",
+     "quote": "Nine of 11 of the director nominees are independent under the NASDAQ Global Select Market standards",
+     "note": "9 of the 11 sitting nominees are independent (Sharps and one other, non-independent)."
+    },
+    {
+     "group": "leadership",
+     "locator": "Board Leadership, Chair of the Board and Lead Independent Director",
+     "quote": "Mr. Sharps became the chair of the Board effective May 7, 2024, following the 2024 Annual Meeting, in addition to his role as CEO and president.",
+     "note": "Sharps is CEO, president and chair; Alan D. Wilson is the lead independent director."
+    }
+   ],
+   "date_basis": "publication date of 2025 proxy; current board described therein, not a year-end or annual-average measure",
+   "board_scope": "incumbent directors; nominee roster reconciled to current membership",
+   "checked_at": "2026-11-11",
+   "capture_status": "raw_document_archived",
+   "review_status": "agent_read_pending_audit"
+  },
+  {
+   "cik": "0000946581",
+   "company": "Take-Two Interactive",
+   "accession": "0001628280-25-036188",
+   "publication_date": "2025-07-28",
+   "board_size": 10,
+   "independent_directors": 9,
+   "board_leadership": "Combined CEO and chair",
+   "ceo_name": "Strauss Zelnick",
+   "chair_name": "Strauss Zelnick",
+   "lead_director_name": "LaVerne Srinivasan",
+   "independence_standard": "Nasdaq",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/946581/000162828025036188/ttwo-20250728.htm",
+   "archive_file": "data/raw/governance/0000946581_0001628280-25-036188.htm",
+   "evidence": [
+    {
+     "group": "board_counts",
+     "locator": "Proposal 1, Election of Directors",
+     "quote": "All members of the Board of Directors stand for election on an annual basis, and at the Annual Meeting 10 director nominees will stand for election to hold office for a term expiring at the 2026 Annual Meeting of Shareholders.",
+     "note": "10 nominees = all members; each of the 10 nominee biographies shows a Director since date between 2007 and May 2022; no departing director mentioned."
+    },
+    {
+     "group": "independence",
+     "locator": "Corporate Governance, Independent Directors",
+     "quote": "The Board of Directors has determined that Messrs. Dornemann, Gordon, Hernandez, Moses, Sheresky and Viera and Mses. Siminoff, Srinivasan and Tolson are “independent” directors, and that Mr. Zelnick is not an “independent” director",
+     "note": "Nine named independent directors plus Zelnick (not independent) = the 10 sitting directors."
+    },
+    {
+     "group": "leadership",
+     "locator": "Corporate Governance, Board Leadership Structure",
+     "quote": "Mr. Zelnick currently serves as both the Chief Executive Officer and Executive Chairman of the Company.",
+     "note": "Combined roles (the proxy itself calls it a combined Chairman/CEO role); LaVerne Srinivasan is Lead Independent Director."
+    }
+   ],
+   "date_basis": "publication date of 2025 proxy; current board described therein, not a year-end or annual-average measure",
+   "board_scope": "incumbent directors; nominee roster reconciled to current membership",
+   "checked_at": "2026-11-11",
+   "capture_status": "raw_document_archived",
+   "review_status": "agent_read_pending_audit"
+  },
+  {
+   "cik": "0001116132",
+   "company": "Tapestry, Inc.",
+   "accession": "0001140361-25-036303",
+   "publication_date": "2025-09-26",
+   "board_size": 10,
+   "independent_directors": 9,
+   "board_leadership": "Separate CEO and chair",
+   "ceo_name": "Joanne Crevoiserat",
+   "chair_name": "Anne Gates",
+   "independence_standard": "NYSE",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/1116132/000114036125036303/ny20053837x1_def14a.htm",
+   "archive_file": "data/raw/governance/0001116132_0001140361-25-036303.htm",
+   "evidence": [
+    {
+     "group": "board_counts",
+     "locator": "Proposal 1, Election of Directors; Board nominees summary",
+     "quote": "All of the director nominees are currently members of the Board.",
+     "note": "Ten nominees (\"Ten directors will be elected at this year’s Annual Meeting\"), all current members, so board = 10."
+    },
+    {
+     "group": "independence",
+     "locator": "Proxy Summary, Board highlights",
+     "quote": "Nine of 10 director nominees are independent",
+     "note": "9 independent of the 10 sitting directors (only the CEO is not independent)."
+    },
+    {
+     "group": "leadership",
+     "locator": "Corporate Governance, Board Leadership Structure",
+     "quote": "The Board believes that the current governance structure — Ms. Gates as the independent Chair of the Board and Ms. Crevoiserat as the Company’s Chief Executive Officer — allows Ms. Crevoiserat to focus her time and energy on managing the Company",
+     "note": "Independent Chair Anne Gates, separate CEO Joanne Crevoiserat; no lead director named (independent chair)."
+    }
+   ],
+   "date_basis": "publication date of 2025 proxy; current board described therein, not a year-end or annual-average measure",
+   "board_scope": "incumbent directors; nominee roster reconciled to current membership",
+   "checked_at": "2026-11-11",
+   "capture_status": "raw_document_archived",
+   "review_status": "agent_read_pending_audit"
+  },
+  {
+   "cik": "0001389170",
+   "company": "Targa Resources",
+   "accession": "0001193125-25-067057",
+   "publication_date": "2025-03-28",
+   "board_size": 11,
+   "independent_directors": 10,
+   "board_leadership": "Separate CEO and chair",
+   "ceo_name": "Matthew J. Meloy",
+   "chair_name": "Paul W. Chung",
+   "lead_director_name": "Laura C. Fulton",
+   "independence_standard": "NYSE",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/1389170/000119312525067057/d909508ddef14a.htm",
+   "archive_file": "data/raw/governance/0001389170_0001193125-25-067057.htm",
+   "evidence": [
+    {
+     "group": "board_counts",
+     "locator": "Corporate Governance, Board of Directors",
+     "quote": "Our Board of Directors currently consists of eleven members.",
+     "note": "Eleven sitting directors (10 independent plus CEO Meloy)."
+    },
+    {
+     "group": "independence",
+     "locator": "Corporate Governance, Board of Directors / Director Independence",
+     "quote": "determined that Mses. Bowman, Cooksen, Fulton and Lawhorn and Messrs. Chung, Crisp, Davis, Joyce, Perkins and Teague are independent within the meaning of the NYSE listing standards currently in effect.",
+     "note": "Ten named independent directors; consistent with the statement that all directors other than Mr. Meloy are independent."
+    },
+    {
+     "group": "leadership",
+     "locator": "Corporate Governance, Board Leadership Structure",
+     "quote": "Although the positions of Chief Executive Officer and Chairman of the Board of Directors are held currently by different individuals, our bylaws allow the same individual to hold the position of Chief Executive Officer and Chairman of the Board of Directors.",
+     "note": "Chair Paul W. Chung (independent), CEO Matthew J. Meloy; Laura C. Fulton is Lead Independent Director."
+    }
+   ],
+   "date_basis": "publication date of 2025 proxy; current board described therein, not a year-end or annual-average measure",
+   "board_scope": "incumbent directors; nominee roster reconciled to current membership",
+   "checked_at": "2026-11-11",
+   "capture_status": "raw_document_archived",
+   "review_status": "agent_read_pending_audit"
+  },
+  {
+   "cik": "0000027419",
+   "company": "Target Corporation",
+   "accession": "0001628280-25-020275",
+   "publication_date": "2025-04-28",
+   "board_size": 12,
+   "independent_directors": 11,
+   "board_leadership": "Combined CEO and chair",
+   "ceo_name": "Brian C. Cornell",
+   "chair_name": "Brian C. Cornell",
+   "lead_director_name": "Christine A. Leahy",
+   "independence_standard": "NYSE",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/27419/000162828025020275/tgt-20250428.htm",
+   "archive_file": "data/raw/governance/0000027419_0001628280-25-020275.htm",
+   "evidence": [
+    {
+     "group": "board_counts",
+     "locator": "Corporate Governance, Meeting attendance; Proxy access / Other information",
+     "quote": "All twelve of our directors attended our 2024 Annual Meeting.",
+     "note": "12 sitting directors; confirmed by \"Based on the current Board size of 12 directors\" (proxy access section) and \"Election of 12 directors\" (all 12 stand)."
+    },
+    {
+     "group": "independence",
+     "locator": "Corporate Governance, Director independence",
+     "quote": "The Board affirmatively determined that all non-employee directors are independent. Mr. Cornell is the only director employed by Target and is not independent.",
+     "note": "12 directors minus Cornell (only employee director) = 11 independent."
+    },
+    {
+     "group": "leadership",
+     "locator": "Corporate Governance, Board leadership structure",
+     "quote": "We currently have a combined Chair of the Board and CEO leadership structure.",
+     "note": "Cornell is Chair and CEO; Christine A. Leahy is Lead Independent Director since January 2025."
+    }
+   ],
+   "date_basis": "publication date of 2025 proxy; current board described therein, not a year-end or annual-average measure",
+   "board_scope": "incumbent directors; nominee roster reconciled to current membership",
+   "checked_at": "2026-11-11",
+   "capture_status": "raw_document_archived",
+   "review_status": "agent_read_pending_audit"
+  },
+  {
+   "cik": "0001385157",
+   "company": "TE Connectivity",
+   "accession": "0001558370-25-000262",
+   "publication_date": "2025-01-17",
+   "board_size": 12,
+   "independent_directors": 10,
+   "board_leadership": "Separate CEO and chair",
+   "ceo_name": "Terrence R. Curtin",
+   "chair_name": "Carol A. (“John”) Davidson",
+   "independence_standard": "NYSE",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/1385157/000155837025000262/tel-20250312xdef14a.htm",
+   "archive_file": "data/raw/governance/0001385157_0001558370-25-000262.htm",
+   "evidence": [
+    {
+     "group": "board_counts",
+     "locator": "Proposal 1 / Election of Directors",
+     "quote": "the Board of Directors proposes twelve (12) nominees for individual election as directors to hold office until the Annual General Meeting of shareholders in 2026. All twelve (12) nominees are current directors of TE Connectivity plc.",
+     "note": "12 nominees all current directors; the director retired in March 2024 (Lynch) is not counted."
+    },
+    {
+     "group": "independence",
+     "locator": "Corporate Governance, Director Independence",
+     "quote": "The Board has determined that ten of the twelve director nominees are independent.",
+     "note": "10 of the 12 sitting directors independent (ten names listed: Clamadieu, Davidson, Dugle, Eldessouky, Jeffrey, Lin, Talwalkar, Trudeau, Willoughby, Wright)."
+    },
+    {
+     "group": "leadership",
+     "locator": "Corporate Governance, Board Leadership Structure",
+     "quote": "Mr. Davidson has served as Chairman of the Board of Directors since March 2024.",
+     "note": "Davidson (independent, non-executive) is Chairman; Terrence R. Curtin is CEO since March 2017 (bio: \"Mr. Curtin has served as the Chief Executive Officer of TE Connectivity since March 2017\"). No separate lead director named in the proxy body."
+    }
+   ],
+   "date_basis": "publication date of 2025 proxy; current board described therein, not a year-end or annual-average measure",
+   "board_scope": "incumbent directors; nominee roster reconciled to current membership",
+   "checked_at": "2026-11-11",
+   "capture_status": "raw_document_archived",
+   "review_status": "agent_read_pending_audit"
+  },
+  {
+   "cik": "0001094285",
+   "company": "Teledyne Technologies",
+   "accession": "0001193125-25-054478",
+   "publication_date": "2025-03-14",
+   "board_size": 11,
+   "independent_directors": 10,
+   "board_leadership": "Separate CEO and chair",
+   "ceo_name": "Edwin Roks",
+   "chair_name": "Robert Mehrabian",
+   "lead_director_name": "Michael T. Smith",
+   "independence_standard": "NYSE",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/1094285/000119312525054478/d894170ddef14a.htm",
+   "archive_file": "data/raw/governance/0001094285_0001193125-25-054478.htm",
+   "evidence": [
+    {
+     "group": "board_counts",
+     "locator": "Corporate Governance, Board Leadership and Independence",
+     "quote": "The Board of Directors currently consists of 11 directors, ten of whom are considered independent under existing rules of the NYSE and the SEC.",
+     "note": "11 sitting directors including Crocker, who still sits but will leave at the 2025 annual meeting (board reduced to ten afterwards); incumbent count kept at 11."
+    },
+    {
+     "group": "independence",
+     "locator": "Corporate Governance, Board Leadership and Independence",
+     "quote": "The Chairman of the Board, Dr. Mehrabian, is also our Executive Chairman and our former Chairman, President and Chief Executive Officer, and therefore is not considered an independent director.",
+     "note": "Ten of the 11 are independent; the single non-independent director is Executive Chairman Mehrabian (CEO Roks is not shown among the directors)."
+    },
+    {
+     "group": "leadership",
+     "locator": "Corporate Governance, Board Leadership and Independence; Executive Officers",
+     "quote": "The Board made the decision to separate the roles of the Executive Chairman and the Chief Executive Officer in 2024",
+     "note": "Executive Chairman Robert Mehrabian (non-CEO) = separate; CEO Edwin Roks since Jan 1, 2024 (bio: \"Dr. Roks has been Chief Executive Officer of Teledyne since January 1, 2024\"); lead director Michael T. Smith."
+    }
+   ],
+   "date_basis": "publication date of 2025 proxy; current board described therein, not a year-end or annual-average measure",
+   "board_scope": "incumbent directors; nominee roster reconciled to current membership",
+   "checked_at": "2026-11-11",
+   "capture_status": "raw_document_archived",
+   "review_status": "agent_read_pending_audit"
+  },
+  {
+   "cik": "0000097210",
+   "company": "Teradyne",
+   "accession": "0000950170-25-046345",
+   "publication_date": "2025-03-28",
+   "board_size": 8,
+   "independent_directors": 7,
+   "board_leadership": "Separate CEO and chair",
+   "ceo_name": "Gregory S. Smith",
+   "chair_name": "Paul J. Tufano",
+   "independence_standard": "Nasdaq",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/97210/000095017025046345/ter-20250326.htm",
+   "archive_file": "data/raw/governance/0000097210_0000950170-25-046345.htm",
+   "evidence": [
+    {
+     "group": "board_counts",
+     "locator": "Proposal No. 1, Election of Directors",
+     "quote": "The Board presently consists of eight members, seven of whom are independent directors.",
+     "note": "8 sitting directors, including Ford Tamer who is not standing for re-election but serves until the end of the annual meeting (hence 7 nominees, 8 incumbents)."
+    },
+    {
+     "group": "independence",
+     "locator": "Proposal No. 1, Election of Directors; Corporate Governance, Independence",
+     "quote": "The Board presently consists of eight members, seven of whom are independent directors.",
+     "note": "Same sentence: 7 of the 8 are independent (all except CEO Gregory S. Smith); consistent with the independence list naming Herweck, Johnson, Maddock, Matz, Tamer, Tufano, van Kralingen (Guertin is listed as a former director)."
+    },
+    {
+     "group": "leadership",
+     "locator": "Corporate Governance, Board Leadership Structure",
+     "quote": "Since May 2021, Mr. Tufano has served as an independent Chair of the Board.",
+     "note": "Independent Chair Paul J. Tufano; CEO Gregory S. Smith (\"Mr. Smith is President and Chief Executive Officer of Teradyne\"). No lead director named."
+    }
+   ],
+   "date_basis": "publication date of 2025 proxy; current board described therein, not a year-end or annual-average measure",
+   "board_scope": "incumbent directors; nominee roster reconciled to current membership",
+   "checked_at": "2026-11-11",
+   "capture_status": "raw_document_archived",
+   "review_status": "agent_read_pending_audit"
+  },
+  {
+   "cik": "0001318605",
+   "company": "Tesla, Inc.",
+   "accession": "0001104659-25-090866",
+   "publication_date": "2025-09-17",
+   "board_size": 9,
+   "independent_directors": 7,
+   "board_leadership": "Separate CEO and chair",
+   "ceo_name": "Elon Musk",
+   "chair_name": "Robyn Denholm",
+   "independence_standard": "Nasdaq",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/1318605/000110465925090866/tm252289-12_def14a.htm",
+   "archive_file": "data/raw/governance/0001318605_0001104659-25-090866.htm",
+   "evidence": [
+    {
+     "group": "board_counts",
+     "locator": "Proposal 1, Election of Directors (Board composition)",
+     "quote": "Tesla’s Board currently consists of nine members who are divided into three classes with staggered three-year terms.",
+     "note": "Nine current members (Musk, Kimbal Musk, Denholm, Ehrenpreis, Murdoch, Wilson-Thompson, Gebbia, Straubel, Hartung)."
+    },
+    {
+     "group": "independence",
+     "locator": "Corporate Governance, Director Independence",
+     "quote": "The Board determined that with respect to each of its current members and director nominees, other than Mr. Musk, who is our Chief Executive Officer, and Mr. Kimbal Musk, who is Mr. Musk’s brother, there are no disqualifying factors",
+     "note": "9 members minus Elon Musk and Kimbal Musk = 7 independent."
+    },
+    {
+     "group": "leadership",
+     "locator": "Corporate Governance, Roles of Chair of the Board",
+     "quote": "Following careful deliberation, the Board appointed Robyn Denholm to serve as the independent Chair of the Board in November 2018",
+     "note": "Independent Chair Denholm; CEO Elon Musk (\"Mr. Musk ... has served as our Chief Executive Officer since October 2008\"). No lead director named."
+    }
+   ],
+   "date_basis": "publication date of 2025 proxy; current board described therein, not a year-end or annual-average measure",
+   "board_scope": "incumbent directors; nominee roster reconciled to current membership",
+   "checked_at": "2026-11-11",
+   "capture_status": "raw_document_archived",
+   "review_status": "agent_read_pending_audit"
+  },
+  {
+   "cik": "0000097476",
+   "company": "Texas Instruments",
+   "accession": "0000097476-25-000017",
+   "publication_date": "2025-03-05",
+   "board_size": 13,
+   "independent_directors": 11,
+   "board_leadership": "Separate CEO and chair",
+   "ceo_name": "Haviv Ilan",
+   "chair_name": "Richard Templeton",
+   "lead_director_name": "Todd Bluedorn",
+   "independence_standard": "Nasdaq",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/97476/000009747625000017/txn-20250305.htm",
+   "archive_file": "data/raw/governance/0000097476_0000097476-25-000017.htm",
+   "evidence": [
+    {
+     "group": "board_counts",
+     "locator": "Election of Directors; Director nominees",
+     "quote": "All nominees for directorship are currently directors of the company.",
+     "note": "Thirteen nominees named in the first paragraph (Blinn, Bluedorn, Clark, Cox, Craighead, DesRoches, Farmer, Hobby, Ilan, Kirk, Patsley, Sanchez, Templeton), all current directors: board = 13."
+    },
+    {
+     "group": "independence",
+     "locator": "Corporate Governance, Director independence",
+     "quote": "The board has determined that each of our directors is independent, with the exception of Messrs. Templeton and Ilan.",
+     "note": "13 directors minus Templeton and Ilan = 11 independent."
+    },
+    {
+     "group": "leadership",
+     "locator": "Corporate Governance, Board leadership structure",
+     "quote": "The board’s current leadership entails an executive chairman (former CEO) and a lead director who presides at executive sessions and performs the duties listed below.",
+     "note": "Executive chairman Richard Templeton (former CEO, non-CEO) and CEO Haviv Ilan (bio: \"president and chief executive officer of the company since 2023\"); lead director Todd Bluedorn."
+    }
+   ],
+   "date_basis": "publication date of 2025 proxy; current board described therein, not a year-end or annual-average measure",
+   "board_scope": "incumbent directors; nominee roster reconciled to current membership",
+   "checked_at": "2026-11-11",
+   "capture_status": "raw_document_archived",
+   "review_status": "agent_read_pending_audit"
+  },
+  {
+   "cik": "0001811074",
+   "company": "Texas Pacific Land Corporation",
+   "accession": "0001104659-25-093848",
+   "publication_date": "2025-09-26",
+   "board_size": 10,
+   "independent_directors": 9,
+   "board_leadership": "Separate CEO and chair",
+   "ceo_name": "Tyler Glover",
+   "chair_name": "Rhys J. Best",
+   "independence_standard": "NYSE",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/1811074/000110465925093848/tm2523293-1_def14a.htm",
+   "archive_file": "data/raw/governance/0001811074_0001104659-25-093848.htm",
+   "evidence": [
+    {
+     "group": "board_counts",
+     "locator": "Proposal 1, Election of Directors",
+     "quote": "The Board currently consists of ten (10) directors.",
+     "note": "10 sitting directors; Eric L. Oliver still sits but is not a nominee and the board will be reduced to nine at the annual meeting. Incumbent count kept at 10."
+    },
+    {
+     "group": "independence",
+     "locator": "Corporate Governance, Board Composition and Independence",
+     "quote": "The Board currently consists of ten (10) directors, nine (9) of whom — Mr. Best, Gen. Cook, Ms. Duganier, Ms. Epps, Mr. Kurz, Mr. Oliver, Mr. Roosa, Mr. Stahl and Ms. Woung-Chapman — are considered “independent” under the rules of the SEC and the NYSE.",
+     "note": "9 of the 10 sitting directors independent (all but CEO Glover); Oliver included in both numerator and denominator."
+    },
+    {
+     "group": "leadership",
+     "locator": "Corporate Governance, Board Leadership Structure",
+     "quote": "Mr. Best serves as the Chair and is an independent director.",
+     "note": "Independent chair Rhys J. Best; CEO Tyler Glover (a Board member as management representative: \"Our Chief Executive Officer also serves as a member of the Board\"). No lead independent director (chair independent)."
+    }
+   ],
+   "date_basis": "publication date of 2025 proxy; current board described therein, not a year-end or annual-average measure",
+   "board_scope": "incumbent directors; nominee roster reconciled to current membership",
+   "checked_at": "2026-11-11",
+   "capture_status": "raw_document_archived",
+   "review_status": "agent_read_pending_audit"
+  },
+  {
+   "cik": "0000217346",
+   "company": "Textron",
+   "accession": "0001552781-25-000047",
+   "publication_date": "2025-03-04",
+   "board_size": 11,
+   "independent_directors": 10,
+   "board_leadership": "Combined CEO and chair",
+   "ceo_name": "Scott C. Donnelly",
+   "chair_name": "Scott C. Donnelly",
+   "lead_director_name": "R. Kerry Clark",
+   "independence_standard": "NYSE",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/217346/000155278125000047/e25050_txt-def14a.htm",
+   "archive_file": "data/raw/governance/0000217346_0001552781-25-000047.htm",
+   "evidence": [
+    {
+     "group": "board_counts",
+     "locator": "Item 1, Election of Directors, Nominees",
+     "quote": "All ten nominees are currently Textron directors. James L. Ziemer, a director since 2007, will be retiring from our Board of Directors effective as of the Annual Meeting in accordance with our retirement policy.",
+     "note": "10 current-director nominees plus Ziemer, who is not a nominee but still sits until the meeting = 11 incumbents (Mionis already appointed March 1, 2025)."
+    },
+    {
+     "group": "independence",
+     "locator": "Corporate Governance, Director Independence",
+     "quote": "The Board of Directors has determined that Mses. Bader, James and Zuber, and Messrs. Ambrose, Clark, Garrett, Kennedy, Mionis, Nowell and Ziemer, are independent, as defined under the listing standards of the New York Stock Exchange",
+     "note": "10 named independent directors (nine nominees + Ziemer); the tenth nominee is CEO Donnelly. 10 of 11."
+    },
+    {
+     "group": "leadership",
+     "locator": "Corporate Governance, Board Leadership; Director biography",
+     "quote": "Mr. Donnelly, 63, is Chairman, President and Chief Executive Officer of Textron.",
+     "note": "Combined chair/CEO (proxy: \"the practice of combining the positions of Chairman of the Board and Chief Executive Officer\"); lead director R. Kerry Clark (\"Currently, Mr. Clark serves as Lead Director\")."
+    }
+   ],
+   "date_basis": "publication date of 2025 proxy; current board described therein, not a year-end or annual-average measure",
+   "board_scope": "incumbent directors; nominee roster reconciled to current membership",
+   "checked_at": "2026-11-11",
+   "capture_status": "raw_document_archived",
+   "review_status": "agent_read_pending_audit"
+  },
+  {
+   "cik": "0000097745",
+   "company": "Thermo Fisher Scientific",
+   "accession": "0001193125-25-075101",
+   "publication_date": "2025-04-08",
+   "board_size": 12,
+   "independent_directors": 10,
+   "board_leadership": "Combined CEO and chair",
+   "ceo_name": "Marc N. Casper",
+   "chair_name": "Marc N. Casper",
+   "lead_director_name": "Scott Sperling",
+   "independence_standard": "NYSE",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/97745/000119312525075101/d864455ddef14a.htm",
+   "archive_file": "data/raw/governance/0000097745_0001193125-25-075101.htm",
+   "evidence": [
+    {
+     "group": "board_counts",
+     "locator": "Proxy Summary, Robust, Independent Oversight; Proposal 1",
+     "quote": "We are asking our shareholders to elect each of the 12 director nominees identified below",
+     "note": "12 nominees; the summary states \"12 current directors\"; no departing incumbent is mentioned (Sørensen retired in May 2024)."
+    },
+    {
+     "group": "independence",
+     "locator": "Proxy Summary, Robust, Independent Oversight",
+     "quote": "10 of the 12 current directors are independent",
+     "note": "10 of 12 independent; the two non-independent are CEO Casper and Dr. Jacks (\"Dr. Jacks is not deemed independent under the Company’s Corporate Governance Guidelines\")."
+    },
+    {
+     "group": "leadership",
+     "locator": "Corporate Governance, Board Leadership Structure",
+     "quote": "Since February 2020, our Board has combined the positions of Chairman and CEO under the leadership of Marc N. Casper, and designated an independent Lead Director, currently Scott Sperling.",
+     "note": "Combined chair/CEO Marc N. Casper; Lead Director Scott Sperling."
+    }
+   ],
+   "date_basis": "publication date of 2025 proxy; current board described therein, not a year-end or annual-average measure",
+   "board_scope": "incumbent directors; nominee roster reconciled to current membership",
+   "checked_at": "2026-11-11",
+   "capture_status": "raw_document_archived",
+   "review_status": "agent_read_pending_audit"
+  }
+ ],
+ "unresolved": []
+}

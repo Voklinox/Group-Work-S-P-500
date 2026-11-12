@@ -1,0 +1,194 @@
+{
+  "shard": "21",
+  "observations": [
+    {
+      "cik": "0001018724",
+      "company": "Amazon",
+      "accession": "0001104659-25-033442",
+      "publication_date": "2025-04-10",
+      "board_size": 12,
+      "independent_directors": 10,
+      "board_leadership": "Separate CEO and chair",
+      "ceo_name": "Andrew R. Jassy",
+      "chair_name": "Jeffrey P. Bezos",
+      "independence_standard": "Nasdaq",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1018724/000110465925033442/tm252295-1_def14a.htm",
+      "archive_file": "data/raw/governance/0001018724_0001104659-25-033442.htm",
+      "evidence": [
+        {
+          "group": "board_counts",
+          "locator": "Proxy statement, board composition",
+          "quote": "The Board expects that the twelve nominees will be available to serve as directors.",
+          "note": "Twelve nominees, each stated to be a current director; ten are independent, the other two being CEO Jassy and Executive Chair Bezos."
+        },
+        {
+          "group": "independence",
+          "locator": "Proxy statement, director independence",
+          "quote": "Currently, of our ten independent director nominees, four are women, three are from underrepresented racial/ethnic groups, and four have served for five years or less.",
+          "note": "Independent directors among the same persons."
+        },
+        {
+          "group": "leadership",
+          "locator": "Proxy statement, board leadership",
+          "quote": "Our current leadership structure, which has the support of all of the independent directors on the Board, consists of an Executive Chair, who as the proposal notes is not also the CEO, and a lead independent director",
+          "note": "Executive Chair Bezos is not the CEO; CEO Jassy since July 2021."
+        }
+      ],
+      "date_basis": "publication date of 2025 proxy; current board described therein, not a year-end or annual-average measure",
+      "board_scope": "incumbent directors; nominee roster reconciled to current membership",
+      "checked_at": "2026-11-12",
+      "capture_status": "raw_document_archived",
+      "review_status": "agent_read_pending_audit"
+    },
+    {
+      "cik": "0000915912",
+      "company": "AvalonBay Communities",
+      "accession": "0001558370-25-004321",
+      "publication_date": "2025-04-02",
+      "board_size": 11,
+      "independent_directors": 10,
+      "board_leadership": "Separate CEO and chair",
+      "ceo_name": "Benjamin W. Schall",
+      "chair_name": "Timothy J. Naughton",
+      "independence_standard": "NYSE",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/915912/000155837025004321/avb-20250521xdef14a.htm",
+      "archive_file": "data/raw/governance/0000915912_0001558370-25-004321.htm",
+      "evidence": [
+        {
+          "group": "board_counts",
+          "locator": "Proxy statement, board composition",
+          "quote": "Election of Directors The Board of Directors (which we refer to as the “Board”) currently consists of 11 members.",
+          "note": "Board currently 11 members; all current directors are nominated for re-election (11 nominees)."
+        },
+        {
+          "group": "independence",
+          "locator": "Proxy statement, director independence",
+          "quote": "Based on its most recent review, the Board affirmatively determined that all directors who served on the Board during 2024, all currently serving directors and all nominees for director are independent, except in each case for Mr.",
+          "note": "All independent except the CEO (Schall), so 10 of 11."
+        },
+        {
+          "group": "leadership",
+          "locator": "Proxy statement, board leadership",
+          "quote": "Naughton serves as AvalonBay’s non-executive Chairman of the Board.",
+          "note": "Non-executive Chairman Naughton; CEO Schall."
+        }
+      ],
+      "date_basis": "publication date of 2025 proxy; current board described therein, not a year-end or annual-average measure",
+      "board_scope": "incumbent directors; nominee roster reconciled to current membership",
+      "checked_at": "2026-11-12",
+      "capture_status": "raw_document_archived",
+      "review_status": "agent_read_pending_audit"
+    },
+    {
+      "cik": "0000005272",
+      "company": "American International Group",
+      "accession": "0000005272-25-000025",
+      "publication_date": "2025-04-02",
+      "board_size": 12,
+      "independent_directors": 11,
+      "board_leadership": "Combined CEO and chair",
+      "ceo_name": "Peter Zaffino",
+      "chair_name": "Peter Zaffino",
+      "independence_standard": "NYSE",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/5272/000000527225000025/aig-20250401.htm",
+      "archive_file": "data/raw/governance/0000005272_0000005272-25-000025.htm",
+      "evidence": [
+        {
+          "group": "board_counts",
+          "locator": "Proxy statement, board composition",
+          "quote": "The Board recommends that our shareholders elect all twelve director nominees during the Annual Meeting.",
+          "note": "Twelve nominees; two new directors joined in Nov 2024 and Feb 2025, before the proxy; no departing director mentioned."
+        },
+        {
+          "group": "independence",
+          "locator": "Proxy statement, director independence",
+          "quote": "All directors are independent, except for Mr.",
+          "note": "All directors independent except the CEO (Zaffino): 11 of 12."
+        },
+        {
+          "group": "leadership",
+          "locator": "Proxy statement, board leadership",
+          "quote": "Board Leadership Structure Peter Zaffino Holds the Combined Role of Chairman and CEO",
+          "note": "Zaffino holds the combined Chairman and CEO role."
+        }
+      ],
+      "date_basis": "publication date of 2025 proxy; current board described therein, not a year-end or annual-average measure",
+      "board_scope": "incumbent directors; nominee roster reconciled to current membership",
+      "checked_at": "2026-11-12",
+      "capture_status": "raw_document_archived",
+      "review_status": "agent_read_pending_audit",
+      "lead_director_name": "John G. Rice"
+    },
+    {
+      "cik": "0001043277",
+      "company": "C.H. Robinson",
+      "accession": "0001043277-25-000014",
+      "publication_date": "2025-03-25",
+      "board_size": 12,
+      "independent_directors": 11,
+      "board_leadership": "Separate CEO and chair",
+      "ceo_name": "David P. Bozeman",
+      "chair_name": "Jodee A. Kozlak",
+      "independence_standard": "Nasdaq",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1043277/000104327725000014/chrw-20250324.htm",
+      "archive_file": "data/raw/governance/0001043277_0001043277-25-000014.htm",
+      "evidence": [
+        {
+          "group": "board_counts",
+          "locator": "Proxy statement, board composition",
+          "quote": "Director Independence Our Board of Directors is currently comprised of 11 independent directors and 1 non-independent director who is not independent solely by virtue of his service as our CEO.",
+          "note": "Current board of 12 (11 independent plus the CEO). Two directors (Barber, Maier) are not standing for re-election but are included in the current board described."
+        },
+        {
+          "group": "independence",
+          "locator": "Proxy statement, director independence",
+          "quote": "Director Independence Our Board of Directors is currently comprised of 11 independent directors and 1 non-independent director who is not independent solely by virtue of his service as our CEO.",
+          "note": "Independent directors among the same persons."
+        },
+        {
+          "group": "leadership",
+          "locator": "Proxy statement, board leadership",
+          "quote": "Kozlak, 62 Independent Chair of the Board; Former Executive Vice President and Chief Human Resources Officer, Target Director Since: 2013",
+          "note": "Independent Chair Jodee Kozlak; CEO Dave Bozeman."
+        }
+      ],
+      "date_basis": "publication date of 2025 proxy; current board described therein, not a year-end or annual-average measure",
+      "board_scope": "incumbent directors; nominee roster reconciled to current membership",
+      "checked_at": "2026-11-12",
+      "capture_status": "raw_document_archived",
+      "review_status": "agent_read_pending_audit"
+    }
+  ],
+  "unresolved": [
+    {
+      "cik": "0001002910",
+      "company": "Ameren",
+      "reason": "administrateur partant encore en poste",
+      "detail": "Un administrateur (Johnson) ne se représente pas et siège jusqu’à l’assemblée ; effectif en place du conseil (13 candidats + sortant ?) non établi. Seconde lecture nécessaire."
+    },
+    {
+      "cik": "0000008670",
+      "company": "Automatic Data Processing",
+      "reason": "administrateurs partants encore en poste",
+      "detail": "Douze candidats, dix indépendants ; des administrateurs ne se représentent pas et quittent le conseil le 12 novembre 2025 ; effectif en place non établi. Seconde lecture nécessaire."
+    },
+    {
+      "cik": "0000769397",
+      "company": "Autodesk",
+      "reason": "trois administrateurs partants et deux nominations postérieures",
+      "detail": "Dix candidats dont neuf indépendants ; trois administrateurs ne se représentent pas et deux nouveaux seront nommés après l’assemblée ; effectif en place non établi."
+    },
+    {
+      "cik": "0000732717",
+      "company": "AT&T",
+      "reason": "administrateur partant encore en poste et effectif non établi",
+      "detail": "Tous les candidats sont indépendants sauf le CEO ; Glenn Hutchins ne se représente pas ; nombre de candidats/administrateurs en place non établi par la lecture ciblée."
+    },
+    {
+      "cik": "0000004962",
+      "company": "American Express",
+      "reason": "conseil de 13 membres dont un sortant ; indépendance chiffrée non établie",
+      "detail": "Conseil actuel de 13 membres, douze candidats (Clayton quitte à l’assemblée) ; nombre d’indépendants non explicitement déclaré dans les passages lus."
+    }
+  ]
+}

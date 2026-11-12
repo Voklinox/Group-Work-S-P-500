@@ -1,0 +1,5 @@
+cik,company,sector,accession,filed,form,source_url,local_file
+0001393818,Blackstone Inc.,Financials,0001193125-25-042469,2025-02-28,10-K,https://www.sec.gov/Archives/edgar/data/1393818/000119312525042469/d912273d10k.htm,data/raw/governance/0001393818_0001193125-25-042469.htm
+0001404912,KKR & Co.,Financials,0001404912-25-000015,2025-02-28,10-K,https://www.sec.gov/Archives/edgar/data/1404912/000140491225000015/kkr-20241231.htm,data/raw/governance/0001404912_0001404912-25-000015.htm
+0002041610,Paramount Skydance Corporation,Communication Services,0001193125-25-175046,2025-08-07,8-K12B,https://www.sec.gov/Archives/edgar/data/2041610/000119312525175046/d841914d8k12b.htm,data/raw/governance/0002041610_0001193125-25-175046.htm
+0002058873,Qnity Electronics,Information Technology,0001193125-25-261603,2025-11-03,8-K,https://www.sec.gov/Archives/edgar/data/2058873/000119312525261603/d65598d8k.htm,data/raw/governance/0002058873_0001193125-25-261603.htm

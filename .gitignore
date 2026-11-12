@@ -30,3 +30,15 @@ build/
 # Data files (generated — re-run extract_sp500_esg.py to recreate)
 # Uncomment the line below if you do NOT want to track the CSV in git:
 # sp500_esg_dataset.csv
+
+.pytest_cache/
+
+# Large locally archived provider responses; manifests and selected evidence remain tracked
+02 - Collecte 2025 - Novembre 2026/data/raw/sec/
+02 - Collecte 2025 - Novembre 2026/data/raw/http_cache/
+
+# Public governance reports archived locally; extraction and manifests are tracked
+02 - Collecte 2025 - Novembre 2026/data/raw/governance/
+
+# Annual reports fetched to check definitions (re-downloadable from SEC)
+02 - Collecte 2025 - Novembre 2026/data/raw/reports/

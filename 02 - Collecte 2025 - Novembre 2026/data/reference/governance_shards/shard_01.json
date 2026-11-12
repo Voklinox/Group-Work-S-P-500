@@ -1,0 +1,802 @@
+{
+ "shard": "01",
+ "observations": [
+  {
+   "cik": "0000066740",
+   "company": "3M",
+   "accession": "0000066740-25-000029",
+   "publication_date": "2025-03-26",
+   "board_size": 12,
+   "independent_directors": 11,
+   "board_leadership": "Combined CEO and chair",
+   "ceo_name": "William M. Brown",
+   "chair_name": "William M. Brown",
+   "lead_director_name": "James R. Fitterling",
+   "independence_standard": "NYSE",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/66740/000006674025000029/mmm-20250325.htm",
+   "archive_file": "data/raw/governance/0000066740_0000066740-25-000029.htm",
+   "evidence": [
+    {
+     "group": "board_counts",
+     "locator": "Corporate governance at 3M, Election of Directors (printed p.14-15)",
+     "quote": "At the 2025 Annual Meeting, 11 directors are to be elected to hold office until the 2026 Annual Meeting of Shareholders and until their successors have been elected and qualified.",
+     "note": "11 nominees, all presently directors (Bozeman elected Feb 6, 2025; others elected 2024). Roman left the board March 1, 2025 (excluded). Hood still sits until the 2025 meeting, so incumbent board = 11 + Hood = 12."
+    },
+    {
+     "group": "board_counts",
+     "locator": "Corporate governance at 3M, Election of Directors",
+     "quote": "Ms. Amy E. Hood, a 3M Director since 2017, is not seeking re-election for personal reasons unrelated to 3M.",
+     "note": "Hood is not among the 11 nominees but remains a director until the annual meeting; counted."
+    },
+    {
+     "group": "independence",
+     "locator": "Director independence",
+     "quote": "As a result of this review, the Board affirmatively determined that the following directors are independent under these Guidelines: David P. Bozeman, Thomas “Tony” K. Brown, Audrey Choi, Anne H. Chow, David B. Dillon, James R. Fitterling, Amy E. Hood, Suzan Kereere, Gregory R. Page, Pedro J. Pizarro, and Thomas W. Sweet.",
+     "note": "11 named independent directors (incl. Hood) out of 12 in place; only William M. Brown (CEO) not named. Guidelines conform to or exceed NYSE standards."
+    },
+    {
+     "group": "leadership",
+     "locator": "Corporate governance at 3M, Election of Directors",
+     "quote": "The Board appointed Mr. William M. Brown, 3M’s Chief Executive Officer, to serve as Chairman of the Board.",
+     "note": "Brown CEO and Chairman since March 1, 2025; Fitterling Lead Independent Director (biography)."
+    }
+   ],
+   "date_basis": "publication date of 2025 proxy; current board described therein, not a year-end or annual-average measure",
+   "board_scope": "incumbent directors; nominee roster reconciled to current membership",
+   "checked_at": "2026-11-11",
+   "capture_status": "raw_document_archived",
+   "review_status": "agent_read_pending_audit"
+  },
+  {
+   "cik": "0000001800",
+   "company": "Abbott Laboratories",
+   "accession": "0001308179-25-000134",
+   "publication_date": "2025-03-14",
+   "board_size": 12,
+   "independent_directors": 11,
+   "board_leadership": "Combined CEO and chair",
+   "ceo_name": "Robert B. Ford",
+   "chair_name": "Robert B. Ford",
+   "lead_director_name": "Nancy McKinstry",
+   "independence_standard": "NYSE",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/1800/000130817925000134/abt012575_def14a.htm",
+   "archive_file": "data/raw/governance/0000001800_0001308179-25-000134.htm",
+   "evidence": [
+    {
+     "group": "board_counts",
+     "locator": "Proposal 1 Election of Directors, nominees page",
+     "quote": "All nominees are currently serving as directors.",
+     "note": "12 nominees, all currently serving; no retiring incumbent not renominated is mentioned (searched for non-standing/retiring directors)."
+    },
+    {
+     "group": "board_counts",
+     "locator": "Proposal 1 Election of Directors, heading",
+     "quote": "of the 12 director nominees named in this proxy statement to hold office until the next Annual Meeting or until the next meeting of shareholders at which directors are elected",
+     "note": "12 nominees."
+    },
+    {
+     "group": "independence",
+     "locator": "Governance highlights",
+     "quote": "Eleven out of twelve director nominees are independent",
+     "note": "11 independent of 12 current directors; all but Ford named in the independence determination."
+    },
+    {
+     "group": "independence",
+     "locator": "Director Independence",
+     "quote": "The Board has determined that each of following director nominees is independent in accordance with the New York Stock Exchange listing standards",
+     "note": "NYSE standards; list names 11 directors."
+    },
+    {
+     "group": "leadership",
+     "locator": "Director biography, Robert B. Ford",
+     "quote": "Chairman of the Board and Chief Executive Officer of Abbott since December 2021.",
+     "note": "Ford holds both roles; Nancy McKinstry is Lead Independent Director (biography)."
+    }
+   ],
+   "date_basis": "publication date of 2025 proxy; current board described therein, not a year-end or annual-average measure",
+   "board_scope": "incumbent directors; nominee roster reconciled to current membership",
+   "checked_at": "2026-11-11",
+   "capture_status": "raw_document_archived",
+   "review_status": "agent_read_pending_audit"
+  },
+  {
+   "cik": "0001551152",
+   "company": "AbbVie",
+   "accession": "0001558370-25-003537",
+   "publication_date": "2025-03-24",
+   "board_size": 14,
+   "independent_directors": 12,
+   "board_leadership": "Separate CEO and chair",
+   "ceo_name": "Robert A. Michael",
+   "chair_name": "Richard A. Gonzalez",
+   "lead_director_name": "Roxanne S. Austin",
+   "independence_standard": "NYSE",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/1551152/000155837025003537/abbv-20250509xdef14a.htm",
+   "archive_file": "data/raw/governance/0001551152_0001558370-25-003537.htm",
+   "evidence": [
+    {
+     "group": "board_counts",
+     "locator": "Information Concerning Director Nominees, p. (intro)",
+     "quote": "The Board of Directors consists of three classes currently comprised of four directors in Class I, five directors in Class II, and five directors in Class III.",
+     "note": "4+5+5 = 14 current directors. Gonzalez and Tilton retire only effective July 1, 2025 (after publication) so are counted."
+    },
+    {
+     "group": "independence",
+     "locator": "Governance highlights",
+     "quote": "Twelve of AbbVie’s fourteen directors are independent and regularly meet in executive session",
+     "note": "Matches the independence determination listing 12 named independent directors."
+    },
+    {
+     "group": "independence",
+     "locator": "Director independence section",
+     "quote": "The Board has determined that each of the following individuals is independent in accordance with the New York Stock Exchange (NYSE) listing standards: Dr. Alpern, Ms. Austin, Mr. Burnside, Ms. Davis, Mr. Freyman, Mr. Hart, Ms. Meyer, Dr. Quaggin, Mr. Rapp, Ms. Roberts, Mr. Tilton, and Mr. Waddell.",
+     "note": "12 named; the two others are Gonzalez (Executive Chairman) and Michael (CEO)."
+    },
+    {
+     "group": "leadership",
+     "locator": "Information Concerning Director Nominees, Gonzalez biography",
+     "quote": "Mr. Gonzalez is the Executive Chairman of the Board.",
+     "note": "At the date of the document Gonzalez is Executive Chairman and Michael is CEO (since July 2024): separate. An announced change (Michael to become Chairman effective July 1, 2025) is after the document date; Lead Independent Director is Roxanne Austin."
+    },
+    {
+     "group": "leadership",
+     "locator": "Board leadership structure",
+     "quote": "On February 14, 2025, AbbVie announced that both Mr. Gonzalez and Mr. Tilton will retire from the Board and that Mr. Michael will become Chairman of the Board, all effective July 1, 2025.",
+     "note": "Future transition, not yet effective at publication date (2025-03-24)."
+    }
+   ],
+   "date_basis": "publication date of 2025 proxy; current board described therein, not a year-end or annual-average measure",
+   "board_scope": "incumbent directors; nominee roster reconciled to current membership",
+   "checked_at": "2026-11-11",
+   "capture_status": "raw_document_archived",
+   "review_status": "agent_read_pending_audit"
+  },
+  {
+   "cik": "0001467373",
+   "company": "Accenture",
+   "accession": "0001308179-25-000651",
+   "publication_date": "2025-12-12",
+   "board_size": 11,
+   "independent_directors": 10,
+   "board_leadership": "Combined CEO and chair",
+   "ceo_name": "Julie Sweet",
+   "chair_name": "Julie Sweet",
+   "lead_director_name": "Arun Sarin",
+   "independence_standard": "NYSE",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/1467373/000130817925000651/acn-20251210.htm",
+   "archive_file": "data/raw/governance/0001467373_0001308179-25-000651.htm",
+   "evidence": [
+    {
+     "group": "board_counts",
+     "locator": "Proposal 1 Appointment of Directors, p. (intro)",
+     "quote": "Jaime Ardila is not standing for re-election at the 2026 Annual General Meeting of Shareholders (the “Annual Meeting”) and will step down, effective at the completion of the Annual Meeting.",
+     "note": "Ardila still sits at the document date: counted."
+    },
+    {
+     "group": "board_counts",
+     "locator": "Proposal 1 Appointment of Directors",
+     "quote": "All of the director nominees are current Board members who were last elected at the 2025 annual general meeting of shareholders.",
+     "note": "10 nominees (all current directors) + Ardila = 11 in place; Pélisson and Mooney left earlier and are excluded."
+    },
+    {
+     "group": "independence",
+     "locator": "Director Independence",
+     "quote": "Based on its analysis, the Nominating, Governance & Sustainability Committee recommended, and the Board determined that each of the following directors and director nominees are independent under all applicable standards",
+     "note": "Ten current directors named independent (Ardila, Brudermüller, Jope, McKinstry, Nason, Price, Renduchintala, Sarin, Travis, Uotani); Sweet is the only non-independent director."
+    },
+    {
+     "group": "independence",
+     "locator": "Governance highlights",
+     "quote": "All of our current directors are independent except for our chair and chief executive officer.",
+     "note": "Confirms 10 of 11."
+    },
+    {
+     "group": "leadership",
+     "locator": "Board Leadership Structure",
+     "quote": "Currently, our Board leadership structure consists of an independent Lead Director, a chair (who is also our chief executive officer) and strong independent committee chairs.",
+     "note": "Julie Sweet is chair and CEO; Arun Sarin is the Independent Lead Director (biography)."
+    }
+   ],
+   "date_basis": "publication date of 2025 proxy (filed 2025-12-12, fiscal-2025 proxy for the 2026 annual meeting); current board described therein, not a year-end or annual-average measure",
+   "board_scope": "incumbent directors; nominee roster reconciled to current membership",
+   "checked_at": "2026-11-11",
+   "capture_status": "raw_document_archived",
+   "review_status": "agent_read_pending_audit"
+  },
+  {
+   "cik": "0000796343",
+   "company": "Adobe Inc.",
+   "accession": "0000796343-25-000048",
+   "publication_date": "2025-02-28",
+   "board_size": 12,
+   "independent_directors": 11,
+   "board_leadership": "Combined CEO and chair",
+   "ceo_name": "Shantanu Narayen",
+   "chair_name": "Shantanu Narayen",
+   "lead_director_name": "Frank Calderoni",
+   "independence_standard": "Nasdaq",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/796343/000079634325000048/adbe-20250227.htm",
+   "archive_file": "data/raw/governance/0000796343_0000796343-25-000048.htm",
+   "evidence": [
+    {
+     "group": "board_counts",
+     "locator": "Director Nominees, Corporate Governance p.4",
+     "quote": "The following tables set forth the name, occupation, age, tenure, independence, committee assignments and attributes (as of February 28, 2025) for each of our eleven director nominees at the 2025 Annual Meeting.",
+     "note": "11 nominees. Mr. Biggs is a current director (named in the current independent directors list) who is not standing for re-election, so incumbent board = 11 + Biggs = 12."
+    },
+    {
+     "group": "board_counts",
+     "locator": "Audit Committee table footnote, p.18",
+     "quote": "Mr. Biggs is not standing for re-election at the 2025 Annual Meeting.",
+     "note": "Biggs not a nominee but still serving at the date of the proxy; counted."
+    },
+    {
+     "group": "independence",
+     "locator": "Director Independence, p.15",
+     "quote": "Our current independent directors are: Messrs. Amon, Biggs, Calderoni, Neumann, Pandey, Ricks and Rosensweig and Mses. Banse, Boulden, Desmond and Oberg.",
+     "note": "11 named independent directors (incl. Biggs); Nasdaq standards. Only Narayen not independent."
+    },
+    {
+     "group": "leadership",
+     "locator": "Board Leadership Structure, p.10",
+     "quote": "Based on these considerations, the Board has determined that, at this time, our Chief Executive Officer (“CEO”), Shantanu Narayen, is the director best qualified to serve in the role of Chair.",
+     "note": "Narayen is Chair and CEO; Frank Calderoni is Lead Director."
+    }
+   ],
+   "date_basis": "publication date of 2025 proxy; current board described therein, not a year-end or annual-average measure",
+   "board_scope": "incumbent directors; nominee roster reconciled to current membership",
+   "checked_at": "2026-11-11",
+   "capture_status": "raw_document_archived",
+   "review_status": "agent_read_pending_audit"
+  },
+  {
+   "cik": "0000002488",
+   "company": "Advanced Micro Devices",
+   "accession": "0001193125-25-067170",
+   "publication_date": "2025-03-28",
+   "board_size": 9,
+   "independent_directors": 8,
+   "board_leadership": "Combined CEO and chair",
+   "ceo_name": "Lisa T. Su",
+   "chair_name": "Lisa T. Su",
+   "lead_director_name": "Nora M. Denzel",
+   "independence_standard": "Nasdaq",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/2488/000119312525067170/d869673ddef14a.htm",
+   "archive_file": "data/raw/governance/0000002488_0001193125-25-067170.htm",
+   "evidence": [
+    {
+     "group": "board_counts",
+     "locator": "Proposal 1 Election of Directors",
+     "quote": "Our Board currently consists of nine members.",
+     "note": "9 current members = 8 nominees + Mark Durcan (not renominated, retires after the meeting, still sitting)."
+    },
+    {
+     "group": "board_counts",
+     "locator": "Proposal 1 Election of Directors",
+     "quote": "Mr. Mark Durcan, currently a member of the Board, is not being nominated for re-election and after the Annual Meeting he will retire from our Board.",
+     "note": "Confirms Durcan is the ninth sitting director."
+    },
+    {
+     "group": "independence",
+     "locator": "Director Independence",
+     "quote": "The Board determined that all directors who served during fiscal 2024 and all of our director nominees, other than Dr. Su, are independent in accordance with SEC and Nasdaq rules.",
+     "note": "All 9 current directors (incl. Durcan, who served in fiscal 2024) independent except Su: 8."
+    },
+    {
+     "group": "leadership",
+     "locator": "Board Leadership Structure",
+     "quote": "Dr. Lisa Su, our President and Chief Executive Officer, serves as Chair of our Board.",
+     "note": "Su is chair and CEO; Nora Denzel is Lead Independent Director."
+    }
+   ],
+   "date_basis": "publication date of 2025 proxy; current board described therein, not a year-end or annual-average measure",
+   "board_scope": "incumbent directors; nominee roster reconciled to current membership",
+   "checked_at": "2026-11-11",
+   "capture_status": "raw_document_archived",
+   "review_status": "agent_read_pending_audit"
+  },
+  {
+   "cik": "0000874761",
+   "company": "AES Corporation",
+   "accession": "0000874761-25-000019",
+   "publication_date": "2025-03-19",
+   "board_size": 11,
+   "independent_directors": 10,
+   "board_leadership": "Separate CEO and chair",
+   "ceo_name": "Andrés R. Gluski",
+   "chair_name": "John B. Morse, Jr.",
+   "lead_director_name": "John B. Morse, Jr.",
+   "independence_standard": "NYSE",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/874761/000087476125000019/aes-20250319.htm",
+   "archive_file": "data/raw/governance/0000874761_0000874761-25-000019.htm",
+   "evidence": [
+    {
+     "group": "board_counts",
+     "locator": "Proposal 1 Election of Directors",
+     "quote": "The Board has nominated eleven Directors (the “Nominees”) for election at the Annual Meeting, each to serve a one-year term expiring at the Annual Meeting in 2026.",
+     "note": "11 nominees; the independence section lists 11 current directors (10 named independents + Gluski), matching the nominee roster with no outgoing director mentioned."
+    },
+    {
+     "group": "independence",
+     "locator": "Director Independence",
+     "quote": "Our Board currently has ten independent members.",
+     "note": "Ten independent of the 11 current directors."
+    },
+    {
+     "group": "independence",
+     "locator": "Director Independence",
+     "quote": "Mr. Gluski is not considered independent because of his employment with the Company.",
+     "note": "Gluski (CEO) is the only current director not independent; Dr. Khanna left in April 2024 and is excluded."
+    },
+    {
+     "group": "leadership",
+     "locator": "Board Leadership Structure",
+     "quote": "John B. Morse, Jr., an independent director, currently serves as Chairman and Lead Independent Director.",
+     "note": "Corporate Governance Guidelines require separation of Chair and CEO; Gluski is CEO. Morse is independent chairman and lead independent director."
+    }
+   ],
+   "date_basis": "publication date of 2025 proxy; current board described therein, not a year-end or annual-average measure",
+   "board_scope": "incumbent directors; nominee roster reconciled to current membership",
+   "checked_at": "2026-11-11",
+   "capture_status": "raw_document_archived",
+   "review_status": "agent_read_pending_audit"
+  },
+  {
+   "cik": "0000004977",
+   "company": "Aflac",
+   "accession": "0000004977-25-000059",
+   "publication_date": "2025-03-20",
+   "board_size": 10,
+   "independent_directors": 9,
+   "board_leadership": "Combined CEO and chair",
+   "ceo_name": "Daniel P. Amos",
+   "chair_name": "Daniel P. Amos",
+   "lead_director_name": "W. Paul Bowers",
+   "independence_standard": "NYSE",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/4977/000000497725000059/afl-20250319.htm",
+   "archive_file": "data/raw/governance/0000004977_0000004977-25-000059.htm",
+   "evidence": [
+    {
+     "group": "board_counts",
+     "locator": "Proposal 1 Election of Directors, p.14",
+     "quote": "The Company proposes that the eleven individuals named in this Proxy Statement be elected to the Board.",
+     "note": "11 nominees."
+    },
+    {
+     "group": "board_counts",
+     "locator": "Proposal 1 Election of Directors, p.14",
+     "quote": "All except for one of the nominees are currently members of our Board.",
+     "note": "Michael A. Forrester is the only new nominee, so 11 - 1 = 10 incumbent directors; no outgoing incumbent is mentioned in the document."
+    },
+    {
+     "group": "independence",
+     "locator": "Director Independence",
+     "quote": "Daniel P. Amos is an employee of the Company. The Board has determined that all of the other Directors during the last completed fiscal year and Director nominees are “independent” under New York Stock Exchange (“NYSE”) listing standards.",
+     "note": "All nominees except Amos independent (summary: 10 independent of 11 nominees, which includes new nominee Forrester); incumbents: 10 - 1 (Amos) = 9."
+    },
+    {
+     "group": "leadership",
+     "locator": "Board Leadership Structure",
+     "quote": "Mr. Amos has served as Chairman of the Board since 2001 and as CEO since 1990.",
+     "note": "Combined roles; W. Paul Bowers is Lead Non-Management Director (independent lead director)."
+    }
+   ],
+   "date_basis": "publication date of 2025 proxy; current board described therein, not a year-end or annual-average measure",
+   "board_scope": "incumbent directors; nominee roster reconciled to current membership",
+   "checked_at": "2026-11-11",
+   "capture_status": "raw_document_archived",
+   "review_status": "agent_read_pending_audit"
+  },
+  {
+   "cik": "0001090872",
+   "company": "Agilent Technologies",
+   "accession": "0000950170-25-011439",
+   "publication_date": "2025-01-31",
+   "board_size": 10,
+   "independent_directors": 9,
+   "board_leadership": "Separate CEO and chair",
+   "ceo_name": "Padraig McDonnell",
+   "chair_name": "Koh Boon Hwee",
+   "independence_standard": "NYSE",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/1090872/000095017025011439/a-20250129.htm",
+   "archive_file": "data/raw/governance/0001090872_0000950170-25-011439.htm",
+   "evidence": [
+    {
+     "group": "board_counts",
+     "locator": "Corporate Governance highlights",
+     "quote": "Nine of our ten directors are independent",
+     "note": "Ten sitting directors on a classified board (only two nominees up for election; all nominees are currently serving directors)."
+    },
+    {
+     "group": "board_counts",
+     "locator": "Proposal 1 Election of Directors",
+     "quote": "All nominees are currently serving as our directors.",
+     "note": "No non-sitting nominee, so the board of ten is the incumbent board."
+    },
+    {
+     "group": "independence",
+     "locator": "Director Independence",
+     "quote": "The Board has affirmatively determined that all of our directors meet these independence standards with the exception of Padraig McDonnell because of his role as our President and Chief Executive Officer.",
+     "note": "10 directors minus McDonnell = 9 independent (NYSE standards)."
+    },
+    {
+     "group": "leadership",
+     "locator": "Board Leadership Structure",
+     "quote": "We currently separate the positions of Chief Executive Officer and Chairperson of the Board.",
+     "note": "Non-Executive Chairperson Koh Boon Hwee since 2017; CEO Padraig McDonnell. No lead director named."
+    }
+   ],
+   "date_basis": "publication date of 2025 proxy; current board described therein, not a year-end or annual-average measure",
+   "board_scope": "incumbent directors; nominee roster reconciled to current membership",
+   "checked_at": "2026-11-11",
+   "capture_status": "raw_document_archived",
+   "review_status": "agent_read_pending_audit"
+  },
+  {
+   "cik": "0000002969",
+   "company": "Air Products",
+   "accession": "0001308179-25-000643",
+   "publication_date": "2025-12-11",
+   "board_size": 11,
+   "independent_directors": 10,
+   "board_leadership": "Separate CEO and chair",
+   "ceo_name": "Eduardo Menezes",
+   "chair_name": "Wayne T. Smith",
+   "independence_standard": "NYSE",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/2969/000130817925000643/apd-20251210.htm",
+   "archive_file": "data/raw/governance/0000002969_0001308179-25-000643.htm",
+   "evidence": [
+    {
+     "group": "board_counts",
+     "locator": "Proposal 1 Election of Directors, nominees",
+     "quote": "Information follows about the age and business experience of the director nominees and the particular experience, qualifications, attributes and skills that led the Board to conclude that each nominee should continue to serve as a director. All of the nominees are currently directors of the Company.",
+     "note": "Ten nominees named (Calaway, Evans, Graziano, Hilal, Menezes, Patel, Reilley, Smith, Stern, Ungerleider), all current directors."
+    },
+    {
+     "group": "board_counts",
+     "locator": "Board composition section",
+     "quote": "Lisa A. Davis, a director since 2020, is not standing for re-election and will retire from the Board at the conclusion of the Annual Meeting.",
+     "note": "Davis still sits at the document date (2025-12-11): 10 + 1 = 11 incumbent directors."
+    },
+    {
+     "group": "independence",
+     "locator": "Director Independence",
+     "quote": "The Board has affirmatively determined that all of the Company’s directors, except Mr. Menezes, qualify as independent under New York Stock Exchange (“NYSE”) corporate governance listing standards.",
+     "note": "All directors (incl. Davis) independent except CEO Menezes: 10 of 11."
+    },
+    {
+     "group": "leadership",
+     "locator": "Director biography, Wayne T. Smith",
+     "quote": "Independent Chairman of the Board Since 2025",
+     "note": "Smith is independent chairman; Menezes is CEO (since February 2025); a separate Independent Vice Chairman exists (Reilley); no lead director."
+    }
+   ],
+   "date_basis": "publication date of 2025 proxy (filed 2025-12-11, fiscal-2025 proxy for the 2026 annual meeting); current board described therein, not a year-end or annual-average measure",
+   "board_scope": "incumbent directors; nominee roster reconciled to current membership",
+   "checked_at": "2026-11-11",
+   "capture_status": "raw_document_archived",
+   "review_status": "agent_read_pending_audit"
+  },
+  {
+   "cik": "0001559720",
+   "company": "Airbnb",
+   "accession": "0001193125-25-096938",
+   "publication_date": "2025-04-25",
+   "board_size": 9,
+   "independent_directors": 6,
+   "board_leadership": "Combined CEO and chair",
+   "ceo_name": "Brian Chesky",
+   "chair_name": "Brian Chesky",
+   "lead_director_name": "Kenneth I. Chenault",
+   "independence_standard": "Nasdaq",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/1559720/000119312525096938/d842295ddef14a.htm",
+   "archive_file": "data/raw/governance/0001559720_0001193125-25-096938.htm",
+   "evidence": [
+    {
+     "group": "board_counts",
+     "locator": "Statement in opposition to stockholder proposal (governance practices)",
+     "quote": "Majority independent board of directors. Six of the nine members of our board of directors are independent, with the three exceptions being Mr. Blecharczyk, our Chief Strategy Officer, Mr. Chesky, our Chief Executive Officer, and Mr. Gebbia, a former executive officer.",
+     "note": "Nine current board members (classified board; three Class II nominees all current directors)."
+    },
+    {
+     "group": "independence",
+     "locator": "Director Independence",
+     "quote": "our board of directors has determined that Messrs. Chenault, Jordan, Lin and Manyika and Mses. Ahrendts and Ahuja qualify as independent directors in accordance with the Listing Rules (the “Nasdaq Listing Rules”) of The Nasdaq Stock Market LLC.",
+     "note": "Six named independent directors (Chenault, Jordan, Lin, Manyika, Ahrendts, Ahuja) per the determination paragraph (Nasdaq Listing Rules); Blecharczyk, Chesky and Gebbia not independent."
+    },
+    {
+     "group": "independence",
+     "locator": "Director Independence",
+     "quote": "Messrs. Blecharczyk and Chesky are not considered independent by virtue of their positions as our executive officers and for Mr. Gebbia, as a former executive officer.",
+     "note": "6 + 3 = 9."
+    },
+    {
+     "group": "leadership",
+     "locator": "Board Leadership Structure",
+     "quote": "Our board of directors currently believes that our existing leadership structure, under which our Chief Executive Officer, Mr. Chesky, serves as Chairperson of our board of directors and Mr. Chenault serves as lead director, is effective.",
+     "note": "Combined CEO and chair; lead director Chenault."
+    }
+   ],
+   "date_basis": "publication date of 2025 proxy; current board described therein, not a year-end or annual-average measure",
+   "board_scope": "incumbent directors; nominee roster reconciled to current membership",
+   "checked_at": "2026-11-11",
+   "capture_status": "raw_document_archived",
+   "review_status": "agent_read_pending_audit"
+  },
+  {
+   "cik": "0001086222",
+   "company": "Akamai Technologies",
+   "accession": "0001193125-25-070445",
+   "publication_date": "2025-04-01",
+   "board_size": 9,
+   "independent_directors": 8,
+   "board_leadership": "Separate CEO and chair",
+   "ceo_name": "Tom Leighton",
+   "chair_name": "Daniel Hesse",
+   "independence_standard": "Nasdaq",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/1086222/000119312525070445/d882861ddef14a.htm",
+   "archive_file": "data/raw/governance/0001086222_0001193125-25-070445.htm",
+   "evidence": [
+    {
+     "group": "board_counts",
+     "locator": "Proposal 1 Election of Directors",
+     "quote": "The Board currently consists of nine persons.",
+     "note": "Nine current directors; each of the nine nominees is currently a director."
+    },
+    {
+     "group": "board_counts",
+     "locator": "Proposal 1 Election of Directors",
+     "quote": "Each of the nominees listed below is currently a director of the Company who was previously elected by the stockholders.",
+     "note": "Nominee roster = incumbent board; no outgoing director mentioned."
+    },
+    {
+     "group": "independence",
+     "locator": "Determination of Independence",
+     "quote": "The Board has determined that each member of the Board, other than Dr. Leighton, is an “independent director” as defined under Nasdaq Rule 5605(a)(2).",
+     "note": "9 - 1 (Leighton, CEO) = 8."
+    },
+    {
+     "group": "leadership",
+     "locator": "Board Leadership Structure, Roles of Chair of the Board and CEO",
+     "quote": "Currently, the roles of Chair of the Board and Chief Executive Officer are held by two different individuals.",
+     "note": "Daniel Hesse has served as independent Chair of the Board since June 2021; Dr. Tom Leighton is CEO."
+    }
+   ],
+   "date_basis": "publication date of 2025 proxy; current board described therein, not a year-end or annual-average measure",
+   "board_scope": "incumbent directors; nominee roster reconciled to current membership",
+   "checked_at": "2026-11-11",
+   "capture_status": "raw_document_archived",
+   "review_status": "agent_read_pending_audit"
+  },
+  {
+   "cik": "0000915913",
+   "company": "Albemarle Corporation",
+   "accession": "0000915913-25-000072",
+   "publication_date": "2025-03-27",
+   "board_size": 10,
+   "independent_directors": 9,
+   "board_leadership": "Combined CEO and chair",
+   "ceo_name": "J. Kent Masters, Jr.",
+   "chair_name": "J. Kent Masters, Jr.",
+   "lead_director_name": "James J. O’Brien",
+   "independence_standard": "NYSE",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/915913/000091591325000072/alb-20250327.htm",
+   "archive_file": "data/raw/governance/0000915913_0000915913-25-000072.htm",
+   "evidence": [
+    {
+     "group": "board_counts",
+     "locator": "Proposal 1 Election of Directors",
+     "quote": "Our Board recommends a vote FOR each of the 10 nominees listed below. All of the nominees are currently serving as Directors.",
+     "note": "10 nominees, all current directors; no outgoing director mentioned (retirement policy section states no current director reaches 72 in 2025)."
+    },
+    {
+     "group": "independence",
+     "locator": "Director independence",
+     "quote": "The Board has affirmatively determined that Directors Brlas, Cramer, Minor, O’Brien, O'Connell, Seavers, Steiner, Van Deursen and Wolff are each “independent” as that term is defined in the New York Stock Exchange (“NYSE”) listing standards and our Corporate Governance Guidelines.",
+     "note": "9 named independent directors; Masters (Chairman and CEO) is the tenth (nominee table: Independent 9 of 10)."
+    },
+    {
+     "group": "leadership",
+     "locator": "Board Leadership Structure",
+     "quote": "the Board continues to believe that having the same individual as both Chairman of the Board and CEO is in the best interests of the Company and its shareholders.",
+     "note": "Masters is Chairman and CEO; James J. O’Brien is Lead Independent Director (since 2020)."
+    }
+   ],
+   "date_basis": "publication date of 2025 proxy; current board described therein, not a year-end or annual-average measure",
+   "board_scope": "incumbent directors; nominee roster reconciled to current membership",
+   "checked_at": "2026-11-11",
+   "capture_status": "raw_document_archived",
+   "review_status": "agent_read_pending_audit"
+  },
+  {
+   "cik": "0001097149",
+   "company": "Align Technology",
+   "accession": "0001097149-25-000021",
+   "publication_date": "2025-04-08",
+   "board_size": 10,
+   "independent_directors": 9,
+   "board_leadership": "Separate CEO and chair",
+   "ceo_name": "Joe Hogan",
+   "chair_name": "C. Raymond Larkin, Jr.",
+   "independence_standard": "Nasdaq",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/1097149/000109714925000021/algn-20250407.htm",
+   "archive_file": "data/raw/governance/0001097149_0001097149-25-000021.htm",
+   "evidence": [
+    {
+     "group": "board_counts",
+     "locator": "Corporate Governance, Board composition",
+     "quote": "Our Board currently consists of ten directors.",
+     "note": "Ten current directors = the ten nominees; no outgoing director mentioned."
+    },
+    {
+     "group": "independence",
+     "locator": "Corporate Governance, Board composition",
+     "quote": "Our Board has determined that all Board members, other than our President and CEO, Mr. Hogan, are independent under the applicable rules of Nasdaq.",
+     "note": "10 - 1 (Hogan) = 9 (governance highlight: 90% of directors independent)."
+    },
+    {
+     "group": "leadership",
+     "locator": "Board Leadership Structure",
+     "quote": "The roles of CEO and Chair are separated in recognition of the differences between the two roles.",
+     "note": "C. Raymond Larkin, Jr. is independent Chairman of the Board (director biography); Joe Hogan is President & CEO."
+    }
+   ],
+   "date_basis": "publication date of 2025 proxy; current board described therein, not a year-end or annual-average measure",
+   "board_scope": "incumbent directors; nominee roster reconciled to current membership",
+   "checked_at": "2026-11-11",
+   "capture_status": "raw_document_archived",
+   "review_status": "agent_read_pending_audit"
+  },
+  {
+   "cik": "0001579241",
+   "company": "Allegion",
+   "accession": "0001104659-25-036159",
+   "publication_date": "2025-04-18",
+   "board_size": 9,
+   "independent_directors": 8,
+   "board_leadership": "Separate CEO and chair",
+   "ceo_name": "John H. Stone",
+   "chair_name": "Lauren B. Peters",
+   "independence_standard": "NYSE",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/1579241/000110465925036159/tm254848-2_def14a.htm",
+   "archive_file": "data/raw/governance/0001579241_0001104659-25-036159.htm",
+   "evidence": [
+    {
+     "group": "board_counts",
+     "locator": "Board size and composition, p. (Corporate Governance)",
+     "quote": "The Board has the authority to set the size of the Board, which is currently comprised of nine directors and will be reduced to eight directors effective as of the date of the 2025 AGM, following the retirement of Mr. Hachigian.",
+     "note": "9 current directors = 8 nominees + Kirk S. Hachigian (retires at the 2025 AGM, still sitting at the document date)."
+    },
+    {
+     "group": "independence",
+     "locator": "Director Independence",
+     "quote": "Eight of our nine directors are independent, non-employee directors",
+     "note": "8 of 9."
+    },
+    {
+     "group": "independence",
+     "locator": "Director Independence",
+     "quote": "Based on the recommendation of the Corporate Governance and Nominating Committee, the Board has determined that our current directors and director nominees, except Mr. Stone, who is our President and CEO, are independent under applicable NYSE listing standards",
+     "note": "Includes Hachigian (current director)."
+    },
+    {
+     "group": "leadership",
+     "locator": "Board Leadership Structure",
+     "quote": "Ms. Peters currently serves as independent Chair of the Board, a position to which she was elected in 2024, succeeding Mr. Hachigian who will retire at the 2025 AGM.",
+     "note": "Peters is independent non-executive Chair; John H. Stone is President and CEO."
+    }
+   ],
+   "date_basis": "publication date of 2025 proxy; current board described therein, not a year-end or annual-average measure",
+   "board_scope": "incumbent directors; nominee roster reconciled to current membership",
+   "checked_at": "2026-11-11",
+   "capture_status": "raw_document_archived",
+   "review_status": "agent_read_pending_audit"
+  },
+  {
+   "cik": "0000352541",
+   "company": "Alliant Energy",
+   "accession": "0000352541-25-000036",
+   "publication_date": "2025-04-01",
+   "board_size": 11,
+   "independent_directors": 9,
+   "board_leadership": "Separate CEO and chair",
+   "ceo_name": "Lisa M. Barton",
+   "chair_name": "John O. Larsen",
+   "lead_director_name": "Carol P. Sanders",
+   "independence_standard": "Nasdaq",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/352541/000035254125000036/lnt-20250331.htm",
+   "archive_file": "data/raw/governance/0000352541_0000352541-25-000036.htm",
+   "evidence": [
+    {
+     "group": "board_counts",
+     "locator": "Proposal One Election of Directors, nominees and continuing directors",
+     "quote": "At our annual meeting of shareowners (Annual Meeting), three directors will be elected. The nominees are:",
+     "note": "Classified board: 3 nominees (all currently serving) + 8 continuing directors with separate biographies (director-since entries counted: 3 nominee + 8 continuing) = 11. Larsen is listed among continuing directors and sits until his term expires."
+    },
+    {
+     "group": "board_counts",
+     "locator": "Proposal One Election of Directors",
+     "quote": "Biographies of the director nominees and continuing directors follow.",
+     "note": "Roster: Falotico, O’Toole, Raymond (nominees); Allen, Cortina, Cox, Garcia, Newport, Sanders, Larsen, Barton (continuing)."
+    },
+    {
+     "group": "independence",
+     "locator": "Director Independence",
+     "quote": "The Board of Directors adopted resolutions that affirm that each of Mr. Allen, Mr. Cortina, Ms. Cox, Ms. Falotico, Mr. Garcia, Mr. Newport, Mr. O’Toole, Ms. Raymond, and Ms. Sanders, has no material relationship with the Company that would impair his or her independent judgment as a director and, therefore, is independent in accordance with Nasdaq rules.",
+     "note": "Nine independent. The two others, Barton (CEO) and Larsen (former executive, employee until Dec 31, 2024), are not in the list; Executive Committee table says 'All members except Mr. Larsen are independent'."
+    },
+    {
+     "group": "leadership",
+     "locator": "Leadership Structure Prior to the 2025 Annual Meeting",
+     "quote": "The Board determined that his leadership was still valuable to the Board and the Company, and designated him non-employee Chairman of the Board effective January 1, 2025.",
+     "note": "At the document date Larsen is non-employee Chairman and Barton President and CEO (separate). Mr. Allen becomes independent Chair only after the 2025 Annual Meeting (future). Lead Independent Director: Carol P. Sanders."
+    }
+   ],
+   "date_basis": "publication date of 2025 proxy; current board described therein, not a year-end or annual-average measure",
+   "board_scope": "incumbent directors; nominee roster reconciled to current membership",
+   "checked_at": "2026-11-11",
+   "capture_status": "raw_document_archived",
+   "review_status": "agent_read_pending_audit"
+  },
+  {
+   "cik": "0000899051",
+   "company": "Allstate",
+   "accession": "0000899051-25-000030",
+   "publication_date": "2025-04-17",
+   "board_size": 13,
+   "independent_directors": 12,
+   "board_leadership": "Combined CEO and chair",
+   "ceo_name": "Thomas J. Wilson",
+   "chair_name": "Thomas J. Wilson",
+   "lead_director_name": "Gregg M. Sherrill",
+   "independence_standard": "NYSE",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/899051/000089905125000030/all-20250417.htm",
+   "archive_file": "data/raw/governance/0000899051_0000899051-25-000030.htm",
+   "evidence": [
+    {
+     "group": "board_counts",
+     "locator": "Board of Directors, Governance section",
+     "quote": "Twelve out of thirteen directors on the Board are independent.",
+     "note": "13 sitting directors = 13 nominees (each previously elected in 2024; no outgoing director mentioned)."
+    },
+    {
+     "group": "board_counts",
+     "locator": "Proposal 1 Election of Directors",
+     "quote": "The Board recommends 13 nominees for election to the Allstate Board for one-year terms beginning in May 2025",
+     "note": "13 nominees = the 13 directors."
+    },
+    {
+     "group": "independence",
+     "locator": "Director Independence",
+     "quote": "The Board has affirmatively determined that all nominated directors, other than Mr. Wilson, are independent according to applicable law, the NYSE listing standards and the Board’s Director Independence Standards.",
+     "note": "13 - 1 = 12."
+    },
+    {
+     "group": "leadership",
+     "locator": "Board Leadership Structure",
+     "quote": "The independent directors have determined Allstate is well served by having Mr. Wilson hold the roles of Chair and CEO, and Mr. Sherrill hold the role of independent Lead Director.",
+     "note": "Combined roles; Gregg M. Sherrill is independent Lead Director."
+    }
+   ],
+   "date_basis": "publication date of 2025 proxy; current board described therein, not a year-end or annual-average measure",
+   "board_scope": "incumbent directors; nominee roster reconciled to current membership",
+   "checked_at": "2026-11-11",
+   "capture_status": "raw_document_archived",
+   "review_status": "agent_read_pending_audit"
+  }
+ ],
+ "unresolved": [
+  {
+   "cik": "0000091142",
+   "company": "A. O. Smith",
+   "reason": "independence_not_stated_for_all",
+   "detail": "Board currently 10 directors (Election of Directors, p.6); Board determined that Brown, Fister, Larsen, Mapes, Smith, Kadri, Holt and Martin meet NYSE independence (8) and Wheeler is management; outgoing director Ajita G. Rajendra (retired CEO, still sitting, not renominated) is not mentioned in the independence determination, so the independent count is 8 or 9 (8 of 10 if he is non-independent). Leadership: Wheeler combined chairman and CEO; Presiding Director Ronald D. Brown."
+  },
+  {
+   "cik": "0001035443",
+   "company": "Alexandria Real Estate Equities",
+   "reason": "independence_not_stated_for_all",
+   "detail": "Nine directors sit at the document date: eight nominees (Marcus, Hash, Aldridge, Cain, Freire, Klein, McGrath, Woronoff; 7 of 8 independent, Marcus Executive Chairman not independent) plus Cynthia L. Feldmann, who is not standing for reelection but still sits (Life Science Committee, director compensation table). The independence determination covers only 'each member of the Board standing for reelection other than Joel S. Marcus', so Feldmann's independence is not stated. Leadership: Executive Chairman Joel S. Marcus separate from CEO Peter M. Moglia; Lead Director Steven R. Hash."
+  }
+ ]
+}

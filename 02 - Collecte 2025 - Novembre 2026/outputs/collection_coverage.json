@@ -1,0 +1,16 @@
+{
+  "issuers": 500,
+  "variables": {
+    "revenue_usd": 498,
+    "net_income_usd": 498,
+    "assets_usd": 498,
+    "equity_usd": 498,
+    "liabilities_usd": 357,
+    "cash_usd": 417,
+    "assets_open_usd": 498,
+    "net_margin_pct": 498,
+    "roa_pct": 498
+  },
+  "review_entries": 224,
+  "state": "WORKING: extracted, not independently validated; governance absent"
+}

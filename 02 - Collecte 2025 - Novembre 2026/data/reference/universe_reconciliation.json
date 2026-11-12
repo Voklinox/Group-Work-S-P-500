@@ -1,0 +1,52 @@
+{
+  "snapshot_revision": 1329075976,
+  "snapshot_timestamp": "2025-12-23T15:18:59Z",
+  "snapshot_rows": 501,
+  "final_securities": 503,
+  "final_issuers": 500,
+  "changes": [
+    {
+      "ticker": "LKQ",
+      "action": "deletion",
+      "applied": false,
+      "source_url": "https://press.spglobal.com/2025-12-05-CRH,-Carvana-and-Comfort-Systems-USA-Set-to-Join-S-P-500-Others-to-Join-S-P-MidCap-400-and-S-P-SmallCap-600",
+      "effective_date": "2025-12-22"
+    },
+    {
+      "ticker": "SOLS",
+      "action": "deletion",
+      "applied": true,
+      "source_url": "https://press.spglobal.com/2025-12-05-CRH,-Carvana-and-Comfort-Systems-USA-Set-to-Join-S-P-500-Others-to-Join-S-P-MidCap-400-and-S-P-SmallCap-600",
+      "effective_date": "2025-12-22"
+    },
+    {
+      "ticker": "MHK",
+      "action": "deletion",
+      "applied": false,
+      "source_url": "https://press.spglobal.com/2025-12-05-CRH,-Carvana-and-Comfort-Systems-USA-Set-to-Join-S-P-500-Others-to-Join-S-P-MidCap-400-and-S-P-SmallCap-600",
+      "effective_date": "2025-12-22"
+    },
+    {
+      "ticker": "CRH",
+      "action": "addition",
+      "applied": true,
+      "source_url": "https://press.spglobal.com/2025-12-05-CRH,-Carvana-and-Comfort-Systems-USA-Set-to-Join-S-P-500-Others-to-Join-S-P-MidCap-400-and-S-P-SmallCap-600",
+      "effective_date": "2025-12-22"
+    },
+    {
+      "ticker": "CVNA",
+      "action": "addition",
+      "applied": true,
+      "source_url": "https://press.spglobal.com/2025-12-05-CRH,-Carvana-and-Comfort-Systems-USA-Set-to-Join-S-P-500-Others-to-Join-S-P-MidCap-400-and-S-P-SmallCap-600",
+      "effective_date": "2025-12-22"
+    },
+    {
+      "ticker": "FIX",
+      "action": "addition",
+      "applied": true,
+      "source_url": "https://press.spglobal.com/2025-12-05-CRH,-Carvana-and-Comfort-Systems-USA-Set-to-Join-S-P-500-Others-to-Join-S-P-MidCap-400-and-S-P-SmallCap-600",
+      "effective_date": "2025-12-22"
+    }
+  ],
+  "validation": "Historical snapshot reconciled against December 22 event; independent full official roster still unavailable"
+}

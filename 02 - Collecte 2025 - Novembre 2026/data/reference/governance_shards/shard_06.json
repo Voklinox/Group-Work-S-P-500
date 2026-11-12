@@ -1,0 +1,705 @@
+{
+ "shard": "06",
+ "observations": [
+  {
+   "cik": "0000026172",
+   "company": "Cummins",
+   "accession": "0001104659-25-029877",
+   "publication_date": "2025-03-31",
+   "board_size": 11,
+   "independent_directors": 10,
+   "board_leadership": "Combined CEO and chair",
+   "ceo_name": "Jennifer W. Rumsey",
+   "chair_name": "Jennifer W. Rumsey",
+   "lead_director_name": "Thomas J. Lynch",
+   "independence_standard": "NYSE",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/26172/000110465925029877/tm2425076-3_def14a.htm",
+   "archive_file": "data/raw/governance/0000026172_0001104659-25-029877.htm",
+   "evidence": [
+    {
+     "group": "board_counts",
+     "locator": "Election of Directors; Director Independence",
+     "quote": "Ten of our eleven director nominees qualify as independent directors within the meaning of the rules adopted by the Securities and Exchange Commission",
+     "note": "Onze candidats ; tous les administrateurs actuels sont candidats, donc 11 en place."
+    },
+    {
+     "group": "board_counts",
+     "locator": "Proposal 1 Election of Directors",
+     "quote": "All of our current directors are nominated for reelection at the Annual Meeting to hold office until our 2026 annual meeting of shareholders and until their successors are elected and qualified.",
+     "note": "Tous les administrateurs actuels se représentent : conseil en place = 11 candidats."
+    },
+    {
+     "group": "independence",
+     "locator": "Director Independence",
+     "quote": "the Governance and Nominating Committee of our Board determined that all director nominees standing for election, except Jennifer W. Rumsey, our Chair and Chief Executive Officer, qualify as independent.",
+     "note": "10 indépendants sur 11 (tous sauf la Chair/CEO)."
+    },
+    {
+     "group": "leadership",
+     "locator": "Board Leadership Structure",
+     "quote": "Ms. Rumsey, our Chief Executive Officer, is the person best qualified to serve as our Chairperson of the Board",
+     "note": "Rumsey est à la fois CEO et présidente du conseil."
+    },
+    {
+     "group": "leadership",
+     "locator": "Board Leadership Structure",
+     "quote": "Thomas J. Lynch is our independent Lead Director.",
+     "note": "Administrateur référent indépendant."
+    }
+   ],
+   "date_basis": "publication date of 2025 proxy; current board described therein, not a year-end or annual-average measure",
+   "board_scope": "incumbent directors; nominee roster reconciled to current membership",
+   "checked_at": "2026-11-11",
+   "capture_status": "raw_document_archived",
+   "review_status": "agent_read_pending_audit"
+  },
+  {
+   "cik": "0000064803",
+   "company": "CVS Health",
+   "accession": "0001308179-25-000386",
+   "publication_date": "2025-04-04",
+   "board_size": 16,
+   "independent_directors": 13,
+   "board_leadership": "Separate CEO and chair",
+   "ceo_name": "J. David Joyner",
+   "chair_name": "Roger N. Farah",
+   "lead_director_name": "Michael F. Mahoney",
+   "independence_standard": "NYSE",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/64803/000130817925000386/cvs012729_def14a.htm",
+   "archive_file": "data/raw/governance/0000064803_0001308179-25-000386.htm",
+   "evidence": [
+    {
+     "group": "board_counts",
+     "locator": "The CVS Health Board (Proposal 1)",
+     "quote": "At the time of the Annual Meeting, the size of the Board will be reduced to 13 directors.",
+     "note": "Les 13 candidats plus Millon, DeParle et Schapiro (qui siègent encore) donnent 16."
+    },
+    {
+     "group": "board_counts",
+     "locator": "Election of directors; Board refreshment",
+     "quote": "As a result, the Board will be reduced from 16 to 13 directors effective at the time of the Annual Meeting.",
+     "note": "Conseil en place avant l'assemblée = 16."
+    },
+    {
+     "group": "independence",
+     "locator": "2025 Independence Determinations",
+     "quote": "Mr. Joyner is not an independent director because of his employment as President and CEO of the Company, Mr. Farah is not independent due to his role as Executive Chair, and Ms. Norwalk is not independent",
+     "note": "16 administrateurs : 13 déclarés indépendants (4 + 1 + 8 noms listés, dont Millon, DeParle, Schapiro) et 3 non indépendants (Joyner, Farah, Norwalk)."
+    },
+    {
+     "group": "leadership",
+     "locator": "Board leadership structure",
+     "quote": "Mr. Farah, our Executive Chair, Mr. Joyner, our CEO, and Michael F. Mahoney, our Lead Independent Director.",
+     "note": "Président exécutif non CEO = séparé ; CEO Joyner ; administrateur référent indépendant Mahoney."
+    }
+   ],
+   "date_basis": "publication date of 2025 proxy; current board described therein, not a year-end or annual-average measure",
+   "board_scope": "incumbent directors; nominee roster reconciled to current membership",
+   "checked_at": "2026-11-11",
+   "capture_status": "raw_document_archived",
+   "review_status": "agent_read_pending_audit"
+  },
+  {
+   "cik": "0000882184",
+   "company": "D. R. Horton",
+   "accession": "0000882184-25-000114",
+   "publication_date": "2025-12-10",
+   "board_size": 9,
+   "independent_directors": 7,
+   "board_leadership": "Separate CEO and chair",
+   "ceo_name": "Paul J. Romanowski",
+   "chair_name": "David V. Auld",
+   "lead_director_name": "Benjamin S. Carson, Sr.",
+   "independence_standard": "NYSE",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/882184/000088218425000114/dhi-20251210.htm",
+   "archive_file": "data/raw/governance/0000882184_0000882184-25-000114.htm",
+   "evidence": [
+    {
+     "group": "board_counts",
+     "locator": "Proposal 1 Election of Directors",
+     "quote": "Our Board of Directors currently consists of nine directors, all of whom were elected by our stockholders at the 2025 Annual Meeting.",
+     "note": "Conseil en place = 9 (8 candidats plus Michael Buchanan qui ne se représente pas mais siège)."
+    },
+    {
+     "group": "independence",
+     "locator": "Board Determinations",
+     "quote": "The Board also determined that Mr. Auld and Mr. Romanowski are not independent because they are executive officers.",
+     "note": "Les 9 administrateurs : Anderson, Carson, Crow, Crowley, Miller, Smith et Buchanan indépendants (7), Auld et Romanowski non indépendants."
+    },
+    {
+     "group": "independence",
+     "locator": "Committees of the Board",
+     "quote": "Our Board is currently composed of seven independent directors, six of whom are standing for re-election and one of whose term will expire at the 2026 Annual Meeting, and two management directors.",
+     "note": "Confirme 7 indépendants et 2 dirigeants."
+    },
+    {
+     "group": "leadership",
+     "locator": "Board Leadership Transition and Structure",
+     "quote": "The Board believes the current separation of the roles of Chairman and CEO facilitates robust and effective communication",
+     "note": "Président exécutif (Auld) distinct du CEO (Romanowski)."
+    },
+    {
+     "group": "leadership",
+     "locator": "Board Leadership Transition and Structure",
+     "quote": "Given that our Chairman is not an independent director, the Chair of the Nominating and Governance Committee serves as the Presiding Director.",
+     "note": "Administrateur référent (Presiding Director) : Benjamin S. Carson, Sr. (Dr. Carson), président du comité de gouvernance."
+    }
+   ],
+   "date_basis": "publication date of 2025 proxy; current board described therein, not a year-end or annual-average measure",
+   "board_scope": "incumbent directors; nominee roster reconciled to current membership",
+   "checked_at": "2026-11-11",
+   "capture_status": "raw_document_archived",
+   "review_status": "agent_read_pending_audit"
+  },
+  {
+   "cik": "0000313616",
+   "company": "Danaher Corporation",
+   "accession": "0000313616-25-000081",
+   "publication_date": "2025-03-26",
+   "board_size": 13,
+   "independent_directors": 10,
+   "board_leadership": "Separate CEO and chair",
+   "ceo_name": "Rainer M. Blair",
+   "chair_name": "Steven M. Rales",
+   "lead_director_name": "Linda Filler",
+   "independence_standard": "NYSE",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/313616/000031361625000081/dhr-20250326.htm",
+   "archive_file": "data/raw/governance/0000313616_0000313616-25-000081.htm",
+   "evidence": [
+    {
+     "group": "board_counts",
+     "locator": "Proposal 1 Election of Directors",
+     "quote": "We are seeking your support for the election of the thirteen candidates (each of whom currently serves as a director of the Company)",
+     "note": "13 candidats, tous administrateurs actuels : conseil en place = 13 (13 noms avec âge dans les biographies)."
+    },
+    {
+     "group": "independence",
+     "locator": "Director Independence",
+     "quote": "The Board has affirmatively determined that Mss. Filler and List, Messrs. Dewan, Lamanna, Sanders, Schwieters and Spoon, Professor Stevens and Drs. Mega and Zerhouni are independent within the meaning of the listing standards of the NYSE.",
+     "note": "10 indépendants nommés (Lohr, parti en mai 2024, exclu) ; les 3 autres administrateurs sont Blair (CEO), Steven M. Rales et Mitchell P. Rales."
+    },
+    {
+     "group": "leadership",
+     "locator": "Board Leadership Structure",
+     "quote": "The Board has separated the positions of Chairman and CEO",
+     "note": "Président Steven M. Rales, CEO Rainer M. Blair."
+    },
+    {
+     "group": "leadership",
+     "locator": "Lead Independent Director",
+     "quote": "our independent directors have appointed Ms. Filler as Lead Independent Director.",
+     "note": "Administratrice référente : Linda Filler."
+    }
+   ],
+   "date_basis": "publication date of 2025 proxy; current board described therein, not a year-end or annual-average measure",
+   "board_scope": "incumbent directors; nominee roster reconciled to current membership",
+   "checked_at": "2026-11-11",
+   "capture_status": "raw_document_archived",
+   "review_status": "agent_read_pending_audit"
+  },
+  {
+   "cik": "0000940944",
+   "company": "Darden Restaurants",
+   "accession": "0000950170-25-101699",
+   "publication_date": "2025-08-04",
+   "board_size": 9,
+   "independent_directors": 8,
+   "board_leadership": "Separate CEO and chair",
+   "ceo_name": "Ricardo Cardenas",
+   "chair_name": "Cynthia T. Jamison",
+   "independence_standard": "NYSE",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/940944/000095017025101699/dri-20250804.htm",
+   "archive_file": "data/raw/governance/0000940944_0000950170-25-101699.htm",
+   "evidence": [
+    {
+     "group": "board_counts",
+     "locator": "Corporate Governance; Board of Directors",
+     "quote": "The Board currently consists of nine members, all of whom have agreed to stand for re-election at the 2025 Annual Meeting.",
+     "note": "Conseil en place = 9, tous candidats."
+    },
+    {
+     "group": "independence",
+     "locator": "Corporate Governance; Director Independence",
+     "quote": "The Board has affirmatively determined that, other than Mr. Cardenas, who is employed by the Company, eight of the nine nominees",
+     "note": "8 indépendants sur 9 ; aucun candidat n'est un non-administrateur actuel (voir parenthèse du même paragraphe)."
+    },
+    {
+     "group": "leadership",
+     "locator": "Board Leadership Structure",
+     "quote": "The Board believes that separating the roles of CEO and Chair is the proper structure for our Company at this time.",
+     "note": "CEO Cardenas distinct de la présidente."
+    },
+    {
+     "group": "leadership",
+     "locator": "Board Leadership Structure",
+     "quote": "the Board elected Ms. Jamison, an independent director, to serve as Chair of the Board.",
+     "note": "Présidente indépendante : Jamison."
+    }
+   ],
+   "date_basis": "publication date of 2025 proxy; current board described therein, not a year-end or annual-average measure",
+   "board_scope": "incumbent directors; nominee roster reconciled to current membership",
+   "checked_at": "2026-11-11",
+   "capture_status": "raw_document_archived",
+   "review_status": "agent_read_pending_audit"
+  },
+  {
+   "cik": "0000927066",
+   "company": "DaVita",
+   "accession": "0000927066-25-000076",
+   "publication_date": "2025-04-24",
+   "board_size": 10,
+   "independent_directors": 9,
+   "board_leadership": "Separate CEO and chair",
+   "ceo_name": "Javier J. Rodriguez",
+   "chair_name": "Pamela M. Arway",
+   "independence_standard": "NYSE",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/927066/000092706625000076/dva-20250424.htm",
+   "archive_file": "data/raw/governance/0000927066_0000927066-25-000076.htm",
+   "evidence": [
+    {
+     "group": "board_counts",
+     "locator": "Proposal 1 Election of Directors",
+     "quote": "Charles G. Berg is not standing for re-election at the Annual Meeting and will step down effective as of the date of the Annual Meeting.",
+     "note": "Neuf candidats actuels plus Berg, qui siège encore jusqu'à l'assemblée : 10 administrateurs en place."
+    },
+    {
+     "group": "board_counts",
+     "locator": "Proxy Summary; Corporate Governance",
+     "quote": "9 out of 10 members of our Board are independent under New York Stock Exchange Independence Standards",
+     "note": "Confirme un conseil de 10 membres dont 9 indépendants."
+    },
+    {
+     "group": "independence",
+     "locator": "Corporate Governance — Director Independence",
+     "quote": "The Board has determined that (i) all of the director nominees, other than Mr. Rodriguez, are independent under the Company Independence Standards, and (ii) each other individual who served as a director at any time during 2024, was independent under the Company Independence Standards during the time of such service.",
+     "note": "8 candidats indépendants + Berg (autre administrateur de 2024, indépendant) = 9 ; Rodriguez (CEO) non indépendant."
+    },
+    {
+     "group": "leadership",
+     "locator": "Leadership Structure and Meetings of Independent Directors",
+     "quote": "Pamela M. Arway, an independent director and member of the Board since May 2009, has served as the independent Board Chair since June 2020.",
+     "note": "Présidente indépendante Arway ; CEO Javier J. Rodriguez (signature « Director and Chief Executive Officer »)."
+    }
+   ],
+   "date_basis": "publication date of 2025 proxy; current board described therein, not a year-end or annual-average measure",
+   "board_scope": "incumbent directors; nominee roster reconciled to current membership",
+   "checked_at": "2026-11-11",
+   "capture_status": "raw_document_archived",
+   "review_status": "agent_read_pending_audit"
+  },
+  {
+   "cik": "0001725057",
+   "company": "Dayforce",
+   "accession": "0001725057-25-000064",
+   "publication_date": "2025-03-13",
+   "board_size": 9,
+   "independent_directors": 8,
+   "board_leadership": "Combined CEO and chair",
+   "ceo_name": "David Ossip",
+   "chair_name": "David Ossip",
+   "lead_director_name": "Gerald Throop",
+   "independence_standard": "NYSE",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/1725057/000172505725000064/day-20250313.htm",
+   "archive_file": "data/raw/governance/0001725057_0001725057-25-000064.htm",
+   "evidence": [
+    {
+     "group": "board_counts",
+     "locator": "Proposal 1 Election of Directors",
+     "quote": "Each of the nominees is a current member of our Board and has consented to serve if elected.",
+     "note": "Neuf candidats, tous membres actuels : conseil en place = 9."
+    },
+    {
+     "group": "independence",
+     "locator": "Corporate Governance — Director Independence",
+     "quote": "Our Board has affirmatively determined that all board members, other than Mr. Ossip, are independent directors under the applicable rules of the NYSE.",
+     "note": "8 indépendants sur 9 (tous sauf Ossip)."
+    },
+    {
+     "group": "leadership",
+     "locator": "Executive Officers / Board Leadership Structure",
+     "quote": "Mr. Ossip is our Chair and Chief Executive Officer.",
+     "note": "Fonctions cumulées."
+    },
+    {
+     "group": "leadership",
+     "locator": "Board Leadership Structure",
+     "quote": "Mr. Throop as independent Lead Director.",
+     "note": "Administrateur référent : Gerald Throop."
+    }
+   ],
+   "date_basis": "publication date of 2025 proxy; current board described therein, not a year-end or annual-average measure",
+   "board_scope": "incumbent directors; nominee roster reconciled to current membership",
+   "checked_at": "2026-11-11",
+   "capture_status": "raw_document_archived",
+   "review_status": "agent_read_pending_audit"
+  },
+  {
+   "cik": "0000910521",
+   "company": "Deckers Brands",
+   "accession": "0000910521-25-000030",
+   "publication_date": "2025-07-25",
+   "board_size": 10,
+   "independent_directors": 8,
+   "board_leadership": "Separate CEO and chair",
+   "ceo_name": "Stefano Caroti",
+   "chair_name": "Cynthia (Cindy) L. Davis",
+   "independence_standard": "NYSE",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/910521/000091052125000030/deck-20250725.htm",
+   "archive_file": "data/raw/governance/0000910521_0000910521-25-000030.htm",
+   "evidence": [
+    {
+     "group": "board_counts",
+     "locator": "Governance Highlights; Proposal 1",
+     "quote": "If all nominees are elected, our Board will consist of ten members.",
+     "note": "10 candidats dont Patrick J. Grismer, nouveau (pas encore administrateur)."
+    },
+    {
+     "group": "board_counts",
+     "locator": "Governance Highlights",
+     "quote": "At the Annual Meeting, Dave Powers will not stand for reelection, after serving as a director and as our previous Chief Executive Officer and President for over 9 years.",
+     "note": "Powers siège encore : 10 candidats - Grismer (nouveau) + Powers (sortant) = 10 administrateurs en place."
+    },
+    {
+     "group": "independence",
+     "locator": "Corporate Governance — Director Independence",
+     "quote": "our Board has determined that each of our directors, other than Mr. Powers and Mr. Caroti,",
+     "note": "Sur les 10 administrateurs en place, tous sauf Powers et Caroti sont indépendants : 10 - 2 = 8 (Grismer exclu car pas encore administrateur)."
+    },
+    {
+     "group": "leadership",
+     "locator": "Corporate Governance — Board Leadership",
+     "quote": "Currently, Ms. Davis, who is an independent director, serves as Chair of the Board.",
+     "note": "Présidente indépendante Davis (nommée en mai 2025) ; Caroti CEO."
+    },
+    {
+     "group": "leadership",
+     "locator": "Governance Highlights",
+     "quote": "our current Chief Executive Officer, President and director, Stefano Caroti",
+     "note": "CEO Stefano Caroti."
+    }
+   ],
+   "date_basis": "publication date of 2025 proxy; current board described therein, not a year-end or annual-average measure",
+   "board_scope": "incumbent directors; nominee roster reconciled to current membership",
+   "checked_at": "2026-11-11",
+   "capture_status": "raw_document_archived",
+   "review_status": "agent_read_pending_audit"
+  },
+  {
+   "cik": "0000315189",
+   "company": "Deere & Company",
+   "accession": "0001558370-25-000112",
+   "publication_date": "2025-01-10",
+   "board_size": 12,
+   "independent_directors": 11,
+   "board_leadership": "Combined CEO and chair",
+   "ceo_name": "John C. May",
+   "chair_name": "John C. May",
+   "lead_director_name": "Sherry M. Smith",
+   "independence_standard": "NYSE",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/315189/000155837025000112/de-20250226xdef14a.htm",
+   "archive_file": "data/raw/governance/0000315189_0001558370-25-000112.htm",
+   "evidence": [
+    {
+     "group": "board_counts",
+     "locator": "Proposal 1 Election of Directors",
+     "quote": "Your vote is requested to elect the 11 nominees for the Board of Directors, all of whom currently serve as directors.",
+     "note": "11 candidats, tous administrateurs actuels."
+    },
+    {
+     "group": "board_counts",
+     "locator": "Proposal 1 Election of Directors",
+     "quote": "Clayton M. Jones will retire from the Board effective as of the Annual Meeting in accordance with our Corporate Governance Policies.",
+     "note": "Jones siège encore à la date du document : 11 + 1 = 12 administrateurs en place."
+    },
+    {
+     "group": "independence",
+     "locator": "Corporate Governance — Director Independence",
+     "quote": "In November 2024, we reviewed the independence of each then-sitting director (including all our nominees), applying our categorical independence standards.",
+     "note": "Examen portant sur tous les administrateurs en place (dont Jones)."
+    },
+    {
+     "group": "independence",
+     "locator": "Corporate Governance — Director Independence",
+     "quote": "the Board affirmatively determined at its regular December 2024 meeting that no director, other than Mr. May, has a material relationship with Deere",
+     "note": "Tous sauf May indépendants : 12 - 1 = 11."
+    },
+    {
+     "group": "leadership",
+     "locator": "Board Leadership Structure",
+     "quote": "John C. May currently serves as Deere’s Chairman, Chief Executive Officer, and President.",
+     "note": "Fonctions cumulées."
+    },
+    {
+     "group": "leadership",
+     "locator": "Lead Director",
+     "quote": "Sherry M. Smith has served as our independent Lead Director since February 2024.",
+     "note": "Administratrice référente indépendante."
+    }
+   ],
+   "date_basis": "publication date of 2025 proxy; current board described therein, not a year-end or annual-average measure",
+   "board_scope": "incumbent directors; nominee roster reconciled to current membership",
+   "checked_at": "2026-11-11",
+   "capture_status": "raw_document_archived",
+   "review_status": "agent_read_pending_audit"
+  },
+  {
+   "cik": "0001571996",
+   "company": "Dell Technologies",
+   "accession": "0001193125-25-121698",
+   "publication_date": "2025-05-16",
+   "board_size": 8,
+   "independent_directors": 6,
+   "board_leadership": "Combined CEO and chair",
+   "ceo_name": "Michael S. Dell",
+   "chair_name": "Michael S. Dell",
+   "lead_director_name": "Ellen J. Kullman",
+   "independence_standard": "NYSE",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/1571996/000119312525121698/d835807ddef14a.htm",
+   "archive_file": "data/raw/governance/0001571996_0001193125-25-121698.htm",
+   "evidence": [
+    {
+     "group": "board_counts",
+     "locator": "Proposal 1 Election of Directors; Director Groups",
+     "quote": "The Board is currently composed of eight members, seven of whom are Group I directors and one of whom is the Group IV director.",
+     "note": "Conseil en place = 8 ; les 8 candidats sont tous des administrateurs actuels (Kullman Groupe IV, les sept autres Groupe I)."
+    },
+    {
+     "group": "independence",
+     "locator": "Corporate Governance — Director Independence",
+     "quote": "Messrs. Dorman, Grain, Green and Mollenkopf, Mrs. Kullman and Ms. Vojvodich Radakovich, constituting six of our eight directors, are independent under NYSE rules",
+     "note": "6 indépendants sur 8."
+    },
+    {
+     "group": "leadership",
+     "locator": "Corporate Governance — Board Leadership",
+     "quote": "Both the Chairman and Chief Executive Officer positions are currently held by Mr. Dell.",
+     "note": "Fonctions cumulées."
+    },
+    {
+     "group": "leadership",
+     "locator": "Director Independence",
+     "quote": "Mrs. Kullman currently serves as the Lead Independent Director.",
+     "note": "Administratrice référente : Ellen J. Kullman."
+    }
+   ],
+   "date_basis": "publication date of 2025 proxy; current board described therein, not a year-end or annual-average measure",
+   "board_scope": "incumbent directors; nominee roster reconciled to current membership",
+   "checked_at": "2026-11-11",
+   "capture_status": "raw_document_archived",
+   "review_status": "agent_read_pending_audit"
+  },
+  {
+   "cik": "0000027904",
+   "company": "Delta Air Lines",
+   "accession": "0001308179-25-000514",
+   "publication_date": "2025-04-25",
+   "board_size": 14,
+   "independent_directors": 12,
+   "board_leadership": "Separate CEO and chair",
+   "ceo_name": "Edward H. Bastian",
+   "chair_name": "David S. Taylor",
+   "independence_standard": "NYSE",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/27904/000130817925000514/dal013395-def14a.htm",
+   "archive_file": "data/raw/governance/0000027904_0001308179-25-000514.htm",
+   "evidence": [
+    {
+     "group": "board_counts",
+     "locator": "Proposal 1 Election of Directors, p.60",
+     "quote": "the Board set the number of directors at 14 as of the date of the annual meeting and nominated all current directors to stand for re-election.",
+     "note": "14 candidats = tous les administrateurs actuels : conseil en place = 14."
+    },
+    {
+     "group": "independence",
+     "locator": "Proxy Summary — Corporate Governance Highlights",
+     "quote": "12 of 14 director nominees are independent (all except the CEO and ALPA nominee)",
+     "note": "12 indépendants sur 14 (sauf le CEO et le candidat ALPA, Hazleton) ; indépendance au sens NYSE et des critères de Delta."
+    },
+    {
+     "group": "leadership",
+     "locator": "Board Leadership Structure",
+     "quote": "For many years our Board has chosen to elect an independent, non-executive Chair of the Board separate from our Chief Executive Officer.",
+     "note": "Président non exécutif indépendant David S. Taylor ; CEO Edward H. Bastian."
+    },
+    {
+     "group": "leadership",
+     "locator": "Letter from the Non-Executive Chair of the Board",
+     "quote": "Mr. Taylor presided at these sessions as non-executive Chair of the Board.",
+     "note": "Taylor identifié comme président non exécutif."
+    }
+   ],
+   "date_basis": "publication date of 2025 proxy; current board described therein, not a year-end or annual-average measure",
+   "board_scope": "incumbent directors; nominee roster reconciled to current membership",
+   "checked_at": "2026-11-11",
+   "capture_status": "raw_document_archived",
+   "review_status": "agent_read_pending_audit"
+  },
+  {
+   "cik": "0001090012",
+   "company": "Devon Energy",
+   "accession": "0001104659-25-037545",
+   "publication_date": "2025-04-23",
+   "board_size": 11,
+   "independent_directors": 10,
+   "board_leadership": "Separate CEO and chair",
+   "ceo_name": "Clay M. Gaspar",
+   "chair_name": "John E. Bethancourt",
+   "independence_standard": "NYSE",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/1090012/000110465925037545/tm252204-6_def14a.htm",
+   "archive_file": "data/raw/governance/0001090012_0001104659-25-037545.htm",
+   "evidence": [
+    {
+     "group": "board_counts",
+     "locator": "Proxy Summary — Corporate Governance Highlights",
+     "quote": "11 Current Directors qualify as independent under New York Stock Exchange (NYSE) and Securities and Exchange Commission (SEC) standards.",
+     "note": "Le document compte 11 administrateurs actuels (10 candidats, tous administrateurs actuels, plus Krenicki qui part)."
+    },
+    {
+     "group": "board_counts",
+     "locator": "Director Compensation / committee notes",
+     "quote": "As previously announced, he is retiring from the Board at the Annual Meeting.",
+     "note": "John Krenicki Jr. siège encore et n'est pas candidat : 10 + 1 = 11."
+    },
+    {
+     "group": "independence",
+     "locator": "Corporate Governance — Director Independence",
+     "quote": "the Board has affirmatively determined that (i) each of the current Directors, with the exception of Clay M. Gaspar, is an independent Director",
+     "note": "10 indépendants sur 11 (tous sauf le CEO Gaspar)."
+    },
+    {
+     "group": "leadership",
+     "locator": "Proxy Summary — Independent Board Chair",
+     "quote": "In July 2024, John Bethancourt became",
+     "note": "Président indépendant Bethancourt depuis juillet 2024."
+    },
+    {
+     "group": "leadership",
+     "locator": "Board Leadership",
+     "quote": "Mr. Bethancourt’s appointment as Board Chair continues a Devon governance practice of separating the Chair and CEO roles",
+     "note": "Fonctions séparées ; CEO Clay M. Gaspar (élu CEO et nommé administrateur en mars 2025)."
+    }
+   ],
+   "date_basis": "publication date of 2025 proxy; current board described therein, not a year-end or annual-average measure",
+   "board_scope": "incumbent directors; nominee roster reconciled to current membership",
+   "checked_at": "2026-11-11",
+   "capture_status": "raw_document_archived",
+   "review_status": "agent_read_pending_audit"
+  },
+  {
+   "cik": "0001093557",
+   "company": "Dexcom",
+   "accession": "0001093557-25-000100",
+   "publication_date": "2025-03-27",
+   "board_size": 11,
+   "independent_directors": 10,
+   "board_leadership": "Combined CEO and chair",
+   "ceo_name": "Kevin R. Sayer",
+   "chair_name": "Kevin R. Sayer",
+   "lead_director_name": "Mark G. Foletta",
+   "independence_standard": "Nasdaq",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/1093557/000109355725000100/dxcm-20250327.htm",
+   "archive_file": "data/raw/governance/0001093557_0001093557-25-000100.htm",
+   "evidence": [
+    {
+     "group": "board_counts",
+     "locator": "Proposal 1 Election of Directors",
+     "quote": "As of the date of this Proxy Statement, the Board consists of eleven members.",
+     "note": "Onze membres actuels (dix candidats + Topol qui n'est pas renommé et dont le mandat expire à l'assemblée)."
+    },
+    {
+     "group": "independence",
+     "locator": "Director Independence",
+     "quote": "are independent directors within the meaning of the applicable Nasdaq listing standards. Mr. Sayer is not considered an independent director because of his employment as our President and CEO.",
+     "note": "Dix noms indépendants listés (dont Topol) + Sayer non indépendant = 11."
+    },
+    {
+     "group": "leadership",
+     "locator": "Board Leadership Structure and the Role of the Lead Independent Director",
+     "quote": "Our Board believes that our stockholders and Dexcom currently are best served by having Kevin R. Sayer, our CEO, also serve as Chairperson of the Board, and Mark G. Foletta serve as lead independent director.",
+     "note": "Fonctions cumulées ; administrateur référent Foletta."
+    }
+   ],
+   "date_basis": "publication date of 2025 proxy; current board described therein, not a year-end or annual-average measure",
+   "board_scope": "incumbent directors; nominee roster reconciled to current membership",
+   "checked_at": "2026-11-11",
+   "capture_status": "raw_document_archived",
+   "review_status": "agent_read_pending_audit"
+  },
+  {
+   "cik": "0001297996",
+   "company": "Digital Realty",
+   "accession": "0001308179-25-000509",
+   "publication_date": "2025-04-25",
+   "board_size": 9,
+   "independent_directors": 8,
+   "board_leadership": "Separate CEO and chair",
+   "ceo_name": "Andrew P. Power",
+   "chair_name": "Mary Hogan Preusse",
+   "independence_standard": "NYSE",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/1297996/000130817925000509/dlr000000-def14a.htm",
+   "archive_file": "data/raw/governance/0001297996_0001308179-25-000509.htm",
+   "evidence": [
+    {
+     "group": "board_counts",
+     "locator": "Proposal 1 Election of Directors, p.22",
+     "quote": "the names, ages and biographical summaries of the individuals who are our nominees for election as directors of the Company, all of whom are current directors of the Company.",
+     "note": "9 candidats, tous administrateurs actuels ; aucun administrateur sortant ni nouveau candidat mentionné dans le document : conseil en place = 9 (effectif total non énoncé explicitement)."
+    },
+    {
+     "group": "board_counts",
+     "locator": "Proxy Summary — Governance Highlights, p.8",
+     "quote": "8 of 9 directors standing for re-election are independent",
+     "note": "8 indépendants sur 9 candidats."
+    },
+    {
+     "group": "independence",
+     "locator": "Corporate Governance — Independent Directors, p.31",
+     "quote": "all non-employee nominees for election to the Board at the Annual Meeting are independent (the Independent Directors).",
+     "note": "Seul candidat salarié : Andrew P. Power (CEO) ; 9 - 1 = 8 indépendants."
+    },
+    {
+     "group": "leadership",
+     "locator": "Corporate Governance — Board Leadership Structure, p.31-32",
+     "quote": "We separate the roles of the Chief Executive Officer and the Board Chair in recognition of the differences between the two roles.",
+     "note": "Fonctions séparées."
+    },
+    {
+     "group": "leadership",
+     "locator": "Nominees for Election, p.22",
+     "quote": "Board Chair since: August 2022",
+     "note": "Présidente : Mary Hogan Preusse ; CEO : Andrew P. Power (« President & Chief Executive Officer »)."
+    }
+   ],
+   "date_basis": "publication date of 2025 proxy; current board described therein, not a year-end or annual-average measure",
+   "board_scope": "incumbent directors; nominee roster reconciled to current membership",
+   "checked_at": "2026-11-11",
+   "capture_status": "raw_document_archived",
+   "review_status": "agent_read_pending_audit"
+  }
+ ],
+ "unresolved": [
+  {
+   "cik": "0001051470",
+   "company": "Crown Castle",
+   "reason": "CEO en transition",
+   "detail": "Le document (7 avril 2025) indique que Daniel K. Schlanger a été nommé Interim President and CEO le 23 mars 2025 après le départ de M. Moskowitz, et que le CEO Search Committee a été rétabli en mars 2025 : poste de CEO en transition à la date du document."
+  },
+  {
+   "cik": "0000277948",
+   "company": "CSX Corporation",
+   "reason": "Indépendance non indiquée pour tous les administrateurs en place",
+   "detail": "Conseil en place = 13 (12 candidats dont Ann D. Begeman, entrée en janvier 2025, plus Donna M. Alvarado, administratrice actuelle qui part à la retraite). La liste des administrateurs déclarés indépendants (10 noms) ne mentionne ni Begeman ni Alvarado ; le graphique de répartition est une image non lisible dans le texte."
+  },
+  {
+   "cik": "0001561550",
+   "company": "Datadog",
+   "reason": "Président du conseil non indiqué",
+   "detail": "9 administrateurs (3 candidats Classe III + 3 Classe I + 3 Classe II) dont 6 déclarés indépendants (Nasdaq), CEO Olivier Pomel, administrateur référent Dev Ittycheria ; mais le document ne dit nulle part s'il existe un président du conseil ni qu'il n'y en a pas (seulement « when the chairperson is not present »). Impossible de classer Combined / Separate / No board chair sans deviner."
+  },
+  {
+   "cik": "0001539838",
+   "company": "Diamondback Energy",
+   "reason": "Direction (CEO et président) en transition annoncée",
+   "detail": "À la date du document (10 avril 2025), Travis D. Stice est Chairman et CEO ; le document annonce qu'à l'issue de l'assemblée il deviendra Executive Chairman et que Kaes Van't Hof lui succèdera comme CEO (transition de direction en cours). Effectifs lisibles : 13 administrateurs actuels dont 11 indépendants (Nasdaq) ; administrateur référent M. Trent (nom à confirmer) ; David L. Houston ne se représente pas."
+  }
+ ]
+}

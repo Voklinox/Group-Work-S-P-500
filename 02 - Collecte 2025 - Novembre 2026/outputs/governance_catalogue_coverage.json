@@ -1,0 +1,12 @@
+{
+  "issuers": 500,
+  "issuers_with_proxy_candidates": 496,
+  "proxy_candidates": 505,
+  "no_proxy_or_information_statement_found": [
+    "Blackstone Inc.",
+    "KKR & Co.",
+    "Paramount Skydance Corporation",
+    "Qnity Electronics"
+  ],
+  "note": "Catalogue availability is not a verified governance measurement. Special meetings and duplicates require content review; No proxy/information statement does not mean no public governance source; contested filings may be submitted by third parties."
+}

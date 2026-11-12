@@ -1,0 +1,71 @@
+{
+ "shard": "00",
+ "observations": [
+  {
+   "cik": "0001393818",
+   "company": "Blackstone Inc.",
+   "accession": "0001193125-25-042469",
+   "publication_date": "2025-02-28",
+   "board_size": 8,
+   "independent_directors": 5,
+   "board_leadership": "Combined CEO and chair",
+   "ceo_name": "Stephen A. Schwarzman",
+   "chair_name": "Stephen A. Schwarzman",
+   "independence_standard": "NYSE",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/1393818/000119312525042469/d912273d10k.htm",
+   "archive_file": "data/raw/governance/0001393818_0001193125-25-042469.htm",
+   "evidence": [
+    {
+     "group": "board_counts",
+     "locator": "Part III, Item 10, Controlled Company Exception and Director Independence",
+     "quote": "Our board of directors has a total of eight members, including five members, Messrs. Breyer, Brown and Parrett, and Mses. Lazarus and Porat, who are independent under NYSE rules relating to corporate governance matters and the independence standards described in our governance policy.",
+     "note": "Effectif en place de huit administrateurs, cohérent avec le tableau de l'Item 10 (Schwarzman, Gray, Baratta, Breyer, Brown, Lazarus, Parrett, Porat). Mulroney (départ le 29 février 2024) et Ayotte (départ le 14 novembre 2024) sont des anciens administrateurs, exclus."
+    },
+    {
+     "group": "independence",
+     "locator": "Part III, Item 10, Controlled Company Exception and Director Independence",
+     "quote": "Our board of directors has a total of eight members, including five members, Messrs. Breyer, Brown and Parrett, and Mses. Lazarus and Porat, who are independent under NYSE rules relating to corporate governance matters and the independence standards described in our governance policy.",
+     "note": "Cinq indépendants déclarés sur les huit membres en place (même ensemble). Société contrôlée (le détenteur de l'action de série II détient plus de 50 % des voix) mais l'indépendance est bel et bien déclarée ; la société dit conserver un conseil à majorité indépendante."
+    },
+    {
+     "group": "leadership",
+     "locator": "Part III, Item 10, biographie de Stephen A. Schwarzman",
+     "quote": "Mr. Schwarzman was elected Chairman of the board of directors effective March 20, 2007.",
+     "note": "Schwarzman est président du conseil ; le tableau des dirigeants de l'Item 10 lui donne aussi la fonction de Co-Founder, Chairman and Chief Executive Officer and Director (un seul CEO, pas de co-CEO). Fonctions cumulées."
+    },
+    {
+     "group": "leadership",
+     "locator": "Part III, Item 10, Communications to the Board of Directors",
+     "quote": "The presiding director at these non-management board member meetings is Mr. Parrett.",
+     "note": "Contrôle de l'existence d'un administrateur référent : le document ne nomme qu'un « presiding director » (M. Parrett) pour les réunions des administrateurs non exécutifs, pas un lead director statutaire ; non retenu comme lead_director_name."
+    }
+   ],
+   "date_basis": "publication date of 2025 10-K (filed 2025-02-28); current board described in Part III Item 10, not a year-end or annual-average measure",
+   "board_scope": "incumbent directors per 10-K Part III Item 10; former directors who left in 2024 excluded",
+   "checked_at": "2026-11-11",
+   "capture_status": "raw_document_archived",
+   "review_status": "agent_read_pending_audit",
+   "selection_note": "Pas de procuration disponible dans la liste : 10-K du 28 février 2025 (Part III Item 10 renseignée directement). Société contrôlée, à auditer en priorité."
+  }
+ ],
+ "unresolved": [
+  {
+   "cik": "0001404912",
+   "company": "KKR & Co.",
+   "reason": "Co-CEO et co-présidents exécutifs ; société contrôlée",
+   "detail": "10-K du 2025-02-28, Item 10 : le conseil compte treize administrateurs dont neuf déclarés indépendants (NYSE), mais la direction est assurée par deux Co-Chief Executive Officers (Joseph Y. Bae, Scott C. Nuttall) et deux Co-Executive Chairmen (Henry R. Kravis, George R. Roberts) ; aucun CEO ni président unique, donc board_leadership non classable selon le protocole. Société contrôlée (Series I preferred stockholder > 50 % des voix). Chiffres de contexte non retenus : 13 membres, 9 indépendants."
+  },
+  {
+   "cik": "0002041610",
+   "company": "Paramount Skydance Corporation",
+   "reason": "Indépendance non déclarée pour l'ensemble du conseil",
+   "detail": "8-K12B du 2025-08-07 (Item 5.02) : conseil porté de trois à dix au Closing du 7 août 2025, dix administrateurs effectivement nommés (Ellison, Shell, Cardinale, Brandon-Gordon, Marinelli, Catz, Thornton, Byrne, Hamill, Lansing), David Ellison élu président et CEO (fonctions cumulées). Mais le conseil n'a déterminé comme indépendants que trois des dix (Byrne, Hamill, Lansing) au titre de l'Audit Committee, au sens Nasdaq, sans se prononcer sur les sept autres : l'indépendance n'est pas indiquée pour tous. Quatre administrateurs sont par ailleurs désignés par Ellison et deux par RedBird selon le certificat de constitution ; aucune déclaration de société contrôlée dans ce document. À chercher : procuration définitive de l'assemblée annuelle 2026 (DEF 14A) ou information statement/prospectus du formulaire S-4 (File No. 333-282985, effectif le 13 février 2025) pour la détermination d'indépendance complète."
+  },
+  {
+   "cik": "0002058873",
+   "company": "Qnity Electronics",
+   "reason": "Indépendance et CEO non indiqués dans le document",
+   "detail": "8-K du 2025-11-03 (Item 5.02) : conseil porté à dix membres au 1er novembre 2025 (Sterin, Blinn, Banerji, Curtin, De Bondt, Green, Johnson, Noonan, Paik, Kemp), Mark A. Blinn président non exécutif. Le document ne déclare l'indépendance d'aucun administrateur (seulement la composition des comités) et ne nomme pas le CEO ; la biographie et l'indépendance sont renvoyées à l'information statement. À chercher : Exhibit 99.1 du 8-K déposé le 15 octobre 2025 (section Management — Board of Directors Following the Spin-Off), ou la première procuration (DEF 14A 2026)."
+  }
+ ]
+}

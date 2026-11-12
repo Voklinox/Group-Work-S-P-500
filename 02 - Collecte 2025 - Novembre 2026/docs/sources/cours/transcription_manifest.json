@@ -1,0 +1,1094 @@
+{
+  "created_on": "2026-11-11",
+  "total_pages": 175,
+  "transcription_file": "docs/CONSIGNES_PROFESSEUR.md",
+  "transcription_sha256": "1ede9194e1cc4549e6e75bf5c06f8b8b0b6a6f64979276192bb19a11720125ed",
+  "sources": [
+    {
+      "source": "S01 - Slides.pdf",
+      "pdf_sha256": "58b1e73fb8c223621e17f81a5ea6bd7fb47cf515d12ff3325763a81f6c4d0efd",
+      "pages_expected": 44,
+      "pages_transcribed": 44,
+      "extraction": "pypdf extract_text; strip outer whitespace only; no summarisation",
+      "page_records": [
+        {
+          "page": 1,
+          "anchor": "s01-p001",
+          "text_sha256": "eca561ba3e0d87ceeb6abad9d926c3811741997acf880c85a85282d40daccb35",
+          "characters": 169
+        },
+        {
+          "page": 2,
+          "anchor": "s01-p002",
+          "text_sha256": "6b3caca6729136309471022cf91f5f88407d17aa7bdb770fb44f5446a26de1e0",
+          "characters": 399
+        },
+        {
+          "page": 3,
+          "anchor": "s01-p003",
+          "text_sha256": "653a43e1847af271483e686ae1ec664089e04e1c014182aad96e44b324aa4e9d",
+          "characters": 478
+        },
+        {
+          "page": 4,
+          "anchor": "s01-p004",
+          "text_sha256": "25cd17a3da512956b26b51f9682ae94f0f1d75bbef8e0e861e1afb5f39e97877",
+          "characters": 449
+        },
+        {
+          "page": 5,
+          "anchor": "s01-p005",
+          "text_sha256": "d6bf71c5996761a436861b834a12b8de32bd1ab72404fc7e341b5bb9af0d0e33",
+          "characters": 550
+        },
+        {
+          "page": 6,
+          "anchor": "s01-p006",
+          "text_sha256": "8893dff34c02db6a4e9bb13792e41320671581fe96a8c65721b2267627a48aec",
+          "characters": 16
+        },
+        {
+          "page": 7,
+          "anchor": "s01-p007",
+          "text_sha256": "b0631c60de87b0ed0397e937262daf30b7bceeec867e0d2349c6b234175f2fff",
+          "characters": 296
+        },
+        {
+          "page": 8,
+          "anchor": "s01-p008",
+          "text_sha256": "a7e93dc911f4e5cc0c07c9642f4d9c5b3d3e0b9923a835d6d42e57d0178e896b",
+          "characters": 432
+        },
+        {
+          "page": 9,
+          "anchor": "s01-p009",
+          "text_sha256": "abb0ff53550716a3a2def7dc43999e4272631c007a20d774925ae2e3805e9c1c",
+          "characters": 437
+        },
+        {
+          "page": 10,
+          "anchor": "s01-p010",
+          "text_sha256": "2d8d72f9de8ef8ecd270c33c4c15f809cf9241ccc2944a9486b97d94218de1cb",
+          "characters": 25
+        },
+        {
+          "page": 11,
+          "anchor": "s01-p011",
+          "text_sha256": "4fc8608f99808632bab7a61631b25dcbd7c0fee2e1332db7158280a2c1b42757",
+          "characters": 450
+        },
+        {
+          "page": 12,
+          "anchor": "s01-p012",
+          "text_sha256": "ab06ac6b51c8628630228053fcaacaaca02fdd1e91cb58c572cf50094d88667b",
+          "characters": 330
+        },
+        {
+          "page": 13,
+          "anchor": "s01-p013",
+          "text_sha256": "0b8b052f91c8d4111ffc309bc96dedb8620ebaee6b0732d7d41a583ba210c5df",
+          "characters": 428
+        },
+        {
+          "page": 14,
+          "anchor": "s01-p014",
+          "text_sha256": "cdb77483f63d537d2be73ba0161466557b011d1ef12d9cf13db73a9a734bbca5",
+          "characters": 515
+        },
+        {
+          "page": 15,
+          "anchor": "s01-p015",
+          "text_sha256": "ed1f33cb1cdb11d515a42ef8ea433ce9a2c9805dfcc20d2d85aefe4da22361f5",
+          "characters": 337
+        },
+        {
+          "page": 16,
+          "anchor": "s01-p016",
+          "text_sha256": "758d2d77384c6e35e750c17c58c65197bb949dcd0fc500541454a47217e297c0",
+          "characters": 744
+        },
+        {
+          "page": 17,
+          "anchor": "s01-p017",
+          "text_sha256": "63582c1841f180bdc24c12f5ab7147c0b610aa2427de39baeb8bdbd2862812b0",
+          "characters": 554
+        },
+        {
+          "page": 18,
+          "anchor": "s01-p018",
+          "text_sha256": "fefb6bf29fbe485848a140364d11fcb8acddfb0992c58d66f7a5898b181c1d69",
+          "characters": 23
+        },
+        {
+          "page": 19,
+          "anchor": "s01-p019",
+          "text_sha256": "ee676190d2e67fb8d3110c0a45b4d1851ce7b816dcb4661d59bf2a0250d28a3c",
+          "characters": 523
+        },
+        {
+          "page": 20,
+          "anchor": "s01-p020",
+          "text_sha256": "dae529de2be6e00d9b6383d2128fd1e110e74db446e3f1a01fd879996e7210ee",
+          "characters": 463
+        },
+        {
+          "page": 21,
+          "anchor": "s01-p021",
+          "text_sha256": "f8c5e5688d1b158790b0e8adcdad1705e21623e5f44c6d1990db662f7d644b3e",
+          "characters": 684
+        },
+        {
+          "page": 22,
+          "anchor": "s01-p022",
+          "text_sha256": "b44888b6e5b1b9d38c02289683549fab20b5c2365c31d5516a62357e3a92fb47",
+          "characters": 546
+        },
+        {
+          "page": 23,
+          "anchor": "s01-p023",
+          "text_sha256": "7bc564f8eaf0c2211c3bd08d3253f76bb37e87c7cbb4e68aeb04ab4d14dbbded",
+          "characters": 384
+        },
+        {
+          "page": 24,
+          "anchor": "s01-p024",
+          "text_sha256": "a2fa605a08580dc0ff94a46e8ff860070be755ddd41990583affb95c52f37090",
+          "characters": 588
+        },
+        {
+          "page": 25,
+          "anchor": "s01-p025",
+          "text_sha256": "b33d484fb2c2a4f17942ed41141acfc054d189db39e920497ed99213a8e63324",
+          "characters": 485
+        },
+        {
+          "page": 26,
+          "anchor": "s01-p026",
+          "text_sha256": "33cd48c86004830751a34d81dc847e2d5b0fb7bbea5aa0796b97ae880cf63eff",
+          "characters": 464
+        },
+        {
+          "page": 27,
+          "anchor": "s01-p027",
+          "text_sha256": "1aa7ab4287f6581e395c94d0d9cb1bd000d67dce83daf9061c16566df92c238e",
+          "characters": 21
+        },
+        {
+          "page": 28,
+          "anchor": "s01-p028",
+          "text_sha256": "9d6fe011b24d22899a2b860833acca6df90ce970123724a551369c85eaf23a74",
+          "characters": 566
+        },
+        {
+          "page": 29,
+          "anchor": "s01-p029",
+          "text_sha256": "34c57ff7bb485e914ff6a615fbcadc703fc97b01a971c423320b38df915c0b58",
+          "characters": 643
+        },
+        {
+          "page": 30,
+          "anchor": "s01-p030",
+          "text_sha256": "a7285f52f0a70b16c3cea434eb4d7af2807c32b85b7c36b022b7b32e0b9b76b3",
+          "characters": 482
+        },
+        {
+          "page": 31,
+          "anchor": "s01-p031",
+          "text_sha256": "8f2e1163ff01df2e139bbc8116bd13df81efc3a70edf88b2b34e648bf3f10d29",
+          "characters": 818
+        },
+        {
+          "page": 32,
+          "anchor": "s01-p032",
+          "text_sha256": "0298f261c360c8439b63f03148db7634571f3a9f7f0e118e15990f083df975e4",
+          "characters": 855
+        },
+        {
+          "page": 33,
+          "anchor": "s01-p033",
+          "text_sha256": "b16d06b3e6b6f392a937c1f2e044e56829169efe6978749a0bf7b58ec97817ab",
+          "characters": 805
+        },
+        {
+          "page": 34,
+          "anchor": "s01-p034",
+          "text_sha256": "027840bd184868a64a291213a058bed27c65a574a23e68a12c5093a34d58ff36",
+          "characters": 738
+        },
+        {
+          "page": 35,
+          "anchor": "s01-p035",
+          "text_sha256": "d483fe120f9eeff6e5d6a653d75f48a5d40ae64f39886e0bf268a1fbd679cdc6",
+          "characters": 358
+        },
+        {
+          "page": 36,
+          "anchor": "s01-p036",
+          "text_sha256": "b46b058951499c43247c4a86468a0932f1143fc9f5dd47b168149931f8549b93",
+          "characters": 10
+        },
+        {
+          "page": 37,
+          "anchor": "s01-p037",
+          "text_sha256": "fb1098f1b93eabcd03d9c1dd2e571b7a19aa0d21c64cab5bd5b56c91f9916bef",
+          "characters": 512
+        },
+        {
+          "page": 38,
+          "anchor": "s01-p038",
+          "text_sha256": "110dea50f1b401629af5a3f29964917a38c7a3430c1cbfed8fb3552ce51ec552",
+          "characters": 592
+        },
+        {
+          "page": 39,
+          "anchor": "s01-p039",
+          "text_sha256": "bcfe022aa61eab1c4735b8be30f3f715a90057c6d55b4f214073d5e3a9f8e1c9",
+          "characters": 552
+        },
+        {
+          "page": 40,
+          "anchor": "s01-p040",
+          "text_sha256": "edba53798f5a649744fc845a67e87140f8899e568c3acbded08b73cb2009a6b3",
+          "characters": 585
+        },
+        {
+          "page": 41,
+          "anchor": "s01-p041",
+          "text_sha256": "f6a0c585ac3b95b9d99caa73af1c9df49b7b7ce7469a5dae5344089a35c90160",
+          "characters": 550
+        },
+        {
+          "page": 42,
+          "anchor": "s01-p042",
+          "text_sha256": "16822bcc649985d7ab9d53454de2015ee2ab9c94bc6c00a95384f6575cbb86da",
+          "characters": 456
+        },
+        {
+          "page": 43,
+          "anchor": "s01-p043",
+          "text_sha256": "5d970dd4247d618dc526792945166d97b83180fc0b445bc5e0174bd499bdf683",
+          "characters": 558
+        },
+        {
+          "page": 44,
+          "anchor": "s01-p044",
+          "text_sha256": "9aeb5cb63c216268c957b6f857955e2aa3a906b987a829d97309a7e2715d07b3",
+          "characters": 73
+        }
+      ]
+    },
+    {
+      "source": "S02 - Slides.pdf",
+      "pdf_sha256": "38e612b04af56fc62f48656b9c287dab33f3f891bc965d5984b4d1af6ba30fa3",
+      "pages_expected": 43,
+      "pages_transcribed": 43,
+      "extraction": "pypdf extract_text; strip outer whitespace only; no summarisation",
+      "page_records": [
+        {
+          "page": 1,
+          "anchor": "s02-p001",
+          "text_sha256": "347a60f86eb9527513675da930c096e145b927d0864475761b437155de72f2b8",
+          "characters": 178
+        },
+        {
+          "page": 2,
+          "anchor": "s02-p002",
+          "text_sha256": "e851dcd3a8f956497f7d78beee9b701f16dcb39db0a60f4c79bfa099df39a711",
+          "characters": 513
+        },
+        {
+          "page": 3,
+          "anchor": "s02-p003",
+          "text_sha256": "9a483e0a15b8d8c6c8c7c22ca5fcb1a1136e1982de2fdf1e13b5784aea0ad78c",
+          "characters": 667
+        },
+        {
+          "page": 4,
+          "anchor": "s02-p004",
+          "text_sha256": "578d0f93ce67e97966f204b006914765f5db85ee279b0169f651c8180b7309b2",
+          "characters": 31
+        },
+        {
+          "page": 5,
+          "anchor": "s02-p005",
+          "text_sha256": "1d5faa760cd4f55261f5c9e2d5d937372b1217b8c3e2faa23300238d711bfd21",
+          "characters": 617
+        },
+        {
+          "page": 6,
+          "anchor": "s02-p006",
+          "text_sha256": "b2f6230b657c5cae6f151782b46680db52612bae1954fb6b1ae3960e5f1a0140",
+          "characters": 663
+        },
+        {
+          "page": 7,
+          "anchor": "s02-p007",
+          "text_sha256": "448aa41cdc0018d847ce979f7496d8e60211f08cb853cf9a3ff70ca151146c93",
+          "characters": 601
+        },
+        {
+          "page": 8,
+          "anchor": "s02-p008",
+          "text_sha256": "30a5478f37818ba81981e2ac58da63126a5ead08dca91245cb697017a85d4e83",
+          "characters": 496
+        },
+        {
+          "page": 9,
+          "anchor": "s02-p009",
+          "text_sha256": "9c63b1db2a29d98893ebfb94df19f5bd564d29a35c2d34f81db791993cf43b1c",
+          "characters": 491
+        },
+        {
+          "page": 10,
+          "anchor": "s02-p010",
+          "text_sha256": "7377a23852acc678f56198584fc4c5ef4f2e9a9e59acae676cc6970dabbdb489",
+          "characters": 531
+        },
+        {
+          "page": 11,
+          "anchor": "s02-p011",
+          "text_sha256": "fab2ce79639d8fd16c15b404474f4b0f5fa51064919d9065d35c63d1bd7524b7",
+          "characters": 28
+        },
+        {
+          "page": 12,
+          "anchor": "s02-p012",
+          "text_sha256": "c694921c99ffe27baf53add86a78321abe87cf9e940c6e9a0f749b6a7cc4d3bf",
+          "characters": 637
+        },
+        {
+          "page": 13,
+          "anchor": "s02-p013",
+          "text_sha256": "3301feafdd0a9c7238c7045d28b6d426cbaa213c93dd482ac19f33d0cd26e235",
+          "characters": 629
+        },
+        {
+          "page": 14,
+          "anchor": "s02-p014",
+          "text_sha256": "5cc29ada026b07173d36f441244f3b5ea9216312a960feef1f1dd5bcf3cc8057",
+          "characters": 960
+        },
+        {
+          "page": 15,
+          "anchor": "s02-p015",
+          "text_sha256": "ba2d688acb706e110695a467d9df9dc28b754479043166ffa002ada001f66491",
+          "characters": 655
+        },
+        {
+          "page": 16,
+          "anchor": "s02-p016",
+          "text_sha256": "3af73e9d8f94806ee14ac48f2e2d869581152e34a5eb1d8d434f161e47669a2a",
+          "characters": 831
+        },
+        {
+          "page": 17,
+          "anchor": "s02-p017",
+          "text_sha256": "4021be84b3c5505013d50cedae866566d83efea5d6b374072572f41661044f00",
+          "characters": 37
+        },
+        {
+          "page": 18,
+          "anchor": "s02-p018",
+          "text_sha256": "9c5bde79757ff787a3b558a38e2114126cff0567a6481c15fb643d532f7d39a5",
+          "characters": 572
+        },
+        {
+          "page": 19,
+          "anchor": "s02-p019",
+          "text_sha256": "de0b5266019e4a2321b065d5de3fe10209c9262584f3f3869f997ef25473f9c2",
+          "characters": 498
+        },
+        {
+          "page": 20,
+          "anchor": "s02-p020",
+          "text_sha256": "a33ab3aba513ea38da4b9ba01a041ca5b625752e8ba75a49854ea0bf917429a0",
+          "characters": 624
+        },
+        {
+          "page": 21,
+          "anchor": "s02-p021",
+          "text_sha256": "0c841cffd7466579c88034d1a33057d0cab49ab5f840d2cb9705847bc89cc302",
+          "characters": 558
+        },
+        {
+          "page": 22,
+          "anchor": "s02-p022",
+          "text_sha256": "f642563db40b8e703a0d6ae99b4160752fead6a07c93ef648ddace40c1c9d14c",
+          "characters": 434
+        },
+        {
+          "page": 23,
+          "anchor": "s02-p023",
+          "text_sha256": "319fa8cb455f21f37b0811f3cf52f82000c00e4e42987fcbf119c6229748341c",
+          "characters": 435
+        },
+        {
+          "page": 24,
+          "anchor": "s02-p024",
+          "text_sha256": "a18d3b38382a15a5fdf106bb9699bd14f7e4965905f47989ef20eb7601852630",
+          "characters": 864
+        },
+        {
+          "page": 25,
+          "anchor": "s02-p025",
+          "text_sha256": "cb17fb971d13f818f139ef5a67c0837c7402dbf0b8cffde8f1120818adbf815a",
+          "characters": 529
+        },
+        {
+          "page": 26,
+          "anchor": "s02-p026",
+          "text_sha256": "11124b0dc1d65e3fbf1433a96359072c4bc368d251a0d9373958e680e5df3d2b",
+          "characters": 39
+        },
+        {
+          "page": 27,
+          "anchor": "s02-p027",
+          "text_sha256": "7285dfe3845a9d4a03bda222d2f3a74103182cd2a7c21eeff0f3ac45b16a6f9f",
+          "characters": 395
+        },
+        {
+          "page": 28,
+          "anchor": "s02-p028",
+          "text_sha256": "4b4d324b775d92fb6695a41d38a2d4921b8b4af8472bba52bc01d46002349394",
+          "characters": 298
+        },
+        {
+          "page": 29,
+          "anchor": "s02-p029",
+          "text_sha256": "58d72f076775ff2edaffb88f9294cf0d46dee03639d1c6ce14c22078352ba7af",
+          "characters": 512
+        },
+        {
+          "page": 30,
+          "anchor": "s02-p030",
+          "text_sha256": "3f4832b5eb76de73c04a33b865a2fc33a9d7bad5b630476b0414871f1808dffa",
+          "characters": 376
+        },
+        {
+          "page": 31,
+          "anchor": "s02-p031",
+          "text_sha256": "496852f3809b2870b3932b50bd7056253bea3c5644b26b983249b5b3dd546048",
+          "characters": 583
+        },
+        {
+          "page": 32,
+          "anchor": "s02-p032",
+          "text_sha256": "fd1f2df6864ff93c8de2cd475e0ba9e537ee7e94eb993bcc08dec952e81f047e",
+          "characters": 270
+        },
+        {
+          "page": 33,
+          "anchor": "s02-p033",
+          "text_sha256": "58153492f5ca289e35a298a2d4da86b80228ebc182ef2488ee37277c309a9d7a",
+          "characters": 556
+        },
+        {
+          "page": 34,
+          "anchor": "s02-p034",
+          "text_sha256": "2a6dd8586f3eb01d649799de159afbc9e48fd883fa7c07644cedd66bc2ac96ff",
+          "characters": 458
+        },
+        {
+          "page": 35,
+          "anchor": "s02-p035",
+          "text_sha256": "bc4b2f296795468dce3d99e299106b07ff10b93d5127b847203b31a4a9431615",
+          "characters": 860
+        },
+        {
+          "page": 36,
+          "anchor": "s02-p036",
+          "text_sha256": "b46b058951499c43247c4a86468a0932f1143fc9f5dd47b168149931f8549b93",
+          "characters": 10
+        },
+        {
+          "page": 37,
+          "anchor": "s02-p037",
+          "text_sha256": "3b8e38d9b2c3253193200165afc77ad6c8c7291683a485d83e9487b0f491f679",
+          "characters": 626
+        },
+        {
+          "page": 38,
+          "anchor": "s02-p038",
+          "text_sha256": "b5ae2eb037b18efd7c307d4ac6646a7c296e30ee4078facdc12dae28e212e5d6",
+          "characters": 683
+        },
+        {
+          "page": 39,
+          "anchor": "s02-p039",
+          "text_sha256": "353ea6eb2450be9157c687a1491e4ba6c940d078cec732b7a1acfff44e30851e",
+          "characters": 617
+        },
+        {
+          "page": 40,
+          "anchor": "s02-p040",
+          "text_sha256": "d19b5221fb8c66ff4273e7104ad7595a05da9784658332d564eab7e5a39abbde",
+          "characters": 666
+        },
+        {
+          "page": 41,
+          "anchor": "s02-p041",
+          "text_sha256": "e6cc1835284a2282b71c4bfa8fdc8b1b0e267e14b71745634022aa19a98b4865",
+          "characters": 504
+        },
+        {
+          "page": 42,
+          "anchor": "s02-p042",
+          "text_sha256": "0eb324842788d3bd0452d4088489638b4cff82bff780ef17724ce5230808815c",
+          "characters": 625
+        },
+        {
+          "page": 43,
+          "anchor": "s02-p043",
+          "text_sha256": "71cac9f6d36381c6984307a0be702185df19fdf438e1b8b8541366820d4b5ee6",
+          "characters": 79
+        }
+      ]
+    },
+    {
+      "source": "S03 - Slides (revised).pdf",
+      "pdf_sha256": "7a492513f2e69782190d04f7025caba085b499ccabf7dc2675d424e330444a2b",
+      "pages_expected": 48,
+      "pages_transcribed": 48,
+      "extraction": "pypdf extract_text; strip outer whitespace only; no summarisation",
+      "page_records": [
+        {
+          "page": 1,
+          "anchor": "s03-p001",
+          "text_sha256": "fbc8a74b850f282cc41060bd1ee28758d2d24141358e1d2c4fe864fc00800194",
+          "characters": 175
+        },
+        {
+          "page": 2,
+          "anchor": "s03-p002",
+          "text_sha256": "0aef6799e355974f552f871294ea4e89a534f51c80b9b626f7e5cbe2d8783462",
+          "characters": 581
+        },
+        {
+          "page": 3,
+          "anchor": "s03-p003",
+          "text_sha256": "3d6586781e34a4bc2bf4e186e49201b08966e1e6cd175236253d55a97d968895",
+          "characters": 686
+        },
+        {
+          "page": 4,
+          "anchor": "s03-p004",
+          "text_sha256": "1d98676287bdf98aaf05110ffcda28e66d8d026dd1cc02fb2a05a208d6b90bd2",
+          "characters": 10
+        },
+        {
+          "page": 5,
+          "anchor": "s03-p005",
+          "text_sha256": "01026297661117ab277808c895b059090b583c5267317aac99d37fe69b8419ad",
+          "characters": 424
+        },
+        {
+          "page": 6,
+          "anchor": "s03-p006",
+          "text_sha256": "1ef21ac0bfeeed6412868de0fd36966242e7e9f6bc08780b347a81c2b4ae4815",
+          "characters": 567
+        },
+        {
+          "page": 7,
+          "anchor": "s03-p007",
+          "text_sha256": "c5ed78910bff4992af4597d9fbdfa0794932c48d42219088e7aec5146a3fa103",
+          "characters": 643
+        },
+        {
+          "page": 8,
+          "anchor": "s03-p008",
+          "text_sha256": "bb5c1ee35428d065393d2a67439323c020aa28a84d5a7076577285e1e8c21e3a",
+          "characters": 357
+        },
+        {
+          "page": 9,
+          "anchor": "s03-p009",
+          "text_sha256": "679bcd232c74b0f50c822e7cbaf938be9e8eff3c10142bef3a1fbe247abb0bd7",
+          "characters": 526
+        },
+        {
+          "page": 10,
+          "anchor": "s03-p010",
+          "text_sha256": "de06934494f50a9d17a9b96ea8fece71e56998356d06bb3cf1e768d0967ca996",
+          "characters": 456
+        },
+        {
+          "page": 11,
+          "anchor": "s03-p011",
+          "text_sha256": "0ea82618cb9b67dfd27c150acf68e9faae34424d6f501ac3d8d3bcd841372a99",
+          "characters": 467
+        },
+        {
+          "page": 12,
+          "anchor": "s03-p012",
+          "text_sha256": "7a263dd29bb817e6223d04c44a283960465ebd3583b8f63d3d4e3ddd2c4231df",
+          "characters": 598
+        },
+        {
+          "page": 13,
+          "anchor": "s03-p013",
+          "text_sha256": "4c804664a5621d59e6ce778c27e15138522d21e9bb087afb02b7265ed84e51ae",
+          "characters": 732
+        },
+        {
+          "page": 14,
+          "anchor": "s03-p014",
+          "text_sha256": "6b7a096c4353693be51e7065cae955f78d2ad6a1c2f66c071e9808b5003ad27d",
+          "characters": 35
+        },
+        {
+          "page": 15,
+          "anchor": "s03-p015",
+          "text_sha256": "5e38f54214ee4b5e89f29add09ea93bc9c27e36b007f3f033100ab069a558704",
+          "characters": 375
+        },
+        {
+          "page": 16,
+          "anchor": "s03-p016",
+          "text_sha256": "2e4689b6a424cc550f5aff633a735a5ad0458b217ab74e3bfc526af9ce608368",
+          "characters": 533
+        },
+        {
+          "page": 17,
+          "anchor": "s03-p017",
+          "text_sha256": "57af2fc0589cf0117b9d9464880c3b1ecc9a3120b21de3cbe956db9e8c90a437",
+          "characters": 524
+        },
+        {
+          "page": 18,
+          "anchor": "s03-p018",
+          "text_sha256": "0e105abfb9e901036384e41faae10616a854e2a3485f8b4a4400b53278aec7ba",
+          "characters": 753
+        },
+        {
+          "page": 19,
+          "anchor": "s03-p019",
+          "text_sha256": "81aaa7f5d763a19fadb6347ea8127ed8d033f8d1cb515f6be3ea755afa75b8f8",
+          "characters": 29
+        },
+        {
+          "page": 20,
+          "anchor": "s03-p020",
+          "text_sha256": "d7f3f866682f2d84fb9a9823c3425a15b38dc935ab0661133674e8fa16b5f4d1",
+          "characters": 457
+        },
+        {
+          "page": 21,
+          "anchor": "s03-p021",
+          "text_sha256": "75312321f275a09cdb789676918012226a1cd37b7b5d5dbf0c6a686cc5a25d42",
+          "characters": 458
+        },
+        {
+          "page": 22,
+          "anchor": "s03-p022",
+          "text_sha256": "1cb9b9338a806d06bf8d6ed8401e83668ef92495db1385528fa8760373a19ecb",
+          "characters": 428
+        },
+        {
+          "page": 23,
+          "anchor": "s03-p023",
+          "text_sha256": "4261ae4762c85e4c62335275c3f98a2a99157595228f0b3ce3b7262e846bebca",
+          "characters": 36
+        },
+        {
+          "page": 24,
+          "anchor": "s03-p024",
+          "text_sha256": "1b77364f794bc22ea8cd258c48ae3740e2e5b2e4020423f8e2ce4ad852399e91",
+          "characters": 430
+        },
+        {
+          "page": 25,
+          "anchor": "s03-p025",
+          "text_sha256": "0c47b0eb9dfa9f9930316269bec50697c26284dd048d9448a7c599756d191748",
+          "characters": 887
+        },
+        {
+          "page": 26,
+          "anchor": "s03-p026",
+          "text_sha256": "2cdf3063a86e0263accb494010566fa71ad6c85ccda81ba6618dec962ea2812b",
+          "characters": 627
+        },
+        {
+          "page": 27,
+          "anchor": "s03-p027",
+          "text_sha256": "c68b963f298c7fa135ca27187faa2cab853dc8fe1b7bb7766b5ee674fa16581d",
+          "characters": 794
+        },
+        {
+          "page": 28,
+          "anchor": "s03-p028",
+          "text_sha256": "136ee2f3efe5291884cd99126eadf0b3b51f3876cab850736d309a1055d40737",
+          "characters": 782
+        },
+        {
+          "page": 29,
+          "anchor": "s03-p029",
+          "text_sha256": "66933d609df8745f7cdc7a8f5fd958a31e5888aba1cfc47b31ba90e712db6efb",
+          "characters": 384
+        },
+        {
+          "page": 30,
+          "anchor": "s03-p030",
+          "text_sha256": "0c36f6fb0656ae6b7005364079abf0a31e290914e01e8bd82fb0f15063b9f5c2",
+          "characters": 1085
+        },
+        {
+          "page": 31,
+          "anchor": "s03-p031",
+          "text_sha256": "3c310efec5990cfbafc0ccaf44ff895d517d111ddf5842e548955eee71645efc",
+          "characters": 543
+        },
+        {
+          "page": 32,
+          "anchor": "s03-p032",
+          "text_sha256": "c152ee4263dc169bb8df4e9c63ecf39860396da83e8cb78cebef32680c886a8c",
+          "characters": 764
+        },
+        {
+          "page": 33,
+          "anchor": "s03-p033",
+          "text_sha256": "44097135359a20b17e5fa35db1c2d9f4ac89804eb57ed67cc49483091fd4ce20",
+          "characters": 984
+        },
+        {
+          "page": 34,
+          "anchor": "s03-p034",
+          "text_sha256": "2aac959edab1cd45838fa5f63b1a3dc4471d25963afa838564e1ea2fd414b59e",
+          "characters": 608
+        },
+        {
+          "page": 35,
+          "anchor": "s03-p035",
+          "text_sha256": "2196be28bc205c8b91baf30c0b921a395a73ea9bfda119c616b106c5c9e370af",
+          "characters": 840
+        },
+        {
+          "page": 36,
+          "anchor": "s03-p036",
+          "text_sha256": "21e8fb566b8d340deb7d91d1d3a786eac6dd263f260582683fa109a6e4b8b774",
+          "characters": 941
+        },
+        {
+          "page": 37,
+          "anchor": "s03-p037",
+          "text_sha256": "073915f2a6093c9ab9a388b68782a968022d55f2727421e99c4a9aac2b98b33e",
+          "characters": 505
+        },
+        {
+          "page": 38,
+          "anchor": "s03-p038",
+          "text_sha256": "6101e0a78fc5e3e7b79b1f96c51a7474712360a93ee7191ffb72fd38579ed09e",
+          "characters": 836
+        },
+        {
+          "page": 39,
+          "anchor": "s03-p039",
+          "text_sha256": "a6336e03e30e32550123920f1a59730b5fd481172b7f0103c0f4036b0519cb6a",
+          "characters": 965
+        },
+        {
+          "page": 40,
+          "anchor": "s03-p040",
+          "text_sha256": "de6e5bb3d1a797e0aab0a94ccc824082820d880f074d3cdb3d0a20e0f1e0ccd1",
+          "characters": 784
+        },
+        {
+          "page": 41,
+          "anchor": "s03-p041",
+          "text_sha256": "864c08e6304b4995ce95af334ae113f4c453bc64b6f34d211836fe97952455c2",
+          "characters": 557
+        },
+        {
+          "page": 42,
+          "anchor": "s03-p042",
+          "text_sha256": "db753378ca89ab74f7977d9446263221f0ea3219404bdb6f072f738183f97d7a",
+          "characters": 497
+        },
+        {
+          "page": 43,
+          "anchor": "s03-p043",
+          "text_sha256": "b46b058951499c43247c4a86468a0932f1143fc9f5dd47b168149931f8549b93",
+          "characters": 10
+        },
+        {
+          "page": 44,
+          "anchor": "s03-p044",
+          "text_sha256": "b57f702ebf11a585bc5768e58bd9472045c1159d3ea5bc56ee4666bcbf18d676",
+          "characters": 887
+        },
+        {
+          "page": 45,
+          "anchor": "s03-p045",
+          "text_sha256": "5eb1181f3e73427d3f08e7d35bf1e156cc5394fec6f92f9579defb6cb463b235",
+          "characters": 672
+        },
+        {
+          "page": 46,
+          "anchor": "s03-p046",
+          "text_sha256": "d830cd8afcf992c76fee16b816bab63af6a0e1bde4f38849b1e6542dd0f946b2",
+          "characters": 681
+        },
+        {
+          "page": 47,
+          "anchor": "s03-p047",
+          "text_sha256": "b1c2a545d2f0ddea14b84f069915818a641f7933a68291968e9fa81fa3e88132",
+          "characters": 581
+        },
+        {
+          "page": 48,
+          "anchor": "s03-p048",
+          "text_sha256": "1f091481e02f4c8451c4cff17f74d7601c128c2b358f730663fd6265766ec620",
+          "characters": 90
+        }
+      ]
+    },
+    {
+      "source": "S04 - Slides (revised).pdf",
+      "pdf_sha256": "818d7fa7c6d05f6c3e438a13d2c3d5d4cdb8876aae2185a1cc553e881d50eea1",
+      "pages_expected": 40,
+      "pages_transcribed": 40,
+      "extraction": "pypdf extract_text; strip outer whitespace only; no summarisation",
+      "page_records": [
+        {
+          "page": 1,
+          "anchor": "s04-p001",
+          "text_sha256": "3fb39bb7a74d5452e01cef00dc6c07a55fabbf69208cd1426ed409bdb67546a2",
+          "characters": 187
+        },
+        {
+          "page": 2,
+          "anchor": "s04-p002",
+          "text_sha256": "8892d8d7f5d4e113fcee1eb0084458c0a27039258912110ee2e622304661bed8",
+          "characters": 542
+        },
+        {
+          "page": 3,
+          "anchor": "s04-p003",
+          "text_sha256": "04cd9377b58705620c7c9ab5b6dcd0d1f5580e4b0ffb7b97ddf994c9e2d775ec",
+          "characters": 624
+        },
+        {
+          "page": 4,
+          "anchor": "s04-p004",
+          "text_sha256": "e4efade7c3e0ffc9c85ec36b9ac123292d1fce2f6fc9bb3461f344b0f6870c06",
+          "characters": 47
+        },
+        {
+          "page": 5,
+          "anchor": "s04-p005",
+          "text_sha256": "48eadbf9c1abb393119d8393fd91426339fda04fd2ac4960c01d17001b45347c",
+          "characters": 419
+        },
+        {
+          "page": 6,
+          "anchor": "s04-p006",
+          "text_sha256": "7c2b8059aae1b458ccb78ac665c2f43036a0a0823b7e083386e56eedd4631c47",
+          "characters": 345
+        },
+        {
+          "page": 7,
+          "anchor": "s04-p007",
+          "text_sha256": "e3b170013df31af241a5a02ae985e8ac14266356643670032030d813163b5d56",
+          "characters": 436
+        },
+        {
+          "page": 8,
+          "anchor": "s04-p008",
+          "text_sha256": "fdde982c129febf2e9d38bbceb44c8edd2ff12ea15272775fd726070b854b516",
+          "characters": 518
+        },
+        {
+          "page": 9,
+          "anchor": "s04-p009",
+          "text_sha256": "405e52717bbe78a113e93e89c490b49c54a63a45dd5055f7aff7d6b34a9ac647",
+          "characters": 526
+        },
+        {
+          "page": 10,
+          "anchor": "s04-p010",
+          "text_sha256": "61260c59327c40d12b868e6bd2458d53519287e0717361f07ef01ce18ce52f82",
+          "characters": 501
+        },
+        {
+          "page": 11,
+          "anchor": "s04-p011",
+          "text_sha256": "4dbba18042a31f954e60db3da6a1917e6441bee1398680231924357a5e2a86bf",
+          "characters": 408
+        },
+        {
+          "page": 12,
+          "anchor": "s04-p012",
+          "text_sha256": "354a43610d9149ac682a939cde913f654e21646681d295162f4a2ada6e40da4b",
+          "characters": 41
+        },
+        {
+          "page": 13,
+          "anchor": "s04-p013",
+          "text_sha256": "4710f7e7b09246b6fb13c06c84208e858c56531dae11745e05207ccd69ed0957",
+          "characters": 453
+        },
+        {
+          "page": 14,
+          "anchor": "s04-p014",
+          "text_sha256": "25b3c4bf646ca57c081ad5719307429750d91f4c3babb92a7334a0d95de5de1e",
+          "characters": 478
+        },
+        {
+          "page": 15,
+          "anchor": "s04-p015",
+          "text_sha256": "0793457efca7ffd1c21b8573e5c7310b9123d2582404405c1958f55141c7fea8",
+          "characters": 521
+        },
+        {
+          "page": 16,
+          "anchor": "s04-p016",
+          "text_sha256": "00167cd6e7d5e65ecb3150709d46549318fb61053e5b51c02fcb2c7a8149dcbc",
+          "characters": 509
+        },
+        {
+          "page": 17,
+          "anchor": "s04-p017",
+          "text_sha256": "d54e5ecd6ed941a0bbc4d1acddb5b1f86ad958fd1bed8dcc32975c905bf1ce36",
+          "characters": 402
+        },
+        {
+          "page": 18,
+          "anchor": "s04-p018",
+          "text_sha256": "093a7d5edff6cb6c443e83f4b154797f480f6c858a982576b9bc4412b3775175",
+          "characters": 560
+        },
+        {
+          "page": 19,
+          "anchor": "s04-p019",
+          "text_sha256": "2c00ff57bcbd137aa12ec72ee56f7105941aa3aca10441c231c75e8852f772ff",
+          "characters": 567
+        },
+        {
+          "page": 20,
+          "anchor": "s04-p020",
+          "text_sha256": "924ce70ae5c4fd11210d38c60da380c75533fad7eb76d9b511610137cb41691a",
+          "characters": 772
+        },
+        {
+          "page": 21,
+          "anchor": "s04-p021",
+          "text_sha256": "bf6c9185ad60c75b632950adf438742252135d013bf97888dc1bd7e30530de0e",
+          "characters": 528
+        },
+        {
+          "page": 22,
+          "anchor": "s04-p022",
+          "text_sha256": "fb13195ebe140fab3697ff5f3fd09d6ad8222fbacf2b22adf507b3116cb94b16",
+          "characters": 480
+        },
+        {
+          "page": 23,
+          "anchor": "s04-p023",
+          "text_sha256": "ede6bb4fe47a054b3ecee7fe26b189a2f01ce67ffbd28e891b1bedf87d4cd10b",
+          "characters": 509
+        },
+        {
+          "page": 24,
+          "anchor": "s04-p024",
+          "text_sha256": "5a98b3c6352b5b466f5814b22c9611a6228dfc92710cab3784ca817c11e448a2",
+          "characters": 34
+        },
+        {
+          "page": 25,
+          "anchor": "s04-p025",
+          "text_sha256": "b4e5f11b33a20c2c9cf7917921a9c20e2e52110f9f78ed071bb1ada4a6d906bd",
+          "characters": 659
+        },
+        {
+          "page": 26,
+          "anchor": "s04-p026",
+          "text_sha256": "1d1d8c1799899c02be9b6c7adaabc4f63e1e2ba2ec15aabb15b5c6b865b4f56a",
+          "characters": 359
+        },
+        {
+          "page": 27,
+          "anchor": "s04-p027",
+          "text_sha256": "20b55df8ab4c3322822b756be0820ed4dd4d86a2e45de6d446b198370fe56b30",
+          "characters": 384
+        },
+        {
+          "page": 28,
+          "anchor": "s04-p028",
+          "text_sha256": "74d9d894b5f8beeefe313087e4b8d7a49274702b07a0848ed52f9d5a3fcbcefb",
+          "characters": 481
+        },
+        {
+          "page": 29,
+          "anchor": "s04-p029",
+          "text_sha256": "29e324d76cdd0ed281cc937577a80c69456497f44c8ea7d473c428606a3a9679",
+          "characters": 1185
+        },
+        {
+          "page": 30,
+          "anchor": "s04-p030",
+          "text_sha256": "e06b779cfee1cc5f2591e6f435f15f99f044f7d8498e064581a23fa7517621ea",
+          "characters": 634
+        },
+        {
+          "page": 31,
+          "anchor": "s04-p031",
+          "text_sha256": "b46b058951499c43247c4a86468a0932f1143fc9f5dd47b168149931f8549b93",
+          "characters": 10
+        },
+        {
+          "page": 32,
+          "anchor": "s04-p032",
+          "text_sha256": "7382350d8c6be969bb35b9a1045656fdf6eec1c15f1a2991365875699a6f927d",
+          "characters": 800
+        },
+        {
+          "page": 33,
+          "anchor": "s04-p033",
+          "text_sha256": "bb01d995be47dca6cd262e4740b41a7d85c21e44ac31dec9464f834bda426aa0",
+          "characters": 635
+        },
+        {
+          "page": 34,
+          "anchor": "s04-p034",
+          "text_sha256": "d0d0fe5d9cb1f4c07ff75e99fd0a3329a171899560c30559bbfd348154eb0c16",
+          "characters": 40
+        },
+        {
+          "page": 35,
+          "anchor": "s04-p035",
+          "text_sha256": "7fab6d5a4526f76aa48182bafd0780b13208b64bb992063117211833d46a84ea",
+          "characters": 503
+        },
+        {
+          "page": 36,
+          "anchor": "s04-p036",
+          "text_sha256": "503eb96d6e27533cf1d2f1a40068300c22f1c1b1557cc0f9018eb1e8c56f36f6",
+          "characters": 853
+        },
+        {
+          "page": 37,
+          "anchor": "s04-p037",
+          "text_sha256": "61c8b6ff13036e41d6273712b9573671bffad3918637f6222d28907df1386198",
+          "characters": 672
+        },
+        {
+          "page": 38,
+          "anchor": "s04-p038",
+          "text_sha256": "6b89e66a444f6c46b1acd60def89bf4f1571aa09438c483017dbb2bbcc54a8f7",
+          "characters": 551
+        },
+        {
+          "page": 39,
+          "anchor": "s04-p039",
+          "text_sha256": "0163f3dfc2f1ce28aec28ea81b5a348f7dc8652f8867c2fef40f41963385074c",
+          "characters": 463
+        },
+        {
+          "page": 40,
+          "anchor": "s04-p040",
+          "text_sha256": "8016d90e919f1ad0b0cbc8b33c2ded29a5191c4ffdd6faff0da9ad0bd0c39585",
+          "characters": 87
+        }
+      ]
+    }
+  ]
+}

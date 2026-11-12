@@ -1,0 +1,501 @@
+cik,company,sector,tickers,universe_date
+0000066740,3M,Industrials,MMM,2025-12-31
+0000091142,A. O. Smith,Industrials,AOS,2025-12-31
+0000874761,AES Corporation,Utilities,AES,2025-12-31
+0001841666,APA Corporation,Energy,APA,2025-12-31
+0000732717,AT&T,Communication Services,T,2025-12-31
+0001551152,AbbVie,Health Care,ABBV,2025-12-31
+0000001800,Abbott Laboratories,Health Care,ABT,2025-12-31
+0001467373,Accenture,Information Technology,ACN,2025-12-31
+0000796343,Adobe Inc.,Information Technology,ADBE,2025-12-31
+0000002488,Advanced Micro Devices,Information Technology,AMD,2025-12-31
+0000004977,Aflac,Financials,AFL,2025-12-31
+0001090872,Agilent Technologies,Health Care,A,2025-12-31
+0000002969,Air Products,Materials,APD,2025-12-31
+0001559720,Airbnb,Consumer Discretionary,ABNB,2025-12-31
+0001086222,Akamai Technologies,Information Technology,AKAM,2025-12-31
+0000915913,Albemarle Corporation,Materials,ALB,2025-12-31
+0001035443,Alexandria Real Estate Equities,Real Estate,ARE,2025-12-31
+0001097149,Align Technology,Health Care,ALGN,2025-12-31
+0001579241,Allegion,Industrials,ALLE,2025-12-31
+0000352541,Alliant Energy,Utilities,LNT,2025-12-31
+0000899051,Allstate,Financials,ALL,2025-12-31
+0001652044,Alphabet Inc.,Communication Services,GOOG|GOOGL,2025-12-31
+0000764180,Altria,Consumer Staples,MO,2025-12-31
+0001018724,Amazon,Consumer Discretionary,AMZN,2025-12-31
+0001748790,Amcor,Materials,AMCR,2025-12-31
+0001002910,Ameren,Utilities,AEE,2025-12-31
+0000004904,American Electric Power,Utilities,AEP,2025-12-31
+0000004962,American Express,Financials,AXP,2025-12-31
+0000005272,American International Group,Financials,AIG,2025-12-31
+0001053507,American Tower,Real Estate,AMT,2025-12-31
+0001410636,American Water Works,Utilities,AWK,2025-12-31
+0000820027,Ameriprise Financial,Financials,AMP,2025-12-31
+0001037868,Ametek,Industrials,AME,2025-12-31
+0000318154,Amgen,Health Care,AMGN,2025-12-31
+0000820313,Amphenol,Information Technology,APH,2025-12-31
+0000006281,Analog Devices,Information Technology,ADI,2025-12-31
+0000315293,Aon plc,Financials,AON,2025-12-31
+0001858681,Apollo Global Management,Financials,APO,2025-12-31
+0001751008,AppLovin,Information Technology,APP,2025-12-31
+0000320193,Apple Inc.,Information Technology,AAPL,2025-12-31
+0000006951,Applied Materials,Information Technology,AMAT,2025-12-31
+0001521332,Aptiv,Consumer Discretionary,APTV,2025-12-31
+0000947484,Arch Capital Group,Financials,ACGL,2025-12-31
+0000007084,Archer Daniels Midland,Consumer Staples,ADM,2025-12-31
+0001176948,Ares Management,Financials,ARES,2025-12-31
+0001596532,Arista Networks,Information Technology,ANET,2025-12-31
+0000354190,Arthur J. Gallagher & Co.,Financials,AJG,2025-12-31
+0001267238,Assurant,Financials,AIZ,2025-12-31
+0000731802,Atmos Energy,Utilities,ATO,2025-12-31
+0000866787,AutoZone,Consumer Discretionary,AZO,2025-12-31
+0000769397,Autodesk,Information Technology,ADSK,2025-12-31
+0000008670,Automatic Data Processing,Industrials,ADP,2025-12-31
+0000915912,AvalonBay Communities,Real Estate,AVB,2025-12-31
+0000008818,Avery Dennison,Materials,AVY,2025-12-31
+0001069183,Axon Enterprise,Industrials,AXON,2025-12-31
+0001390777,BNY Mellon,Financials,BK,2025-12-31
+0001037540,"BXP, Inc.",Real Estate,BXP,2025-12-31
+0001701605,Baker Hughes,Energy,BKR,2025-12-31
+0000009389,Ball Corporation,Materials,BALL,2025-12-31
+0000070858,Bank of America,Financials,BAC,2025-12-31
+0000010456,Baxter International,Health Care,BAX,2025-12-31
+0000010795,Becton Dickinson,Health Care,BDX,2025-12-31
+0001067983,Berkshire Hathaway,Financials,BRK.B,2025-12-31
+0000764478,Best Buy,Consumer Discretionary,BBY,2025-12-31
+0000842023,Bio-Techne,Health Care,TECH,2025-12-31
+0000875045,Biogen,Health Care,BIIB,2025-12-31
+0002012383,BlackRock,Financials,BLK,2025-12-31
+0001393818,Blackstone Inc.,Financials,BX,2025-12-31
+0001512673,"Block, Inc.",Financials,XYZ,2025-12-31
+0000012927,Boeing,Industrials,BA,2025-12-31
+0001075531,Booking Holdings,Consumer Discretionary,BKNG,2025-12-31
+0000885725,Boston Scientific,Health Care,BSX,2025-12-31
+0000014272,Bristol Myers Squibb,Health Care,BMY,2025-12-31
+0001730168,Broadcom,Information Technology,AVGO,2025-12-31
+0001383312,Broadridge Financial Solutions,Industrials,BR,2025-12-31
+0000079282,Brown & Brown,Financials,BRO,2025-12-31
+0000014693,Brown–Forman,Consumer Staples,BF.B,2025-12-31
+0001316835,Builders FirstSource,Industrials,BLDR,2025-12-31
+0001996862,Bunge Global,Consumer Staples,BG,2025-12-31
+0001043277,C.H. Robinson,Industrials,CHRW,2025-12-31
+0001138118,CBRE Group,Real Estate,CBRE,2025-12-31
+0001402057,CDW Corporation,Information Technology,CDW,2025-12-31
+0001324404,CF Industries,Materials,CF,2025-12-31
+0001156375,CME Group,Financials,CME,2025-12-31
+0000811156,CMS Energy,Utilities,CMS,2025-12-31
+0000849395,CRH,Materials,CRH,2025-12-31
+0000277948,CSX Corporation,Industrials,CSX,2025-12-31
+0000064803,CVS Health,Health Care,CVS,2025-12-31
+0000813672,Cadence Design Systems,Information Technology,CDNS,2025-12-31
+0000906345,Camden Property Trust,Real Estate,CPT,2025-12-31
+0000016732,Campbell's Company (The),Consumer Staples,CPB,2025-12-31
+0000927628,Capital One,Financials,COF,2025-12-31
+0000721371,Cardinal Health,Health Care,CAH,2025-12-31
+0000815097,Carnival,Consumer Discretionary,CCL,2025-12-31
+0001783180,Carrier Global,Industrials,CARR,2025-12-31
+0001690820,Carvana,Consumer Discretionary,CVNA,2025-12-31
+0000018230,Caterpillar Inc.,Industrials,CAT,2025-12-31
+0001374310,Cboe Global Markets,Financials,CBOE,2025-12-31
+0001140859,Cencora,Health Care,COR,2025-12-31
+0001071739,Centene Corporation,Health Care,CNC,2025-12-31
+0001130310,CenterPoint Energy,Utilities,CNP,2025-12-31
+0001100682,Charles River Laboratories,Health Care,CRL,2025-12-31
+0000316709,Charles Schwab Corporation,Financials,SCHW,2025-12-31
+0001091667,Charter Communications,Communication Services,CHTR,2025-12-31
+0000093410,Chevron Corporation,Energy,CVX,2025-12-31
+0001058090,Chipotle Mexican Grill,Consumer Discretionary,CMG,2025-12-31
+0000896159,Chubb Limited,Financials,CB,2025-12-31
+0000313927,Church & Dwight,Consumer Staples,CHD,2025-12-31
+0001739940,Cigna,Health Care,CI,2025-12-31
+0000020286,Cincinnati Financial,Financials,CINF,2025-12-31
+0000723254,Cintas,Industrials,CTAS,2025-12-31
+0000858877,Cisco,Information Technology,CSCO,2025-12-31
+0000831001,Citigroup,Financials,C,2025-12-31
+0000759944,Citizens Financial Group,Financials,CFG,2025-12-31
+0000021076,Clorox,Consumer Staples,CLX,2025-12-31
+0001057352,CoStar Group,Real Estate,CSGP,2025-12-31
+0000021344,Coca-Cola Company (The),Consumer Staples,KO,2025-12-31
+0001058290,Cognizant,Information Technology,CTSH,2025-12-31
+0001679788,Coinbase,Financials,COIN,2025-12-31
+0000021665,Colgate-Palmolive,Consumer Staples,CL,2025-12-31
+0001166691,Comcast,Communication Services,CMCSA,2025-12-31
+0001035983,Comfort Systems USA,Industrials,FIX,2025-12-31
+0000023217,Conagra Brands,Consumer Staples,CAG,2025-12-31
+0001163165,ConocoPhillips,Energy,COP,2025-12-31
+0001047862,Consolidated Edison,Utilities,ED,2025-12-31
+0000016918,Constellation Brands,Consumer Staples,STZ,2025-12-31
+0001868275,Constellation Energy,Utilities,CEG,2025-12-31
+0000711404,Cooper Companies (The),Health Care,COO,2025-12-31
+0000900075,Copart,Industrials,CPRT,2025-12-31
+0000024741,Corning Inc.,Information Technology,GLW,2025-12-31
+0001175454,Corpay,Financials,CPAY,2025-12-31
+0001755672,Corteva,Materials,CTVA,2025-12-31
+0000909832,Costco,Consumer Staples,COST,2025-12-31
+0000858470,Coterra,Energy,CTRA,2025-12-31
+0001535527,CrowdStrike,Information Technology,CRWD,2025-12-31
+0001051470,Crown Castle,Real Estate,CCI,2025-12-31
+0000026172,Cummins,Industrials,CMI,2025-12-31
+0000882184,D. R. Horton,Consumer Discretionary,DHI,2025-12-31
+0000936340,DTE Energy,Utilities,DTE,2025-12-31
+0000927066,DaVita,Health Care,DVA,2025-12-31
+0000313616,Danaher Corporation,Health Care,DHR,2025-12-31
+0000940944,Darden Restaurants,Consumer Discretionary,DRI,2025-12-31
+0001561550,Datadog,Information Technology,DDOG,2025-12-31
+0001725057,Dayforce,Industrials,DAY,2025-12-31
+0000910521,Deckers Brands,Consumer Discretionary,DECK,2025-12-31
+0000315189,Deere & Company,Industrials,DE,2025-12-31
+0001571996,Dell Technologies,Information Technology,DELL,2025-12-31
+0000027904,Delta Air Lines,Industrials,DAL,2025-12-31
+0001090012,Devon Energy,Energy,DVN,2025-12-31
+0001093557,Dexcom,Health Care,DXCM,2025-12-31
+0001539838,Diamondback Energy,Energy,FANG,2025-12-31
+0001297996,Digital Realty,Real Estate,DLR,2025-12-31
+0000029534,Dollar General,Consumer Staples,DG,2025-12-31
+0000935703,Dollar Tree,Consumer Staples,DLTR,2025-12-31
+0000715957,Dominion Energy,Utilities,D,2025-12-31
+0001286681,Domino's,Consumer Discretionary,DPZ,2025-12-31
+0001792789,DoorDash,Consumer Discretionary,DASH,2025-12-31
+0000029905,Dover Corporation,Industrials,DOV,2025-12-31
+0001751788,Dow Inc.,Materials,DOW,2025-12-31
+0001666700,DuPont,Materials,DD,2025-12-31
+0001326160,Duke Energy,Utilities,DUK,2025-12-31
+0000821189,EOG Resources,Energy,EOG,2025-12-31
+0001352010,EPAM Systems,Information Technology,EPAM,2025-12-31
+0000033213,EQT Corporation,Energy,EQT,2025-12-31
+0001551182,Eaton Corporation,Industrials,ETN,2025-12-31
+0000031462,Ecolab,Materials,ECL,2025-12-31
+0000827052,Edison International,Utilities,EIX,2025-12-31
+0001099800,Edwards Lifesciences,Health Care,EW,2025-12-31
+0000712515,Electronic Arts,Communication Services,EA,2025-12-31
+0001156039,Elevance Health,Health Care,ELV,2025-12-31
+0000105634,Emcor,Industrials,EME,2025-12-31
+0000032604,Emerson Electric,Industrials,EMR,2025-12-31
+0000065984,Entergy,Utilities,ETR,2025-12-31
+0000033185,Equifax,Industrials,EFX,2025-12-31
+0001101239,Equinix,Real Estate,EQIX,2025-12-31
+0000906107,Equity Residential,Real Estate,EQR,2025-12-31
+0000922621,Erie Indemnity,Financials,ERIE,2025-12-31
+0000920522,Essex Property Trust,Real Estate,ESS,2025-12-31
+0001001250,Estée Lauder Companies (The),Consumer Staples,EL,2025-12-31
+0001095073,Everest Group,Financials,EG,2025-12-31
+0001711269,Evergy,Utilities,EVRG,2025-12-31
+0000072741,Eversource Energy,Utilities,ES,2025-12-31
+0001109357,Exelon,Utilities,EXC,2025-12-31
+0000895126,Expand Energy,Energy,EXE,2025-12-31
+0001324424,Expedia Group,Consumer Discretionary,EXPE,2025-12-31
+0000746515,Expeditors International,Industrials,EXPD,2025-12-31
+0001289490,Extra Space Storage,Real Estate,EXR,2025-12-31
+0000034088,ExxonMobil,Energy,XOM,2025-12-31
+0001048695,"F5, Inc.",Information Technology,FFIV,2025-12-31
+0001013237,FactSet,Financials,FDS,2025-12-31
+0000814547,Fair Isaac,Information Technology,FICO,2025-12-31
+0000815556,Fastenal,Industrials,FAST,2025-12-31
+0001048911,FedEx,Industrials,FDX,2025-12-31
+0000034903,Federal Realty Investment Trust,Real Estate,FRT,2025-12-31
+0001136893,Fidelity National Information Services,Financials,FIS,2025-12-31
+0000035527,Fifth Third Bancorp,Financials,FITB,2025-12-31
+0001274494,First Solar,Information Technology,FSLR,2025-12-31
+0001031296,FirstEnergy,Utilities,FE,2025-12-31
+0000798354,Fiserv,Financials,FISV,2025-12-31
+0000037996,Ford Motor Company,Consumer Discretionary,F,2025-12-31
+0001262039,Fortinet,Information Technology,FTNT,2025-12-31
+0001659166,Fortive,Industrials,FTV,2025-12-31
+0001754301,Fox Corporation,Communication Services,FOX|FOXA,2025-12-31
+0000038777,Franklin Resources,Financials,BEN,2025-12-31
+0000831259,Freeport-McMoRan,Materials,FCX,2025-12-31
+0000040545,GE Aerospace,Industrials,GE,2025-12-31
+0001932393,GE HealthCare,Health Care,GEHC,2025-12-31
+0001996810,GE Vernova,Industrials,GEV,2025-12-31
+0001121788,Garmin,Consumer Discretionary,GRMN,2025-12-31
+0000749251,Gartner,Information Technology,IT,2025-12-31
+0000849399,Gen Digital,Information Technology,GEN,2025-12-31
+0001474735,Generac,Industrials,GNRC,2025-12-31
+0000040533,General Dynamics,Industrials,GD,2025-12-31
+0000040704,General Mills,Consumer Staples,GIS,2025-12-31
+0001467858,General Motors,Consumer Discretionary,GM,2025-12-31
+0000040987,Genuine Parts Company,Consumer Discretionary,GPC,2025-12-31
+0000882095,Gilead Sciences,Health Care,GILD,2025-12-31
+0001123360,Global Payments,Financials,GPN,2025-12-31
+0000320335,Globe Life,Financials,GL,2025-12-31
+0001609711,GoDaddy,Information Technology,GDDY,2025-12-31
+0000886982,Goldman Sachs,Financials,GS,2025-12-31
+0000860730,HCA Healthcare,Health Care,HCA,2025-12-31
+0000047217,HP Inc.,Information Technology,HPQ,2025-12-31
+0000045012,Halliburton,Energy,HAL,2025-12-31
+0000874766,Hartford (The),Financials,HIG,2025-12-31
+0000046080,Hasbro,Consumer Discretionary,HAS,2025-12-31
+0000765880,Healthpeak Properties,Real Estate,DOC,2025-12-31
+0001000228,Henry Schein,Health Care,HSIC,2025-12-31
+0000047111,Hershey Company (The),Consumer Staples,HSY,2025-12-31
+0001645590,Hewlett Packard Enterprise,Information Technology,HPE,2025-12-31
+0001585689,Hilton Worldwide,Consumer Discretionary,HLT,2025-12-31
+0000859737,Hologic,Health Care,HOLX,2025-12-31
+0000354950,Home Depot (The),Consumer Discretionary,HD,2025-12-31
+0000773840,Honeywell,Industrials,HON,2025-12-31
+0000048465,Hormel Foods,Consumer Staples,HRL,2025-12-31
+0001070750,Host Hotels & Resorts,Real Estate,HST,2025-12-31
+0000004281,Howmet Aerospace,Industrials,HWM,2025-12-31
+0000048898,Hubbell Incorporated,Industrials,HUBB,2025-12-31
+0000049071,Humana,Health Care,HUM,2025-12-31
+0000049196,Huntington Bancshares,Financials,HBAN,2025-12-31
+0001501585,Huntington Ingalls Industries,Industrials,HII,2025-12-31
+0000051143,IBM,Information Technology,IBM,2025-12-31
+0000832101,IDEX Corporation,Industrials,IEX,2025-12-31
+0001478242,IQVIA,Health Care,IQV,2025-12-31
+0000874716,Idexx Laboratories,Health Care,IDXX,2025-12-31
+0000049826,Illinois Tool Works,Industrials,ITW,2025-12-31
+0000879169,Incyte,Health Care,INCY,2025-12-31
+0001699150,Ingersoll Rand,Industrials,IR,2025-12-31
+0001145197,Insulet Corporation,Health Care,PODD,2025-12-31
+0000050863,Intel,Information Technology,INTC,2025-12-31
+0001381197,Interactive Brokers,Financials,IBKR,2025-12-31
+0001571949,Intercontinental Exchange,Financials,ICE,2025-12-31
+0000051253,International Flavors & Fragrances,Materials,IFF,2025-12-31
+0000051434,International Paper,Materials,IP,2025-12-31
+0000896878,Intuit,Information Technology,INTU,2025-12-31
+0001035267,Intuitive Surgical,Health Care,ISRG,2025-12-31
+0000914208,Invesco,Financials,IVZ,2025-12-31
+0001687229,Invitation Homes,Real Estate,INVH,2025-12-31
+0001020569,Iron Mountain,Real Estate,IRM,2025-12-31
+0000728535,J.B. Hunt,Industrials,JBHT,2025-12-31
+0000091419,J.M. Smucker Company (The),Consumer Staples,SJM,2025-12-31
+0000019617,JPMorgan Chase,Financials,JPM,2025-12-31
+0000898293,Jabil,Information Technology,JBL,2025-12-31
+0000779152,Jack Henry & Associates,Financials,JKHY,2025-12-31
+0000052988,Jacobs Solutions,Industrials,J,2025-12-31
+0000200406,Johnson & Johnson,Health Care,JNJ,2025-12-31
+0000833444,Johnson Controls,Industrials,JCI,2025-12-31
+0001404912,KKR & Co.,Financials,KKR,2025-12-31
+0000319201,KLA Corporation,Information Technology,KLAC,2025-12-31
+0001944048,Kenvue,Consumer Staples,KVUE,2025-12-31
+0001418135,Keurig Dr Pepper,Consumer Staples,KDP,2025-12-31
+0000091576,KeyCorp,Financials,KEY,2025-12-31
+0001601046,Keysight Technologies,Information Technology,KEYS,2025-12-31
+0000055785,Kimberly-Clark,Consumer Staples,KMB,2025-12-31
+0000879101,Kimco Realty,Real Estate,KIM,2025-12-31
+0001506307,Kinder Morgan,Energy,KMI,2025-12-31
+0001637459,Kraft Heinz,Consumer Staples,KHC,2025-12-31
+0000056873,Kroger,Consumer Staples,KR,2025-12-31
+0000202058,L3Harris,Industrials,LHX,2025-12-31
+0000920148,Labcorp,Health Care,LH,2025-12-31
+0000707549,Lam Research,Information Technology,LRCX,2025-12-31
+0001679273,Lamb Weston,Consumer Staples,LW,2025-12-31
+0001300514,Las Vegas Sands,Consumer Discretionary,LVS,2025-12-31
+0001336920,Leidos,Industrials,LDOS,2025-12-31
+0000920760,Lennar,Consumer Discretionary,LEN,2025-12-31
+0001069202,Lennox International,Industrials,LII,2025-12-31
+0000059478,Lilly (Eli),Health Care,LLY,2025-12-31
+0001707925,Linde plc,Materials,LIN,2025-12-31
+0001335258,Live Nation Entertainment,Communication Services,LYV,2025-12-31
+0000936468,Lockheed Martin,Industrials,LMT,2025-12-31
+0000060086,Loews Corporation,Financials,L,2025-12-31
+0000060667,Lowe's,Consumer Discretionary,LOW,2025-12-31
+0001397187,Lululemon Athletica,Consumer Discretionary,LULU,2025-12-31
+0001489393,LyondellBasell,Materials,LYB,2025-12-31
+0000036270,M&T Bank,Financials,MTB,2025-12-31
+0000789570,MGM Resorts,Consumer Discretionary,MGM,2025-12-31
+0001408198,MSCI Inc.,Financials,MSCI,2025-12-31
+0001510295,Marathon Petroleum,Energy,MPC,2025-12-31
+0001048286,Marriott International,Consumer Discretionary,MAR,2025-12-31
+0000062709,Marsh McLennan,Financials,MMC,2025-12-31
+0000916076,Martin Marietta Materials,Materials,MLM,2025-12-31
+0000062996,Masco,Industrials,MAS,2025-12-31
+0001141391,Mastercard,Financials,MA,2025-12-31
+0000891103,Match Group,Communication Services,MTCH,2025-12-31
+0000063754,McCormick & Company,Consumer Staples,MKC,2025-12-31
+0000063908,McDonald's,Consumer Discretionary,MCD,2025-12-31
+0000927653,McKesson Corporation,Health Care,MCK,2025-12-31
+0001613103,Medtronic,Health Care,MDT,2025-12-31
+0000310158,Merck & Co.,Health Care,MRK,2025-12-31
+0001099219,MetLife,Financials,MET,2025-12-31
+0001326801,Meta Platforms,Communication Services,META,2025-12-31
+0001037646,Mettler Toledo,Health Care,MTD,2025-12-31
+0000827054,Microchip Technology,Information Technology,MCHP,2025-12-31
+0000723125,Micron Technology,Information Technology,MU,2025-12-31
+0000789019,Microsoft,Information Technology,MSFT,2025-12-31
+0000912595,Mid-America Apartment Communities,Real Estate,MAA,2025-12-31
+0001682852,Moderna,Health Care,MRNA,2025-12-31
+0001179929,Molina Healthcare,Health Care,MOH,2025-12-31
+0000024545,Molson Coors Beverage Company,Consumer Staples,TAP,2025-12-31
+0001103982,Mondelez International,Consumer Staples,MDLZ,2025-12-31
+0001280452,Monolithic Power Systems,Information Technology,MPWR,2025-12-31
+0000865752,Monster Beverage,Consumer Staples,MNST,2025-12-31
+0001059556,Moody's Corporation,Financials,MCO,2025-12-31
+0000895421,Morgan Stanley,Financials,MS,2025-12-31
+0001285785,Mosaic Company (The),Materials,MOS,2025-12-31
+0000068505,Motorola Solutions,Information Technology,MSI,2025-12-31
+0001013871,NRG Energy,Utilities,NRG,2025-12-31
+0000906163,"NVR, Inc.",Consumer Discretionary,NVR,2025-12-31
+0001413447,NXP Semiconductors,Information Technology,NXPI,2025-12-31
+0001120193,"Nasdaq, Inc.",Financials,NDAQ,2025-12-31
+0001002047,NetApp,Information Technology,NTAP,2025-12-31
+0001065280,Netflix,Communication Services,NFLX,2025-12-31
+0001164727,Newmont,Materials,NEM,2025-12-31
+0001564708,News Corp,Communication Services,NWS|NWSA,2025-12-31
+0000753308,NextEra Energy,Utilities,NEE,2025-12-31
+0001111711,NiSource,Utilities,NI,2025-12-31
+0000320187,"Nike, Inc.",Consumer Discretionary,NKE,2025-12-31
+0000072331,Nordson Corporation,Industrials,NDSN,2025-12-31
+0000702165,Norfolk Southern,Industrials,NSC,2025-12-31
+0000073124,Northern Trust,Financials,NTRS,2025-12-31
+0001133421,Northrop Grumman,Industrials,NOC,2025-12-31
+0001513761,Norwegian Cruise Line Holdings,Consumer Discretionary,NCLH,2025-12-31
+0000073309,Nucor,Materials,NUE,2025-12-31
+0001045810,Nvidia,Information Technology,NVDA,2025-12-31
+0001097864,ON Semiconductor,Information Technology,ON,2025-12-31
+0000797468,Occidental Petroleum,Energy,OXY,2025-12-31
+0000878927,Old Dominion,Industrials,ODFL,2025-12-31
+0000029989,Omnicom Group,Communication Services,OMC,2025-12-31
+0001039684,Oneok,Energy,OKE,2025-12-31
+0001341439,Oracle Corporation,Information Technology,ORCL,2025-12-31
+0001781335,Otis Worldwide,Industrials,OTIS,2025-12-31
+0000898173,O’Reilly Automotive,Consumer Discretionary,ORLY,2025-12-31
+0001004980,PG&E Corporation,Utilities,PCG,2025-12-31
+0000713676,PNC Financial Services,Financials,PNC,2025-12-31
+0000079879,PPG Industries,Materials,PPG,2025-12-31
+0000922224,PPL Corporation,Utilities,PPL,2025-12-31
+0000857005,PTC Inc.,Information Technology,PTC,2025-12-31
+0000075362,Paccar,Industrials,PCAR,2025-12-31
+0000075677,Packaging Corporation of America,Materials,PKG,2025-12-31
+0001321655,Palantir Technologies,Information Technology,PLTR,2025-12-31
+0001327567,Palo Alto Networks,Information Technology,PANW,2025-12-31
+0002041610,Paramount Skydance Corporation,Communication Services,PSKY,2025-12-31
+0000076334,Parker Hannifin,Industrials,PH,2025-12-31
+0001633917,PayPal,Financials,PYPL,2025-12-31
+0000723531,Paychex,Industrials,PAYX,2025-12-31
+0001590955,Paycom,Industrials,PAYC,2025-12-31
+0000077360,Pentair,Industrials,PNR,2025-12-31
+0000077476,PepsiCo,Consumer Staples,PEP,2025-12-31
+0000078003,Pfizer,Health Care,PFE,2025-12-31
+0001413329,Philip Morris International,Consumer Staples,PM,2025-12-31
+0001534701,Phillips 66,Energy,PSX,2025-12-31
+0000764622,Pinnacle West Capital,Utilities,PNW,2025-12-31
+0000945841,Pool Corporation,Consumer Discretionary,POOL,2025-12-31
+0001126328,Principal Financial Group,Financials,PFG,2025-12-31
+0000080424,Procter & Gamble,Consumer Staples,PG,2025-12-31
+0000080661,Progressive Corporation,Financials,PGR,2025-12-31
+0001045609,Prologis,Real Estate,PLD,2025-12-31
+0001137774,Prudential Financial,Financials,PRU,2025-12-31
+0000788784,Public Service Enterprise Group,Utilities,PEG,2025-12-31
+0001393311,Public Storage,Real Estate,PSA,2025-12-31
+0000822416,PulteGroup,Consumer Discretionary,PHM,2025-12-31
+0002058873,Qnity Electronics,Information Technology,Q,2025-12-31
+0000804328,Qualcomm,Information Technology,QCOM,2025-12-31
+0001050915,Quanta Services,Industrials,PWR,2025-12-31
+0001022079,Quest Diagnostics,Health Care,DGX,2025-12-31
+0000101829,RTX Corporation,Industrials,RTX,2025-12-31
+0001037038,Ralph Lauren Corporation,Consumer Discretionary,RL,2025-12-31
+0000720005,Raymond James Financial,Financials,RJF,2025-12-31
+0000726728,Realty Income,Real Estate,O,2025-12-31
+0000910606,Regency Centers,Real Estate,REG,2025-12-31
+0000872589,Regeneron Pharmaceuticals,Health Care,REGN,2025-12-31
+0001281761,Regions Financial Corporation,Financials,RF,2025-12-31
+0001060391,Republic Services,Industrials,RSG,2025-12-31
+0000943819,ResMed,Health Care,RMD,2025-12-31
+0000031791,Revvity,Health Care,RVTY,2025-12-31
+0001783879,Robinhood Markets,Financials,HOOD,2025-12-31
+0001024478,Rockwell Automation,Industrials,ROK,2025-12-31
+0000084839,"Rollins, Inc.",Industrials,ROL,2025-12-31
+0000882835,Roper Technologies,Information Technology,ROP,2025-12-31
+0000745732,Ross Stores,Consumer Discretionary,ROST,2025-12-31
+0000884887,Royal Caribbean Group,Consumer Discretionary,RCL,2025-12-31
+0000064040,S&P Global,Financials,SPGI,2025-12-31
+0001034054,SBA Communications,Real Estate,SBAC,2025-12-31
+0001108524,Salesforce,Information Technology,CRM,2025-12-31
+0002023554,Sandisk,Information Technology,SNDK,2025-12-31
+0000087347,Schlumberger,Energy,SLB,2025-12-31
+0001137789,Seagate Technology,Information Technology,STX,2025-12-31
+0001032208,Sempra,Utilities,SRE,2025-12-31
+0001373715,ServiceNow,Information Technology,NOW,2025-12-31
+0000089800,Sherwin-Williams,Materials,SHW,2025-12-31
+0001063761,Simon Property Group,Real Estate,SPG,2025-12-31
+0000004127,Skyworks Solutions,Information Technology,SWKS,2025-12-31
+0002005951,Smurfit Westrock,Materials,SW,2025-12-31
+0000091440,Snap-on,Industrials,SNA,2025-12-31
+0001964738,Solventum,Health Care,SOLV,2025-12-31
+0000092122,Southern Company,Utilities,SO,2025-12-31
+0000092380,Southwest Airlines,Industrials,LUV,2025-12-31
+0000093556,Stanley Black & Decker,Industrials,SWK,2025-12-31
+0000829224,Starbucks,Consumer Discretionary,SBUX,2025-12-31
+0000093751,State Street Corporation,Financials,STT,2025-12-31
+0001022671,Steel Dynamics,Materials,STLD,2025-12-31
+0001757898,Steris,Health Care,STE,2025-12-31
+0000310764,Stryker Corporation,Health Care,SYK,2025-12-31
+0001375365,Supermicro,Information Technology,SMCI,2025-12-31
+0001601712,Synchrony Financial,Financials,SYF,2025-12-31
+0000883241,Synopsys,Information Technology,SNPS,2025-12-31
+0000096021,Sysco,Consumer Staples,SYY,2025-12-31
+0001283699,T-Mobile US,Communication Services,TMUS,2025-12-31
+0001113169,T. Rowe Price,Financials,TROW,2025-12-31
+0001385157,TE Connectivity,Information Technology,TEL,2025-12-31
+0000109198,TJX Companies,Consumer Discretionary,TJX,2025-12-31
+0001973266,TKO Group Holdings,Communication Services,TKO,2025-12-31
+0000946581,Take-Two Interactive,Communication Services,TTWO,2025-12-31
+0001116132,"Tapestry, Inc.",Consumer Discretionary,TPR,2025-12-31
+0001389170,Targa Resources,Energy,TRGP,2025-12-31
+0000027419,Target Corporation,Consumer Staples,TGT,2025-12-31
+0001094285,Teledyne Technologies,Information Technology,TDY,2025-12-31
+0000097210,Teradyne,Information Technology,TER,2025-12-31
+0001318605,"Tesla, Inc.",Consumer Discretionary,TSLA,2025-12-31
+0000097476,Texas Instruments,Information Technology,TXN,2025-12-31
+0001811074,Texas Pacific Land Corporation,Energy,TPL,2025-12-31
+0000217346,Textron,Industrials,TXT,2025-12-31
+0000097745,Thermo Fisher Scientific,Health Care,TMO,2025-12-31
+0000916365,Tractor Supply,Consumer Discretionary,TSCO,2025-12-31
+0001671933,Trade Desk (The),Communication Services,TTD,2025-12-31
+0001466258,Trane Technologies,Industrials,TT,2025-12-31
+0001260221,TransDigm Group,Industrials,TDG,2025-12-31
+0000086312,Travelers Companies (The),Financials,TRV,2025-12-31
+0000864749,Trimble Inc.,Information Technology,TRMB,2025-12-31
+0000092230,Truist Financial,Financials,TFC,2025-12-31
+0000860731,Tyler Technologies,Information Technology,TYL,2025-12-31
+0000100493,Tyson Foods,Consumer Staples,TSN,2025-12-31
+0000036104,U.S. Bancorp,Financials,USB,2025-12-31
+0000074208,"UDR, Inc.",Real Estate,UDR,2025-12-31
+0001543151,Uber,Industrials,UBER,2025-12-31
+0001403568,Ulta Beauty,Consumer Discretionary,ULTA,2025-12-31
+0000100885,Union Pacific Corporation,Industrials,UNP,2025-12-31
+0000100517,United Airlines Holdings,Industrials,UAL,2025-12-31
+0001090727,United Parcel Service,Industrials,UPS,2025-12-31
+0001067701,United Rentals,Industrials,URI,2025-12-31
+0000731766,UnitedHealth Group,Health Care,UNH,2025-12-31
+0000352915,Universal Health Services,Health Care,UHS,2025-12-31
+0001035002,Valero Energy,Energy,VLO,2025-12-31
+0000740260,Ventas,Real Estate,VTR,2025-12-31
+0001967680,Veralto,Industrials,VLTO,2025-12-31
+0001014473,Verisign,Information Technology,VRSN,2025-12-31
+0001442145,Verisk Analytics,Industrials,VRSK,2025-12-31
+0000732712,Verizon,Communication Services,VZ,2025-12-31
+0000875320,Vertex Pharmaceuticals,Health Care,VRTX,2025-12-31
+0001792044,Viatris,Health Care,VTRS,2025-12-31
+0001705696,Vici Properties,Real Estate,VICI,2025-12-31
+0001403161,Visa Inc.,Financials,V,2025-12-31
+0001692819,Vistra Corp.,Utilities,VST,2025-12-31
+0001396009,Vulcan Materials Company,Materials,VMC,2025-12-31
+0000011544,W. R. Berkley Corporation,Financials,WRB,2025-12-31
+0000277135,W. W. Grainger,Industrials,GWW,2025-12-31
+0000783325,WEC Energy Group,Utilities,WEC,2025-12-31
+0000943452,Wabtec,Industrials,WAB,2025-12-31
+0000104169,Walmart,Consumer Staples,WMT,2025-12-31
+0001744489,Walt Disney Company (The),Communication Services,DIS,2025-12-31
+0001437107,Warner Bros. Discovery,Communication Services,WBD,2025-12-31
+0000823768,Waste Management,Industrials,WM,2025-12-31
+0001000697,Waters Corporation,Health Care,WAT,2025-12-31
+0000072971,Wells Fargo,Financials,WFC,2025-12-31
+0000766704,Welltower,Real Estate,WELL,2025-12-31
+0000105770,West Pharmaceutical Services,Health Care,WST,2025-12-31
+0000106040,Western Digital,Information Technology,WDC,2025-12-31
+0000106535,Weyerhaeuser,Real Estate,WY,2025-12-31
+0000107263,Williams Companies,Energy,WMB,2025-12-31
+0000719955,"Williams-Sonoma, Inc.",Consumer Discretionary,WSM,2025-12-31
+0001140536,Willis Towers Watson,Financials,WTW,2025-12-31
+0001327811,"Workday, Inc.",Information Technology,WDAY,2025-12-31
+0001174922,Wynn Resorts,Consumer Discretionary,WYNN,2025-12-31
+0000072903,Xcel Energy,Utilities,XEL,2025-12-31
+0001524472,Xylem Inc.,Industrials,XYL,2025-12-31
+0001041061,Yum! Brands,Consumer Discretionary,YUM,2025-12-31
+0000877212,Zebra Technologies,Information Technology,ZBRA,2025-12-31
+0001136869,Zimmer Biomet,Health Care,ZBH,2025-12-31
+0001555280,Zoetis,Health Care,ZTS,2025-12-31
+0001065088,eBay Inc.,Consumer Discretionary,EBAY,2025-12-31

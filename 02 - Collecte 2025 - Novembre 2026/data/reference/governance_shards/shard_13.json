@@ -1,0 +1,177 @@
+{
+ "shard": "13",
+ "observations": [
+  {
+   "cik": "0001059556",
+   "company": "Moody's Corporation",
+   "accession": "0001059556-25-000072",
+   "publication_date": "2025-03-05",
+   "board_size": 10,
+   "independent_directors": 9,
+   "board_leadership": "Separate CEO and chair",
+   "ceo_name": "Robert Fauber",
+   "chair_name": "Vincent A. Forlenza",
+   "independence_standard": "NYSE",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/1059556/000105955625000072/mco-20250304.htm",
+   "archive_file": "data/raw/governance/0001059556_0001059556-25-000072.htm",
+   "evidence": [
+    {
+     "group": "board_counts",
+     "locator": "Proposal 1, Election of Directors",
+     "quote": "Kathryn Hill will not stand for reelection to the Board at the Annual Meeting and will retire from the Board at the end of her current term. Accordingly, the Board will set the number of directors at nine, effective as of the Annual Meeting. All of the nominees are currently members of the Board of Directors.",
+     "note": "Nine nominees all currently directors, plus Kathryn Hill who still sits until the meeting: 9 + 1 = 10 current directors."
+    },
+    {
+     "group": "independence",
+     "locator": "Corporate Governance, Director Independence",
+     "quote": "The Board has determined that Mr. Fauber, as the Company’s CEO, is the only member of the Board who has not been determined to be independent under these standards.",
+     "note": "Same text names Bermudez, Esperdy, Forlenza, Hill, Howell, Minaya, Seidman, Serafin and Van Saun as independent (9 of the 10 current directors); Fauber is the sole non-independent."
+    },
+    {
+     "group": "leadership",
+     "locator": "Corporate Governance, Board leadership; executive sessions",
+     "quote": "Vincent A. Forlenza, the independent Chairman of the Board, establishes the agenda for and presides at these sessions and has the authority to call additional sessions as appropriate.",
+     "note": "Independent chair Forlenza separate from CEO Robert Fauber (Fauber is the Company's CEO per independence paragraph); no lead director."
+    }
+   ],
+   "date_basis": "publication date of 2025 proxy; current board described therein, not a year-end or annual-average measure",
+   "board_scope": "incumbent directors; nominee roster reconciled to current membership",
+   "checked_at": "2026-11-11",
+   "capture_status": "raw_document_archived",
+   "review_status": "agent_read_pending_audit"
+  },
+  {
+   "cik": "0001103982",
+   "company": "Mondelez International",
+   "accession": "0001103982-25-000113",
+   "publication_date": "2025-04-04",
+   "board_size": 11,
+   "independent_directors": 10,
+   "board_leadership": "Combined CEO and chair",
+   "ceo_name": "Dirk Van de Put",
+   "chair_name": "Dirk Van de Put",
+   "lead_director_name": "Patrick T. Siewert",
+   "independence_standard": "Nasdaq",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/1103982/000110398225000113/mdlz-20250404.htm",
+   "archive_file": "data/raw/governance/0001103982_0001103982-25-000113.htm",
+   "evidence": [
+    {
+     "group": "board_counts",
+     "locator": "Election of Directors, Shareholders Elect Directors Annually",
+     "quote": "The Board currently consists of 11 directors.",
+     "note": "Board currently 11 (9 renominated incumbents plus Bunch, retiring, and Mukherjee, not standing). Nominee McKinstry is new and not yet a director."
+    },
+    {
+     "group": "independence",
+     "locator": "Director Independence",
+     "quote": "Based on that criterion, the Board determined that Charles E. Bunch, Ertharin Cousin, Cees 't Hart, Nancy McKinstry, Brian J. McNamara, Jorge S. Mesquita, Anindita Mukherjee, Jane Hamilton Nielsen, Paula A. Price, Patrick T. Siewert and Michael A. Todman are all independent.",
+     "note": "11 names declared independent; McKinstry is a nominee, not yet a director (Mr. Booth served only during fiscal 2024), so 11 - 1 = 10 of the 11 current directors; the 11th, Van de Put, is not independent."
+    },
+    {
+     "group": "leadership",
+     "locator": "Board leadership structure",
+     "quote": "Our Board is led by Mr. Van de Put, the Chair and CEO, together with Mr. Siewert, our independent Lead Director.",
+     "note": "Combined chair and CEO; independent Lead Director Siewert."
+    }
+   ],
+   "date_basis": "publication date of 2025 proxy; current board described therein, not a year-end or annual-average measure",
+   "board_scope": "incumbent directors; nominee roster reconciled to current membership",
+   "checked_at": "2026-11-11",
+   "capture_status": "raw_document_archived",
+   "review_status": "agent_read_pending_audit"
+  },
+  {
+   "cik": "0001179929",
+   "company": "Molina Healthcare",
+   "accession": "0001179929-25-000043",
+   "publication_date": "2025-03-17",
+   "board_size": 9,
+   "independent_directors": 8,
+   "board_leadership": "Separate CEO and chair",
+   "ceo_name": "Joseph M. Zubretsky",
+   "chair_name": "Dale B. Wolf",
+   "independence_standard": "NYSE",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/1179929/000117992925000043/moh-20250317.htm",
+   "archive_file": "data/raw/governance/0001179929_0001179929-25-000043.htm",
+   "evidence": [
+    {
+     "group": "board_counts",
+     "locator": "Proposal 1, Nominees for Election to Board of Directors",
+     "quote": "eight of our nine incumbent directors have been nominated by the Board for re-election.",
+     "note": "Nine incumbent directors (8 renominated plus Mr. Cooperman, who steps down at the 2025 meeting but is still in office). New nominee Mr. Grohowski is not yet a director and is excluded."
+    },
+    {
+     "group": "independence",
+     "locator": "Corporate Governance, Director Independence",
+     "quote": "The Board of Directors has determined that, except for Mr. Zubretsky (the Company’s president and chief executive officer), each of the directors of the Company and the director nominees has no material relationship with the Company that would interfere with the exercise of his or her independent judgment as a director",
+     "note": "All directors except CEO Zubretsky are independent under NYSE rules, so 9 - 1 = 8 of the 9 incumbent directors (Cooperman included as a current director)."
+    },
+    {
+     "group": "leadership",
+     "locator": "Board Leadership Structure",
+     "quote": "The roles of chairman of the Board and the chief executive officer are split, and the chairman is an independent director. Mr. Dale B. Wolf has been serving as the chairman of the Board since May 2017.",
+     "note": "Separate chair (Wolf) and CEO (Zubretsky, president and chief executive officer); no lead director, Romney is vice-chair."
+    }
+   ],
+   "date_basis": "publication date of 2025 proxy; current board described therein, not a year-end or annual-average measure",
+   "board_scope": "incumbent directors; nominee roster reconciled to current membership",
+   "checked_at": "2026-11-11",
+   "capture_status": "raw_document_archived",
+   "review_status": "agent_read_pending_audit"
+  },
+  {
+   "cik": "0001280452",
+   "company": "Monolithic Power Systems",
+   "accession": "0001437749-25-013745",
+   "publication_date": "2025-04-30",
+   "board_size": 7,
+   "independent_directors": 6,
+   "board_leadership": "Combined CEO and chair",
+   "ceo_name": "Michael Hsing",
+   "chair_name": "Michael Hsing",
+   "lead_director_name": "Herbert Chang",
+   "independence_standard": "Nasdaq",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/1280452/000143774925013745/mpwr20250418_def14a.htm",
+   "archive_file": "data/raw/governance/0001280452_0001437749-25-013745.htm",
+   "evidence": [
+    {
+     "group": "board_counts",
+     "locator": "Corporate Governance, Board Leadership and Independence",
+     "quote": "The Board currently consists of seven members, six of which the Board has determined are independent.",
+     "note": "Current board stated directly as seven members; seven nominees/continuing directors by class."
+    },
+    {
+     "group": "independence",
+     "locator": "Director Independence",
+     "quote": "The Board has determined that Herbert Chang, Eugen Elmiger, Victor K. Lee, Carintia Martinez, Eileen Wynne and Jeff Zhou are “independent” under the applicable listing standards of The NASDAQ Stock Market.",
+     "note": "Six named independent directors; Hsing, the CEO, is the seventh."
+    },
+    {
+     "group": "leadership",
+     "locator": "Board Leadership Structure",
+     "quote": "As such, Mr. Hsing holds the position of Chairman, President and Chief Executive Officer, and the Board has designated one of the independent directors, Mr. Chang, as the Lead Independent Director.",
+     "note": "Combined chair and CEO; Lead Independent Director Herbert Chang."
+    }
+   ],
+   "date_basis": "publication date of 2025 proxy; current board described therein, not a year-end or annual-average measure",
+   "board_scope": "incumbent directors; nominee roster reconciled to current membership",
+   "checked_at": "2026-11-11",
+   "capture_status": "raw_document_archived",
+   "review_status": "agent_read_pending_audit"
+  }
+ ],
+ "unresolved": [
+  {
+   "cik": "0000024545",
+   "reason": "indépendance non indiquée pour tous les administrateurs en place",
+   "detail": "Société contrôlée (Coors/Molson). Le conseil en place diffère des 14 candidats : Julia M. Brown (retraite à l'assemblée) et Peter H. Coors (non renommé) siègent encore, tandis que Christian P. Cocks et Peter J. Coors sont de nouveaux candidats ; la liste des indépendants (9 noms, Cocks inclus) ne porte que sur les candidats, rien n'indique l'indépendance de Brown et P. H. Coors, donc numérateur non établissable pour le même ensemble. Président Geoffrey E. Molson, CEO Gavin D.K. Hattersley (fonctions séparées).",
+   "company": "Molson Coors Beverage Company"
+  },
+  {
+   "cik": "0000865752",
+   "reason": "co-directeurs généraux et CEO en transition à la date du document",
+   "detail": "Procuration du 25 avril 2025 : Rodney C. Sacks (Chairman and Co-CEO) et Hilton H. Schlosberg (Vice Chairman and Co-CEO) sont co-CEO ; Sacks cesse d'être Co-CEO le 12 juin 2025 et Schlosberg devient seul CEO le 13 juin 2025. Cas à ne pas trancher selon le protocole.",
+   "company": "Monster Beverage"
+  }
+ ]
+}

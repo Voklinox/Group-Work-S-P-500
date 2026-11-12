@@ -1,0 +1,492 @@
+{
+ "shard": "18",
+ "observations": [
+  {
+   "cik": "0000860731",
+   "company": "Tyler Technologies",
+   "accession": "0000860731-25-000015",
+   "publication_date": "2025-03-27",
+   "board_size": 8,
+   "independent_directors": 6,
+   "board_leadership": "Separate CEO and chair",
+   "ceo_name": "H. Lynn Moore, Jr.",
+   "chair_name": "John S. Marr, Jr.",
+   "lead_director_name": "Glenn A. Carter",
+   "independence_standard": "NYSE",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/860731/000086073125000015/tyl-20250326.htm",
+   "archive_file": "data/raw/governance/0000860731_0000860731-25-000015.htm",
+   "evidence": [
+    {
+     "group": "board_counts",
+     "locator": "General Information / Corporate Governance, Board of Directors section",
+     "quote": "Following the 2025 annual meeting, if each of the nominees for director is elected at the annual meeting, the Board will consist of eight directors, including two employee directors and six independent directors, as defined by Rule 303A.02 of the New York Stock Exchange Listed Company Manual",
+     "note": "Eight director nominees, all incumbent (director-since dates 2002-2024, all on the board before the proxy); board of eight directors incl. two employee directors."
+    },
+    {
+     "group": "independence",
+     "locator": "Board Leadership Structure / Director independence",
+     "quote": "each of non-employee directors (Mr. Carter, Ms. Carter, Ms. Cline, Mr. Hawkins, Mr. Pope, and Mr. Teed): (1) has no material relationship with us (either directly or as a partner, shareholder, or officer of an organization that has a relationship with us), and (2) is “independent” within the meaning of the New York Stock Exchange director independence standards currently in effect.",
+     "note": "Six non-employee directors (G. Carter, M. Carter, Cline, Hawkins, Pope, Teed) declared independent under NYSE; 2024 overview figure of 5 reflected Teed not independent then, now resolved; 8 minus 2 employee directors = 6."
+    },
+    {
+     "group": "leadership",
+     "locator": "Board Leadership Structure",
+     "quote": "The Board believes that having Mr. Marr serve as Executive Chair of the Board and having Mr. Moore serve as Chief Executive Officer is in the current best interests of Tyler and its shareholders.",
+     "note": "Executive Chair Marr and CEO Moore are two different people (separate); Glenn A. Carter is Lead Independent Director."
+    }
+   ],
+   "date_basis": "publication date of 2025 proxy; current board described therein, not a year-end or annual-average measure",
+   "board_scope": "incumbent directors; nominee roster reconciled to current membership",
+   "checked_at": "2026-11-11",
+   "capture_status": "raw_document_archived",
+   "review_status": "agent_read_pending_audit"
+  },
+  {
+   "cik": "0000100493",
+   "company": "Tyson Foods",
+   "accession": "0000100493-25-000114",
+   "publication_date": "2025-12-17",
+   "board_size": 16,
+   "independent_directors": 11,
+   "board_leadership": "Separate CEO and chair",
+   "ceo_name": "Donnie King",
+   "chair_name": "John H. Tyson",
+   "lead_director_name": "Jeffrey K. Schomburger",
+   "independence_standard": "NYSE",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/100493/000010049325000114/tsn-20251217.htm",
+   "archive_file": "data/raw/governance/0000100493_0000100493-25-000114.htm",
+   "evidence": [
+    {
+     "group": "board_counts",
+     "locator": "Proposal 1 Election of Directors, director nominee introduction",
+     "quote": "The slate consists of ten (10) independent director nominees and five (5) non-independent director nominees. Kevin M. McNamara, currently a director of the Company, having expressed his preference to not be renominated to the Board, is not being put forward as a director nominee and his term will end at the Annual Meeting.",
+     "note": "15 nominees, all currently serving; plus McNamara, a sitting director whose term ends at the meeting: 15 + 1 = 16 incumbent directors."
+    },
+    {
+     "group": "board_counts",
+     "locator": "Proposal 1 Election of Directors, director nominee introduction",
+     "quote": "Each of the director nominees is currently serving as a director of the Company and, except for Sarah Bond, John R. Tyson and Olivia L. Tyson, was elected at the 2025 annual meeting of shareholders in February 2025.",
+     "note": "Confirms every one of the 15 nominees is already a director (Bond, J.R. Tyson, O.L. Tyson appointed during fiscal 2025)."
+    },
+    {
+     "group": "independence",
+     "locator": "Independence of Directors",
+     "quote": "After reviewing all relevant relationships of the directors, the Board has determined that each of the following director nominees: Mr. Baledge, Governor Beebe, Ms. Bond, Ms. Borras, Mr. Bronczek, Ms. Martinez, Ms. Miller, Ms. Quinn, Mr. Schomburger and Ms. Barbara A. Tyson qualify as independent directors in accordance with the NYSE corporate governance rules.",
+     "note": "10 independent nominees (Baledge, Beebe, Bond, Borras, Bronczek, Martinez, Miller, Quinn, Schomburger, B. Tyson). Non-renominated McNamara is not in that list."
+    },
+    {
+     "group": "independence",
+     "locator": "Audit Committee",
+     "quote": "During fiscal year 2025, the members of the Audit Committee were Ms. Quinn, as Chairperson, Mr. McNamara and Ms. Miller. Each of the foregoing individuals qualifies as an “independent” director under the SEC rules and the NYSE listing standards relating to audit committees.",
+     "note": "McNamara, who still sits, is stated independent as an Audit Committee member and served as Lead Independent Director (chosen from independent directors); counted as the 11th independent. Not an explicit general independence declaration for the current date: audit priority."
+    },
+    {
+     "group": "leadership",
+     "locator": "Board Leadership Structure",
+     "quote": "The Board’s current leadership structure consists of a Chairman of the Board and a Lead Independent Director. Pursuant to the Company’s Corporate Governance Principles, the Board is permitted to either separate or combine the positions of Chief Executive Officer and Chairman of the Board as it deems appropriate from time to time. Since 2006, these positions have been held by separate individuals.",
+     "note": "Chairman John H. Tyson (bio) and President and CEO Donnie King are separate persons; Lead Independent Director Schomburger since Nov 13, 2025."
+    },
+    {
+     "group": "leadership",
+     "locator": "Executive Sessions; Lead Independent Director",
+     "quote": "Mr. McNamara served as the Lead Independent Director for fiscal year 2025. Effective November 13, 2025, the Board appointed Mr. Schomburger as Lead Independent Director.",
+     "note": "Schomburger replaced McNamara as Lead Independent Director on Nov 13, 2025, before the Dec 17, 2025 filing."
+    }
+   ],
+   "date_basis": "publication date of 2025 proxy; current board described therein, not a year-end or annual-average measure",
+   "board_scope": "incumbent directors incl. one non-renominated sitting director (McNamara); nominee roster reconciled to current membership",
+   "checked_at": "2026-11-11",
+   "capture_status": "raw_document_archived",
+   "review_status": "agent_read_pending_audit"
+  },
+  {
+   "cik": "0001543151",
+   "company": "Uber",
+   "accession": "0001308179-25-000210",
+   "publication_date": "2025-03-24",
+   "board_size": 11,
+   "independent_directors": 10,
+   "board_leadership": "Separate CEO and chair",
+   "ceo_name": "Dara Khosrowshahi",
+   "chair_name": "Ronald Sugar",
+   "independence_standard": "NYSE",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/1543151/000130817925000210/uber013353-def14a.htm",
+   "archive_file": "data/raw/governance/0001543151_0001308179-25-000210.htm",
+   "evidence": [
+    {
+     "group": "board_counts",
+     "locator": "Proposal 1 Election of Directors, Director Nominees",
+     "quote": "Our Board has nominated the ten director nominees listed below for election at the 2025 Annual Meeting. Each of the director nominees currently serves on the Board.",
+     "note": "Ten nominees, all sitting directors (9 independent + CEO). Martello is an additional sitting director not standing again: 10 + 1 = 11 incumbents."
+    },
+    {
+     "group": "board_counts",
+     "locator": "Director Independence Determination (footnote 1)",
+     "quote": "Ms. Martello has decided not to stand for re-election at the 2025 Annual Meeting of Stockholders.",
+     "note": "Martello is one of the ten directors listed as independent and still sits at the date of the proxy."
+    },
+    {
+     "group": "independence",
+     "locator": "Director Independence Determination",
+     "quote": "Our Board has determined that, applying the standards adopted by the NYSE, each of the following directors is independent: | Revathi Advaithi Turqi Alnowaiser | Ursula Burns Robert Eckert | Amanda Ginsberg Wan Ling Martello(1) | Ronald Sugar John Thain | David Trujillo Alexander Wynaendts | (1) | Ms.",
+     "note": "Ten names listed (Advaithi, Alnowaiser, Burns, Eckert, Ginsberg, Martello, Sugar, Thain, Trujillo, Wynaendts); Khosrowshahi is the only director not independent."
+    },
+    {
+     "group": "independence",
+     "locator": "Director Independence Determination",
+     "quote": "Our Board has determined that Dara Khosrowshahi is not independent.",
+     "note": "Only non-independent director is the CEO; 10 of 11."
+    },
+    {
+     "group": "leadership",
+     "locator": "Board Structure & Operations",
+     "quote": "Dr. Sugar currently serves as the Independent Chairperson of our Board.",
+     "note": "Chair Ronald Sugar is independent chairperson; CEO is Dara Khosrowshahi; guidelines require separate roles."
+    }
+   ],
+   "date_basis": "publication date of 2025 proxy; current board described therein, not a year-end or annual-average measure",
+   "board_scope": "incumbent directors incl. one sitting director not standing for re-election (Martello); nominee roster reconciled to current membership",
+   "checked_at": "2026-11-11",
+   "capture_status": "raw_document_archived",
+   "review_status": "agent_read_pending_audit"
+  },
+  {
+   "cik": "0000074208",
+   "company": "UDR, Inc.",
+   "accession": "0000074208-25-000024",
+   "publication_date": "2025-03-27",
+   "board_size": 10,
+   "independent_directors": 9,
+   "board_leadership": "Combined CEO and chair",
+   "ceo_name": "Thomas W. Toomey",
+   "chair_name": "Thomas W. Toomey",
+   "lead_director_name": "James D. Klingbeil",
+   "independence_standard": "NYSE",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/74208/000007420825000024/udr-20250327xdef14a.htm",
+   "archive_file": "data/raw/governance/0000074208_0000074208-25-000024.htm",
+   "evidence": [
+    {
+     "group": "board_counts",
+     "locator": "Proxy Overview, governance highlights",
+     "quote": "Nine of our ten current board members (and eight of the nine to be voted on at the 2025 annual meeting) are independent directors as defined by the NYSE;",
+     "note": "Ten current board members (incl. Klingbeil, who is not standing for re-election but still sits)."
+    },
+    {
+     "group": "independence",
+     "locator": "Proxy Overview, governance highlights",
+     "quote": "Nine of our ten current board members (and eight of the nine to be voted on at the 2025 annual meeting) are independent directors as defined by the NYSE;",
+     "note": "9 of the 10 current members independent under NYSE (all except the Chairman and CEO)."
+    },
+    {
+     "group": "leadership",
+     "locator": "Proxy Overview, governance highlights",
+     "quote": "While the Chairman and Chief Executive Officer role is combined, the board has appointed a Lead Independent Director with specific duties in accordance with our Statement on Corporate Governance;",
+     "note": "Toomey is Chairman and CEO; lead independent director is Klingbeil until the 2025 meeting (Grove takes over after)."
+    },
+    {
+     "group": "leadership",
+     "locator": "Proxy Overview, What Is New",
+     "quote": "Mr. Klingbeil elected not to stand for re-election at the annual meeting and the board has appointed him Chairman Emeritus as of the conclusion of the annual meeting. Further, following the conclusion of the annual meeting Mr. Grove will become Lead Independent Director.",
+     "note": "Current lead independent director is James D. Klingbeil (relinquishes at meeting end); Jon Grove succeeds after the publication date."
+    }
+   ],
+   "date_basis": "publication date of 2025 proxy; current board described therein, not a year-end or annual-average measure",
+   "board_scope": "incumbent directors; nominee roster reconciled to current membership",
+   "checked_at": "2026-11-11",
+   "capture_status": "raw_document_archived",
+   "review_status": "agent_read_pending_audit"
+  },
+  {
+   "cik": "0001403568",
+   "company": "Ulta Beauty",
+   "accession": "0001558370-25-005260",
+   "publication_date": "2025-04-23",
+   "board_size": 11,
+   "independent_directors": 10,
+   "board_leadership": "Separate CEO and chair",
+   "ceo_name": "Kecia L. Steelman",
+   "chair_name": "Lorna E. Nagler",
+   "independence_standard": "Nasdaq",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/1403568/000155837025005260/tmb-20250611xdef14a.htm",
+   "archive_file": "data/raw/governance/0001403568_0001558370-25-005260.htm",
+   "evidence": [
+    {
+     "group": "board_counts",
+     "locator": "Proposal One Election of Directors",
+     "quote": "The Board of Directors is presently composed of eleven members, ten of whom are non-employee, independent directors.",
+     "note": "Eleven sitting members; MacDonald retires at the annual meeting (still a director at publication), board reduced to ten afterwards."
+    },
+    {
+     "group": "independence",
+     "locator": "Corporate Governance, Independence",
+     "quote": "Each member of, and nominee for, the Board of Directors is independent other than our CEO.",
+     "note": "All but the CEO independent: 11 minus 1 = 10, consistent with the 'ten non-employee, independent directors' sentence. Committees satisfy NASDAQ rules."
+    },
+    {
+     "group": "leadership",
+     "locator": "Corporate Governance, Board Leadership Structure",
+     "quote": "We currently separate the roles of CEO and Chair of the Board, and our Board is led by an independent, non-executive Chair.",
+     "note": "CEO Kecia L. Steelman; independent non-executive Chair Lorna E. Nagler (asterisk 'Non-Executive Chair' in committee table, 'Independent Chair of the Board' in her biography card)."
+    }
+   ],
+   "date_basis": "publication date of 2025 proxy; current board described therein, not a year-end or annual-average measure",
+   "board_scope": "incumbent directors incl. one retiring sitting director (MacDonald); full current board of eleven",
+   "checked_at": "2026-11-11",
+   "capture_status": "raw_document_archived",
+   "review_status": "agent_read_pending_audit"
+  },
+  {
+   "cik": "0000100885",
+   "company": "Union Pacific Corporation",
+   "accession": "0001140361-25-010237",
+   "publication_date": "2025-03-25",
+   "board_size": 12,
+   "independent_directors": 11,
+   "board_leadership": "Separate CEO and chair",
+   "ceo_name": "V. James Vena",
+   "chair_name": "Michael R. McCarthy",
+   "independence_standard": "NYSE",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/100885/000114036125010237/ny20039220x771_def14a.htm",
+   "archive_file": "data/raw/governance/0000100885_0001140361-25-010237.htm",
+   "evidence": [
+    {
+     "group": "board_counts",
+     "locator": "Proposal Number 1 - Election of Directors",
+     "quote": "The Board currently consists of twelve members.",
+     "note": "Twelve sitting directors; DeLaney (retiring, not a nominee) still sits at publication; the eleven nominees all currently serve."
+    },
+    {
+     "group": "board_counts",
+     "locator": "Proposal Number 1 - Election of Directors",
+     "quote": "Due to Mr. DeLaney’s retirement, the Board will be reduced to eleven directors as of the Annual Meeting.",
+     "note": "DeLaney (retiring, not a nominee) still sits at publication; eleven nominees all currently serve a director (twelve in place)."
+    },
+    {
+     "group": "independence",
+     "locator": "Board Corporate Governance Matters, Director Independence",
+     "quote": "The Board affirmatively determined that, except for Mr. Vena, all of our current directors, Mses. Edison, Finley, Hopkins and Lute and Messrs. DeLaney, Dillon, McCarthy, Simons, Tien, Wiehoff and Williams have no material relationship with the Company",
+     "note": "All current directors other than CEO Vena independent: 12 minus 1 = 11 (the list names 11 independents incl. DeLaney)."
+    },
+    {
+     "group": "leadership",
+     "locator": "Board Corporate Governance Matters, Board Leadership Structure",
+     "quote": "The Board separated the positions of Chairman and CEO in August of 2023 and has since annually elected Mr. McCarthy as the Chairman of the Board.",
+     "note": "Chairman McCarthy is separate from CEO Vena (V. James Vena, MANAGEMENT director)."
+    }
+   ],
+   "date_basis": "publication date of 2025 proxy; current board described therein, not a year-end or annual-average measure",
+   "board_scope": "incumbent directors; nominee roster reconciled to current membership",
+   "checked_at": "2026-11-11",
+   "capture_status": "raw_document_archived",
+   "review_status": "agent_read_pending_audit"
+  },
+  {
+   "cik": "0000100517",
+   "company": "United Airlines Holdings",
+   "accession": "0001558370-25-004681",
+   "publication_date": "2025-04-10",
+   "board_size": 13,
+   "independent_directors": 10,
+   "board_leadership": "Separate CEO and chair",
+   "ceo_name": "Scott Kirby",
+   "chair_name": "Edward M. Philip",
+   "independence_standard": "Nasdaq",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/100517/000155837025004681/tmb-20250521xdef14a.htm",
+   "archive_file": "data/raw/governance/0000100517_0001558370-25-004681.htm",
+   "evidence": [
+    {
+     "group": "board_counts",
+     "locator": "Letter / Proxy Statement Summary",
+     "quote": "The Board’s effective oversight on a variety of topics is made possible by our 13 directors who bring a broad range of perspectives and experiences.",
+     "note": "13 sitting directors: 11 nominees elected by Common Stock holders plus ALPA director Noyes (director since Jan 15, 2025) and IAM director Johnsen (since 2021)."
+    },
+    {
+     "group": "board_counts",
+     "locator": "Item 1 - Election of Directors",
+     "quote": "He became the ALPA director on January 15, 2025.",
+     "note": "Noyes already seated before publication (Apr 10, 2025), so the 13 are all incumbents."
+    },
+    {
+     "group": "independence",
+     "locator": "Proxy Statement Summary, Board highlights",
+     "quote": "10 of 13 Directors (10 of 11 nominees elected by the holders of Common Stock) are independent",
+     "note": "10 of 13 independent."
+    },
+    {
+     "group": "independence",
+     "locator": "Board and Corporate Governance Matters, Independence Determination",
+     "quote": "The Board has also determined that Messrs.",
+     "note": "Three non-independent (Kirby, Johnsen, Noyes): 13 minus 3 = 10; Nasdaq Listing Rules standards."
+    },
+    {
+     "group": "leadership",
+     "locator": "Letter to stockholders",
+     "quote": "It is a privilege to serve as the Chairman of the Board and to work closely with our CEO, Scott Kirby, and my fellow Board members",
+     "note": "Chairman Edward M. Philip (signs the letter) distinct from CEO Scott Kirby."
+    },
+    {
+     "group": "leadership",
+     "locator": "Item 1 - Election of Directors",
+     "quote": "EDWARD M. PHILIP-Chairman of the Board and Independent Director",
+     "note": "Philip is independent Chairman of the Board."
+    }
+   ],
+   "date_basis": "publication date of 2025 proxy; current board described therein, not a year-end or annual-average measure",
+   "board_scope": "incumbent directors; nominee roster reconciled to current membership",
+   "checked_at": "2026-11-11",
+   "capture_status": "raw_document_archived",
+   "review_status": "agent_read_pending_audit"
+  },
+  {
+   "cik": "0001090727",
+   "company": "United Parcel Service",
+   "accession": "0001090727-25-000038",
+   "publication_date": "2025-03-17",
+   "board_size": 13,
+   "independent_directors": 12,
+   "board_leadership": "Separate CEO and chair",
+   "ceo_name": "Carol Tomé",
+   "chair_name": "William Johnson",
+   "independence_standard": "NYSE",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/1090727/000109072725000038/ups-20250317.htm",
+   "archive_file": "data/raw/governance/0001090727_0001090727-25-000038.htm",
+   "evidence": [
+    {
+     "group": "board_counts",
+     "locator": "Board Chair Letter",
+     "quote": "It has been a pleasure to serve as a board member with Mike Burns, who’s board service will conclude at the Annual Meeting.",
+     "note": "Burns is a sitting director leaving at the meeting and is not among the 12 nominees: 12 + 1 = 13 incumbents."
+    },
+    {
+     "group": "board_counts",
+     "locator": "Board Chair Letter",
+     "quote": "We also welcome Kevin Clark, Chairman and CEO of Aptiv PLC, who joined the board in March 2025.",
+     "note": "Clark, one of the 12 nominees, is already seated; all 12 nominees therefore incumbent."
+    },
+    {
+     "group": "independence",
+     "locator": "Director Independence",
+     "quote": "The board has determined that each current director, including all director nominees, other than our CEO, Carol Tomé, is independent.",
+     "note": "Every current director other than CEO Tomé is independent: 13 minus 1 = 12 (NYSE standards per Corporate Governance Guidelines)."
+    },
+    {
+     "group": "leadership",
+     "locator": "Board Leadership Structure",
+     "quote": "In October 2020, in connection with Carol Tomé’s election as CEO, the board determined that it was in the best interests of the Company to enable Carol to focus on leading the Company, and separated the roles of Board Chair and CEO. Bill Johnson, who had been serving as our independent Lead Director, was appointed Board Chair.",
+     "note": "Roles separated since Oct 2020; Bill (William) Johnson, independent, is Board Chair; CEO is Carol Tomé."
+    }
+   ],
+   "date_basis": "publication date of 2025 proxy; current board described therein, not a year-end or annual-average measure",
+   "board_scope": "incumbent directors; nominee roster reconciled to current membership",
+   "checked_at": "2026-11-11",
+   "capture_status": "raw_document_archived",
+   "review_status": "agent_read_pending_audit"
+  },
+  {
+   "cik": "0001067701",
+   "company": "United Rentals",
+   "accession": "0000950170-25-045191",
+   "publication_date": "2025-03-26",
+   "board_size": 11,
+   "independent_directors": 9,
+   "board_leadership": "Separate CEO and chair",
+   "ceo_name": "Matthew J. Flannery",
+   "chair_name": "Michael J. Kneeland",
+   "lead_director_name": "Bobby J. Griffin",
+   "independence_standard": "NYSE",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/1067701/000095017025045191/uri-20250324.htm",
+   "archive_file": "data/raw/governance/0001067701_0000950170-25-045191.htm",
+   "evidence": [
+    {
+     "group": "board_counts",
+     "locator": "Proposal 1, Election of Directors",
+     "quote": "The Board, upon the recommendation of the N&CG Committee, has nominated 10 of the 11 current directors to stand for election at the Annual Meeting",
+     "note": "11 current directors; Griffin is the 11th, sitting but not standing for re-election."
+    },
+    {
+     "group": "independence",
+     "locator": "Corporate Governance Matters, Director Independence",
+     "quote": "Nine of our 11 current directors have been determined by the N&CG Committee and the Board to be independent under the criteria of the NYSE: Julie M.",
+     "note": "Explicit 9 of 11 (Kneeland and Flannery are the two non-independent)."
+    },
+    {
+     "group": "leadership",
+     "locator": "Corporate Governance Matters, Board Leadership",
+     "quote": "Michael Kneeland currently serves as our Chair. In light of our Chair not being an independent director, due to Mr. Kneeland’s previous service as CEO, our independent directors appointed Bobby Griffin to serve as the Lead Independent Director in May 2019",
+     "note": "Non-executive Chair Kneeland (former CEO) distinct from President and CEO Matthew Flannery; Lead Independent Director Bobby Griffin (Martore from May 8, 2025)."
+    },
+    {
+     "group": "leadership",
+     "locator": "Board leadership summary",
+     "quote": "Non-Executive Chair Michael Kneeland | | Lead Independent Director Currently Bobby Griffin; Gracia Martore beginning May 8, 2025 | | President and CEO Matthew Flannery",
+     "note": "Chair and CEO named separately in the leadership structure table."
+    }
+   ],
+   "date_basis": "publication date of 2025 proxy; current board described therein, not a year-end or annual-average measure",
+   "board_scope": "incumbent directors; nominee roster reconciled to current membership",
+   "checked_at": "2026-11-11",
+   "capture_status": "raw_document_archived",
+   "review_status": "agent_read_pending_audit"
+  },
+  {
+   "cik": "0000731766",
+   "company": "UnitedHealth Group",
+   "accession": "0001104659-25-036829",
+   "publication_date": "2025-04-21",
+   "board_size": 10,
+   "independent_directors": 8,
+   "board_leadership": "Separate CEO and chair",
+   "ceo_name": "Andrew Witty",
+   "chair_name": "Stephen Hemsley",
+   "lead_director_name": "Michele Hooper",
+   "independence_standard": "NYSE",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/731766/000110465925036829/tm252303-2_def14a.htm",
+   "archive_file": "data/raw/governance/0000731766_0001104659-25-036829.htm",
+   "evidence": [
+    {
+     "group": "board_counts",
+     "locator": "Proxy Summary, Board refreshment",
+     "quote": "Of our ten current directors, four have been appointed since 2020.",
+     "note": "Ten current directors; ten nominees, all elected at the 2024 meeting (no new nominee, no departing director)."
+    },
+    {
+     "group": "board_counts",
+     "locator": "Director nominee criteria",
+     "quote": "All director nominees were elected by our shareholders at the 2024 Annual Meeting.",
+     "note": "Confirms the ten nominees are the incumbent directors."
+    },
+    {
+     "group": "independence",
+     "locator": "Proxy Summary, governance highlights",
+     "quote": "We have a Lead Independent Director, and eight of our ten director nominees are independent.",
+     "note": "8 of 10 independent; only the Chair (Hemsley, non-executive) and the CEO (Witty) are non-independent; NYSE-aligned standards."
+    },
+    {
+     "group": "leadership",
+     "locator": "Board Leadership Structure",
+     "quote": "Our Board separates the positions of CEO and Chair of the Board.",
+     "note": "CEO Andrew Witty and non-executive Chair Stephen Hemsley are different persons (as of the 2025 proxy; later CEO change post-dates publication)."
+    },
+    {
+     "group": "leadership",
+     "locator": "Director biographies",
+     "quote": "Stephen Hemsley is non-executive Chair of the Board of UnitedHealth Group and has served in this capacity since November 2019.",
+     "note": "Hemsley named as non-executive Chair; Michele Hooper is Lead Independent Director since October 2021."
+    }
+   ],
+   "date_basis": "publication date of 2025 proxy; current board described therein, not a year-end or annual-average measure",
+   "board_scope": "incumbent directors; nominee roster reconciled to current membership",
+   "checked_at": "2026-11-11",
+   "capture_status": "raw_document_archived",
+   "review_status": "agent_read_pending_audit"
+  }
+ ],
+ "unresolved": [
+  {
+   "cik": "0000036104",
+   "company": "U.S. Bancorp",
+   "reason": "Poste de CEO en transition à la date du document",
+   "detail": "Le document (5 mars 2025) annonce que Gunjan Kedia (Présidente, administratrice depuis le 28 janv. 2025) deviendra CEO après l'assemblée du 15 avril 2025 et qu'Andrew Cecere passera alors de Chairman et CEO à Executive Chairman. À la date du document: conseil de 15 membres (Wine ne se représente pas, 14 candidats), 12 candidats indépendants sur 14 (tous sauf Cecere et Kedia) + Wine non couvert explicitement; direction combinée Cecere à la date de publication mais en transition annoncée: cas protocole (poste CEO en transition), non tranché."
+  }
+ ]
+}

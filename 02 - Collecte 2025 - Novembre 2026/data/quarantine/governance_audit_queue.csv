@@ -1,0 +1,108 @@
+cik,company,priority,reasons,board_size,independent,leadership,audit_status
+0000066740,3M,1,departing_or_deduced_counts,12,11,Combined CEO and chair,to_audit
+0001551152,AbbVie,1,departing_or_deduced_counts,14,12,Separate CEO and chair,to_audit
+0001467373,Accenture,1,departing_or_deduced_counts,11,10,Combined CEO and chair,to_audit
+0000796343,Adobe Inc.,1,departing_or_deduced_counts,12,11,Combined CEO and chair,to_audit
+0000002488,Advanced Micro Devices,1,departing_or_deduced_counts,9,8,Combined CEO and chair,to_audit
+0000002969,Air Products,1,departing_or_deduced_counts,11,10,Separate CEO and chair,to_audit
+0001579241,Allegion,1,departing_or_deduced_counts,9,8,Separate CEO and chair,to_audit
+0001053507,American Tower,1,departing_or_deduced_counts,12,11,Separate CEO and chair,to_audit
+0000820027,Ameriprise Financial,1,departing_or_deduced_counts,9,8,Combined CEO and chair,to_audit
+0000820313,Amphenol,1,departing_or_deduced_counts,9,8,Separate CEO and chair,to_audit
+0000947484,Arch Capital Group,1,departing_or_deduced_counts,13,11,Separate CEO and chair,to_audit
+0001267238,Assurant,1,departing_or_deduced_counts,11,10,Separate CEO and chair,to_audit
+0001701605,Baker Hughes,1,departing_or_deduced_counts,10,9,Combined CEO and chair,to_audit
+0000010795,Becton Dickinson,1,several_candidate_documents,14,13,Combined CEO and chair,to_audit
+0000842023,Bio-Techne,1,departing_or_deduced_counts,10,9,Separate CEO and chair,to_audit
+0001393818,Blackstone Inc.,1,several_candidate_documents,8,5,Combined CEO and chair,to_audit
+0000012927,Boeing,1,departing_or_deduced_counts,11,10,Separate CEO and chair,to_audit
+0001075531,Booking Holdings,1,departing_or_deduced_counts,12,11,Separate CEO and chair,to_audit
+0000885725,Boston Scientific,1,departing_or_deduced_counts,11,10,Combined CEO and chair,to_audit
+0001730168,Broadcom,1,departing_or_deduced_counts,9,8,Separate CEO and chair,to_audit
+0001043277,C.H. Robinson,1,departing_or_deduced_counts,12,11,Separate CEO and chair,to_audit
+0001138118,CBRE Group,1,departing_or_deduced_counts,13,11,Combined CEO and chair,to_audit
+0001156375,CME Group,1,departing_or_deduced_counts|atypical_independence_or_size,22,21,Combined CEO and chair,to_audit
+0001071739,Centene Corporation,1,departing_or_deduced_counts,12,10,Separate CEO and chair,to_audit
+0001130310,CenterPoint Energy,1,departing_or_deduced_counts,11,10,Separate CEO and chair,to_audit
+0000831001,Citigroup,1,departing_or_deduced_counts,14,12,Separate CEO and chair,to_audit
+0000759944,Citizens Financial Group,1,departing_or_deduced_counts,14,13,Combined CEO and chair,to_audit
+0001679788,Coinbase,1,several_candidate_documents,10,8,Combined CEO and chair,to_audit
+0001047862,Consolidated Edison,1,departing_or_deduced_counts,12,11,Combined CEO and chair,to_audit
+0000711404,Cooper Companies (The),1,departing_or_deduced_counts,8,7,Separate CEO and chair,to_audit
+0000927066,DaVita,1,departing_or_deduced_counts,10,9,Separate CEO and chair,to_audit
+0000910521,Deckers Brands,1,departing_or_deduced_counts,10,8,Separate CEO and chair,to_audit
+0000315189,Deere & Company,1,departing_or_deduced_counts,12,11,Combined CEO and chair,to_audit
+0000031462,Ecolab,1,departing_or_deduced_counts,13,12,Combined CEO and chair,to_audit
+0000827052,Edison International,1,departing_or_deduced_counts,11,10,Separate CEO and chair,to_audit
+0000922621,Erie Indemnity,1,several_candidate_documents,11,10,Separate CEO and chair,to_audit
+0001013237,FactSet,1,departing_or_deduced_counts,11,10,Separate CEO and chair,to_audit
+0001274494,First Solar,1,departing_or_deduced_counts,10,8,Separate CEO and chair,to_audit
+0001262039,Fortinet,1,departing_or_deduced_counts,10,8,Combined CEO and chair,to_audit
+0000040704,General Mills,1,departing_or_deduced_counts,12,11,Combined CEO and chair,to_audit
+0001467858,General Motors,1,departing_or_deduced_counts,13,12,Combined CEO and chair,to_audit
+0001123360,Global Payments,1,departing_or_deduced_counts,12,11,Separate CEO and chair,to_audit
+0000047217,HP Inc.,1,departing_or_deduced_counts,15,14,Separate CEO and chair,to_audit
+0000045012,Halliburton,1,departing_or_deduced_counts,12,11,Combined CEO and chair,to_audit
+0000046080,Hasbro,1,departing_or_deduced_counts,11,10,Separate CEO and chair,to_audit
+0001000228,Henry Schein,1,departing_or_deduced_counts,14,12,Combined CEO and chair,to_audit
+0000047111,Hershey Company (The),1,departing_or_deduced_counts,10,9,Combined CEO and chair,to_audit
+0000049071,Humana,1,departing_or_deduced_counts,11,10,Separate CEO and chair,to_audit
+0000049826,Illinois Tool Works,1,departing_or_deduced_counts,12,10,Separate CEO and chair,to_audit
+0000050863,Intel,1,departing_or_deduced_counts,14,13,Separate CEO and chair,to_audit
+0001381197,Interactive Brokers,1,several_candidate_documents|atypical_independence_or_size,9,4,Separate CEO and chair,to_audit
+0000052988,Jacobs Solutions,1,departing_or_deduced_counts,11,10,Combined CEO and chair,to_audit
+0000319201,KLA Corporation,1,departing_or_deduced_counts,10,9,Separate CEO and chair,to_audit
+0001944048,Kenvue,1,departing_or_deduced_counts,14,13,Separate CEO and chair,to_audit
+0001418135,Keurig Dr Pepper,1,departing_or_deduced_counts,10,8,Separate CEO and chair,to_audit
+0000879101,Kimco Realty,1,departing_or_deduced_counts,10,7,Separate CEO and chair,to_audit
+0001506307,Kinder Morgan,1,departing_or_deduced_counts,12,9,Separate CEO and chair,to_audit
+0000202058,L3Harris,1,departing_or_deduced_counts,14,13,Combined CEO and chair,to_audit
+0000060667,Lowe's,1,departing_or_deduced_counts,13,12,Combined CEO and chair,to_audit
+0001489393,LyondellBasell,1,departing_or_deduced_counts,12,11,Separate CEO and chair,to_audit
+0001510295,Marathon Petroleum,1,departing_or_deduced_counts,15,13,Separate CEO and chair,to_audit
+0000062709,Marsh McLennan,1,departing_or_deduced_counts,12,11,Separate CEO and chair,to_audit
+0001141391,Mastercard,1,departing_or_deduced_counts,12,11,Separate CEO and chair,to_audit
+0000891103,Match Group,1,several_candidate_documents,10,8,Separate CEO and chair,to_audit
+0001103982,Mondelez International,1,departing_or_deduced_counts,11,10,Combined CEO and chair,to_audit
+0001059556,Moody's Corporation,1,departing_or_deduced_counts,10,9,Separate CEO and chair,to_audit
+0000878927,Old Dominion,1,departing_or_deduced_counts,12,8,Separate CEO and chair,to_audit
+0000029989,Omnicom Group,1,several_candidate_documents,11,10,Combined CEO and chair,to_audit
+0000898173,O’Reilly Automotive,1,departing_or_deduced_counts,10,6,Separate CEO and chair,to_audit
+0000857005,PTC Inc.,1,several_candidate_documents,9,8,Separate CEO and chair,to_audit
+0000822416,PulteGroup,1,departing_or_deduced_counts,11,10,Separate CEO and chair,to_audit
+0001050915,Quanta Services,1,departing_or_deduced_counts,11,10,Separate CEO and chair,to_audit
+0000884887,Royal Caribbean Group,1,departing_or_deduced_counts,14,13,Separate CEO and chair,to_audit
+0000087347,Schlumberger,1,departing_or_deduced_counts|several_candidate_documents,11,9,Separate CEO and chair,to_audit
+0001373715,ServiceNow,1,departing_or_deduced_counts|several_candidate_documents,11,9,Combined CEO and chair,to_audit
+0000096021,Sysco,1,departing_or_deduced_counts,11,10,Combined CEO and chair,to_audit
+0001283699,T-Mobile US,1,departing_or_deduced_counts|atypical_independence_or_size,13,6,Separate CEO and chair,to_audit
+0000097210,Teradyne,1,departing_or_deduced_counts,8,7,Separate CEO and chair,to_audit
+0000100493,Tyson Foods,1,departing_or_deduced_counts,16,11,Separate CEO and chair,to_audit
+0000074208,"UDR, Inc.",1,departing_or_deduced_counts,10,9,Combined CEO and chair,to_audit
+0001543151,Uber,1,departing_or_deduced_counts,11,10,Separate CEO and chair,to_audit
+0001067701,United Rentals,1,departing_or_deduced_counts,11,9,Separate CEO and chair,to_audit
+0001437107,Warner Bros. Discovery,1,departing_or_deduced_counts,13,12,Separate CEO and chair,to_audit
+0000107263,Williams Companies,1,departing_or_deduced_counts,12,11,Separate CEO and chair,to_audit
+0001176948,Ares Management,2,atypical_independence_or_size,11,6,Separate CEO and chair,to_audit
+0001067983,Berkshire Hathaway,2,atypical_independence_or_size,14,8,Combined CEO and chair,to_audit
+0001321655,Palantir Technologies,2,atypical_independence_or_size,7,4,Separate CEO and chair,to_audit
+0001841666,APA Corporation,3,random_10pct_sample,11,10,Separate CEO and chair,to_audit
+0001090872,Agilent Technologies,3,random_10pct_sample,10,9,Separate CEO and chair,to_audit
+0000005272,American International Group,3,random_10pct_sample,12,11,Combined CEO and chair,to_audit
+0001037868,Ametek,3,random_10pct_sample,9,8,Combined CEO and chair,to_audit
+0000318154,Amgen,3,random_10pct_sample,12,11,Combined CEO and chair,to_audit
+0000315293,Aon plc,3,random_10pct_sample,13,12,Separate CEO and chair,to_audit
+0001069183,Axon Enterprise,3,random_10pct_sample,10,8,Separate CEO and chair,to_audit
+0001390777,BNY Mellon,3,random_10pct_sample,11,10,Separate CEO and chair,to_audit
+0000875045,Biogen,3,random_10pct_sample,11,10,Separate CEO and chair,to_audit
+0001402057,CDW Corporation,3,random_10pct_sample,11,10,Combined CEO and chair,to_audit
+0000811156,CMS Energy,3,random_10pct_sample,10,9,Separate CEO and chair,to_audit
+0001091667,Charter Communications,3,random_10pct_sample,13,12,Separate CEO and chair,to_audit
+0000712515,Electronic Arts,3,random_10pct_sample,8,7,Combined CEO and chair,to_audit
+0001711269,Evergy,3,random_10pct_sample,12,11,Combined CEO and chair,to_audit
+0001659166,Fortive,3,random_10pct_sample,10,9,Separate CEO and chair,to_audit
+0001474735,Generac,3,random_10pct_sample,11,10,Combined CEO and chair,to_audit
+0000354950,Home Depot (The),3,random_10pct_sample,11,10,Combined CEO and chair,to_audit
+0000879169,Incyte,3,random_10pct_sample,9,8,Combined CEO and chair,to_audit
+0000804328,Qualcomm,3,random_10pct_sample,11,10,Separate CEO and chair,to_audit
+0001094285,Teledyne Technologies,3,random_10pct_sample,11,10,Separate CEO and chair,to_audit

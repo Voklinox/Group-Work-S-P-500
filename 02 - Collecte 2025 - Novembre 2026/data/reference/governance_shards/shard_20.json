@@ -1,0 +1,84 @@
+{
+  "shard": "20",
+  "observations": [
+    {
+      "cik": "0000764180",
+      "company": "Altria",
+      "accession": "0001558370-25-004359",
+      "publication_date": "2025-04-03",
+      "board_size": 11,
+      "independent_directors": 10,
+      "board_leadership": "Separate CEO and chair",
+      "ceo_name": "William F. Gifford, Jr.",
+      "chair_name": "Kathryn B. McQuade",
+      "independence_standard": "NYSE",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/764180/000155837025004359/tmb-20250515xdef14a.htm",
+      "archive_file": "data/raw/governance/0000764180_0001558370-25-004359.htm",
+      "evidence": [
+        {
+          "group": "board_counts",
+          "locator": "Board and Governance Matters, Our Board of Directors",
+          "quote": "Our Board currently consists of 11 directors.",
+          "note": "Current board is 11; the 11 director nominees equal the current membership."
+        },
+        {
+          "group": "independence",
+          "locator": "Proxy summary, Board Performance",
+          "quote": "10 of our 11 director nominees are independent",
+          "note": "10 independent of 11 (all but the CEO), same 11 persons as the current board."
+        },
+        {
+          "group": "leadership",
+          "locator": "Proxy summary, Board Performance",
+          "quote": "Separate Chair and CEO roles, with an independent Chair",
+          "note": "Chair Kathryn B. McQuade (independent); CEO William F. Gifford, Jr."
+        }
+      ],
+      "date_basis": "publication date of 2025 proxy; current board described therein, not a year-end or annual-average measure",
+      "board_scope": "incumbent directors; nominee roster reconciled to current membership",
+      "checked_at": "2026-11-12",
+      "capture_status": "raw_document_archived",
+      "review_status": "agent_read_pending_audit"
+    },
+    {
+      "cik": "0000004904",
+      "company": "American Electric Power",
+      "accession": "0000004904-25-000043",
+      "publication_date": "2025-03-13",
+      "board_size": 12,
+      "independent_directors": 11,
+      "board_leadership": "Separate CEO and chair",
+      "ceo_name": "William J. Fehrman",
+      "chair_name": "Sara Martinez Tucker",
+      "independence_standard": "Nasdaq",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/4904/000000490425000043/aep-20250312.htm",
+      "archive_file": "data/raw/governance/0000004904_0000004904-25-000043.htm",
+      "evidence": [
+        {
+          "group": "board_counts",
+          "locator": "Corporate Governance, Board composition",
+          "quote": "The Board currently is comprised of eleven independent directors among its twelve members",
+          "note": "Current board of 12 members; Donna A. James retires at the meeting and is replaced by nominee Sauvage, board stays at 12."
+        },
+        {
+          "group": "independence",
+          "locator": "Corporate Governance, Board composition",
+          "quote": "The Board currently is comprised of eleven independent directors among its twelve members",
+          "note": "Eleven of the twelve current members are independent (Nasdaq)."
+        },
+        {
+          "group": "leadership",
+          "locator": "Governance highlights",
+          "quote": "Strong independent Chair",
+          "note": "Independent Chair Sara Martinez Tucker; CEO William J. Fehrman, elected effective August 1, 2024."
+        }
+      ],
+      "date_basis": "publication date of 2025 proxy; current board described therein, not a year-end or annual-average measure",
+      "board_scope": "incumbent directors; nominee roster reconciled to current membership",
+      "checked_at": "2026-11-12",
+      "capture_status": "raw_document_archived",
+      "review_status": "agent_read_pending_audit"
+    }
+  ],
+  "unresolved": []
+}

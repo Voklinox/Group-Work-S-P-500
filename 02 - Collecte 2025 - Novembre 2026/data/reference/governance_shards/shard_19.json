@@ -1,0 +1,542 @@
+{
+ "shard": "19",
+ "observations": [
+  {
+   "cik": "0000943452",
+   "company": "Wabtec",
+   "accession": "0001628280-25-016372",
+   "publication_date": "2025-04-03",
+   "board_size": 10,
+   "independent_directors": 9,
+   "board_leadership": "Separate CEO and chair",
+   "ceo_name": "Rafael Santana",
+   "chair_name": "Albert J. Neupaver",
+   "lead_director_name": "Linda A. Harty",
+   "independence_standard": "NYSE",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/943452/000162828025016372/wab-20250403.htm",
+   "archive_file": "data/raw/governance/0000943452_0001628280-25-016372.htm",
+   "evidence": [
+    {
+     "group": "board_counts",
+     "locator": "Proposal 1 Election of Directors, printed p.~21",
+     "quote": "Wabtec’s Board of Directors currently has ten members.",
+     "note": "Ten sitting members stated; includes Kassling (retiring, still sitting) and Perez (joined 29 Jan 2025). Roster in at-a-glance table and biographies is consistent."
+    },
+    {
+     "group": "independence",
+     "locator": "Director Independence, printed p.~23",
+     "quote": "The Board has reviewed the independence of its members considering these standards and any other commercial, legal, accounting and familial relationships between the directors and Wabtec and determined that all of its members were independent during 2024, with the exception of Mr. Santana due to his position as the Company’s Chief Executive Officer.",
+     "note": "All members except CEO Santana independent: 10-1=9. Statement refers to 2024; the 2025 joiner Juan Perez is labelled 'INDEPENDENT DIRECTOR' in his biography and nine biographies carry that label (Perez, Neupaver, Klee, Kassling, Banks, Foster, Harty, Hehir, Babcock)."
+    },
+    {
+     "group": "leadership",
+     "locator": "Board Leadership Structure, printed p.~24",
+     "quote": "The Company currently has a non-executive, independent Chairman of the Board, a separate Chief Executive Officer, and a Lead Independent Director.",
+     "note": "Chair is Albert J. Neupaver (Chairman of the Board per leadership table); CEO Rafael Santana; Lead Independent Director Linda A. Harty."
+    }
+   ],
+   "date_basis": "publication date of 2025 proxy; current board described therein, not a year-end or annual-average measure",
+   "board_scope": "incumbent directors; nominee roster reconciled to current membership",
+   "checked_at": "2026-11-11",
+   "capture_status": "raw_document_archived",
+   "review_status": "agent_read_pending_audit"
+  },
+  {
+   "cik": "0000104169",
+   "company": "Walmart",
+   "accession": "0000104169-25-000055",
+   "publication_date": "2025-04-24",
+   "board_size": 12,
+   "independent_directors": 9,
+   "board_leadership": "Separate CEO and chair",
+   "ceo_name": "Doug McMillon",
+   "chair_name": "Greg Penner",
+   "lead_director_name": "Tom Horton",
+   "independence_standard": "NYSE",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/104169/000010416925000055/wmt-20250424.htm",
+   "archive_file": "data/raw/governance/0000104169_0000104169-25-000055.htm",
+   "evidence": [
+    {
+     "group": "board_counts",
+     "locator": "Election of Directors, printed p.~13",
+     "quote": "If the shareholders elect all the director nominees named in this proxy statement at the 2025 Annual Shareholders’ Meeting, Walmart will have 12 directors.",
+     "note": "12 nominees = incumbent directors: every nominee card shows 'Director Since' 2008-2024 (latest Niccol and Moritz, 2024), so none is a new candidate. Two (Flynn, Mayer) retire only next year."
+    },
+    {
+     "group": "independence",
+     "locator": "Election of Directors, printed p.~13",
+     "quote": "Nine of our twelve Board nominees are independent, and all members of the Audit Committee, the CMDC, and the NGC are independent.",
+     "note": "9 of the same 12 labelled 'Independent' on nominee cards; the 3 without the label are McMillon, Steuart Walton and Penner."
+    },
+    {
+     "group": "leadership",
+     "locator": "Board Leadership, printed p.~34",
+     "quote": "We have separated the Chairman and CEO roles since 1988.",
+     "note": "Greg Penner is Chairman (non-management); Doug McMillon is CEO; Tom Horton is Lead Independent Director (Randall Stephenson to succeed him on June 5, 2025, after the document date)."
+    }
+   ],
+   "date_basis": "publication date of 2025 proxy; current board described therein, not a year-end or annual-average measure",
+   "board_scope": "incumbent directors; nominee roster reconciled to current membership",
+   "checked_at": "2026-11-11",
+   "capture_status": "raw_document_archived",
+   "review_status": "agent_read_pending_audit"
+  },
+  {
+   "cik": "0001437107",
+   "company": "Warner Bros. Discovery",
+   "accession": "0001437107-25-000084",
+   "publication_date": "2025-04-23",
+   "board_size": 13,
+   "independent_directors": 12,
+   "board_leadership": "Separate CEO and chair",
+   "ceo_name": "David M. Zaslav",
+   "chair_name": "Samuel A. Di Piazza, Jr.",
+   "independence_standard": "Nasdaq",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/1437107/000143710725000084/wbd-20250422.htm",
+   "archive_file": "data/raw/governance/0001437107_0001437107-25-000084.htm",
+   "evidence": [
+    {
+     "group": "board_counts",
+     "locator": "Proxy Summary, Board Refreshment (printed p.~10)",
+     "quote": "With Dr. Malone not standing for re-election and the nomination of Mr. Levy for election by our stockholders at the 2025 Annual Meeting, our board size will remain 13 directors following the 2025 Annual Meeting",
+     "note": "Current board = 13: 12 incumbent nominees plus Malone (still a director, not standing; 'who is currently a director'). Levy is 'not currently on the Board' and is excluded; 13 nominees - Levy + Malone = 13."
+    },
+    {
+     "group": "independence",
+     "locator": "Director Independence, printed p.~33",
+     "quote": "Our Board has affirmatively determined that each director who served on the Board during 2024 and each director nominee, other than Mr. Zaslav, is independent under the Nasdaq Rules and the Guidelines.",
+     "note": "All current directors except CEO Zaslav (incl. Malone, who served in 2024) independent: 13-1=12; consistent with summary '12 of 13 directors are independent'."
+    },
+    {
+     "group": "leadership",
+     "locator": "Board Leadership Structure, printed p.~28",
+     "quote": "In light of the leadership experience and management expertise of Mr. Di Piazza and the dynamic leadership of David M. Zaslav, our CEO, our Board believes that this structure continues to be appropriate for Warner Bros. Discovery at this time.",
+     "note": "Structure described as separated CEO and Board Chair; Di Piazza labelled 'Independent Board Chair' in his nominee card; no lead director named."
+    }
+   ],
+   "date_basis": "publication date of 2025 proxy; current board described therein, not a year-end or annual-average measure",
+   "board_scope": "incumbent directors; nominee roster reconciled to current membership",
+   "checked_at": "2026-11-11",
+   "capture_status": "raw_document_archived",
+   "review_status": "agent_read_pending_audit"
+  },
+  {
+   "cik": "0000823768",
+   "company": "Waste Management",
+   "accession": "0001104659-25-030318",
+   "publication_date": "2025-04-01",
+   "board_size": 9,
+   "independent_directors": 8,
+   "board_leadership": "Separate CEO and chair",
+   "ceo_name": "James C. Fish, Jr.",
+   "chair_name": "Kathleen M. Mazzarella",
+   "independence_standard": "NYSE",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/823768/000110465925030318/tm251991-2_def14a.htm",
+   "archive_file": "data/raw/governance/0000823768_0001104659-25-030318.htm",
+   "evidence": [
+    {
+     "group": "board_counts",
+     "locator": "Proposal 1 Election of Directors, printed p.~11",
+     "quote": "Our Board of Directors currently has 9 members. Each member of our Board is elected annually and is nominated for re-election at the 2025 Annual Meeting.",
+     "note": "Nine current members, all nominees for re-election (8 non-employee nominees + CEO Fish)."
+    },
+    {
+     "group": "independence",
+     "locator": "Director Independence, printed p.~13",
+     "quote": "The Board of Directors has determined that each of the following eight non-employee director nominees are independent in accordance with the New York Stock Exchange listing standards",
+     "note": "Eight named independent nominees; the ninth director is CEO James C. Fish, Jr. (8 of 9)."
+    },
+    {
+     "group": "leadership",
+     "locator": "Board Leadership, printed p.~13",
+     "quote": "Ms. Kathleen M. Mazzarella’s service as Non-Executive Chair of the Board began in May 2023.",
+     "note": "Chair roles separated since 2004; Mazzarella Non-Executive Chair, Fish President and CEO; no lead director mentioned."
+    }
+   ],
+   "date_basis": "publication date of 2025 proxy; current board described therein, not a year-end or annual-average measure",
+   "board_scope": "incumbent directors; nominee roster reconciled to current membership",
+   "checked_at": "2026-11-11",
+   "capture_status": "raw_document_archived",
+   "review_status": "agent_read_pending_audit"
+  },
+  {
+   "cik": "0001000697",
+   "company": "Waters Corporation",
+   "accession": "0001193125-25-076853",
+   "publication_date": "2025-04-09",
+   "board_size": 10,
+   "independent_directors": 9,
+   "board_leadership": "Separate CEO and chair",
+   "ceo_name": "Udit Batra",
+   "chair_name": "Flemming Ornskov",
+   "independence_standard": "NYSE",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/1000697/000119312525076853/d793609ddef14a.htm",
+   "archive_file": "data/raw/governance/0001000697_0001193125-25-076853.htm",
+   "evidence": [
+    {
+     "group": "board_counts",
+     "locator": "Proxy letter / Proposal 1, printed p.~4 and 10",
+     "quote": "Our highly qualified Board is composed of 10 directors",
+     "note": "Ten directors composed the Board; Proposal 1 says 'Ten Directors are to be elected', all with 'Independent Director since' dates (<=2024) or CEO Batra, so all ten are incumbents."
+    },
+    {
+     "group": "independence",
+     "locator": "Board/Director Independence, printed p.~20",
+     "quote": "The Board has determined that each Director, other than Dr. Batra, the Company’s President and CEO, has no material relationship with the Company and otherwise qualifies as “independent” under these criteria and the applicable listing standards of the New York Stock Exchange.",
+     "note": "10 minus Batra = 9 independent; nine biography cards carry 'Independent Director since'."
+    },
+    {
+     "group": "leadership",
+     "locator": "Board Leadership Structure, printed p.~22",
+     "quote": "In 2024, Dr. Flemming Ornskov served as Chair of the Board and Dr. Batra served as President and CEO of the Company.",
+     "note": "Ornskov's current card is headed 'Chair of the Board' (independent); Batra is CEO; no lead director named."
+    }
+   ],
+   "date_basis": "publication date of 2025 proxy; current board described therein, not a year-end or annual-average measure",
+   "board_scope": "incumbent directors; nominee roster reconciled to current membership",
+   "checked_at": "2026-11-11",
+   "capture_status": "raw_document_archived",
+   "review_status": "agent_read_pending_audit"
+  },
+  {
+   "cik": "0000783325",
+   "company": "WEC Energy Group",
+   "accession": "0000107815-25-000149",
+   "publication_date": "2025-03-27",
+   "board_size": 14,
+   "independent_directors": 12,
+   "board_leadership": "Separate CEO and chair",
+   "ceo_name": "Scott J. Lauber",
+   "chair_name": "Gale E. Klappa",
+   "lead_director_name": "Thomas K. Lane",
+   "independence_standard": "NYSE",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/783325/000010781525000149/wec-20250311.htm",
+   "archive_file": "data/raw/governance/0000783325_0000107815-25-000149.htm",
+   "evidence": [
+    {
+     "group": "board_counts",
+     "locator": "Election of Directors, printed p.P-11",
+     "quote": "Acting on the recommendation of the Corporate Governance Committee, the Board is recommending the following 13 nominees for election as directors at our annual meeting.",
+     "note": "13 nominees, all sitting (Baxter and Lange joined 1 Jan 2025). Plus Culver, a sitting director who is not a nominee (see second board_counts entry): 13+1=14 in place."
+    },
+    {
+     "group": "independence",
+     "locator": "Director Independence, printed p.P-19",
+     "quote": "The Board has affirmatively determined that Directors Baxter, Bie, Culver, Cunningham, Farrow, Garcia-Thomas, Green, Lane, Lange, Payne, Stanek, and Tellock are independent.",
+     "note": "Twelve named independent directors (including Culver); Klappa and Lauber are the two non-independent ones: 12 of 14."
+    },
+    {
+     "group": "leadership",
+     "locator": "Board Leadership, printed p.P-12",
+     "quote": "Director Klappa, who transitioned to Non-Executive Chairman in May 2024, is not independent due to his prior employment with WEC Energy Group.",
+     "note": "Klappa is Non-Executive Chairman (summary: 'Separate Chairman and CEO'); Scott J. Lauber is President and CEO; Thomas K. Lane is Independent Lead Director."
+    },
+    {
+     "group": "board_counts",
+     "locator": "Election of Directors, printed p.P-12",
+     "quote": "Director Culver reached retirement age in 2024, and therefore, is not serving as a nominee.",
+     "note": "Culver is still a director until May 2025 (p.P-19: 'will complete his service on the board in May 2025'), so counted in the board in place."
+    }
+   ],
+   "date_basis": "publication date of 2025 proxy; current board described therein, not a year-end or annual-average measure",
+   "board_scope": "incumbent directors; nominee roster reconciled to current membership",
+   "checked_at": "2026-11-11",
+   "capture_status": "raw_document_archived",
+   "review_status": "agent_read_pending_audit"
+  },
+  {
+   "cik": "0000072971",
+   "company": "Wells Fargo",
+   "accession": "0000072971-25-000090",
+   "publication_date": "2025-03-19",
+   "board_size": 13,
+   "independent_directors": 12,
+   "board_leadership": "Separate CEO and chair",
+   "ceo_name": "Charles W. Scharf",
+   "chair_name": "Steven D. Black",
+   "independence_standard": "NYSE",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/72971/000007297125000090/wfc-20250317.htm",
+   "archive_file": "data/raw/governance/0000072971_0000072971-25-000090.htm",
+   "evidence": [
+    {
+     "group": "board_counts",
+     "locator": "Proposal 1, Election of 13 Director Nominees, printed p.~ 9",
+     "quote": "Our Board believes the 13 director nominees bring the right mix of professional experiences, capabilities, and diverse perspectives",
+     "note": "13 nominees; the director-nominee table lists 13 people each with a 'director since' year of 2024 or earlier (Garcia 2024 latest), so all are incumbents; no non-nominee director is mentioned."
+    },
+    {
+     "group": "independence",
+     "locator": "Director Independence, printed p.~ 59",
+     "quote": "Additionally, 12 of the 13 director nominees are independent under the Director Independence Standards adopted by our Board, which include the NYSE’s corporate governance rules, and all members of our standing Board committees are independent.",
+     "note": "12 of the 13; the exception is CEO Charles W. Scharf (employee)."
+    },
+    {
+     "group": "leadership",
+     "locator": "Letter from Independent Board Chair, printed p.~ 2",
+     "quote": "As I approach my fourth year as independent Board Chair of Wells Fargo, I am incredibly proud to be a part of Wells Fargo.",
+     "note": "Steven D. Black is independent Board Chair (signature 'Independent Chair of the Board'); Scharf is CEO and President; no separate lead director named."
+    }
+   ],
+   "date_basis": "publication date of 2025 proxy; current board described therein, not a year-end or annual-average measure",
+   "board_scope": "incumbent directors; nominee roster reconciled to current membership",
+   "checked_at": "2026-11-11",
+   "capture_status": "raw_document_archived",
+   "review_status": "agent_read_pending_audit"
+  },
+  {
+   "cik": "0000766704",
+   "company": "Welltower",
+   "accession": "0000766704-25-000013",
+   "publication_date": "2025-04-11",
+   "board_size": 9,
+   "independent_directors": 8,
+   "board_leadership": "Separate CEO and chair",
+   "ceo_name": "Shankh Mitra",
+   "chair_name": "Kenneth J. Bacon",
+   "independence_standard": "NYSE",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/766704/000076670425000013/well-20250410.htm",
+   "archive_file": "data/raw/governance/0000766704_0000766704-25-000013.htm",
+   "evidence": [
+    {
+     "group": "board_counts",
+     "locator": "Notice of Annual Meeting item (1) and Board table, printed p.~ iv and 9",
+     "quote": "The election of nine director nominees named in the accompanying proxy statement to hold office until the next annual meeting of shareholders",
+     "note": "Nine nominees; the 'Welltower's Board of Directors' table lists the same nine with director-since years 2014-2024, so all are incumbents."
+    },
+    {
+     "group": "independence",
+     "locator": "Director independence, printed p.~ 14",
+     "quote": "The Board has determined that, other than Mr. Mitra, all of the directors have no material relationship with Welltower",
+     "note": "All directors except CEO Mitra independent: 9-1=8 (matches 'Number of Independent Director Nominees Standing for Election: 8')."
+    },
+    {
+     "group": "leadership",
+     "locator": "Board leadership, printed p.~ 14",
+     "quote": "The Board is currently led by an independent Chair, Mr. Bacon.",
+     "note": "Leadership structure 'separates the Chair and CEO roles'; Kenneth J. Bacon is independent Chair; Shankh Mitra is CEO; no lead director named."
+    }
+   ],
+   "date_basis": "publication date of 2025 proxy; current board described therein, not a year-end or annual-average measure",
+   "board_scope": "incumbent directors; nominee roster reconciled to current membership",
+   "checked_at": "2026-11-11",
+   "capture_status": "raw_document_archived",
+   "review_status": "agent_read_pending_audit"
+  },
+  {
+   "cik": "0000105770",
+   "company": "West Pharmaceutical Services",
+   "accession": "0001558370-25-003461",
+   "publication_date": "2025-03-21",
+   "board_size": 12,
+   "independent_directors": 11,
+   "board_leadership": "Combined CEO and chair",
+   "ceo_name": "Eric M. Green",
+   "chair_name": "Eric M. Green",
+   "lead_director_name": "Paolo Pucci",
+   "independence_standard": "NYSE",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/105770/000155837025003461/wst-20250506xdef14a.htm",
+   "archive_file": "data/raw/governance/0000105770_0001558370-25-003461.htm",
+   "evidence": [
+    {
+     "group": "board_counts",
+     "locator": "Proposal 1, printed p.~ 25",
+     "quote": "Our shareholders are asked to consider twelve nominees for election to our Board",
+     "note": "Twelve nominees; 'All the nominees are current Company directors' (quoted in note of independence entry), so 12 incumbents."
+    },
+    {
+     "group": "independence",
+     "locator": "Proposal 1 / Eric M. Green bio, printed p.~ 25 and 35",
+     "quote": "All the nominees are current Company directors and all non-employee directors have been determined by our Board to be independent.",
+     "note": "12 current directors; the only non-independent one is CEO Green (see leadership entry: 'our only non-independent director'): 12-1=11."
+    },
+    {
+     "group": "leadership",
+     "locator": "Eric M. Green biography",
+     "quote": "As West’s President and CEO, Mr. Green is our only non-independent director and also serves as Chair.",
+     "note": "Roles combined in Eric M. Green. Lead Independent Director at the document date (data as of March 21, 2025) is Paolo Pucci ('until April 2025'); Robert F. Friel takes over 'as of April 2025'."
+    }
+   ],
+   "date_basis": "publication date of 2025 proxy; current board described therein, not a year-end or annual-average measure",
+   "board_scope": "incumbent directors; nominee roster reconciled to current membership",
+   "checked_at": "2026-11-11",
+   "capture_status": "raw_document_archived",
+   "review_status": "agent_read_pending_audit"
+  },
+  {
+   "cik": "0000106040",
+   "company": "Western Digital",
+   "accession": "0001628280-25-044298",
+   "publication_date": "2025-10-06",
+   "board_size": 8,
+   "independent_directors": 7,
+   "board_leadership": "Separate CEO and chair",
+   "ceo_name": "Irving Tan",
+   "chair_name": "Martin I. Cole",
+   "independence_standard": "Nasdaq",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/106040/000162828025044298/wdc-20251006.htm",
+   "archive_file": "data/raw/governance/0000106040_0001628280-25-044298.htm",
+   "evidence": [
+    {
+     "group": "board_counts",
+     "locator": "Proposal 1, printed p.~ 14",
+     "quote": "Each of the nominees is currently a member of our Board",
+     "note": "Eight nominees, all current members (Kiddoo, Tan and Oulman joined at the Separation, Feb 2025, before the document date of Oct 2025): 8 in place."
+    },
+    {
+     "group": "independence",
+     "locator": "Director Independence, printed p.~ 25",
+     "quote": "none of our current non-employee directors (Messrs. Cole, Doluca, Kiddoo or Massengill, or Mses. Alexy, Oulman or Streeter) has any relationship that, in the opinion of our Board, would interfere",
+     "note": "Seven named non-employee directors independent; the eighth is CEO Irving Tan ('7 Independent, 1 Non-Independent')."
+    },
+    {
+     "group": "leadership",
+     "locator": "Board Leadership, printed p.~ 26",
+     "quote": "In connection with Mr. Cole’s appointment as Chair of the Board, our Board determined not to appoint a Lead Independent Director.",
+     "note": "Martin I. Cole is independent Chair (appointed Feb 2025); Irving Tan is CEO; no lead director."
+    }
+   ],
+   "date_basis": "publication date of 2025 proxy; current board described therein, not a year-end or annual-average measure",
+   "board_scope": "incumbent directors; nominee roster reconciled to current membership",
+   "checked_at": "2026-11-11",
+   "capture_status": "raw_document_archived",
+   "review_status": "agent_read_pending_audit"
+  },
+  {
+   "cik": "0000106535",
+   "company": "Weyerhaeuser",
+   "accession": "0001140361-25-010318",
+   "publication_date": "2025-03-26",
+   "board_size": 10,
+   "independent_directors": 9,
+   "board_leadership": "Separate CEO and chair",
+   "ceo_name": "Devin W. Stockfish",
+   "chair_name": "Rick R. Holley",
+   "independence_standard": "NYSE",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/106535/000114036125010318/ny20041684x1_def14a.htm",
+   "archive_file": "data/raw/governance/0000106535_0001140361-25-010318.htm",
+   "evidence": [
+    {
+     "group": "board_counts",
+     "locator": "Election of Directors, printed p.~ 24",
+     "quote": "All nominees were elected as directors by shareholders at the 2024 annual meeting for a one-year term expiring at the 2025 annual meeting.",
+     "note": "Ten nominees, all elected in 2024, so all ten are incumbents ('Nine of Our 10 Directors Are Independent' heading confirms 10 current directors)."
+    },
+    {
+     "group": "independence",
+     "locator": "Director Independence, printed p.~ 14",
+     "quote": "the board affirmatively determined that, other than Mr. Stockfish, each of the company’s current directors, each nominee for director and each director who served on the board in 2024 is independent in accordance with applicable NYSE and SEC independence rules and requirements.",
+     "note": "10 current directors minus CEO Stockfish = 9 independent."
+    },
+    {
+     "group": "leadership",
+     "locator": "Board leadership, printed p.~ 14",
+     "quote": "Our board has chosen to separate the positions of board chair and chief executive officer.",
+     "note": "Rick R. Holley is Chairman of the Board (independent non-executive chair per the same section); Devin W. Stockfish is President and CEO; no lead director."
+    }
+   ],
+   "date_basis": "publication date of 2025 proxy; current board described therein, not a year-end or annual-average measure",
+   "board_scope": "incumbent directors; nominee roster reconciled to current membership",
+   "checked_at": "2026-11-11",
+   "capture_status": "raw_document_archived",
+   "review_status": "agent_read_pending_audit"
+  },
+  {
+   "cik": "0000107263",
+   "company": "Williams Companies",
+   "accession": "0001193125-25-057277",
+   "publication_date": "2025-03-19",
+   "board_size": 12,
+   "independent_directors": 11,
+   "board_leadership": "Separate CEO and chair",
+   "ceo_name": "Alan S. Armstrong",
+   "chair_name": "Stephen W. Bergstrom",
+   "independence_standard": "NYSE",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/107263/000119312525057277/d891052ddef14a.htm",
+   "archive_file": "data/raw/governance/0000107263_0001193125-25-057277.htm",
+   "evidence": [
+    {
+     "group": "board_counts",
+     "locator": "Item 1 Election of Directors, printed p.~ 24",
+     "quote": "After the Annual Meeting, assuming the stockholders elect all nominees to the Board, the Board has approved reducing the size of the Board from twelve to eleven directors.",
+     "note": "Current board = 12: 11 nominees (all elected in April 2024) plus Murray D. Smith, who is retiring from the Board effective April 29, 2025 (footnote in committee table) and is not a nominee."
+    },
+    {
+     "group": "independence",
+     "locator": "Director Independence, printed p.~ 29",
+     "quote": "the Board affirmatively determined that each of Mr. Bergstrom, Mr. Creel, Ms. Doré, Ms. Lockhart, Mr. Muncrief, Mr. Ragauss, Ms. Robeson, Mr. Sheffield, Mr. Smith, Mr. Spence, and Mr. Tyson are independent as defined by the NYSE’s Listed Company Manual.",
+     "note": "Eleven named independent directors (including retiring Smith); the twelfth, CEO Armstrong, is not independent: 11 of 12."
+    },
+    {
+     "group": "leadership",
+     "locator": "Director Independence and Board Leadership, printed p.~ 26",
+     "quote": "Separate the roles of Board Chair and CEO, which were split in 2011.",
+     "note": "Stephen W. Bergstrom labelled 'NON-EXECUTIVE BOARD CHAIR' and independent in his nominee entry; Alan S. Armstrong is Director, President and CEO; no separate lead director found."
+    },
+    {
+     "group": "board_counts",
+     "locator": "Item 1 Election of Directors, printed p.~ 24",
+     "quote": "Effective April 29, 2025, Mr. Smith will retire from the Board.",
+     "note": "Smith still sits at publication (2025-03-19) and is counted in the 12."
+    }
+   ],
+   "date_basis": "publication date of 2025 proxy; current board described therein, not a year-end or annual-average measure",
+   "board_scope": "incumbent directors; nominee roster reconciled to current membership",
+   "checked_at": "2026-11-11",
+   "capture_status": "raw_document_archived",
+   "review_status": "agent_read_pending_audit"
+  },
+  {
+   "cik": "0000719955",
+   "company": "Williams-Sonoma, Inc.",
+   "accession": "0001628280-25-020659",
+   "publication_date": "2025-04-29",
+   "board_size": 8,
+   "independent_directors": 7,
+   "board_leadership": "Separate CEO and chair",
+   "ceo_name": "Laura Alber",
+   "chair_name": "Scott Dahnke",
+   "independence_standard": "NYSE",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/719955/000162828025020659/wsm-20250429.htm",
+   "archive_file": "data/raw/governance/0000719955_0001628280-25-020659.htm",
+   "evidence": [
+    {
+     "group": "board_counts",
+     "locator": "Proposal 1 nominee table, printed p.~ 10",
+     "quote": "Our Board has no reason to believe that any of the nominees will be unwilling or unable to serve as a director.",
+     "note": "Eight nominees in the table (Alber, Eggleston Bracey, Campion, Dahnke, Finucane, Huffington, Ready, van Paasschen), 'Director Since' 2010-2024: all incumbents; Pretlow, listed as former member, left in 2024 and is excluded."
+    },
+    {
+     "group": "independence",
+     "locator": "Director Independence, printed p.~ 12",
+     "quote": "Our Board has determined that the following former and current members of the Board satisfied the independence requirements of our “Policy Regarding Director Independence Determinations,” which is part of our Corporate Governance Guidelines",
+     "note": "Seven current directors independent (the nominee table marks Alber 'Not Independent', the other seven 'Independent'); Pretlow is former. 7 of 8."
+    },
+    {
+     "group": "leadership",
+     "locator": "Board Leadership Structure, printed p.~ 20",
+     "quote": "We currently separate the positions of Chief Executive Officer and Board Chair.",
+     "note": "Scott Dahnke independent Board Chair since June 2020; Laura Alber is CEO; no lead director because the chair is independent."
+    },
+    {
+     "group": "board_counts",
+     "locator": "Director Compensation table footnote",
+     "quote": "Ms. Pretlow's service on the Board ended in 2024.",
+     "note": "Confirms Pretlow (named in the independence sentence) is not in the board in place."
+    }
+   ],
+   "date_basis": "publication date of 2025 proxy; current board described therein, not a year-end or annual-average measure",
+   "board_scope": "incumbent directors; nominee roster reconciled to current membership",
+   "checked_at": "2026-11-11",
+   "capture_status": "raw_document_archived",
+   "review_status": "agent_read_pending_audit"
+  }
+ ],
+ "unresolved": [
+  {
+   "cik": "0001744489",
+   "company": "Walt Disney Company (The)",
+   "reason": "effectif en place non rapprochable des candidats",
+   "detail": "Dix candidats (Barra, Chang, Darroch, Everson, Froman, Gorman, Iger, Lagomasino, McDonald, Rice), tous administrateurs depuis 2017-2024 sauf aucune entrée nouvelle ; indépendance : tous sauf Iger. Mais la lettre du président (23 janv. 2025) remercie Mark Parker, ancien président, 'As he departs the Disney Board' ; le document ne dit nulle part si Parker siège encore à la date de publication (il est dans le tableau de rémunération 2024 mais pas parmi les candidats). Effectif en place = 10 ou 11 non établi ; Gorman est président indépendant depuis janvier 2025, CEO Bob Iger. Si Parker est déjà parti : 10 administrateurs, 9 indépendants (Séparé)."
+  }
+ ]
+}

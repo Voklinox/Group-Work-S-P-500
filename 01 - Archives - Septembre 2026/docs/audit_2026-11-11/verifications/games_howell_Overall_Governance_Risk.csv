@@ -1,0 +1,11 @@
+Group_1,Group_2,Mean_Diff,SE,95%_CI,t_stat,p_val,Significant
+Consumer,Finance,-0.2171,0.4203,"[-1.378, 0.944]",-0.517,0.986,False
+Consumer,Healthcare,0.3379,0.4265,"[-0.842, 1.518]",0.792,0.932,False
+Consumer,Industrials & Energy,0.8708,0.3387,"[-0.060, 1.802]",2.571,0.079,False
+Consumer,Tech & Comms,-0.4383,0.4138,"[-1.577, 0.701]",-1.059,0.827,False
+Finance,Healthcare,0.5551,0.4702,"[-0.746, 1.857]",1.18,0.763,False
+Finance,Industrials & Energy,1.0879,0.3924,"[0.002, 2.174]",2.773,0.049,True
+Finance,Tech & Comms,-0.2211,0.4588,"[-1.487, 1.044]",-0.482,0.989,False
+Healthcare,Industrials & Energy,0.5329,0.399,"[-0.574, 1.640]",1.336,0.670,False
+Healthcare,Tech & Comms,-0.7762,0.4644,"[-2.059, 0.507]",-1.671,0.455,False
+Industrials & Energy,Tech & Comms,-1.3091,0.3854,"[-2.370, -0.248]",-3.397,0.007,True

@@ -1,0 +1,18 @@
+Variable,Label,Jamovi Measure Type,Description,Unit,Levels / Range
+Ticker,Stock Ticker Symbol,ID,Unique equity ticker symbol,string,string
+Company,Company Name,ID,Legal operating corporate identity,string,string
+Sector,Sector (5 Consolidated Groups),Nominal,Consolidated business sector (5 groups for ANOVA/Chi-Square),categories,"Tech & Comms, Healthcare, Finance, Industrials & Energy, Consumer"
+Sector_Raw,GICS Raw Sector,Nominal,Original 11-category GICS sector classification,categories,categories
+Total_Revenue_B,Total Revenue ($B),Continuous,Yahoo Finance totalRevenue in billions USD; source reporting period not verified,$ Billion,$ Billion
+Market_Cap_B,Market Capitalization ($B),Continuous,Total market capitalization in billions USD,$ Billion,$ Billion
+Market_Cap_Quartile,Market Cap Quartile,Ordinal,Firm size quartile from Q1 (smallest) to Q4 (mega-cap),quartiles,"Q1, Q2, Q3, Q4"
+ROE,Return on Equity (ROE),Continuous,Yahoo Finance returnOnEquity; reporting period not verified; missing causes not established for every firm,decimal,decimal
+Profit_Margin,Net Profit Margin,Continuous,Yahoo Finance net profit margin as a decimal; reporting period not verified,decimal,decimal
+Beta,Market Beta (5Y Monthly),Continuous,Systematic market risk coefficient against S&P 500,ratio,ratio
+Headcount,Full-Time Employees,Continuous,Total full-time headcount globally,employees,employees
+Audit_Risk,Audit Risk Score,Ordinal,"ISS Governance QualityScore for audit practices (1-10, lower=better)",relative decile rank (1-10),"1, 2, 3, 4, 5, 6, 7, 8, 9, 10"
+Board_Risk,Board Structure Risk Score,Ordinal,"ISS Governance QualityScore for board independence (1-10, lower=better)",relative decile rank (1-10),"1, 2, 3, 4, 5, 6, 7, 8, 9, 10"
+Compensation_Risk,Compensation Risk Score,Ordinal,"ISS Governance QualityScore for executive pay alignment (1-10, lower=better)",relative decile rank (1-10),"1, 2, 3, 4, 5, 6, 7, 8, 9, 10"
+Shareholder_Rights_Risk,Shareholder Rights Risk Score,Ordinal,"ISS Governance QualityScore for shareholder rights protection (1-10, lower=better)",relative decile rank (1-10),"1, 2, 3, 4, 5, 6, 7, 8, 9, 10"
+Overall_Governance_Risk,Overall Governance Risk Score,Ordinal,"ISS composite governance quality score (1-10, lower=better)",relative decile rank (1-10),"1, 2, 3, 4, 5, 6, 7, 8, 9, 10"
+Governance_Risk_Level,Governance Risk Category,Ordinal,"Categorized governance risk: Low (1-3), Medium (4-6), High (7-10)",tier,"Low, Medium, High"

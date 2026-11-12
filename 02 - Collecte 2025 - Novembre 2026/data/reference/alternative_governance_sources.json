@@ -1,0 +1,46 @@
+[
+  {
+    "cik": "0001393818",
+    "company": "Blackstone Inc.",
+    "form": "10-K",
+    "publication_date": "2025-02-28",
+    "accession": "0001193125-25-042469",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1393818/000119312525042469/d912273d10k.htm",
+    "locator": "Part III Item 10: Controlled Company Exception and Director Independence",
+    "status": "Governance section located; measures not extracted",
+    "note": "Financial period ends 2024; verify the separate current governance description and its date."
+  },
+  {
+    "cik": "0001404912",
+    "company": "KKR & Co.",
+    "form": "10-K",
+    "publication_date": "2025-02-28",
+    "accession": "0001404912-25-000015",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1404912/000140491225000015/kkr-20241231.htm",
+    "locator": "Independence and Composition of Board of Directors",
+    "status": "Governance section located; measures not extracted",
+    "note": "Financial period ends 2024; verify current board, date and co-CEO/co-chair structure."
+  },
+  {
+    "cik": "0002041610",
+    "company": "Paramount Skydance Corporation",
+    "form": "8-K12B",
+    "publication_date": "2025-08-07",
+    "accession": "0001193125-25-175046",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/2041610/000119312525175046/d841914d8k12b.htm",
+    "locator": "Board appointments, chair election and independence after Closing",
+    "status": "Current board information located; not integrated",
+    "note": "Use actual appointments, distinguish earlier proposed board and later changes."
+  },
+  {
+    "cik": "0002058873",
+    "company": "Qnity Electronics",
+    "form": "8-K",
+    "publication_date": "2025-11-03",
+    "accession": "0001193125-25-261603",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/2058873/000119312525261603/d65598d8k.htm",
+    "locator": "Item 5.02: appointments and board expansion effective November 1, 2025",
+    "status": "Actual appointments located; independence detail requires referenced information statement",
+    "note": "8-K confirms actual appointments rather than merely proposed Form 10 appointments."
+  }
+]

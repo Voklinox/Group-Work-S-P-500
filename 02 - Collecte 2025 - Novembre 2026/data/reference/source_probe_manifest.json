@@ -1,0 +1,143 @@
+[
+  {
+    "source_id": "wikipedia_revision",
+    "url": "https://en.wikipedia.org/w/api.php?action=query&prop=revisions&titles=List+of+S%26P+500+companies&rvprop=ids%7Ctimestamp&rvstart=2025-12-31T23%3A59%3A59Z&rvlimit=1&format=json",
+    "retrieved_at_utc": "2026-11-11T15:38:21.039411+00:00",
+    "status": 200,
+    "bytes": 255,
+    "sha256": "6c0d08abdc877b777b9886c45885a8046fa6998eb01f8feb6f78e5dcf626752c",
+    "local_file": "data/raw/universe_revision_probe.json"
+  },
+  {
+    "source_id": "sec_companyfacts_fiserv",
+    "url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000798354.json",
+    "retrieved_at_utc": "2026-11-11T15:38:22.295248+00:00",
+    "status": 200,
+    "bytes": 3936735,
+    "sha256": "59d3dcf55d5911af067891cb80826defe1d66824bb6570729bb760dff84a32a0",
+    "local_file": "data/raw/sec/CIK0000798354.json"
+  },
+  {
+    "source_id": "sec_tickers",
+    "url": "https://www.sec.gov/files/company_tickers.json",
+    "status": "error",
+    "error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "source_id": "universe_2025_revision",
+    "url": "https://en.wikipedia.org/w/api.php?action=parse&oldid=1329075976&prop=text&format=json",
+    "retrieved_at_utc": "2026-11-11T15:41:51.814918+00:00",
+    "status": 200,
+    "bytes": 764826,
+    "sha256": "7a3601f76f6b41fa86b1ec45813aafaa84af6a914aa03e5d22e27dc19829620c",
+    "local_file": "data/raw/universe_2025_revision_1329075976.json"
+  },
+  {
+    "source_id": "companyfacts_AAPL",
+    "url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000320193.json",
+    "retrieved_at_utc": "2026-11-11T15:41:52.943323+00:00",
+    "status": 200,
+    "bytes": 3859564,
+    "sha256": "f085735b4d08fb116ade18d24247ffabe11df8eb52eae6556b165831f15ef1ad",
+    "local_file": "data/raw/sec/CIK0000320193.json"
+  },
+  {
+    "source_id": "companyfacts_NVDA",
+    "url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001045810.json",
+    "retrieved_at_utc": "2026-11-11T15:41:54.157318+00:00",
+    "status": 200,
+    "bytes": 4092966,
+    "sha256": "19ef503a5770f5660964b3c3aea6937579d9b359da344afe6a9adf59c63d26ff",
+    "local_file": "data/raw/sec/CIK0001045810.json"
+  },
+  {
+    "source_id": "companyfacts_GOOGL",
+    "url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001652044.json",
+    "retrieved_at_utc": "2026-11-11T15:41:55.648790+00:00",
+    "status": 200,
+    "bytes": 3250837,
+    "sha256": "f87bc183f74b45ecf9a0933e0e0a1b6b97ead51a9d29367a7dae436574e1c1d0",
+    "local_file": "data/raw/sec/CIK0001652044.json"
+  },
+  {
+    "source_id": "companyfacts_JPM",
+    "url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000019617.json",
+    "retrieved_at_utc": "2026-11-11T15:41:59.006330+00:00",
+    "status": 200,
+    "bytes": 8138544,
+    "sha256": "162ae329aae30c15a681c3c9f98faa3d5d2cb76530636d905ae2c00db483a90d",
+    "local_file": "data/raw/sec/CIK0000019617.json"
+  },
+  {
+    "source_id": "submissions_AAPL",
+    "url": "https://data.sec.gov/submissions/CIK0000320193.json",
+    "retrieved_at_utc": "2026-11-11T15:41:59.919985+00:00",
+    "status": 200,
+    "bytes": 163787,
+    "sha256": "812dc9fc5794ed9ae016507af7a8480ac43890faa2594451c9f4aa76b9173d6f",
+    "local_file": "data/raw/sec/submissions_CIK0000320193.json"
+  },
+  {
+    "source_id": "submissions_NVDA",
+    "url": "https://data.sec.gov/submissions/CIK0001045810.json",
+    "retrieved_at_utc": "2026-11-11T15:42:00.832063+00:00",
+    "status": 200,
+    "bytes": 159914,
+    "sha256": "db787ea656392c0442099ee6498a978e5b0bfba2c14e47a68dda393ddaff0375",
+    "local_file": "data/raw/sec/submissions_CIK0001045810.json"
+  },
+  {
+    "source_id": "submissions_GOOGL",
+    "url": "https://data.sec.gov/submissions/CIK0001652044.json",
+    "retrieved_at_utc": "2026-11-11T15:42:01.897564+00:00",
+    "status": 200,
+    "bytes": 152278,
+    "sha256": "679f595245e1405a6fc4930020991b0042b790c5b2a18cd5799b8aa47bd8be60",
+    "local_file": "data/raw/sec/submissions_CIK0001652044.json"
+  },
+  {
+    "source_id": "submissions_JPM",
+    "url": "https://data.sec.gov/submissions/CIK0000019617.json",
+    "retrieved_at_utc": "2026-11-11T15:42:03.164402+00:00",
+    "status": 200,
+    "bytes": 4681725,
+    "sha256": "b334e2e1f3b969a7afff0ca86290c774e2c5c25e8da7856a25eb5a2cebcc3f31",
+    "local_file": "data/raw/sec/submissions_CIK0000019617.json"
+  },
+  {
+    "source_id": "submissions_FISV",
+    "url": "https://data.sec.gov/submissions/CIK0000798354.json",
+    "retrieved_at_utc": "2026-11-11T15:42:04.208602+00:00",
+    "status": 200,
+    "bytes": 158750,
+    "sha256": "d179dd75dc32daf0cfe3d4ea7e1baea3f82efc7c7e0e01e52b0ec8dd898197a2",
+    "local_file": "data/raw/sec/submissions_CIK0000798354.json"
+  },
+  {
+    "source_id": "submissions_CRH",
+    "url": "https://data.sec.gov/submissions/CIK0000849395.json",
+    "retrieved_at_utc": "2026-11-11T15:44:43.654185+00:00",
+    "status": 200,
+    "bytes": 172111,
+    "sha256": "88d46b92762297eab4651fb7efea058d121e00818d3b39df7d2e4d8ee04f7050",
+    "local_file": "data/raw/sec/submissions_CIK0000849395.json"
+  },
+  {
+    "source_id": "submissions_CVNA",
+    "url": "https://data.sec.gov/submissions/CIK0001690820.json",
+    "retrieved_at_utc": "2026-11-11T15:44:44.904942+00:00",
+    "status": 200,
+    "bytes": 157949,
+    "sha256": "420b4f427454907a5db2a0e400bdd5f21c0ddc1a20f8460a3aaa8d8ba4e1283f",
+    "local_file": "data/raw/sec/submissions_CIK0001690820.json"
+  },
+  {
+    "source_id": "submissions_FIX",
+    "url": "https://data.sec.gov/submissions/CIK0001035983.json",
+    "retrieved_at_utc": "2026-11-11T15:44:46.998496+00:00",
+    "status": 200,
+    "bytes": 158327,
+    "sha256": "8396cc5a300b895c5938c42f09ad5f6a2fbe727ea6bc62bb87b57446c277d44c",
+    "local_file": "data/raw/sec/submissions_CIK0001035983.json"
+  }
+]
