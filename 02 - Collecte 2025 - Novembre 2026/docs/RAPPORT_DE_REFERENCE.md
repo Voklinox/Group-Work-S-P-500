@@ -48,6 +48,13 @@ Tableau : `s1_descriptives_continuous.csv`, `s1_frequency_*.csv`. Cinq profils.
 
 ![Marge](../outputs/figures_reference/s1_hist_box_net_margin_pct.png)
 
+**Lecture des cinq profils.**
+1. *Secteur (nominal)* : on peut seulement compter et nommer le mode, Industrials & Energy (31,8 % des entreprises) ; calculer une « moyenne de secteur » n'aurait aucun sens.
+2. *Quartile de taille (ordinal)* : les quatre classes sont de taille égale par construction ; la médiane de l'actif est de 31,1 milliards USD, et l'écart entre la moyenne (102,6) et la médiane montre une distribution très étirée vers les grands groupes.
+3. *Marge nette* : l'entreprise typique gagne environ 13 centimes de résultat net pour 1 euro de ventes (médiane 12,9 %) ; l'écart-type de 14,7 points et la plage de −145 à +73 % indiquent un marché hétérogène où les cas extrêmes tirent la moyenne.
+4. *Taux d'endettement* : la médiane est de 64 % (actif financé par des dettes et autres passifs) ; la moyenne (67 %) est tirée par quelques entreprises à capitaux propres négatifs (jusqu'à 327 %).
+5. *Croissance du chiffre d'affaires* : la médiane (6,4 %) représente mieux la croissance courante que la moyenne (8,6 %), car quelques acquisitions donnent des valeurs extrêmes (jusqu'à +186 %).
+
 **Normalité de la marge nette (trois preuves).** (1) Les trois mesures de centre divergent peu mais la queue est lourde : moyenne 13,75, médiane 12,90. (2) Asymétrie −2,67 et aplatissement (excès) 31,3 : très hors de l'intervalle ±1. (3) L'histogramme a un pic net et une longue queue gauche (pertes). Shapiro-Wilk : W = 0,791, p < 0,001 ; ici H0 = « normale » donc on la rejette. **La marge n'est pas normale** ; la médiane et l'étendue interquartile (6,9 à 20,3) la résument mieux. L'endettement (asymétrie 2,77) et la croissance (4,76) sont aussi très asymétriques ; l'actif est approximativement symétrique en logarithme (asymétrie 0,56).
 
 **Ce qu'un gestionnaire retient (deux phrases).** La marge de l'entreprise typique est d'environ 13 %, avec un quart des entreprises au-dessous de 7 % et un quart au-dessus de 20 % : une moyenne seule masque cette dispersion, d'où l'usage de la médiane. Quelques cas extrêmes (pertes de Moderna, forte croissance d'Expand Energy par acquisition) tirent les moyennes et doivent être traités à part.

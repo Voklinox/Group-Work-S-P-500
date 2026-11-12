@@ -1,10 +1,10 @@
 # S&P 500 — projet de groupe, collecte 2025
 
-**Équipe : David Wanono, Olyvan Perrin, Guillaume Da Cruz.** Cours Quantitative Data Analysis, M1 S7, EM Normandie. Échéance indiquée par David : **2 décembre 2026**. Dernière mise à jour documentaire : **11 novembre 2026**.
+**Équipe : David Wanono, Olyvan Perrin, Guillaume Da Cruz.** Cours Quantitative Data Analysis, M1 S7, EM Normandie. Échéance indiquée par David : **2 décembre 2026**. Dernière mise à jour documentaire : **13 novembre 2026**.
 
 Étudier ce qui explique la rentabilité (marge nette, ROA) des entreprises du S&P 500 : taille, endettement, croissance du chiffre d’affaires et secteur (DEC25 : la gouvernance a été abandonnée le 12 novembre 2026, travail archivé). Comptes du dernier exercice annuel **clos en 2025**, avec dates exactes ; une ligne par entreprise.
 
-**Le jeu de données final et les analyses 2025 ne sont pas encore terminés. Aucun CSV final Jamovi n’est disponible.**
+**Étape 1 terminée (13 novembre 2026) : CSV final, analyses de référence, rapport et guide Jamovi sont prêts. Prochaine étape : reproduction dans Jamovi par David.**
 
 ## Priorité fixée par David
 

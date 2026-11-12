@@ -158,6 +158,12 @@ Le point d’accès à la racine Git renvoie à cette version complète unique. 
 - **Étape 1 terminée** : données justifiées, calculs contrôlés, rapport de référence, graphiques, guide Jamovi. Les chiffres du rapport sont des résultats « référence ».
 - **Prochaine action** : étape 2 (Jamovi avec David).
 
+## 13 novembre 2026 (audit complet avant Jamovi)
+
+- Audit exécuté et consigné dans docs/AUDIT_2026-11-13.md : to-do (12 tâches ouvertes, toutes pour les étapes 2 et 3), conformité aux consignes, fiabilité des sources, qualité des conclusions, points faibles, risques de rapprochement.
+- Corrections issues de l'audit : docs/ETAT_DU_PROJET.md réécrit (il datait du 11 novembre) ; README, dictionnaire et SOURCES_ET_REPRISE alignés ; lecture des cinq profils ajoutée au rapport ; mise en garde sur les β de facteurs et les distances de Cook ajoutée au guide Jamovi ; liens locaux vérifiés (0 cassé).
+- Verdict : étape 1 complète et vérifiée ; prêt pour Jamovi.
+
 ## Format pour les prochaines entrées
 
 Ajouter une section datée avec : demande ou objectif ; action et motif ; fichiers/preuves ; résultat et nombre de cas vérifiés ; tâche terminée ou restant ouverte ; décision éventuelle ; prochaine action. Conserver les entrées précédentes. Si une ancienne conclusion est corrigée, ajouter la correction et sa raison au lieu d’effacer l’historique.

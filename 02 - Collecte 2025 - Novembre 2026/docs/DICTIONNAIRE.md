@@ -52,14 +52,11 @@ Chaque ligne du tableau financier représente une entreprise (identifiant CIK), 
 
 Les cellules vides signifient « non extrait/à vérifier », jamais zéro. Les montants sont en dollars bruts, sans conversion silencieuse en millions. Tous les flux proviennent de la même période et du même numéro de dépôt. Les ratios sont calculés, pas présentés comme directement publiés.
 
-## Variables non encore disponibles
+## Variables du cours (état au 13 novembre 2026)
 
-- Gouvernance : aucun score ISS historique 2025 vérifié. David n’a pas d’abonnement historique. La substitution par des observations publiques datées est approuvée par David le 11 novembre 2026 ; la collecte doit être vérifiée avant intégration.
-- Capitalisation au 31 décembre 2025 : pas encore validée. Les cours ajustés et les actions actuelles ne constituent pas une méthode acceptable de reconstitution.
-- Quartile de taille : pas encore calculé. Il dépendra d’une mesure de taille validée, de sa date et d’une règle explicite pour les ex æquo. Le premier quartile devra signifier les plus petites entreprises selon cette mesure, le quatrième les plus grandes.
-- Catégorie nominale à 2–5 modalités et variable ordinale : à définir de façon justifiable pour les exigences du cours. Ne pas regrouper les 11 secteurs sans règle économique documentée.
+Réalisé : variable ordinale `size_quartile` (actif total, Q1 à Q4), nominales `sector_group`, `finance_vs_other`, `profitable`, continues listées en tête de ce document. La capitalisation boursière n'est pas utilisée (DEC12 : actif total). Les scores ISS ne sont pas utilisés (DEC05).
 
-## Gouvernance publique — registre pilote
+## Gouvernance publique — registre pilote (ARCHIVÉ, DEC25 : non utilisé dans l'analyse)
 
 Cinq entreprises renseignées dans governance_observations.json et governance_2025_WORKING.json, pas 500. Choix public approuvé par David.
 

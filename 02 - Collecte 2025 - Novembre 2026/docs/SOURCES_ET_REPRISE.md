@@ -60,3 +60,17 @@ Les quatre supports de cours ont une copie identique dans docs/sources/cours. Le
 Les phases de calculs de référence, reproduction Jamovi et finalisation du rapport sont désormais séparées dans tasks/plan.md. L’absence de Jamovi ne bloque pas le travail d’analyse de référence de l’agent.
 
 Le registre docs/sources/cours/transcription_manifest.json conserve le nombre de pages attendu et transcrit, l’empreinte de chaque texte de page et celle du fichier Markdown complet. Aucune page n’est exclue. Les illustrations et la mise en page des formules restent dans les PDF originaux inclus.
+
+## Chaîne de calcul complète (état du 13 novembre 2026)
+
+```sh
+python3 -m src.collect && python3 -m src.audit      # comptes SEC, preuves, audit d'intégrité
+python3 -m src.extra_variables                      # croissance du chiffre d'affaires et preuves
+python3 -m src.screening                            # dépistage des valeurs extrêmes
+SEC_CONTACT_EMAIL=<adresse> python3 -m src.report_sample 25 2026   # contrôle de 25 rapports (téléchargement)
+python3 -m src.build_dataset                        # CSV final data/processed/sp500_2025_JAMOVI.csv
+python3 -m venv .venv && .venv/bin/pip install -r requirements-analysis.txt
+.venv/bin/python -m src.analysis && .venv/bin/python -m src.verify_analysis
+```
+
+Le téléchargement de documents sur sec.gov exige un contact déclaré (variable `SEC_CONTACT_EMAIL`, jamais écrit dans les fichiers : dépôt public).
