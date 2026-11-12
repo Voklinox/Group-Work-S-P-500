@@ -107,6 +107,8 @@ Jamovi peut centrer Levene sur la moyenne ou la médiane : comparer avec les deu
 
 **Variantes à reproduire** (Data → Filter pour exclure les observations, ou Compute) : sans Expand Energy et Moderna et autres observations influentes (N = 468 : exclure les observations dont la distance de Cook dépasse 4/488) ; sans le secteur financier (N = 418, filtre `sector_group != "Finance"`) ; ROA comme dépendante (N = 488 ; B ln actif = −1,97 ; p < .001). Les valeurs de référence sont dans `outputs/analyses_reference/s4_sens_*`.
 
+**Contrôles supplémentaires reproductibles dans Jamovi (optionnels, §6.4 du rapport)** : (a) ANOVA de Welch et Kruskal-Wallis de la marge avec le facteur `sector` (11 secteurs) : Welch F = 8,04, Kruskal-Wallis H = 80,7, η² = 0,116 ; (b) régression multiple avec `sector` comme facteur (référence : Industrials) : croissance B = 0,233 (p < .001), secteur Financials +6,15 (p = .013). Le bootstrap, la régression de Huber et la régression médiane ne sont pas dans Jamovi de base : ils restent des résultats « référence ».
+
 ## 5. Points de vigilance (erreurs fréquentes d'après le cours)
 
 Type de mesure faux (`sector_group` en Continuous) ; facteur mis dans Covariates ; lire Levene à l'envers ; oublier « toutes choses égales par ailleurs » ; interpréter la constante ; écrire « cause » ; ne pas indiquer N, df et taille d'effet ; sortie copiée sans interprétation. Vérifier à chaque sortie : df = N − k − 1 ; F = MS inter / MS intra ; t = B / ES ; R² ajusté ≤ R² ; V de Cramér = √(χ² / (N (k − 1))).

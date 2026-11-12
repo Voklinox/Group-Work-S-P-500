@@ -13,13 +13,13 @@
 **Ce que disent les données.**
 - La marge nette médiane est de 12,9 % ; elle est très dispersée (de −145 % à +73 %) : la médiane décrit mieux l'entreprise typique que la moyenne (13,8 %).
 - Le **secteur financier** se distingue : marge moyenne de 20,9 % contre 12,5 % hors finance, soit +8,4 points (intervalle de confiance à 95 % : 5,5 à 11,4 ; d de Cohen = 0,59, effet moyen). Les autres groupes de secteurs ne se distinguent pas nettement entre eux.
-- À secteur, taille et endettement donnés, **un point de croissance du chiffre d'affaires est associé à 0,25 point de marge en plus** (IC 95 % : 0,16 à 0,33 ; p < 0,001), résultat de même signe et significatif avec les erreurs classiques dans les trois variantes testées (0,14 à 0,25) ; avec les erreurs robustes la significativité est limite (p de 0,04 à 0,08 dans trois cas sur quatre).
+- À secteur, taille et endettement donnés, **un point de croissance du chiffre d'affaires est associé à 0,25 point de marge en plus** (IC 95 % : 0,16 à 0,33 ; p < 0,001), résultat de même signe dans toutes les variantes (0,14 à 0,35) et confirmé par des méthodes robustes aux valeurs extrêmes : intervalle bootstrap à 95 % [0,11 ; 0,52], régression robuste de Huber (0,20) et régression médiane (0,20), p < 0,001.
 - **Taille et endettement n'expliquent pas la marge nette** (p = 0,98 et 0,45 dans le modèle complet). En revanche, la taille est associée à un **ROA plus faible** (−1,97 point par unité de log de l'actif, p < 0,001).
 - Le modèle complet n'explique que **11 %** de la variation des marges (R² ajusté 10 %) : l'essentiel dépend d'autres facteurs non mesurés ici.
 
 **Trois recommandations.**
 1. **Fixer les repères de marge par secteur, pas pour tout le S&P 500** : une marge de 12 % est moyenne hors finance mais faible en finance (médiane 21,0 % contre 12,1 %). Utiliser les groupes de secteurs comme référence dans toute comparaison de rentabilité.
-2. **Suivre la croissance du chiffre d'affaires comme levier associé à la rentabilité** : +10 points de croissance vont de pair avec environ +2,5 points de marge (de +1,4 à +2,5 selon la variante), toutes choses égales par ailleurs. Association à confirmer (inférence robuste limite) sur des données dans le temps avant de promettre un effet.
+2. **Suivre la croissance du chiffre d'affaires comme levier associé à la rentabilité** : +10 points de croissance vont de pair avec environ +2,5 points de marge (de +1,4 à +2,5 selon la variante), toutes choses égales par ailleurs. Association robuste aux valeurs extrêmes, mais observée entre entreprises : à confirmer sur des données dans le temps avant de promettre un effet.
 3. **Ne pas présélectionner ni prévoir la marge d'une entreprise d'après sa taille ou son endettement** (aucune association significative), et choisir l'indicateur selon l'objectif : marge pour la performance d'exploitation, ROA pour l'efficacité du capital, ce dernier diminuant avec la taille.
 
 ---
@@ -158,7 +158,23 @@ r² marge–croissance = 0,07 : 7 % de la variance partagée. Marge et ROA sont 
 | Sans le secteur financier | 418 | 0,083 | 0,250 (< 0,001) | – | −0,16 (0,80) | 0,011 (0,65) |
 | Marges tronquées (1 %–99 %) | 478 | 0,123 | 0,142 (< 0,001) | 7,85 (< 0,001) | −0,07 (0,85) | 0,009 (0,58) |
 
-Avec les erreurs robustes (HC3), le p de la croissance est de 0,046 (modèle complet), 0,077 (sans finance), 0,039 (marges tronquées) et < 0,001 (sans observations influentes) : on parle d'association **probable mais à confirmer**. Autre variation : l'endettement devient faiblement négatif sans les observations influentes (p = 0,039) : non robuste, à ne pas interpréter. Avec **le ROA comme résultat** (N = 488, R² = 0,190) : la taille est négativement associée (B = −1,97 par unité de ln(actif), β = −0,29, p < 0,001), l'endettement et la croissance positivement, et la finance n'a pas de prime ; l'hétéroscédasticité est forte (Breusch-Pagan p < 0,001), les p robustes sont donc à privilégier (croissance : p HC3 = 0,11).
+Avec les erreurs robustes (HC3), le p de la croissance est de 0,046 (modèle complet), 0,077 (sans finance), 0,039 (marges tronquées) et < 0,001 (sans observations influentes) : on parle d'association probable ; elle est consolidée au §6.4. Autre variation : l'endettement devient faiblement négatif sans les observations influentes (p = 0,039) : non robuste, à ne pas interpréter. Avec **le ROA comme résultat** (N = 488, R² = 0,190) : la taille est négativement associée (B = −1,97 par unité de ln(actif), β = −0,29, p < 0,001), l'endettement et la croissance positivement, et la finance n'a pas de prime ; l'hétéroscédasticité est forte (Breusch-Pagan p < 0,001), les p robustes sont donc à privilégier (croissance : p HC3 = 0,11).
+
+**6.4 Consolidation : robustesse aux valeurs extrêmes et au regroupement des secteurs** (`s5_robustness.csv`, `s5_sector11_regression.csv`, `results_robustness.json`, programme `src/robustness.py`). Mêmes données, N = 488.
+
+| Méthode | B croissance (IC ou p) | B Finance (p) |
+|---|---|---|
+| MCO, erreurs classiques | 0,248 (IC [0,16 ; 0,33]) | 7,84 (< 0,001) |
+| MCO, erreurs robustes HC3 | 0,248 (p = 0,046) | 7,84 (< 0,001) |
+| MCO, bootstrap de 2 000 tirages | 0,248 (IC 95 % [0,11 ; 0,52]) | 7,84 (IC [4,5 ; 11,0]) |
+| Régression robuste de Huber | 0,196 (p < 0,001) | 7,60 (< 0,001) |
+| Régression médiane (quantile 0,5) | 0,204 (p < 0,001) | 7,85 (< 0,001) |
+| Croissance écrêtée aux centiles 1 % et 99 % (HC3) | 0,294 (p < 0,001) | 7,53 (< 0,001) |
+| Sans croissance > 50 % (acquisitions importantes), HC3 | 0,349 (p = 0,039) | 7,19 (< 0,001) |
+
+Lecture : le coefficient de la croissance reste compris entre 0,2 et 0,35 selon la méthode, son intervalle bootstrap exclut zéro, et la médiane des entreprises, insensible aux extrêmes, donne le même résultat : **l'association n'est pas produite par quelques valeurs extrêmes**. La prime de la finance (7 à 8 points) est identique dans toutes les méthodes. Elle disparaît avec le ROA comme résultat (§6.3) : c'est une particularité de la marge (structure du revenu des banques et assureurs), pas un meilleur rendement du capital.
+
+*Regroupement des secteurs.* Avec les 11 secteurs d'origine au lieu de 5 groupes : Welch F = 8,04, Kruskal-Wallis H = 80,7 (p < 0,001), η² = 0,116 ; en régression multiple, croissance B = 0,233 (p < 0,001), taille p = 0,73, endettement p = 0,34, secteur financier +6,15 points (p = 0,013) : **les conclusions ne dépendent pas du regroupement** (notamment du classement de l'immobilier avec Consumer).
 
 ---
 
@@ -167,7 +183,7 @@ Avec les erreurs robustes (HC3), le p de la croissance est de 0,046 (modèle com
 - **Pas de causalité.** Coupe transversale : une corrélation entre croissance et marge peut venir de causes communes ou d'une causalité inverse.
 - **Périodes comptables différentes** : 134 entreprises ne clôturent pas en décembre (dates exactes conservées) ; les exercices clos début 2025 couvrent surtout 2024 (par exemple Nvidia).
 - **Définitions** : résultat net attribuable à la société mère ; revenu des banques et assureurs reconstitué par convention ; endettement = (actif − capitaux propres) / actif, qui inclut les minoritaires dans le passif ; la croissance est faussée par les acquisitions et reste manquante pour 12 entreprises.
-- **Valeurs extrêmes** conservées parce qu'authentiques (Moderna, Expand Energy, Verisign) ; résidus non normaux ; conclusions confirmées par erreurs robustes et variantes.
+- **Valeurs extrêmes** conservées parce qu'authentiques (Moderna, Expand Energy, Verisign) ; résidus non normaux ; conclusions confirmées par erreurs robustes, bootstrap, régressions de Huber et médiane, et variantes (§6.3–6.4).
 - **Regroupement des secteurs** en cinq groupes : l'immobilier est rangé avec Consumer par convention ; une analyse avec les 11 secteurs d'origine est possible en complément.
 - **Population** : entreprises cotées américaines présentes dans l'indice au 31 décembre 2025 ; deux entreprises sans comptes 2025 (Dayforce, Paramount) ; contrôle des retraits de 2025 encore partiel (U03).
 - **Faible pouvoir explicatif** : le modèle explique environ 10 % des marges ; la rentabilité dépend surtout de facteurs absents du jeu (modèle économique, concurrence, cycle).

@@ -164,6 +164,13 @@ Le point d’accès à la racine Git renvoie à cette version complète unique. 
 - Corrections issues de l'audit : docs/ETAT_DU_PROJET.md réécrit (il datait du 11 novembre) ; README, dictionnaire et SOURCES_ET_REPRISE alignés ; lecture des cinq profils ajoutée au rapport ; mise en garde sur les β de facteurs et les distances de Cook ajoutée au guide Jamovi ; liens locaux vérifiés (0 cassé).
 - Verdict : étape 1 complète et vérifiée ; prêt pour Jamovi.
 
+## 13 novembre 2026 (consolidation des points faibles)
+
+- Google Doc relu (R01) : il contient encore l'ancienne approche (gouvernance ISS, données de septembre, sections d'analyse « à compléter ») ; couverture avec les trois noms et « Peer assessment score: to be completed ». Non modifié à ce stade.
+- **Décision de David** : il n'est pas nécessaire de prévenir le professeur du changement de question.
+- **Consolidation** (src/robustness.py → s5_robustness.csv, results_robustness.json) : bootstrap de 2 000 tirages, régression de Huber, régression médiane, croissance écrêtée, exclusion des croissances > 50 %, 11 secteurs au lieu de 5 : l'association croissance–marge (0,2 à 0,35 point par point de croissance) et la prime de la finance (7 à 8 points) tiennent partout ; taille et endettement restent non significatifs avec 11 secteurs. Rapport §6.4, audit et guide mis à jour.
+- Relecture de rapports élargie de 25 à 100 : 298 cellules sur 300 retrouvées (99,3 %), les 2 autres sont celles de Clorox (états en annexe) ; deux téléchargements expirés ont été retentés avec succès.
+
 ## Format pour les prochaines entrées
 
 Ajouter une section datée avec : demande ou objectif ; action et motif ; fichiers/preuves ; résultat et nombre de cas vérifiés ; tâche terminée ou restant ouverte ; décision éventuelle ; prochaine action. Conserver les entrées précédentes. Si une ancienne conclusion est corrigée, ajouter la correction et sa raison au lieu d’effacer l’historique.

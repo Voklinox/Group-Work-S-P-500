@@ -20,6 +20,9 @@ cik,company,variable,value,status
 0000097745,Thermo Fisher Scientific,revenue_usd,44556000000,found
 0000097745,Thermo Fisher Scientific,net_income_usd,6704000000,found
 0000097745,Thermo Fisher Scientific,assets_usd,110343000000,found
+0000877212,Zebra Technologies,revenue_usd,5396000000,found
+0000877212,Zebra Technologies,net_income_usd,419000000,found
+0000877212,Zebra Technologies,assets_usd,8502000000,found
 0000915912,AvalonBay Communities,revenue_usd,3040725000,found
 0000915912,AvalonBay Communities,net_income_usd,1051301000,found
 0000915912,AvalonBay Communities,assets_usd,22192137000,found
@@ -74,3 +77,225 @@ cik,company,variable,value,status
 0000084839,"Rollins, Inc.",revenue_usd,3761050000,found
 0000084839,"Rollins, Inc.",net_income_usd,526705000,found
 0000084839,"Rollins, Inc.",assets_usd,3140523000,found
+0000062996,Masco,revenue_usd,7562000000,found
+0000062996,Masco,net_income_usd,810000000,found
+0000062996,Masco,assets_usd,5201000000,found
+0000765880,Healthpeak Properties,revenue_usd,2822512000,found
+0000765880,Healthpeak Properties,net_income_usd,71347000,found
+0000765880,Healthpeak Properties,assets_usd,20336018000,found
+0000023217,Conagra Brands,revenue_usd,11612800000,found
+0000023217,Conagra Brands,net_income_usd,1152400000,found
+0000023217,Conagra Brands,assets_usd,20933900000,found
+0000091142,A. O. Smith,revenue_usd,3830200000,found
+0000091142,A. O. Smith,net_income_usd,546200000,found
+0000091142,A. O. Smith,assets_usd,3142800000,found
+0000912595,Mid-America Apartment Communities,revenue_usd,2209126000,found
+0000912595,Mid-America Apartment Communities,net_income_usd,446909000,found
+0000912595,Mid-America Apartment Communities,assets_usd,11975383000,found
+0001521332,Aptiv,revenue_usd,20398000000,found
+0001521332,Aptiv,net_income_usd,165000000,found
+0001521332,Aptiv,assets_usd,23413000000,found
+0001037540,"BXP, Inc.",revenue_usd,3482279000,found
+0001037540,"BXP, Inc.",net_income_usd,276800000,found
+0001037540,"BXP, Inc.",assets_usd,26166164000,found
+0001090012,Devon Energy,revenue_usd,17188000000,found
+0001090012,Devon Energy,net_income_usd,2642000000,found
+0001090012,Devon Energy,assets_usd,31599000000,found
+0001022671,Steel Dynamics,revenue_usd,18176581000,found
+0001022671,Steel Dynamics,net_income_usd,1185595000,found
+0001022671,Steel Dynamics,assets_usd,16419780000,found
+0000769397,Autodesk,revenue_usd,6131000000,found
+0000769397,Autodesk,net_income_usd,1112000000,found
+0000769397,Autodesk,assets_usd,10833000000,found
+0000859737,Hologic,revenue_usd,4100500000,found
+0000859737,Hologic,net_income_usd,565700000,found
+0000859737,Hologic,assets_usd,9014900000,found
+0001551152,AbbVie,revenue_usd,61160000000,found
+0001551152,AbbVie,net_income_usd,4226000000,found
+0001551152,AbbVie,assets_usd,133960000000,found
+0000093751,State Street Corporation,revenue_usd,13944000000,found
+0000093751,State Street Corporation,net_income_usd,2945000000,found
+0000093751,State Street Corporation,assets_usd,366047000000,found
+0001090727,United Parcel Service,revenue_usd,88661000000,found
+0001090727,United Parcel Service,net_income_usd,5572000000,found
+0001090727,United Parcel Service,assets_usd,73090000000,found
+0000898173,O’Reilly Automotive,revenue_usd,17781992000,found
+0000898173,O’Reilly Automotive,net_income_usd,2538209000,found
+0000898173,O’Reilly Automotive,assets_usd,16538253000,found
+0000783325,WEC Energy Group,revenue_usd,9800100000,found
+0000783325,WEC Energy Group,net_income_usd,1558700000,found
+0000783325,WEC Energy Group,assets_usd,51518300000,found
+0001039684,Oneok,revenue_usd,33629000000,found
+0001039684,Oneok,net_income_usd,3393000000,found
+0001039684,Oneok,assets_usd,66641000000,found
+0000821189,EOG Resources,revenue_usd,22632000000,found
+0000821189,EOG Resources,net_income_usd,4980000000,found
+0000821189,EOG Resources,assets_usd,51799000000,found
+0000313927,Church & Dwight,revenue_usd,6203200000,found
+0000313927,Church & Dwight,net_income_usd,736800000,found
+0000313927,Church & Dwight,assets_usd,8912400000,found
+0000831259,Freeport-McMoRan,revenue_usd,25915000000,found
+0000831259,Freeport-McMoRan,net_income_usd,2204000000,found
+0000831259,Freeport-McMoRan,assets_usd,58167000000,found
+0000900075,Copart,revenue_usd,4646958000,found
+0000900075,Copart,net_income_usd,1552449000,found
+0000900075,Copart,assets_usd,10090902000,found
+0001095073,Everest Group,revenue_usd,17496000000,found
+0001095073,Everest Group,net_income_usd,1591000000,found
+0001095073,Everest Group,assets_usd,62514000000,found
+0000895126,Expand Energy,revenue_usd,12124000000,found
+0000895126,Expand Energy,net_income_usd,1819000000,found
+0000895126,Expand Energy,assets_usd,28287000000,found
+0001964738,Solventum,revenue_usd,8325000000,found
+0001964738,Solventum,net_income_usd,1556000000,found
+0001964738,Solventum,assets_usd,14294000000,found
+0000034903,Federal Realty Investment Trust,revenue_usd,1278975000,found
+0000034903,Federal Realty Investment Trust,net_income_usd,411077000,found
+0000034903,Federal Realty Investment Trust,assets_usd,9130460000,found
+0001050915,Quanta Services,revenue_usd,28479697000,found
+0001050915,Quanta Services,net_income_usd,1028378000,found
+0001050915,Quanta Services,assets_usd,24926901000,found
+0001041061,Yum! Brands,revenue_usd,8214000000,found
+0001041061,Yum! Brands,net_income_usd,1559000000,found
+0001041061,Yum! Brands,assets_usd,8197000000,found
+0000906163,"NVR, Inc.",revenue_usd,10323959000,found
+0000906163,"NVR, Inc.",net_income_usd,1339816000,found
+0000906163,"NVR, Inc.",assets_usd,5856930000,found
+0000320193,Apple Inc.,revenue_usd,416161000000,found
+0000320193,Apple Inc.,net_income_usd,112010000000,found
+0000320193,Apple Inc.,assets_usd,359241000000,found
+0000945841,Pool Corporation,revenue_usd,5289396000,found
+0000945841,Pool Corporation,net_income_usd,406404000,found
+0000945841,Pool Corporation,assets_usd,3626126000,found
+0000906107,Equity Residential,revenue_usd,3093959000,found
+0000906107,Equity Residential,net_income_usd,1120089000,found
+0000906107,Equity Residential,assets_usd,20746023000,found
+0001596532,Arista Networks,revenue_usd,9005700000,found
+0001596532,Arista Networks,net_income_usd,3511400000,found
+0001596532,Arista Networks,assets_usd,19448600000,found
+0000059478,Lilly (Eli),revenue_usd,65179000000,found
+0000059478,Lilly (Eli),net_income_usd,20640000000,found
+0000059478,Lilly (Eli),assets_usd,112476000000,found
+0001637459,Kraft Heinz,revenue_usd,24942000000,found
+0001637459,Kraft Heinz,net_income_usd,-5846000000,found
+0001637459,Kraft Heinz,assets_usd,81786000000,found
+0001539838,Diamondback Energy,revenue_usd,15026000000,found
+0001539838,Diamondback Energy,net_income_usd,1664000000,found
+0001539838,Diamondback Energy,assets_usd,71059000000,found
+0001442145,Verisk Analytics,revenue_usd,3072700000,found
+0001442145,Verisk Analytics,net_income_usd,908300000,found
+0001442145,Verisk Analytics,assets_usd,6195500000,found
+0001070750,Host Hotels & Resorts,revenue_usd,6114000000,found
+0001070750,Host Hotels & Resorts,net_income_usd,765000000,found
+0001070750,Host Hotels & Resorts,assets_usd,13049000000,found
+0000014272,Bristol Myers Squibb,revenue_usd,48194000000,found
+0000014272,Bristol Myers Squibb,net_income_usd,7054000000,found
+0000014272,Bristol Myers Squibb,assets_usd,90038000000,found
+0001065280,Netflix,revenue_usd,45183036000,found
+0001065280,Netflix,net_income_usd,10981201000,found
+0001065280,Netflix,assets_usd,55596993000,found
+0000076334,Parker Hannifin,revenue_usd,19850000000,found
+0000076334,Parker Hannifin,net_income_usd,3531000000,found
+0000076334,Parker Hannifin,assets_usd,29494000000,found
+0000078003,Pfizer,revenue_usd,62579000000,found
+0000078003,Pfizer,net_income_usd,7771000000,found
+0000078003,Pfizer,assets_usd,208160000000,found
+0001408198,MSCI Inc.,revenue_usd,3134459000,found
+0001408198,MSCI Inc.,net_income_usd,1202305000,found
+0001408198,MSCI Inc.,assets_usd,5702459000,found
+0001666700,DuPont,revenue_usd,6849000000,found
+0001666700,DuPont,net_income_usd,-779000000,found
+0001666700,DuPont,assets_usd,21575000000,found
+0000002969,Air Products,revenue_usd,12037300000,found
+0000002969,Air Products,net_income_usd,-394500000,found
+0000002969,Air Products,assets_usd,41059500000,found
+0001590955,Paycom,revenue_usd,2051700000,found
+0001590955,Paycom,net_income_usd,453400000,found
+0001590955,Paycom,assets_usd,7598700000,found
+0001013237,FactSet,revenue_usd,2321748000,found
+0001013237,FactSet,net_income_usd,597040000,found
+0001013237,FactSet,assets_usd,4304272000,found
+0000034088,ExxonMobil,revenue_usd,332238000000,found
+0000034088,ExxonMobil,net_income_usd,28844000000,found
+0000034088,ExxonMobil,assets_usd,448980000000,found
+0000048898,Hubbell Incorporated,revenue_usd,5844600000,found
+0000048898,Hubbell Incorporated,net_income_usd,887100000,found
+0000048898,Hubbell Incorporated,assets_usd,8228800000,found
+0001123360,Global Payments,revenue_usd,7705878000,found
+0001123360,Global Payments,net_income_usd,1400107000,found
+0001123360,Global Payments,assets_usd,53338484000,found
+0000354190,Arthur J. Gallagher & Co.,revenue_usd,13942000000,found
+0000354190,Arthur J. Gallagher & Co.,net_income_usd,1494000000,found
+0000354190,Arthur J. Gallagher & Co.,assets_usd,70665000000,found
+0000040545,GE Aerospace,revenue_usd,45855000000,found
+0000040545,GE Aerospace,net_income_usd,8704000000,found
+0000040545,GE Aerospace,assets_usd,130169000000,found
+0000916076,Martin Marietta Materials,revenue_usd,6150000000,found
+0000916076,Martin Marietta Materials,net_income_usd,1137000000,found
+0000916076,Martin Marietta Materials,assets_usd,18711000000,found
+0000920760,Lennar,revenue_usd,34186934000,found
+0000920760,Lennar,net_income_usd,2078179000,found
+0000920760,Lennar,assets_usd,34430437000,found
+0000914208,Invesco,revenue_usd,6377100000,found
+0000914208,Invesco,net_income_usd,-281700000,found
+0000914208,Invesco,assets_usd,27094000000,found
+0000070858,Bank of America,revenue_usd,113097000000,found
+0000070858,Bank of America,net_income_usd,30509000000,found
+0000070858,Bank of America,assets_usd,3411738000000,found
+0000320335,Globe Life,revenue_usd,5994318000,found
+0000320335,Globe Life,net_income_usd,1161238000,found
+0000320335,Globe Life,assets_usd,30813692000,found
+0000091419,J.M. Smucker Company (The),revenue_usd,8726100000,found
+0000091419,J.M. Smucker Company (The),net_income_usd,-1230800000,found
+0000091419,J.M. Smucker Company (The),assets_usd,17563300000,found
+0002005951,Smurfit Westrock,revenue_usd,31179000000,found
+0002005951,Smurfit Westrock,net_income_usd,699000000,found
+0002005951,Smurfit Westrock,assets_usd,45157000000,found
+0000277135,W. W. Grainger,revenue_usd,17942000000,found
+0000277135,W. W. Grainger,net_income_usd,1706000000,found
+0000277135,W. W. Grainger,assets_usd,8962000000,found
+0000106535,Weyerhaeuser,revenue_usd,6905000000,found
+0000106535,Weyerhaeuser,net_income_usd,324000000,found
+0000106535,Weyerhaeuser,assets_usd,16613000000,found
+0000107263,Williams Companies,revenue_usd,11950000000,found
+0000107263,Williams Companies,net_income_usd,2618000000,found
+0000107263,Williams Companies,assets_usd,58573000000,found
+0001140536,Willis Towers Watson,revenue_usd,9708000000,found
+0001140536,Willis Towers Watson,net_income_usd,1605000000,found
+0001140536,Willis Towers Watson,assets_usd,29530000000,found
+0001944048,Kenvue,revenue_usd,15124000000,found
+0001944048,Kenvue,net_income_usd,1470000000,found
+0001944048,Kenvue,assets_usd,27076000000,found
+0000909832,Costco,revenue_usd,275235000000,found
+0000909832,Costco,net_income_usd,8099000000,found
+0000909832,Costco,assets_usd,77099000000,found
+0000766704,Welltower,revenue_usd,10838034000,found
+0000766704,Welltower,net_income_usd,936845000,found
+0000766704,Welltower,assets_usd,67303047000,found
+0000936468,Lockheed Martin,revenue_usd,75048000000,found
+0000936468,Lockheed Martin,net_income_usd,5017000000,found
+0000936468,Lockheed Martin,assets_usd,59840000000,found
+0000879169,Incyte,revenue_usd,5141242000,found
+0000879169,Incyte,net_income_usd,1286650000,found
+0000879169,Incyte,assets_usd,6957973000,found
+0000086312,Travelers Companies (The),revenue_usd,48828000000,found
+0000086312,Travelers Companies (The),net_income_usd,6288000000,found
+0000086312,Travelers Companies (The),assets_usd,143708000000,found
+0000833444,Johnson Controls,revenue_usd,23596000000,found
+0000833444,Johnson Controls,net_income_usd,3291000000,found
+0000833444,Johnson Controls,assets_usd,37939000000,found
+0000109198,TJX Companies,revenue_usd,56360000000,found
+0000109198,TJX Companies,net_income_usd,4864000000,found
+0000109198,TJX Companies,assets_usd,31749000000,found
+0000789570,MGM Resorts,revenue_usd,17537683000,found
+0000789570,MGM Resorts,net_income_usd,205862000,found
+0000789570,MGM Resorts,assets_usd,41373786000,found
+0001174922,Wynn Resorts,revenue_usd,7137924000,found
+0001174922,Wynn Resorts,net_income_usd,327334000,found
+0001174922,Wynn Resorts,assets_usd,13108117000,found
+0000031791,Revvity,revenue_usd,2856051000,found
+0000031791,Revvity,net_income_usd,241201000,found
+0000031791,Revvity,assets_usd,12168411000,found
+0002012383,BlackRock,revenue_usd,24216000000,found
+0002012383,BlackRock,net_income_usd,5553000000,found
+0002012383,BlackRock,assets_usd,169998000000,found

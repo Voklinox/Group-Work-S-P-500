@@ -26,7 +26,7 @@ Question de travail (DEC25) : **qu'est-ce qui explique la rentabilité (marge ne
 - **Population** : 503 titres regroupés en 500 entreprises/CIK au 31 décembre 2025 ; rapprochement avec la table officielle SEC des tickers (492 concordances, 11 écarts expliqués par des événements de 2026) ; 19 ajouts et 19 retraits de 2025 contrôlés. Limite : pas de liste officielle S&P des constituants (accès payant).
 - **Comptes** : réponses SEC Company Facts et Submissions pour les 500 entreprises ; **498** marges nettes et ROA (Dayforce : aucun rapport annuel 2025 ; Paramount : prédécesseur/successeur) ; croissance du chiffre d'affaires pour 488. 3,264 faits financiers reliés à leurs preuves et 996 ratios reliés à leurs formules ; 1,629 fichiers sources vérifiés par empreinte, **0 erreur d'intégrité** ; 9 alertes de définition (résultat consolidé sans minoritaires déclarés).
 - **Conventions** : exercice annuel clos en 2025 (ou 52/53 semaines clos début janvier 2026) ; résultat net attribuable à la société mère ; revenus bancaires par convention ; taille = actif total, quartiles Q1–Q4 ; cinq groupes de secteurs. Voir [DECISIONS.md](DECISIONS.md).
-- **Contrôles qualité** : 25 rapports tirés au hasard (73 cellules sur 75 retrouvées dans le texte) ; dépistage des valeurs extrêmes ; trois revenus corrigés (Camden, Huntington, M&T) ; 20 tests automatiques réussis.
+- **Contrôles qualité** : 100 rapports tirés au hasard (298 cellules sur 300 retrouvées dans le texte) ; contrôles de robustesse de la régression (bootstrap, Huber, médiane, 11 secteurs) ; dépistage des valeurs extrêmes ; trois revenus corrigés (Camden, Huntington, M&T) ; 20 tests automatiques réussis.
 
 ## Limites connues (à écrire dans le rapport final)
 
