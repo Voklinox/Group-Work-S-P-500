@@ -138,7 +138,7 @@ r² marge–croissance = 0,07 : 7 % de la variance partagée. Marge et ROA sont 
 | Endettement (points) | 0,018 | 0,023 | 0,447 | 0,03 | 0,577 |
 
    Lecture : à secteur, taille et endettement donnés, +1 point de croissance du CA est associé à +0,25 point de marge (IC 95 % [0,16 ; 0,33]) ; une entreprise financière a une marge supérieure de 7,8 points à une entreprise comparable d'Industrials & Energy. Taille et endettement n'ont pas d'association significative. L'ordonnée à l'origine n'a pas d'interprétation. Ajouter le secteur améliore le modèle (R² de 0,079 à 0,114 ; F de variation = 4,71, p = 0,001). Un exemple dans la plage observée : une entreprise financière de taille, d'endettement et de croissance médians a une marge prédite de 19,4 %.
-   *Valeurs influentes :* Expand Energy (croissance de +186 % due à une acquisition, distance de Cook 0,66) et Moderna (marge −145 %, 0,59).
+   *Valeurs influentes :* Expand Energy (croissance de +186 % : revenus de 12,1 contre 4,2 milliards USD, avec l'acquisition de Southwestern au 1er octobre 2024 mentionnée dans le rapport annuel, donc une année 2024 partielle ; distance de Cook 0,66) et Moderna (marge −145 %, 0,59).
 
 4. **RECOMMEND.** Suivre la croissance comme levier associé à la marge, avec prudence : le coefficient provient de comparaisons entre entreprises, pas d'une expérience, et le modèle n'explique qu'environ 10 % de la variation des marges.
 
