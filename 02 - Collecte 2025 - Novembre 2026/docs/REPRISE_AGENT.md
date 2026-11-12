@@ -47,7 +47,7 @@ Le dépôt Git est le dossier parent **Group Work S&P 500**. Les anciens fichier
 | Faits / ratios financiers | 3 244 / 989 | financial_evidence.json et derived_evidence.csv |
 | Audit enregistré | 1 095 sources par empreinte, 0 erreur d’intégrité, 9 alertes de définition (11 nov. après F07) | outputs/integrity_audit.json |
 | Documents de gouvernance candidats | 505 pour 496 entreprises | governance_proxy_candidates.csv et governance_catalogue_coverage.json |
-| Mesures de gouvernance | 288 observations (5 pilotes + 283 à auditer, G09) ; 51 non résolues ; 161 pas encore lues | governance_observations.json, governance_shards/, governance_unresolved.csv, governance_audit_queue.csv, governance_measurement_coverage.json |
+| Mesures de gouvernance | 290 observations (5 pilotes + 285 à auditer, G09) ; 51 non résolues ; 159 pas encore lues | governance_observations.json, governance_shards/, governance_unresolved.csv, governance_audit_queue.csv, governance_measurement_coverage.json |
 | CSV final / analyses 2025 / PDF final | Aucun résultat final validé | tâches D, J et R ouvertes |
 
 Ces valeurs sont un point de reprise, pas des constantes à imposer aux fichiers. Si les fichiers ont évolué, examiner les changements, mettre à jour les compteurs et le journal ; ne pas ramener les données à ces nombres artificiellement.

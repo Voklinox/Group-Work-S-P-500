@@ -108,7 +108,7 @@ cik,company,sector,sector_group,period_end,net_margin_pct,roa_pct,revenue_bn,ass
 0000896159,Chubb Limited,Financials,Finance,2025-12-31,17.3563,3.974,59.402,272.327,26.3303,Q4,,,,,not_yet_read,
 0000313927,Church & Dwight,Consumer Staples,Consumer,2025-12-31,11.8777,8.2807,6.2032,8.9124,22.9107,Q1,,,,,not_yet_read,
 0001739940,Cigna,Health Care,Healthcare,2025-12-31,2.167,3.7967,274.9,157.919,25.7853,Q4,,,,,not_yet_read,
-0000020286,Cincinnati Financial,Financials,Finance,2025-12-31,18.9455,6.1752,12.631,41.002,24.4369,Q3,,,,,not_yet_read,
+0000020286,Cincinnati Financial,Financials,Finance,2025-12-31,18.9455,6.1752,12.631,41.002,24.4369,Q3,13,69.23,Separate CEO and chair,Not combined,observed,2025-03-19
 0000723254,Cintas,Industrials,Industrials & Energy,2025-05-31,17.5266,19.0826,10.3402,9.8252,23.0082,Q1,,,,,not_yet_read,
 0000858877,Cisco,Information Technology,Tech & Comms,2025-07-26,17.9687,8.2528,56.654,122.291,25.5297,Q4,,,,,not_yet_read,
 0000831001,Citigroup,Financials,Finance,2025-12-31,16.7862,0.5711,85.225,2657.202,28.6083,Q4,14,85.71,Separate CEO and chair,Not combined,observed,2025-03-18
@@ -130,7 +130,7 @@ cik,company,sector,sector_group,period_end,net_margin_pct,roa_pct,revenue_bn,ass
 0000900075,Copart,Industrials,Industrials & Energy,2025-07-31,33.4079,16.7663,4.647,10.0909,23.0349,Q1,12,75.0,Separate CEO and chair,Not combined,observed,2025-10-24
 0000024741,Corning Inc.,Information Technology,Tech & Comms,2025-12-31,10.2118,5.4368,15.629,30.976,24.1565,Q2,,,,,not_yet_read,
 0001175454,Corpay,Financials,Finance,2025-12-31,23.6248,4.8228,4.5284,26.4081,23.9969,Q2,,,,,not_yet_read,
-0001755672,Corteva,Materials,Industrials & Energy,2025-12-31,6.287,2.615,17.401,42.845,24.4809,Q3,,,,,not_yet_read,
+0001755672,Corteva,Materials,Industrials & Energy,2025-12-31,6.287,2.615,17.401,42.845,24.4809,Q3,12,91.67,Separate CEO and chair,Not combined,observed,2025-03-21
 0000909832,Costco,Consumer Staples,Consumer,2025-08-31,2.9426,11.0243,275.235,77.099,25.0684,Q4,,,,,not_yet_read,
 0000858470,Coterra,Energy,Industrials & Energy,2025-12-31,22.4591,7.487,7.645,24.241,23.9113,Q2,,,,,not_yet_read,
 0001535527,CrowdStrike,Information Technology,Tech & Comms,2025-01-31,-0.4874,-0.2511,3.9536,8.7016,22.8868,Q1,,,,,not_yet_read,

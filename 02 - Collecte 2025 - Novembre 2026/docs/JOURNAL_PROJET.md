@@ -129,6 +129,11 @@ Le point d’accès à la racine Git renvoie à cette version complète unique. 
 - Commit e70648a poussé sur GitHub (main) à la demande de David (DEC24) ; contact SEC retiré du code.
 - F08 : 25 rapports aléatoires, 73/75 cellules retrouvées ; Clorox : états en annexe ; 10 sociétés financières à ratio élevé : 9/10 retrouvées, Progressive à confirmer.
 
+## 13 novembre 2026 — lot de gouvernance 22 et essai d'automatisation
+
+- Deux observations ajoutées (Cincinnati Financial 13/9, président exécutif séparé ; Corteva 12/11, effectif fondé sur les candidats) : total 290 observations, 51 non résolues, 159 pas encore lues. 0 échec au vérificateur.
+- **Essai d'automatisation abandonné** : comptage des « cartes d'administrateurs » (ancre « Director since » et étiquette « Independent »), testé sur les 285 observations lues : effectif exact dans 60 cas sur 234 seulement. Trop imprécis, code supprimé. Conclusion : la lecture reste manuelle, environ 2 à 4 sociétés conclues pour 12 000 jetons.
+
 ## Format pour les prochaines entrées
 
 Ajouter une section datée avec : demande ou objectif ; action et motif ; fichiers/preuves ; résultat et nombre de cas vérifiés ; tâche terminée ou restant ouverte ; décision éventuelle ; prochaine action. Conserver les entrées précédentes. Si une ancienne conclusion est corrigée, ajouter la correction et sa raison au lieu d’effacer l’historique.

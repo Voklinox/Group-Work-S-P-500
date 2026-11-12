@@ -88,7 +88,6 @@ cik,company,priority,reasons,board_size,independent,leadership,audit_status
 0001321655,Palantir Technologies,2,atypical_independence_or_size,7,4,Separate CEO and chair,to_audit
 0001841666,APA Corporation,3,random_10pct_sample,11,10,Separate CEO and chair,to_audit
 0001090872,Agilent Technologies,3,random_10pct_sample,10,9,Separate CEO and chair,to_audit
-0000005272,American International Group,3,random_10pct_sample,12,11,Combined CEO and chair,to_audit
 0001037868,Ametek,3,random_10pct_sample,9,8,Combined CEO and chair,to_audit
 0000318154,Amgen,3,random_10pct_sample,12,11,Combined CEO and chair,to_audit
 0000315293,Aon plc,3,random_10pct_sample,13,12,Separate CEO and chair,to_audit
@@ -98,11 +97,12 @@ cik,company,priority,reasons,board_size,independent,leadership,audit_status
 0001402057,CDW Corporation,3,random_10pct_sample,11,10,Combined CEO and chair,to_audit
 0000811156,CMS Energy,3,random_10pct_sample,10,9,Separate CEO and chair,to_audit
 0001091667,Charter Communications,3,random_10pct_sample,13,12,Separate CEO and chair,to_audit
+0001755672,Corteva,3,random_10pct_sample,12,11,Separate CEO and chair,to_audit
 0000712515,Electronic Arts,3,random_10pct_sample,8,7,Combined CEO and chair,to_audit
 0001711269,Evergy,3,random_10pct_sample,12,11,Combined CEO and chair,to_audit
 0001659166,Fortive,3,random_10pct_sample,10,9,Separate CEO and chair,to_audit
 0001474735,Generac,3,random_10pct_sample,11,10,Combined CEO and chair,to_audit
 0000354950,Home Depot (The),3,random_10pct_sample,11,10,Combined CEO and chair,to_audit
 0000879169,Incyte,3,random_10pct_sample,9,8,Combined CEO and chair,to_audit
-0000804328,Qualcomm,3,random_10pct_sample,11,10,Separate CEO and chair,to_audit
-0001094285,Teledyne Technologies,3,random_10pct_sample,11,10,Separate CEO and chair,to_audit
+0001126328,Principal Financial Group,3,random_10pct_sample,13,11,Separate CEO and chair,to_audit
+0000097476,Texas Instruments,3,random_10pct_sample,13,11,Separate CEO and chair,to_audit

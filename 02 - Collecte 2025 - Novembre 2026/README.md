@@ -29,7 +29,7 @@ Les [consignes et supports du professeur en texte intégral](docs/CONSIGNES_PROF
 | Exercices annuels extraits de durée comparable | 498 (dont 6 exercices de 52/53 semaines clos début janvier 2026, DEC19) |
 | Marges nettes calculables | 498 ; numérateur harmonisé sur le résultat attribuable à la société mère (DEC16) ; manquent Dayforce (pas de rapport annuel 2025) et Paramount (prédécesseur/successeur) ; comparabilité à contrôler |
 | Documents de gouvernance candidats | 505 documents pour 496 entreprises ; quatre sources alternatives identifiées |
-| Mesures de gouvernance | 288 observations (5 pilotes contrôlés + 283 lues avec citations vérifiées automatiquement, **à auditer** : file G09 de 107 cas) ; 51 non résolues avec raison ; 161 pas encore lues (12 nov. 2026) |
+| Mesures de gouvernance | 290 observations (5 pilotes contrôlés + 285 lues avec citations vérifiées automatiquement, **à auditer** : file G09 de 107 cas) ; 51 non résolues avec raison ; 159 pas encore lues (12 nov. 2026) |
 | Taille et quartiles | Mesure finale non arrêtée ; capitalisation historique non validée |
 | Analyses complètes et rapport local de référence | À réaliser par l’agent, avant Jamovi |
 | Reproduction Jamovi puis Google Doc/PDF | À réaliser après le projet de référence |

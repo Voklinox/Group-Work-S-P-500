@@ -1,10 +1,10 @@
 {
   "issuers": 500,
   "pilot_source_checked": 5,
-  "agent_read_pending_audit": 283,
-  "observations_total": 288,
-  "not_reviewed": 212,
-  "raw_documents_archived": 286,
+  "agent_read_pending_audit": 285,
+  "observations_total": 290,
+  "not_reviewed": 210,
+  "raw_documents_archived": 288,
   "leadership_categories": [
     "Combined CEO and chair",
     "No board chair",

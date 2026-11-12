@@ -49,12 +49,12 @@ def build():
 def show(start, n):
     for i, p in enumerate(json.loads(PATH.read_text())[start:start + n], start):
         print(f"\n#{i} {p['company']} | {p['cik']} | {p['form']}")
-        for k in ("B", "L"):
-            for j, s in enumerate(p[k]):
-                print(f"  {k}{j}: {s[:215]}")
+        for k, lim in (("B", 3), ("L", 2)):
+            for j, s in enumerate(p[k][:lim]):
+                print(f"  {k}{j}: {s[:190]}")
         for s in p["leave"]:
             print("  LEAVE:", s[:160])
-        print("  SIG:", p["sig"][:140])
+        print("  SIG:", p["sig"][:90])
 
 
 if __name__ == "__main__":

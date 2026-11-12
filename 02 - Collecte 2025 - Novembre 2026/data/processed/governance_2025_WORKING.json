@@ -12588,5 +12588,87 @@
     "review_status": "agent_read_pending_audit",
     "board_independence_reported_pct": 91.66666666666667,
     "ratio_formula": "100 * independent_directors / board_size"
+  },
+  {
+    "cik": "0000020286",
+    "company": "Cincinnati Financial",
+    "accession": "0000020286-25-000019",
+    "publication_date": "2025-03-19",
+    "board_size": 13,
+    "independent_directors": 9,
+    "board_leadership": "Separate CEO and chair",
+    "ceo_name": "Stephen M. Spray",
+    "chair_name": "Steven J. Johnston",
+    "independence_standard": "Nasdaq",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/20286/000002028625000019/cinf-20250317.htm",
+    "archive_file": "data/raw/governance/0000020286_0000020286-25-000019.htm",
+    "evidence": [
+      {
+        "group": "board_counts",
+        "locator": "Proxy statement, board composition",
+        "quote": "The board of directors currently consists of 13 directors, 9 of whom are determined to be independent by the board",
+        "note": "Current board of 13 directors, nine independent (Nasdaq definition)."
+      },
+      {
+        "group": "independence",
+        "locator": "Proxy statement, director independence",
+        "quote": "The board of directors currently consists of 13 directors, 9 of whom are determined to be independent by the board",
+        "note": "Independent directors among the same persons."
+      },
+      {
+        "group": "leadership",
+        "locator": "Proxy statement, board leadership",
+        "quote": "when Stephen M. Spray assumed the role of chief executive officer from Steven J. Johnston who remains executive chairman of the board",
+        "note": "Executive chairman Johnston (former CEO) and CEO Spray are different persons."
+      }
+    ],
+    "date_basis": "publication date of 2025 proxy; current board described therein, not a year-end or annual-average measure",
+    "board_scope": "incumbent directors; nominee roster reconciled to current membership",
+    "checked_at": "2026-11-12",
+    "capture_status": "raw_document_archived",
+    "review_status": "agent_read_pending_audit",
+    "board_independence_reported_pct": 69.23076923076923,
+    "ratio_formula": "100 * independent_directors / board_size"
+  },
+  {
+    "cik": "0001755672",
+    "company": "Corteva",
+    "accession": "0000950170-25-043278",
+    "publication_date": "2025-03-21",
+    "board_size": 12,
+    "independent_directors": 11,
+    "board_leadership": "Separate CEO and chair",
+    "ceo_name": "Charles V. Magro",
+    "chair_name": "Gregory R. Page",
+    "independence_standard": "NYSE",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1755672/000095017025043278/ctva-20250321.htm",
+    "archive_file": "data/raw/governance/0001755672_0000950170-25-043278.htm",
+    "evidence": [
+      {
+        "group": "board_counts",
+        "locator": "Proxy statement, board composition",
+        "quote": "Assuming each of the Board’s nominees is elected, our Board will consist of twelve highly qualified directors, eleven of whom will be independent.",
+        "note": "Count rests on the nominee roster (twelve, eleven independent); no departing director found in the document."
+      },
+      {
+        "group": "independence",
+        "locator": "Proxy statement, director independence",
+        "quote": "11 of 12 Director nominees are independent",
+        "note": "Independent directors among the same persons."
+      },
+      {
+        "group": "leadership",
+        "locator": "Proxy statement, board leadership",
+        "quote": "Gregory R. Page Chair of Board",
+        "note": "Chair of Board Gregory R. Page; CEO Charles V. Magro (signature block)."
+      }
+    ],
+    "date_basis": "publication date of 2025 proxy; current board described therein, not a year-end or annual-average measure",
+    "board_scope": "incumbent directors; nominee roster reconciled to current membership",
+    "checked_at": "2026-11-12",
+    "capture_status": "raw_document_archived",
+    "review_status": "agent_read_pending_audit",
+    "board_independence_reported_pct": 91.66666666666667,
+    "ratio_formula": "100 * independent_directors / board_size"
   }
 ]
