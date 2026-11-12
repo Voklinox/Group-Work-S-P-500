@@ -1,0 +1,11 @@
+group1,group2,mean_diff,p_tukey,lower,upper,reject
+Consumer,Finance,8.9805,0.0003,3.1724,14.7885,True
+Consumer,Healthcare,-2.4121,0.8291,-8.669,3.8449,False
+Consumer,Industrials & Energy,0.1432,1.0,-4.6726,4.9591,False
+Consumer,Tech & Comms,3.9438,0.2941,-1.6029,9.4906,False
+Finance,Healthcare,-11.3925,0.0001,-18.1776,-4.6075,True
+Finance,Industrials & Energy,-8.8372,0.0001,-14.3218,-3.3527,True
+Finance,Tech & Comms,-5.0366,0.1643,-11.1729,1.0997,False
+Healthcare,Industrials & Energy,2.5553,0.7661,-3.4026,8.5132,False
+Healthcare,Tech & Comms,6.3559,0.0629,-0.2069,12.9187,False
+Industrials & Energy,Tech & Comms,3.8006,0.2683,-1.4065,9.0076,False

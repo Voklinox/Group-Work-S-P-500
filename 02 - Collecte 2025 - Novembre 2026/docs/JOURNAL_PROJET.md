@@ -142,6 +142,15 @@ Le point d’accès à la racine Git renvoie à cette version complète unique. 
 - **Vérification de la spécification du cours** : toutes les exigences satisfaites ; khi-deux secteur × quartile : effectif attendu minimal 14,9.
 - **Prochaine action** : plan d'analyse D03, CSV final D04, puis calculs de référence P01–P09.
 
+## 13 novembre 2026 (suite) — étape 1 : analyses, rapport de référence et guide Jamovi
+
+- Environnement `.venv` (pandas 2.3.3, SciPy 1.13.1, statsmodels 0.14.6, matplotlib 3.9.4) ; src/analysis.py : séances 1 à 4, 29 tableaux et 17 graphiques, empreinte des données dans results.json.
+- **Résultats principaux** (500 entreprises, N = 498 ou 488) : marge médiane 12,9 % (non normale) ; secteur × taille χ²(12) = 91,76, V = 0,25 ; Finance +8,4 points de marge (d = 0,59) ; ANOVA de Welch F(4 ; 189,1) = 10,41, η² = 0,058 ; régression multiple R² = 0,114 : croissance du CA B = 0,248 et prime Finance 7,84, taille et endettement non significatifs ; ROA négativement associé à la taille.
+- **Vérification** (P07) : src/verify_analysis.py recalcule 12 résultats par formules à la main : tous identiques. Deux formulations du rapport corrigées après relecture des chiffres (robustesse de la croissance avec erreurs HC3 : p de 0,04 à 0,08).
+- Livrables : docs/RAPPORT_DE_REFERENCE.md (P08), docs/GUIDE_JAMOVI.md (P09). P01–P09 cochés, avec la réserve : base encore « DRAFT » (D04).
+- **Limites** : résidus non normaux (valeurs extrêmes), erreurs robustes à privilégier ; rapport en version de référence, pas encore reproduit dans Jamovi ni rédigé dans le Google Doc.
+- **Prochaine action** : U03, F09, D04 (figer le CSV et relancer analyses et vérifications), puis Jamovi avec David.
+
 ## Format pour les prochaines entrées
 
 Ajouter une section datée avec : demande ou objectif ; action et motif ; fichiers/preuves ; résultat et nombre de cas vérifiés ; tâche terminée ou restant ouverte ; décision éventuelle ; prochaine action. Conserver les entrées précédentes. Si une ancienne conclusion est corrigée, ajouter la correction et sa raison au lieu d’effacer l’historique.

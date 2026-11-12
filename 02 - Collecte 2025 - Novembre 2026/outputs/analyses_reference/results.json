@@ -1,0 +1,428 @@
+{
+  "input": {
+    "file": "data/processed/sp500_2025_JAMOVI_DRAFT.csv",
+    "sha256": "90c51dd28abc31e57aa3d4ef78aa34890c1391676a5213791f584d581e90c93e",
+    "rows": 500,
+    "versions": {
+      "pandas": "2.3.3",
+      "numpy": "2.0.2",
+      "scipy": "1.13.1",
+      "statsmodels": "0.14.6",
+      "matplotlib": "3.9.4"
+    }
+  },
+  "s1": {
+    "net_margin_pct": {
+      "N": 498.0,
+      "missing": 2.0,
+      "mean": 13.752327309236946,
+      "median": 12.9026,
+      "mode": 11.0,
+      "sd": 14.721860028921759,
+      "min": -145.1646,
+      "q1": 6.925025,
+      "q3": 20.30095,
+      "max": 72.7097,
+      "skewness": -2.665976420759528,
+      "excess_kurtosis": 31.332062153961488,
+      "shapiro_W": 0.7910375118511941,
+      "shapiro_p": 8.738935574226297e-25
+    },
+    "roa_pct": {
+      "N": 498.0,
+      "missing": 2.0,
+      "mean": 7.407899397590361,
+      "median": 5.77435,
+      "mode": 3.0,
+      "sd": 8.611541714449151,
+      "min": -41.8636,
+      "q1": 2.79095,
+      "q3": 10.671850000000001,
+      "max": 82.1975,
+      "skewness": 2.06010329670735,
+      "excess_kurtosis": 17.323125401282336,
+      "shapiro_W": 0.8074468137475433,
+      "shapiro_p": 6.5028450194194985e-24
+    },
+    "debt_ratio_pct": {
+      "N": 498.0,
+      "missing": 2.0,
+      "mean": 66.72504016064255,
+      "median": 64.21000000000001,
+      "mode": 74.0,
+      "sd": 28.005114517409005,
+      "min": 8.96,
+      "q1": 49.9,
+      "q3": 78.6275,
+      "max": 327.28,
+      "skewness": 2.7648966560779438,
+      "excess_kurtosis": 20.220449860730277,
+      "shapiro_W": 0.837362387500274,
+      "shapiro_p": 3.6318517335392724e-22
+    },
+    "revenue_growth_pct": {
+      "N": 488.0,
+      "missing": 12.0,
+      "mean": 8.641905737704919,
+      "median": 6.37,
+      "mode": 4.0,
+      "sd": 15.117786003586437,
+      "min": -42.35,
+      "q1": 2.11,
+      "q3": 11.0075,
+      "max": 186.28,
+      "skewness": 4.761536562226374,
+      "excess_kurtosis": 45.08199390793735,
+      "shapiro_W": 0.6610853814776838,
+      "shapiro_p": 5.2087764969963824e-30
+    },
+    "ln_assets": {
+      "N": 498.0,
+      "missing": 2.0,
+      "mean": 24.25047048192771,
+      "median": 24.160249999999998,
+      "mode": 24.0,
+      "sd": 1.3026329111145942,
+      "min": 21.0054,
+      "q1": 23.3215,
+      "q3": 25.021,
+      "max": 29.1183,
+      "skewness": 0.5636452356411025,
+      "excess_kurtosis": 0.6572063834918702,
+      "shapiro_W": 0.9821907884543283,
+      "shapiro_p": 8.774330559004452e-06
+    },
+    "asset_turnover": {
+      "N": 498.0,
+      "missing": 2.0,
+      "mean": 0.6836279116465863,
+      "median": 0.5263,
+      "mode": 1.0,
+      "sd": 0.6267168374393945,
+      "min": 0.0138,
+      "q1": 0.304925,
+      "q3": 0.836925,
+      "max": 5.0364,
+      "skewness": 2.810396951680774,
+      "excess_kurtosis": 12.033825434372217,
+      "shapiro_W": 0.7562730903828236,
+      "shapiro_p": 1.803680765126596e-26
+    }
+  },
+  "s2_chi2": {
+    "N": 498,
+    "chi2": 91.76431565619139,
+    "df": 12,
+    "p": 2.2467161406871282e-14,
+    "cramers_v": 0.24783441655585134,
+    "min_expected": 14.939759036144578,
+    "cells_below_5": 0
+  },
+  "s2_corr": {
+    "net_margin_pct|roa_pct": {
+      "N": 498,
+      "pearson_r": 0.581910591592367,
+      "pearson_p": 1.8168108769827204e-46,
+      "spearman_rho": 0.4871902297722885,
+      "spearman_p": 4.781688779348436e-31
+    },
+    "net_margin_pct|ln_assets": {
+      "N": 498,
+      "pearson_r": 0.08480132012623756,
+      "pearson_p": 0.05861487793023518,
+      "spearman_rho": 0.056969491546339006,
+      "spearman_p": 0.20438314730555585
+    },
+    "net_margin_pct|debt_ratio_pct": {
+      "N": 498,
+      "pearson_r": 0.04357299834225596,
+      "pearson_p": 0.3318527885701273,
+      "spearman_rho": -0.05881203003793492,
+      "spearman_p": 0.19010098353460955
+    },
+    "net_margin_pct|revenue_growth_pct": {
+      "N": 488,
+      "pearson_r": 0.2661511968760798,
+      "pearson_p": 2.3371432109634186e-09,
+      "spearman_rho": 0.29500935647257764,
+      "spearman_p": 2.9549592868035316e-11
+    },
+    "net_margin_pct|asset_turnover": {
+      "N": 498,
+      "pearson_r": -0.21650616456600302,
+      "pearson_p": 1.075154560987188e-06,
+      "spearman_rho": -0.3748463327021706,
+      "spearman_p": 4.641949484170797e-18
+    },
+    "roa_pct|ln_assets": {
+      "N": 498,
+      "pearson_r": -0.2946085639224666,
+      "pearson_p": 1.9816429791680715e-11,
+      "spearman_rho": -0.37673690784537683,
+      "spearman_p": 3.0645516244479327e-18
+    },
+    "roa_pct|debt_ratio_pct": {
+      "N": 498,
+      "pearson_r": 0.08946821765712178,
+      "pearson_p": 0.045982798728257904,
+      "spearman_rho": -0.17317981265378057,
+      "spearman_p": 0.00010260739857126852
+    },
+    "roa_pct|revenue_growth_pct": {
+      "N": 488,
+      "pearson_r": 0.25750199440520266,
+      "pearson_p": 7.86041212940705e-09,
+      "spearman_rho": 0.13676945233729948,
+      "spearman_p": 0.0024631843283057725
+    },
+    "roa_pct|asset_turnover": {
+      "N": 498,
+      "pearson_r": 0.2717757787665799,
+      "pearson_p": 6.998641442777012e-10,
+      "spearman_rho": 0.5243633200405018,
+      "spearman_p": 1.5933366425844816e-36
+    },
+    "ln_assets|debt_ratio_pct": {
+      "N": 498,
+      "pearson_r": 0.11908020092897983,
+      "pearson_p": 0.0078099619289109246,
+      "spearman_rho": 0.29258579532033396,
+      "spearman_p": 2.7535068867269535e-11
+    },
+    "ln_assets|revenue_growth_pct": {
+      "N": 488,
+      "pearson_r": 0.007715048970215646,
+      "pearson_p": 0.8650129189924824,
+      "spearman_rho": 0.012578849494696344,
+      "spearman_p": 0.781646332658672
+    },
+    "ln_assets|asset_turnover": {
+      "N": 498,
+      "pearson_r": -0.2486805120419127,
+      "pearson_p": 1.8639429600252125e-08,
+      "spearman_rho": -0.40166987952117733,
+      "spearman_p": 9.889368290497926e-21
+    },
+    "debt_ratio_pct|revenue_growth_pct": {
+      "N": 488,
+      "pearson_r": -0.09028614932916448,
+      "pearson_p": 0.04621282769424591,
+      "spearman_rho": -0.06637140008326357,
+      "spearman_p": 0.1431811628949928
+    },
+    "debt_ratio_pct|asset_turnover": {
+      "N": 498,
+      "pearson_r": 0.15309982633781094,
+      "pearson_p": 0.0006075791376733912,
+      "spearman_rho": -0.03500960808113604,
+      "spearman_p": 0.43565750917726576
+    },
+    "revenue_growth_pct|asset_turnover": {
+      "N": 488,
+      "pearson_r": -0.025054493896565687,
+      "pearson_p": 0.5808530133576182,
+      "spearman_rho": -0.07543879920321547,
+      "spearman_p": 0.09599328990785805
+    }
+  },
+  "s2_ttest": {
+    "n_finance": 76,
+    "n_other": 422,
+    "mean_finance": 20.90261973684211,
+    "mean_other": 12.46459691943128,
+    "sd_finance": 11.236815720680774,
+    "sd_other": 14.915519876554765,
+    "median_finance": 21.006999999999998,
+    "median_other": 12.141300000000001,
+    "levene_mean_F": 0.11669790344198396,
+    "levene_mean_p": 0.7327885259958226,
+    "levene_median_F": 0.11426696343385255,
+    "levene_median_p": 0.7354806163090175,
+    "student_t": 4.696078271709363,
+    "student_df": 496,
+    "student_p": 3.4377304394826213e-06,
+    "welch_t": 5.70373469695874,
+    "welch_df": 127.85561734682838,
+    "welch_p": 7.727027592289938e-08,
+    "mean_diff": 8.438022817410829,
+    "welch_ci_low": 5.510774166163149,
+    "welch_ci_high": 11.36527146865851,
+    "cohens_d": 0.5851766341998529,
+    "mannwhitney_U": 22745.0,
+    "mannwhitney_p": 6.2840180595451094e-09,
+    "shapiro_finance_p": 0.011699504323922406,
+    "shapiro_other_p": 2.521535229615129e-24
+  },
+  "s3": {
+    "N": 498,
+    "k": 5,
+    "levene_mean_F": 3.6100442987738277,
+    "levene_mean_p": 0.006505540626273652,
+    "levene_median_F": 3.444772916698522,
+    "levene_median_p": 0.008621341854757353,
+    "fisher_F": 7.524590900150787,
+    "fisher_df1": 4,
+    "fisher_df2": 493,
+    "fisher_p": 6.875945006105646e-06,
+    "eta2": 0.05753863077190564,
+    "welch_F": 10.405834695321534,
+    "welch_df1": 4.0,
+    "welch_df2": 189.120610441853,
+    "welch_p": 1.223079919919905e-07,
+    "kruskal_H": 46.20499048343527,
+    "kruskal_p": 2.232419483209554e-09,
+    "epsilon2": 0.09296778769302871
+  },
+  "s4_simple": {
+    "N": 498,
+    "R2": 0.0071912638951525665,
+    "adj_R2": 0.005189633378812175,
+    "F": 3.5927029671291737,
+    "df1": 1,
+    "df2": 496,
+    "p_F": 0.05861487793024753,
+    "durbin_watson": 1.9418938836827047,
+    "shapiro_resid_W": 0.7928730181952309,
+    "shapiro_resid_p": 1.087156049524659e-24,
+    "breusch_pagan_LM": 1.3591824102728727,
+    "breusch_pagan_p": 0.2436792272763187,
+    "max_cooks_d": 0.18799124154756874,
+    "max_vif": 1.0000000000000002,
+    "vif": {
+      "ln_assets": 1.0000000000000002
+    }
+  },
+  "s4_multiple": {
+    "N": 488,
+    "R2": 0.11372811352751311,
+    "adj_R2": 0.10080331518312258,
+    "F": 8.799217635521018,
+    "df1": 7,
+    "df2": 480,
+    "p_F": 3.3723375486362833e-10,
+    "durbin_watson": 1.9630199557400336,
+    "shapiro_resid_W": 0.7975792703979658,
+    "shapiro_resid_p": 3.2956771085568744e-24,
+    "breusch_pagan_LM": 10.856787860210929,
+    "breusch_pagan_p": 0.1449890062961395,
+    "max_cooks_d": 0.6591282035812943,
+    "max_vif": 1.4086254437232646,
+    "vif": {
+      "C(sector_group, Treatment('Industrials & Energy'))[T.Consumer]": 1.3626505234351138,
+      "C(sector_group, Treatment('Industrials & Energy'))[T.Finance]": 1.4086254437232646,
+      "C(sector_group, Treatment('Industrials & Energy'))[T.Healthcare]": 1.2194420423778158,
+      "C(sector_group, Treatment('Industrials & Energy'))[T.Tech & Comms]": 1.3082526060881643,
+      "ln_assets": 1.1765447339324764,
+      "debt_ratio_pct": 1.0646306339841054,
+      "revenue_growth_pct": 1.0479168106868189
+    }
+  },
+  "s4_compare": {
+    "R2_continuous_only": 0.0789746639042822,
+    "adj_R2_continuous_only": 0.07326582917641611,
+    "R2_with_sector": 0.11372811352751311,
+    "adj_R2_with_sector": 0.10080331518312258,
+    "F_change": 4.7055694967225765,
+    "p_change": 0.0009847395181526932
+  },
+  "s4_sens_roa": {
+    "N": 488,
+    "R2": 0.18985770989867345,
+    "adj_R2": 0.1780431348346957,
+    "F": 16.069787433789678,
+    "df1": 7,
+    "df2": 480,
+    "p_F": 5.092378958492736e-19,
+    "durbin_watson": 1.7743033048247452,
+    "shapiro_resid_W": 0.8664319938737831,
+    "shapiro_resid_p": 5.214019138860877e-20,
+    "breusch_pagan_LM": 65.7231166606047,
+    "breusch_pagan_p": 1.0760046978878873e-11,
+    "max_cooks_d": 1.0448683958907146,
+    "max_vif": 1.4086254437232646,
+    "vif": {
+      "C(sector_group, Treatment('Industrials & Energy'))[T.Consumer]": 1.3626505234351138,
+      "C(sector_group, Treatment('Industrials & Energy'))[T.Finance]": 1.4086254437232646,
+      "C(sector_group, Treatment('Industrials & Energy'))[T.Healthcare]": 1.2194420423778158,
+      "C(sector_group, Treatment('Industrials & Energy'))[T.Tech & Comms]": 1.3082526060881643,
+      "ln_assets": 1.1765447339324764,
+      "debt_ratio_pct": 1.0646306339841054,
+      "revenue_growth_pct": 1.0479168106868189
+    }
+  },
+  "s4_sens_no_influential": {
+    "N": 468,
+    "R2": 0.14167188781765372,
+    "adj_R2": 0.1286103730670528,
+    "F": 10.846512867976193,
+    "df1": 7,
+    "df2": 460,
+    "p_F": 1.0916562530919756e-12,
+    "durbin_watson": 2.1048498688198567,
+    "shapiro_resid_W": 0.99214647582272,
+    "shapiro_resid_p": 0.014421101852307104,
+    "breusch_pagan_LM": 25.25350900242464,
+    "breusch_pagan_p": 0.000684133086134227,
+    "max_cooks_d": 0.09236773779521831,
+    "max_vif": 1.392498243989034,
+    "vif": {
+      "C(sector_group, Treatment('Industrials & Energy'))[T.Consumer]": 1.3537164032125684,
+      "C(sector_group, Treatment('Industrials & Energy'))[T.Finance]": 1.392498243989034,
+      "C(sector_group, Treatment('Industrials & Energy'))[T.Healthcare]": 1.215091524576182,
+      "C(sector_group, Treatment('Industrials & Energy'))[T.Tech & Comms]": 1.3143407699373308,
+      "ln_assets": 1.2048356291836517,
+      "debt_ratio_pct": 1.1030689885545426,
+      "revenue_growth_pct": 1.055764199769083
+    }
+  },
+  "s4_sens_no_finance": {
+    "N": 418,
+    "R2": 0.08285749029040579,
+    "adj_R2": 0.06946854854282047,
+    "F": 6.18850181384567,
+    "df1": 6,
+    "df2": 411,
+    "p_F": 3.124671430348027e-06,
+    "durbin_watson": 1.8601691989977136,
+    "shapiro_resid_W": 0.7760904944826152,
+    "shapiro_resid_p": 1.6943623847254415e-23,
+    "breusch_pagan_LM": 10.061182229242485,
+    "breusch_pagan_p": 0.12209903627829997,
+    "max_cooks_d": 0.8702413133117232,
+    "max_vif": 1.2960574747608082,
+    "vif": {
+      "C(sector_group, Treatment('Industrials & Energy'))[T.Consumer]": 1.2960574747608082,
+      "C(sector_group, Treatment('Industrials & Energy'))[T.Healthcare]": 1.1913980043108143,
+      "C(sector_group, Treatment('Industrials & Energy'))[T.Tech & Comms]": 1.262062541846409,
+      "ln_assets": 1.0055193467001722,
+      "debt_ratio_pct": 1.0432787351250703,
+      "revenue_growth_pct": 1.0539343190699617
+    }
+  },
+  "s4_sens_trim_1pct": {
+    "N": 478,
+    "R2": 0.12322434921391567,
+    "adj_R2": 0.11016598845752723,
+    "F": 9.436433217977308,
+    "df1": 7,
+    "df2": 470,
+    "p_F": 5.6575312040041896e-11,
+    "durbin_watson": 2.0366344114932753,
+    "shapiro_resid_W": 0.986825279041034,
+    "shapiro_resid_p": 0.00025596463504219045,
+    "breusch_pagan_LM": 31.78733952418655,
+    "breusch_pagan_p": 4.447324586641119e-05,
+    "max_cooks_d": 0.4172315249094437,
+    "max_vif": 1.3981845733464056,
+    "vif": {
+      "C(sector_group, Treatment('Industrials & Energy'))[T.Consumer]": 1.3545839420730368,
+      "C(sector_group, Treatment('Industrials & Energy'))[T.Finance]": 1.3981845733464056,
+      "C(sector_group, Treatment('Industrials & Energy'))[T.Healthcare]": 1.2116227287690808,
+      "C(sector_group, Treatment('Industrials & Energy'))[T.Tech & Comms]": 1.2983192186885606,
+      "ln_assets": 1.1745950674503032,
+      "debt_ratio_pct": 1.066239737926915,
+      "revenue_growth_pct": 1.044390196696481
+    }
+  },
+  "s4_example_prediction_finance_median": 19.411759954553762
+}

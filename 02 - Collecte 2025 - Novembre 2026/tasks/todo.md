@@ -8,11 +8,9 @@ Mise à jour : **12 novembre 2026**. Une case cochée signifie que le livrable d
 
 ## À reprendre en premier
 
-1. **D03** — plan d’analyse (proposé ci-dessous), puis **D02/D04** (dictionnaire final et CSV final).
-2. **P01–P09** — analyses de référence, graphiques, rapport de référence et guide Jamovi (environnement avec SciPy et statsmodels à préparer).
-3. **U03** (retraits de 2025) et **F09** (journal de nettoyage final) en parallèle.
+**Étape 1 (projet de référence) : presque terminée.** Analyses, rapport local (docs/RAPPORT_DE_REFERENCE.md) et guide Jamovi (docs/GUIDE_JAMOVI.md) existent. Reste avant l’étape 2 : **U03** (retraits de 2025), **F09** (clôture du journal de nettoyage) puis **D04** (CSV final unique, renommé sans « DRAFT », et nouvelle exécution de src.analysis + src.verify_analysis pour figer les chiffres). Ensuite **étape 2 : J01–J06 avec David dans Jamovi**.
 
-La gouvernance est abandonnée (DEC25, 12 nov. 2026) : ne pas la reprendre sans décision de David. Lire docs/REPRISE_AGENT.md avant de relancer un programme.
+La gouvernance est abandonnée (DEC25) : ne pas la reprendre sans décision de David. Lire docs/REPRISE_AGENT.md avant de relancer un programme.
 
 ## A — Cadre et organisation
 
@@ -62,23 +60,23 @@ La gouvernance est abandonnée (DEC25, 12 nov. 2026) : ne pas la reprendre sans 
 ## D — Base finale et plan d’analyse
 
 - [x] **D01** (12 nov., mis à jour DEC25) Base brouillon sans gouvernance : 500 lignes, une par CIK, variables ci-dessus, aucune valeur remplie artificiellement. Code : src/build_dataset.py, src/extra_variables.py (preuves : data/reference/revenue_growth_evidence.csv).
-- [ ] **D02 — EN COURS (12 nov.)** Figer les définitions, règles de nettoyage et échantillons valides par analyse. Fait : docs/JOURNAL_NETTOYAGE.md (journal noté du cours) et docs/FICHE_PROVENANCE.md (fiche de provenance), définitions des variables créées. Reste : dictionnaire final des colonnes du CSV Jamovi (docs/DICTIONNAIRE.md à aligner sur sp500_2025_JAMOVI_DRAFT.csv) et tableau des N par analyse (après G05/G09).
-- [ ] **D03 — À FAIRE (plan proposé)** Plan d’analyse répondant à la question « qu’est-ce qui explique la rentabilité ? » : (S1) cinq profils univariés (marge, ROA, actif, endettement, croissance) avec diagnostic de normalité de la marge ; (S2) khi-deux secteur × quartile de taille avec V de Cramér, matrice Pearson et Spearman des six variables continues et nuage marge–endettement ou marge–croissance, test t Finance contre Non-finance sur la marge (Student/Welch, d de Cohen) ; (S3) ANOVA de la marge par sector_group (Levene, Fisher ou Welch, post-hoc, η²) et Kruskal–Wallis de contrôle ; (S4) régression simple (marge ~ ln_assets) puis multiple (marge ~ ln_assets + debt_ratio_pct + revenue_growth_pct + facteur secteur), diagnostics (résidus, VIF, Cook), sensibilités (ROA, sans valeurs extrêmes justifiées). Hypothèses et conditions à écrire dans le plan.
+- [x] **D02** (13 nov. 2026) Définitions et règles figées : JOURNAL_NETTOYAGE.md, FICHE_PROVENANCE.md, dictionnaire du CSV Jamovi (DICTIONNAIRE.md), N par analyse dans le rapport. À actualiser si D04 modifie la base.
+- [x] **D03** (13 nov. 2026) Plan d’analyse appliqué et documenté dans docs/RAPPORT_DE_REFERENCE.md (hypothèses, conditions, tailles d’effet, sensibilités).
 - [ ] **D04 — À FAIRE** Produire **un seul CSV final Jamovi clairement identifié**, puis vérifier valeurs manquantes, types, modalités, unités et traçabilité. Dépend de U03, F09 et D02–D03 (G05–G09 abandonnées, DEC25). Les valeurs manquantes justifiées peuvent subsister ; elles doivent être visibles.
 
 ## P — Projet d’analyse complet de référence, sans dépendre de Jamovi
 
 **Priorité actuelle de l’agent.** Cette section s’exécute après les données et le plan d’analyse D01–D04. Les fichiers d’analyse et de rapport mentionnés ci-dessous sont des livrables **à créer**, pas des résultats déjà présents. Tous les calculs concernent les nouvelles données 2025.
 
-- [ ] **P01 — À FAIRE** Calculer les cinq profils univariés avec tableaux, graphiques, N, statistiques adaptées et diagnostic de normalité documenté ; rédiger l’interprétation et les deux phrases managériales. Terminé quand chaque résultat est reproductible et relié à la base retenue.
-- [ ] **P02 — À FAIRE** Calculer le khi-deux avec pourcentages en ligne, attendus, conditions et V de Cramer ; matrice Pearson **et** Spearman d’au moins trois continues et nuage du couple discuté ; rédiger les deux recommandations chiffrées.
-- [ ] **P03 — À FAIRE** Réaliser une comparaison justifiée de deux groupes, avec Student/Welch ou alternative adaptée, descriptifs, conditions, statistique/df/p, taille d’effet et interprétation. Le choix des groupes doit répondre à la question, pas rechercher une p-value favorable.
-- [ ] **P04 — À FAIRE** Réaliser les comparaisons de 3–5 groupes : descriptifs/boîtes, Levene, Fisher/Welch ou Kruskal–Wallis selon conditions, post-hoc appropriés et tailles d’effet ; rédiger la conclusion dans le protocole du cours.
-- [ ] **P05 — À FAIRE** Calculer et interpréter une régression simple de référence, avec équation, unités, F/p, R² et coefficients/IC ; conserver les diagnostics utiles.
-- [ ] **P06 — À FAIRE** Calculer les modèles multiples justifiés, facteurs/références, échantillons et transformations ; vérifier résidus, colinéarité et observations influentes ; interpréter coefficients et limites, sans causalité indue.
-- [ ] **P07 — À FAIRE** Vérifier indépendamment les calculs essentiels et les sensibilités justifiées ; fixer la version de données et les options utilisées. Prévoir un index de tableaux/graphiques, les N par analyse, les méthodes/versions et l’empreinte de l’entrée. Toute modification de base impose de mettre à jour les résultats concernés.
-- [ ] **P08 — À FAIRE** Rédiger un **rapport local de référence complet** : résumé exécutif, trois recommandations, données/nettoyage, descriptifs, relations, groupes, régressions, limites et sources, avec tableaux/graphiques utilisables. Livrable prévu : docs/RAPPORT_DE_REFERENCE.md ; ce n’est pas encore le Google Doc final.
-- [ ] **P09 — À FAIRE** Préparer le guide Jamovi et la grille de rapprochement des résultats : types de variables, menus/options, références de facteurs, échantillons, résultats attendus et écarts tolérables d’arrondi. Terminé quand l’agent peut expliquer et reproduire l’ensemble du projet indépendamment de Jamovi et guider David sur chaque analyse.
+- [x] **P01** (13 nov. 2026, version référence) Cinq profils (secteur, quartile de taille, marge, endettement, croissance) avec N, statistiques, Shapiro-Wilk, normalité de la marge sur trois preuves, deux phrases managériales. Preuve : src/analysis.py → outputs/analyses_reference/s1_*, figures s1_*, docs/RAPPORT_DE_REFERENCE.md §3.
+- [x] **P02** (13 nov. 2026, version référence) Khi-deux secteur × quartile (χ²(12) = 91,76 ; V = 0,248 ; attendus ≥ 14,9), matrice Pearson et Spearman de six variables, nuages de points, recommandations chiffrées. Preuve : s2_*, rapport §4.1–4.2.
+- [x] **P03** (13 nov. 2026, version référence) Test t Finance contre Non-finance sur la marge (Levene, Student, Welch, Mann-Whitney, d = 0,59). Preuve : s2_ttest dans results.json, rapport §4.3.
+- [x] **P04** (13 nov. 2026, version référence) ANOVA de la marge par 5 groupes de secteurs : Levene (variances inégales) → Welch + Games-Howell, Fisher, Kruskal-Wallis + DSCF, Tukey, η² = 0,058. Preuve : s3_*, rapport §5.
+- [x] **P05** (13 nov. 2026, version référence) Régression simple marge ~ ln actif (B = 0,958 ; p = 0,059 ; R² = 0,007) avec diagnostics. Preuve : s4_simple_*, rapport §6.1.
+- [x] **P06** (13 nov. 2026, version référence) Régression multiple (N = 488 ; R² = 0,114 ; croissance B = 0,248 ; prime Finance 7,84), VIF, Durbin-Watson, Breusch-Pagan, Cook, HC3 ; quatre sensibilités (sans influentes, sans finance, tronquée, ROA). Preuve : s4_*, rapport §6.2–6.3.
+- [x] **P07** (13 nov. 2026, version référence) Vérification indépendante de 12 résultats essentiels par formules à la main et autres fonctions (src/verify_analysis.py : tous identiques) ; sensibilités faites ; empreinte SHA-256 des données dans results.json ; versions dans requirements-analysis.txt. À refaire si la base change (D04).
+- [x] **P08** (13 nov. 2026, version référence) Rapport local de référence complet : résumé d’une page avec trois recommandations, données, profils, relations, groupes, régressions, limites, sources. Livrable : docs/RAPPORT_DE_REFERENCE.md (pas encore le Google Doc). À mettre à jour si la base final diffère du brouillon.
+- [x] **P09** (13 nov. 2026, version référence) Guide Jamovi et grille de rapprochement avec les valeurs de référence et tolérances : docs/GUIDE_JAMOVI.md.
 
 **Fin de l’étape 1 :** données justifiées, calculs contrôlés, rapport de référence complet, tableaux/graphiques identifiés et guide de reproduction prêts. Un script présent, un tableau non interprété ou un CSV seul ne remplit pas ce critère. Les sorties externes portent l’étiquette « référence », pas « Jamovi ».
 
