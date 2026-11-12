@@ -171,6 +171,11 @@ Le point d’accès à la racine Git renvoie à cette version complète unique. 
 - **Consolidation** (src/robustness.py → s5_robustness.csv, results_robustness.json) : bootstrap de 2 000 tirages, régression de Huber, régression médiane, croissance écrêtée, exclusion des croissances > 50 %, 11 secteurs au lieu de 5 : l'association croissance–marge (0,2 à 0,35 point par point de croissance) et la prime de la finance (7 à 8 points) tiennent partout ; taille et endettement restent non significatifs avec 11 secteurs. Rapport §6.4, audit et guide mis à jour.
 - Relecture de rapports élargie de 25 à 100 : 298 cellules sur 300 retrouvées (99,3 %), les 2 autres sont celles de Clorox (états en annexe) ; deux téléchargements expirés ont été retentés avec succès.
 
+## 13 novembre 2026 (Google Doc)
+
+- Google Doc de travail (« DAQ - SP500 CC Final Report ») relu puis réécrit avec l'accord de David (« Oui, remplace ») : ancienne approche gouvernance/ISS supprimée ; titre, sous-titre et date mis à jour ; sections 1, 2 et 7 et références rédigées en anglais à partir des données et du journal de nettoyage ; sections 3 à 6 et résumé exécutif laissés en attente des sorties Jamovi ; couverture (noms, scores à compléter, date de remise 2 décembre 2026) conservée. Édition protégée par le numéro de révision (aucune modification concurrente écrasée). Mise en forme vérifiée par relecture.
+- **Prochaine action** : étape 2, reproduction dans Jamovi avec David (J01–J06), puis rédaction des sections 3 à 6 et du résumé à partir de ses sorties.
+
 ## Format pour les prochaines entrées
 
 Ajouter une section datée avec : demande ou objectif ; action et motif ; fichiers/preuves ; résultat et nombre de cas vérifiés ; tâche terminée ou restant ouverte ; décision éventuelle ; prochaine action. Conserver les entrées précédentes. Si une ancienne conclusion est corrigée, ajouter la correction et sa raison au lieu d’effacer l’historique.
