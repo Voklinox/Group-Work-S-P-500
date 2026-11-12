@@ -1,10 +1,10 @@
 # S&P 500 — projet de groupe, collecte 2025
 
-**Équipe : David Wanono, Olyvan Perrin, Guillaume Da Cruz.** Cours Quantitative Data Analysis, M1 S7, EM Normandie. Échéance indiquée par David : **2 décembre 2026**. Dernière mise à jour documentaire : **13 novembre 2026**.
+**Équipe : David Wanono, Olyvan Perrin, Guillaume Da Cruz.** Cours Quantitative Data Analysis, M1 S7, EM Normandie. Échéance indiquée par David : **2 décembre 2026**. Dernière mise à jour documentaire : **12 novembre 2026**.
 
 Étudier ce qui explique la rentabilité (marge nette, ROA) des entreprises du S&P 500 : taille, endettement, croissance du chiffre d’affaires et secteur (DEC25 : la gouvernance a été abandonnée le 12 novembre 2026, travail archivé). Comptes du dernier exercice annuel **clos en 2025**, avec dates exactes ; une ligne par entreprise.
 
-**Étape 1 terminée (13 novembre 2026) : CSV final, analyses de référence, rapport et guide Jamovi sont prêts. Prochaine étape : reproduction dans Jamovi par David.**
+**Étape 1 terminée (12 novembre 2026) : CSV final, analyses de référence, rapport et guide Jamovi sont prêts. Prochaine étape : reproduction dans Jamovi par David.**
 
 ## Priorité fixée par David
 
@@ -31,7 +31,7 @@ Les [consignes et supports du professeur en texte intégral](docs/CONSIGNES_PROF
 | Gouvernance (abandonnée, DEC25) | Travail archivé : 505 documents téléchargés, 290 observations lues, protocole et outils conservés ; non utilisés dans l’analyse |
 | Variables de l’analyse | continues : net_margin_pct, roa_pct, ln_assets, debt_ratio_pct, revenue_growth_pct (488), asset_turnover ; ordinale size_quartile ; nominales sector_group (5), finance_vs_other (2), profitable (2). CSV final : data/processed/sp500_2025_JAMOVI.csv (500 lignes) |
 | Taille et quartiles | Actif total, quartiles Q1–Q4 sur 498 entreprises (DEC12 confirmée) |
-| Analyses complètes et rapport local de référence | Réalisés le 13 nov. 2026 : docs/RAPPORT_DE_REFERENCE.md, outputs/analyses_reference/, outputs/figures_reference/ ; vérification indépendante des 12 calculs essentiels ; guide Jamovi docs/GUIDE_JAMOVI.md |
+| Analyses complètes et rapport local de référence | Réalisés le 12 nov. 2026 : docs/RAPPORT_DE_REFERENCE.md, outputs/analyses_reference/, outputs/figures_reference/ ; vérification indépendante des 12 calculs essentiels ; guide Jamovi docs/GUIDE_JAMOVI.md |
 | Reproduction Jamovi puis Google Doc/PDF | Prochaine étape : Jamovi avec David (étape 2), puis finalisation (étape 3) |
 
 Ces compteurs ne constituent pas un pourcentage d’achèvement du projet. « Document retrouvé », « valeur extraite » et « donnée validée pour l’analyse » sont trois états différents.

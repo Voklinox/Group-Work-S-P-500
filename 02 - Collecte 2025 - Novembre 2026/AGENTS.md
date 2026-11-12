@@ -17,11 +17,11 @@
 2. **Guider David dans Jamovi** : il effectue les manipulations ; rapprocher ses sorties du projet de référence, expliquer et résoudre les écarts. Ne pas présenter les résultats d’un programme externe comme déjà produits dans Jamovi.
 3. **Finaliser Google Doc et PDF** : intégrer les résultats rapprochés, réviser le rapport, obtenir les évaluations du groupe et contrôler le PDF.
 
-**État au 13 novembre 2026 : l’étape 1 est terminée** (CSV final, analyses, rapport de référence, guide Jamovi, audit). **La priorité actuelle est l’étape 2 : guider David dans Jamovi** avec `docs/GUIDE_JAMOVI.md`, puis l’étape 3 (Google Doc et PDF). Les tâches ouvertes sont J01–J06 et R01–R06.
+**État au 12 novembre 2026 : l’étape 1 est terminée** (CSV final, analyses, rapport de référence, guide Jamovi, audit). **La priorité actuelle est l’étape 2 : guider David dans Jamovi** avec `docs/GUIDE_JAMOVI.md`, puis l’étape 3 (Google Doc et PDF). Les tâches ouvertes sont J01–J06 et R01–R06.
 
 ## Ordre de lecture
 
-Lire `README.md`, `docs/REPRISE_AGENT.md` (section 5 et « Reprise Jamovi »), `docs/ETAT_DU_PROJET.md`, `tasks/todo.md`, `docs/GUIDE_JAMOVI.md`, `docs/RAPPORT_DE_REFERENCE.md` et `docs/AUDIT_2026-11-13.md`, puis `docs/CONSIGNES_PROFESSEUR.md`, `docs/DECISIONS.md`, la méthode et le dictionnaire. Consulter `docs/JOURNAL_PROJET.md` pour le déroulement et le protocole de gouvernance avant de collecter. Ne pas annoncer un CSV final tant que ses contrôles et ses sources ne sont pas validés.
+Lire `README.md`, `docs/REPRISE_AGENT.md` (section 5 et « Reprise Jamovi »), `docs/ETAT_DU_PROJET.md`, `tasks/todo.md`, `docs/GUIDE_JAMOVI.md`, `docs/RAPPORT_DE_REFERENCE.md` et `docs/AUDIT_2026-11-12.md`, puis `docs/CONSIGNES_PROFESSEUR.md`, `docs/DECISIONS.md`, la méthode et le dictionnaire. Consulter `docs/JOURNAL_PROJET.md` pour le déroulement et le protocole de gouvernance avant de collecter. Ne pas annoncer un CSV final tant que ses contrôles et ses sources ne sont pas validés.
 
 ## Suivi obligatoire après chaque lot
 

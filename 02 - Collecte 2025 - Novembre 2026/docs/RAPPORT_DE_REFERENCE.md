@@ -1,6 +1,6 @@
 # Rapport de référence — Qu'est-ce qui explique la rentabilité des entreprises du S&P 500 ?
 
-**Statut : version de référence calculée par programme (`python -m src.analysis`), non encore reproduite dans Jamovi.** Les chiffres sont des résultats « référence », pas des sorties Jamovi. Ils seront rapprochés de celles de David (étape 2), puis le texte sera finalisé dans le Google Doc (étape 3). Données : `data/processed/sp500_2025_JAMOVI.csv` (500 entreprises ; empreinte SHA-256 dans `outputs/analyses_reference/results.json`). Tableaux : `outputs/analyses_reference/`. Graphiques : `outputs/figures_reference/`. Date : 13 novembre 2026.
+**Statut : version de référence calculée par programme (`python -m src.analysis`), non encore reproduite dans Jamovi.** Les chiffres sont des résultats « référence », pas des sorties Jamovi. Ils seront rapprochés de celles de David (étape 2), puis le texte sera finalisé dans le Google Doc (étape 3). Données : `data/processed/sp500_2025_JAMOVI.csv` (500 entreprises ; empreinte SHA-256 dans `outputs/analyses_reference/results.json`). Tableaux : `outputs/analyses_reference/`. Graphiques : `outputs/figures_reference/`. Date : 12 novembre 2026.
 
 Équipe : David Wanono, Olyvan Perrin, Guillaume Da Cruz. (Évaluations des membres : à ajouter par le groupe sur la couverture du PDF.)
 
@@ -99,7 +99,7 @@ r² marge–croissance = 0,07 : 7 % de la variance partagée. Marge et ROA sont 
 
 1. **IDENTIFY.** Résultat quantitatif (marge) et deux groupes indépendants (Finance, N = 76 ; Non-finance, N = 422) : test t pour échantillons indépendants. Levene (H0 = variances égales) : F = 0,12, p = 0,73 → variances comparables, Student convient ; Welch et Mann-Whitney rapportés en confirmation (marge non normale, groupes de plus de 30).
 2. **HYPOTHESISE.** H0 : marge moyenne égale dans les deux groupes. H1 : elle diffère.
-3. **DECIDE.** Finance 20,90 % (écart-type 11,24) contre 12,46 % (14,92). Student t(496) = 4,70, p < 0,001 ; Welch t(127,9) = 5,70, p < 0,001 ; Mann-Whitney U = 22 740, p < 0,001. Écart = 8,44 points, IC 95 % (Welch) [5,51 ; 11,37]. d de Cohen = 0,59 : effet moyen.
+3. **DECIDE.** Finance 20,90 % (écart-type 11,24) contre 12,46 % (14,92). Student t(496) = 4,70, p < 0,001 ; Welch t(127,9) = 5,70, p < 0,001 ; Mann-Whitney U = 22 745 (U de Finance ; Jamovi affiche l'autre U, 9 327), p < 0,001. Écart = 8,44 points, IC 95 % (Welch) [5,51 ; 11,37]. d de Cohen = 0,59 : effet moyen.
 4. **RECOMMEND.** Ne pas comparer la marge d'une banque ou d'un assureur à celle d'un industriel avec une même norme ; adopter un repère de 21 % (médiane) pour la finance et de 12 % pour le reste. Limite : le revenu des banques est reconstitué par convention (intérêts nets plus revenus hors intérêts), ce qui pèse sur la comparaison.
 
 ---

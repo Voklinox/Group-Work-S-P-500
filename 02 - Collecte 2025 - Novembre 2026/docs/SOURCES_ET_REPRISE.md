@@ -61,7 +61,7 @@ Les phases de calculs de référence, reproduction Jamovi et finalisation du rap
 
 Le registre docs/sources/cours/transcription_manifest.json conserve le nombre de pages attendu et transcrit, l’empreinte de chaque texte de page et celle du fichier Markdown complet. Aucune page n’est exclue. Les illustrations et la mise en page des formules restent dans les PDF originaux inclus.
 
-## Chaîne de calcul complète (état du 13 novembre 2026)
+## Chaîne de calcul complète (état du 12 novembre 2026)
 
 ```sh
 python3 -m src.collect && python3 -m src.audit      # comptes SEC, preuves, audit d'intégrité

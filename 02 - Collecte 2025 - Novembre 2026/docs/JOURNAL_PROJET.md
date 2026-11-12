@@ -129,12 +129,12 @@ Le point d’accès à la racine Git renvoie à cette version complète unique. 
 - Commit e70648a poussé sur GitHub (main) à la demande de David (DEC24) ; contact SEC retiré du code.
 - F08 : 25 rapports aléatoires, 73/75 cellules retrouvées ; Clorox : états en annexe ; 10 sociétés financières à ratio élevé : 9/10 retrouvées, Progressive à confirmer.
 
-## 13 novembre 2026 — lot de gouvernance 22 et essai d'automatisation
+## 12 novembre 2026 — lot de gouvernance 22 et essai d'automatisation
 
 - Deux observations ajoutées (Cincinnati Financial 13/9, président exécutif séparé ; Corteva 12/11, effectif fondé sur les candidats) : total 290 observations, 51 non résolues, 159 pas encore lues. 0 échec au vérificateur.
 - **Essai d'automatisation abandonné** : comptage des « cartes d'administrateurs » (ancre « Director since » et étiquette « Independent »), testé sur les 285 observations lues : effectif exact dans 60 cas sur 234 seulement. Trop imprécis, code supprimé. Conclusion : la lecture reste manuelle, environ 2 à 4 sociétés conclues pour 12 000 jetons.
 
-## 13 novembre 2026 — gouvernance abandonnée, nouvelle question (DEC25)
+## 12 novembre 2026 — gouvernance abandonnée, nouvelle question (DEC25)
 
 - **Décision de David** (option 3) : abandonner la gouvernance, pour avancer plus vite et simplifier. Raison explicitée : le cours ne l'exige pas ; la collecte exige une lecture manuelle (159 non lues, 51 non résolues).
 - **Nouvelle question** : qu'est-ce qui explique la rentabilité (marge nette, ROA) des entreprises du S&P 500 : taille, endettement, croissance, secteur ?
@@ -142,7 +142,7 @@ Le point d’accès à la racine Git renvoie à cette version complète unique. 
 - **Vérification de la spécification du cours** : toutes les exigences satisfaites ; khi-deux secteur × quartile : effectif attendu minimal 14,9.
 - **Prochaine action** : plan d'analyse D03, CSV final D04, puis calculs de référence P01–P09.
 
-## 13 novembre 2026 (suite) — étape 1 : analyses, rapport de référence et guide Jamovi
+## 12 novembre 2026 (suite) — étape 1 : analyses, rapport de référence et guide Jamovi
 
 - Environnement `.venv` (pandas 2.3.3, SciPy 1.13.1, statsmodels 0.14.6, matplotlib 3.9.4) ; src/analysis.py : séances 1 à 4, 29 tableaux et 17 graphiques, empreinte des données dans results.json.
 - **Résultats principaux** (500 entreprises, N = 498 ou 488) : marge médiane 12,9 % (non normale) ; secteur × taille χ²(12) = 91,76, V = 0,25 ; Finance +8,4 points de marge (d = 0,59) ; ANOVA de Welch F(4 ; 189,1) = 10,41, η² = 0,058 ; régression multiple R² = 0,114 : croissance du CA B = 0,248 et prime Finance 7,84, taille et endettement non significatifs ; ROA négativement associé à la taille.
@@ -151,30 +151,69 @@ Le point d’accès à la racine Git renvoie à cette version complète unique. 
 - **Limites** : résidus non normaux (valeurs extrêmes), erreurs robustes à privilégier ; rapport en version de référence, pas encore reproduit dans Jamovi ni rédigé dans le Google Doc.
 - **Prochaine action** : U03, F09, D04 (figer le CSV et relancer analyses et vérifications), puis Jamovi avec David.
 
-## 13 novembre 2026 (fin d'étape 1) — U03, F09, D04 : CSV final
+## 12 novembre 2026 (fin d'étape 1) — U03, F09, D04 : CSV final
 
 - **U03** : tableau des changements de 2025 analysé : 19 ajouts présents (SOLS exclu), 19 retraits absents ; 38 enregistrements dans universe_changes_2025_check.csv.
 - **F09** et **D04** : clôturés. CSV final `data/processed/sp500_2025_JAMOVI.csv` (SHA-256 90c51dd28abc31e57aa3d4ef78aa34890c1391676a5213791f584d581e90c93e). Analyses et vérification relancées : 0 valeur modifiée ; 12 contrôles indépendants identiques.
 - **Étape 1 terminée** : données justifiées, calculs contrôlés, rapport de référence, graphiques, guide Jamovi. Les chiffres du rapport sont des résultats « référence ».
 - **Prochaine action** : étape 2 (Jamovi avec David).
 
-## 13 novembre 2026 (audit complet avant Jamovi)
+## 12 novembre 2026 (audit complet avant Jamovi)
 
-- Audit exécuté et consigné dans docs/AUDIT_2026-11-13.md : to-do (12 tâches ouvertes, toutes pour les étapes 2 et 3), conformité aux consignes, fiabilité des sources, qualité des conclusions, points faibles, risques de rapprochement.
+- Audit exécuté et consigné dans docs/AUDIT_2026-11-12.md : to-do (12 tâches ouvertes, toutes pour les étapes 2 et 3), conformité aux consignes, fiabilité des sources, qualité des conclusions, points faibles, risques de rapprochement.
 - Corrections issues de l'audit : docs/ETAT_DU_PROJET.md réécrit (il datait du 11 novembre) ; README, dictionnaire et SOURCES_ET_REPRISE alignés ; lecture des cinq profils ajoutée au rapport ; mise en garde sur les β de facteurs et les distances de Cook ajoutée au guide Jamovi ; liens locaux vérifiés (0 cassé).
 - Verdict : étape 1 complète et vérifiée ; prêt pour Jamovi.
 
-## 13 novembre 2026 (consolidation des points faibles)
+## 12 novembre 2026 (consolidation des points faibles)
 
 - Google Doc relu (R01) : il contient encore l'ancienne approche (gouvernance ISS, données de septembre, sections d'analyse « à compléter ») ; couverture avec les trois noms et « Peer assessment score: to be completed ». Non modifié à ce stade.
 - **Décision de David** : il n'est pas nécessaire de prévenir le professeur du changement de question.
 - **Consolidation** (src/robustness.py → s5_robustness.csv, results_robustness.json) : bootstrap de 2 000 tirages, régression de Huber, régression médiane, croissance écrêtée, exclusion des croissances > 50 %, 11 secteurs au lieu de 5 : l'association croissance–marge (0,2 à 0,35 point par point de croissance) et la prime de la finance (7 à 8 points) tiennent partout ; taille et endettement restent non significatifs avec 11 secteurs. Rapport §6.4, audit et guide mis à jour.
 - Relecture de rapports élargie de 25 à 100 : 298 cellules sur 300 retrouvées (99,3 %), les 2 autres sont celles de Clorox (états en annexe) ; deux téléchargements expirés ont été retentés avec succès.
 
-## 13 novembre 2026 (Google Doc)
+## 12 novembre 2026 (Google Doc)
 
 - Google Doc de travail (« DAQ - SP500 CC Final Report ») relu puis réécrit avec l'accord de David (« Oui, remplace ») : ancienne approche gouvernance/ISS supprimée ; titre, sous-titre et date mis à jour ; sections 1, 2 et 7 et références rédigées en anglais à partir des données et du journal de nettoyage ; sections 3 à 6 et résumé exécutif laissés en attente des sorties Jamovi ; couverture (noms, scores à compléter, date de remise 2 décembre 2026) conservée. Édition protégée par le numéro de révision (aucune modification concurrente écrasée). Mise en forme vérifiée par relecture.
 - **Prochaine action** : étape 2, reproduction dans Jamovi avec David (J01–J06), puis rédaction des sections 3 à 6 et du résumé à partir de ses sorties.
+
+## 12 novembre 2026 (après-midi) — étape 2 : séances Jamovi 1 et 2, audit des sorties
+
+- **Objectif** : David reproduit les analyses dans Jamovi (anglais, version 2.7.38.0), guidé pas à pas ; l'agent compare à la référence. L'agent a consulté l'écran de Jamovi (contrôle de l'ordinateur autorisé par David, lecture seule) et lu le fichier enregistré.
+- **J01** : CSV importé, types réglés, `data/processed/sp500_2025.omv` enregistré. Contrôle : 500 lignes, 16 colonnes, types conformes, 3 974 cellules numériques identiques au CSV (0 écart) ; 32 cases vides = valeurs manquantes prévues (Dayforce et Paramount : 11 colonnes chacune ; dix entreprises sans croissance du CA).
+- **J02** : cinq profils (descriptives, Shapiro-Wilk, histogrammes, box plots, Q-Q, fréquences, bar plots) : tout concorde.
+- **J03** : khi-deux (91,8 ; 12 ; V = 0,248), matrice de corrélations (15 paires, Pearson et Spearman), nuage de points, test t : tout concorde. Toutes les sorties ont aussi été recalculées indépendamment (Python) à partir du CSV : aucun écart.
+- **Seul écart de fond, une erreur de la référence** : U de Mann-Whitney 22 740 dans le guide et le rapport, alors que results.json donne 22 745 (U de Finance). Jamovi affiche l'autre U (9 327) ; 22 745 + 9 327 = 76 × 422. Guide et rapport corrigés.
+- **Écarts de présentation expliqués** (notes du guide, après la séance 2) : mode, pourcentages des quartiles sur 498, Phi = NaN, effectifs 158 et 89 du khi-deux, d de Welch (0,639) différent du d de Student (0,585), Shapiro-Wilk du test t sur les résidus (0,781).
+- **Fichiers modifiés** : docs/GUIDE_JAMOVI.md (grille séances 1 et 2 remplie, notes), docs/RAPPORT_DE_REFERENCE.md (U), tasks/todo.md (J01 à J03 cochés), docs/ETAT_DU_PROJET.md, docs/REPRISE_AGENT.md.
+- **Limites** : séances 3 et 4 non faites ; le graphique de la matrice de corrélations est trop petit pour le rapport (utiliser le nuage détaillé) ; chevauchement des libellés « Industrials & Energy » et « Tech & Comms » sur les bar plots (à corriger par export agrandi). Correction des dates : les documents attribuaient à tort au « 13 novembre » des travaux faits le 12 (dépôt Git et horloge : 12 novembre) ; remplacement fait avec l'accord de David dans tous les fichiers du dossier 02 (une quarantaine de mentions), fichier d'audit renommé docs/AUDIT_2026-11-12.md. Google Doc : « Working draft: 13 November 2026 » corrigé en « 12 November 2026 ».
+- **Prochaine action** : séance 3 (ANOVA, J04), puis séance 4 (régressions, J05), J06, puis le Google Doc (R01 à R06).
+
+## 12 novembre 2026 (soir) — étape 2 : séance 3 (ANOVA), J04
+
+- David a reproduit dans Jamovi : ANOVA à un facteur de la marge par secteur (Welch, Fisher, Levene, Shapiro-Wilk, descriptives, graphiques, Games-Howell), ANOVA avec η², Kruskal-Wallis avec DSCF. L'agent a réglé avec lui les options à l'écran (sur sa demande) puis lu le `.omv` enregistré (15 h 45, 9 analyses).
+- **Résultats** : tout concorde avec la référence (Levene 3,61 ; Welch 10,4 ; Fisher 7,52 ; η² 0,058 ; Kruskal-Wallis 46,2, ε² 0,0930 ; Games-Howell, Tukey et DSCF identiques en significativité et en p).
+- **Correction du guide** : le choix du post-hoc est un bouton radio (un seul à la fois) ; Tukey a été vérifié avant le passage à Games-Howell. Grille §3 remplie, notes ajoutées (Levene en version moyenne seulement, signe des W du DSCF).
+- **Limite** : aucune différence de fond ; Tukey et la version médiane de Levene ne sont pas dans le fichier enregistré.
+- **Prochaine action** : séance 4 (régressions, J05), puis J06 et le Google Doc.
+
+## 12 novembre 2026 (soir, suite) — séance 4 : régressions (J05 en cours)
+
+- Sur demande de David, l'agent a réglé à l'écran (contrôle de Jamovi) la régression simple (marge ~ ln actif) puis la régression multiple (ln actif, endettement, croissance, `sector_group` en facteur, référence Industrials & Energy) avec tous les diagnostics (Durbin-Watson, colinéarité, Shapiro, Q-Q, graphiques de résidus, distance de Cook). Fichier enregistré à 15 h 49, 11 analyses.
+- **Résultats** : concordance avec la référence (N, R², R² ajusté, F, tous les coefficients, ES, p, β, Durbin-Watson 1,96, Shapiro des résidus 0,798, Cook maximal 0,659).
+- **Écart expliqué** : VIF (Jamovi 1,08 = VIF généralisé ajusté ; référence 1,41 = VIF brut de l'indicatrice Finance), recalculé et documenté dans le guide.
+- **Variantes faites (15 h 58)** : ROA, sans les 20 observations influentes (N = 468) et sans la finance (N = 418), toutes conformes à la référence (coefficients, R², F, Durbin-Watson, Shapiro, Cook maximal). Méthode : duplication de la régression multiple ; deux variables calculées ajoutées au `.omv` (`margin_noinfl`, `sector_nofin`) au lieu de filtres, car un filtre Jamovi recalcule toutes les analyses ; colonnes d'origine inchangées (3 974 cellules identiques au CSV), anciennes analyses inchangées. Un faux départ : `roa_pct` placé un instant dans « Weights » par erreur de clic, retiré aussitôt, aucune sortie enregistrée avec ce réglage.
+- **J05 clos.** Limites : les noms des plus grandes distances de Cook ne sont pas lus dans Jamovi (colonne Save non créée) ; VIF affiché sous forme généralisée ; erreurs HC3, Breusch-Pagan, bootstrap, Huber et régression médiane restent « référence ».
+- **Prochaine action** : J06 (exporter les sorties et graphiques utiles, agrandir les bar plots), puis rédaction du Google Doc (R01 à R06).
+
+## 12 novembre 2026 (soir, fin) — audit complet des travaux Jamovi
+
+- **Demande de David** : audit de A à Z du fichier et de l'application avant d'exporter, de commiter et de rédiger le Google Doc.
+- **Fichier** `data/processed/sp500_2025.omv` (15 h 58, 761 Ko) : 500 lignes, 18 colonnes (16 d'origine + `margin_noinfl`, `sector_nofin`) ; 3 974 cellules numériques d'origine identiques au CSV ; aucun filtre actif ; 14 blocs d'analyses (13 analyses : 2 descriptives, khi-deux, corrélations, nuage de points, test t, ANOVA à un facteur, ANOVA avec η², Kruskal-Wallis, 5 régressions) ; aucun message d'erreur ni pondération active dans les sorties ; types de variables conformes (`sector_nofin` typée « Ordinal » par Jamovi : sans effet).
+- **Contrôle numérique** : les 99 valeurs (B, ES, t) des cinq régressions comparées une à une aux fichiers de référence : 0 écart hors tolérance ; toutes les autres sorties lues et recalculées indépendamment au fil des séances (descriptives, khi-deux, 15 corrélations, test t, ANOVA, post-hoc, Kruskal-Wallis).
+- **Application** : fenêtre ouverte sur le même état (18 variables, 500 lignes, Filters 0, cellules éditées 0) ; la capture en arrière-plan échoue quand Jamovi est masqué par une autre fenêtre.
+- **Conformité au cours** : cinq profils avec histogrammes et box plots et trois preuves de normalité ; khi-deux avec attendus, V et pourcentages en ligne ; matrice de corrélations de six variables avec nuage de la paire discutée ; test t ; ANOVA + post-hoc + η² + Kruskal-Wallis ; régressions simple et multiple avec R², R² ajusté, Durbin-Watson (1,5 à 2,5 : 1,96), Q-Q, graphiques de résidus, VIF (< 5) et référence explicite du facteur.
+- **Limites** : noms des distances de Cook non lus dans Jamovi ; VIF généralisé ; HC3, Breusch-Pagan, bootstrap, Huber, régression médiane restent « référence » ; bar plots des secteurs à agrandir pour le rapport ; les graphiques du `.omv` ont un fond transparent.
+- **Verdict** : travaux Jamovi complets et conformes. Reste à exporter les sorties utiles (J06) et à rédiger le Google Doc.
 
 ## Format pour les prochaines entrées
 

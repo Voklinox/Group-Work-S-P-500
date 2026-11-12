@@ -1,6 +1,6 @@
 # Reprendre le projet sans l’historique du chat
 
-Dernière mise à jour : **13 novembre 2026**. Étape 1 (projet de référence) **terminée** ; prochaine étape : reproduction guidée dans Jamovi (voir « Reprise Jamovi » ci-dessous et la section 5).
+Dernière mise à jour : **12 novembre 2026 (après-midi)**. Étape 1 (projet de référence) **terminée** ; étape 2 en cours : séances Jamovi 1 et 2 faites et rapprochées, **séances 3 (ANOVA) et 4 (régressions) faites aussi ; reste J06 puis le Google Doc**. Reproduction guidée dans Jamovi (voir « Reprise Jamovi » ci-dessous et la section 5).
 
 ## 1. Lecture minimale
 
@@ -95,7 +95,7 @@ Les réponses brutes SEC et les originaux de gouvernance sont **ignorés par Git
 
 ## 5. Première action concrète : guider Jamovi (étape 2)
 
-Étape 1 terminée le 13 nov. 2026 (analyses `.venv/bin/python -m src.analysis`, vérification `-m src.verify_analysis`, rapport, guide, CSV final). Prochaines actions :
+Étape 1 terminée le 12 nov. 2026 (analyses `.venv/bin/python -m src.analysis`, vérification `-m src.verify_analysis`, rapport, guide, CSV final). Prochaines actions :
 
 1. **Étape 2** : guider David dans Jamovi avec docs/GUIDE_JAMOVI.md sur data/processed/sp500_2025_JAMOVI.csv ; compléter la colonne « Jamovi » de la grille ; expliquer et résoudre chaque écart (J01–J06).
 2. **Étape 3** : Google Doc final et PDF (relire le Doc avant édition ; évaluations des membres sur la couverture, fournies par le groupe).
@@ -134,7 +134,7 @@ Ne pas faire tourner deux collecteurs ou deux agents écrivants en même temps s
 
 ## 8. Rapport et collaboration
 
-Google Doc transmis par David : [document de travail du groupe](https://docs.google.com/document/d/1I5zWY43G_JIrLmYNwKz_dlHEgy46E5B4YRlmDasl3qc/edit?tab=t.0) (identifiant du document : `1I5zWY43G_JIrLmYNwKz_dlHEgy46E5B4YRlmDasl3qc`). **État au 13 nov. 2026 : réécrit** avec l’accord de David (ancienne approche gouvernance supprimée) : couverture, sections 1 (question, données), 2 (préparation), 7 (limites) et références rédigées en anglais ; le résumé exécutif et les sections 3 à 6 contiennent un paragraphe « To be completed with the Jamovi output » à remplacer par les résultats rapprochés de Jamovi. Toujours relire le Doc (outil read_doc) avant d’y écrire et utiliser le numéro de révision (`requiredRevisionId`).
+Google Doc transmis par David : [document de travail du groupe](https://docs.google.com/document/d/1I5zWY43G_JIrLmYNwKz_dlHEgy46E5B4YRlmDasl3qc/edit?tab=t.0) (identifiant du document : `1I5zWY43G_JIrLmYNwKz_dlHEgy46E5B4YRlmDasl3qc`). **État au 12 nov. 2026 : réécrit** avec l’accord de David (ancienne approche gouvernance supprimée) : couverture, sections 1 (question, données), 2 (préparation), 7 (limites) et références rédigées en anglais ; le résumé exécutif et les sections 3 à 6 contiennent un paragraphe « To be completed with the Jamovi output » à remplacer par les résultats rapprochés de Jamovi. Toujours relire le Doc (outil read_doc) avant d’y écrire et utiliser le numéro de révision (`requiredRevisionId`).
 
 Le professeur demande un PDF final et les évaluations des membres à côté des noms sur la couverture, selon le complément Moodle transmis par David. Le barème des évaluations, une longueur totale et un oral ne sont pas établis dans ce complément. Les notes doivent venir du groupe.
 
@@ -148,7 +148,9 @@ Pour transmettre le projet dans un nouveau chat, il suffit d’indiquer le dossi
 
 ## Reprise Jamovi (à lire au début de la prochaine conversation)
 
-**Où on en est.** Étape 1 terminée (13 nov. 2026) : CSV final `data/processed/sp500_2025_JAMOVI.csv` (500 lignes), analyses de référence (`outputs/analyses_reference/`, `outputs/figures_reference/`), rapport de référence `docs/RAPPORT_DE_REFERENCE.md` (§6.4 : robustesse), guide Jamovi avec grille de rapprochement `docs/GUIDE_JAMOVI.md`, audit `docs/AUDIT_2026-11-13.md`. Dépôt GitHub à jour (dernier commit au moment de la rédaction : 5b29cdd, puis le commit de reprise). Gouvernance abandonnée (DEC25) ; question : qu’est-ce qui explique la rentabilité ? Pas besoin de prévenir le professeur (décision de David).
+**Mise à jour du 12 nov. 2026 (après-midi ; les dates « 13 nov. » antérieures ont été corrigées en 12 nov.).** Séances 1 et 2 reproduites par David dans Jamovi 2.7.38.0 (anglais) et rapprochées (grille du guide §1 et §2 remplie, notes de rapprochement). Fichier de travail `data/processed/sp500_2025.omv` (6 analyses, non suivi par Git). **Séances 3 et 4 faites et rapprochées (grille §3 et §4 remplie, `.omv` avec 13 analyses et deux colonnes calculées `margin_noinfl`, `sector_nofin`). Prochaine action : J06 (exports PDF/HTML des sorties, graphiques agrandis), puis Google Doc.** L'agent peut lire l'écran de Jamovi (contrôle de l'ordinateur) et le `.omv` (zip : `index.html` contient toutes les sorties) pour vérifier ; David manipule.
+
+**Où on en est.** Étape 1 terminée (12 nov. 2026) : CSV final `data/processed/sp500_2025_JAMOVI.csv` (500 lignes), analyses de référence (`outputs/analyses_reference/`, `outputs/figures_reference/`), rapport de référence `docs/RAPPORT_DE_REFERENCE.md` (§6.4 : robustesse), guide Jamovi avec grille de rapprochement `docs/GUIDE_JAMOVI.md`, audit `docs/AUDIT_2026-11-12.md`. Dépôt GitHub à jour (dernier commit au moment de la rédaction : 5b29cdd, puis le commit de reprise). Gouvernance abandonnée (DEC25) ; question : qu’est-ce qui explique la rentabilité ? Pas besoin de prévenir le professeur (décision de David).
 
 **Comment travailler avec David (préférences confirmées).**
 - Il manipule Jamovi lui-même ; l’agent guide pas à pas, **une analyse à la fois**, dans l’ordre du guide : préparation (types de variables) → S1 profils → S2 khi-deux, corrélations, test t → S3 ANOVA et post-hoc → S4 régressions.

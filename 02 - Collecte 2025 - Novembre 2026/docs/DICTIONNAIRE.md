@@ -1,4 +1,4 @@
-# Dictionnaire du CSV Jamovi (fichier final du 13 novembre 2026)
+# Dictionnaire du CSV Jamovi (fichier final du 12 novembre 2026)
 
 Fichier : `data/processed/sp500_2025_JAMOVI.csv`, 500 lignes, une par entreprise (CIK). Niveaux de mesure à régler dans Jamovi : cik et company = ID ; sector, sector_group, finance_vs_other, profitable = Nominal ; size_quartile = Ordinal (Q1 < Q2 < Q3 < Q4) ; les autres = Continuous. Cellule vide = valeur non disponible (jamais zéro).
 
@@ -52,7 +52,7 @@ Chaque ligne du tableau financier représente une entreprise (identifiant CIK), 
 
 Les cellules vides signifient « non extrait/à vérifier », jamais zéro. Les montants sont en dollars bruts, sans conversion silencieuse en millions. Tous les flux proviennent de la même période et du même numéro de dépôt. Les ratios sont calculés, pas présentés comme directement publiés.
 
-## Variables du cours (état au 13 novembre 2026)
+## Variables du cours (état au 12 novembre 2026)
 
 Réalisé : variable ordinale `size_quartile` (actif total, Q1 à Q4), nominales `sector_group`, `finance_vs_other`, `profitable`, continues listées en tête de ce document. La capitalisation boursière n'est pas utilisée (DEC12 : actif total). Les scores ISS ne sont pas utilisés (DEC05).
 

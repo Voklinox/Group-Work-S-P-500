@@ -1,10 +1,10 @@
-# État réel au 13 novembre 2026
+# État réel au 12 novembre 2026
 
 Lecture rapide : [to-do détaillée](../tasks/todo.md), [journal](JOURNAL_PROJET.md), [décisions](DECISIONS.md), [guide de reprise](REPRISE_AGENT.md).
 
 ## Où en est le projet
 
-**Étape 1 (projet de référence indépendant de Jamovi) : terminée le 13 novembre 2026.** Données justifiées, calculs contrôlés, rapport de référence complet, tableaux et graphiques, guide de reproduction. **Prochaine étape : étape 2, David reproduit les analyses dans Jamovi** avec le guide [GUIDE_JAMOVI.md](GUIDE_JAMOVI.md) et la grille de rapprochement ; puis **étape 3** : Google Doc et PDF avec les sorties Jamovi.
+**Étape 1 (projet de référence indépendant de Jamovi) : terminée le 12 novembre 2026.** Données justifiées, calculs contrôlés, rapport de référence complet, tableaux et graphiques, guide de reproduction. **Étape 2 en cours : séances Jamovi 1 et 2 faites et rapprochées le 12 novembre 2026 (J01 à J03) ; les séances 3 (ANOVA) et 4 (régressions et variantes) sont faites aussi ; reste J06 (exports des sorties et cohérence finale). David reproduit les analyses dans Jamovi** avec le guide [GUIDE_JAMOVI.md](GUIDE_JAMOVI.md) et la grille de rapprochement ; puis **étape 3** : Google Doc et PDF avec les sorties Jamovi.
 
 Question de travail (DEC25) : **qu'est-ce qui explique la rentabilité (marge nette, ROA) des entreprises du S&P 500 : taille, endettement, croissance du chiffre d'affaires, secteur ?** La gouvernance a été étudiée puis abandonnée le 12 novembre 2026 (travail archivé).
 
@@ -34,9 +34,9 @@ Association et non causalité ; dates de clôture différentes selon les entrepr
 
 ## Ce qui reste à faire
 
-1. **Étape 2 (J01–J06)** : reproduction dans Jamovi par David, rapprochement des sorties avec les valeurs de référence.
+1. **Étape 2** : J01 à J05 faits (12 nov.) ; reste J06 (séance 4, régressions) et J06 (sorties conservées, cohérence finale).
 2. **Étape 3 (R01–R06)** : Google Doc final (relire le Doc avant édition), évaluations des membres sur la couverture (à fournir par le groupe), PDF, dépôt Moodle (échéance indiquée : 2 décembre 2026).
-3. **Décision de David** : informer ou non le professeur du changement de question (jeu de données inchangé).
+3. **Décision de David (prise, voir le journal)** : il n'est pas nécessaire de prévenir le professeur du changement de question (jeu de données inchangé).
 
 ## Entretien du dossier
 
