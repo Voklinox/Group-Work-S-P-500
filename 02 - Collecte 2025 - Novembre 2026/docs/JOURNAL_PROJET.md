@@ -151,6 +151,13 @@ Le point d’accès à la racine Git renvoie à cette version complète unique. 
 - **Limites** : résidus non normaux (valeurs extrêmes), erreurs robustes à privilégier ; rapport en version de référence, pas encore reproduit dans Jamovi ni rédigé dans le Google Doc.
 - **Prochaine action** : U03, F09, D04 (figer le CSV et relancer analyses et vérifications), puis Jamovi avec David.
 
+## 13 novembre 2026 (fin d'étape 1) — U03, F09, D04 : CSV final
+
+- **U03** : tableau des changements de 2025 analysé : 19 ajouts présents (SOLS exclu), 19 retraits absents ; 38 enregistrements dans universe_changes_2025_check.csv.
+- **F09** et **D04** : clôturés. CSV final `data/processed/sp500_2025_JAMOVI.csv` (SHA-256 90c51dd28abc31e57aa3d4ef78aa34890c1391676a5213791f584d581e90c93e). Analyses et vérification relancées : 0 valeur modifiée ; 12 contrôles indépendants identiques.
+- **Étape 1 terminée** : données justifiées, calculs contrôlés, rapport de référence, graphiques, guide Jamovi. Les chiffres du rapport sont des résultats « référence ».
+- **Prochaine action** : étape 2 (Jamovi avec David).
+
 ## Format pour les prochaines entrées
 
 Ajouter une section datée avec : demande ou objectif ; action et motif ; fichiers/preuves ; résultat et nombre de cas vérifiés ; tâche terminée ou restant ouverte ; décision éventuelle ; prochaine action. Conserver les entrées précédentes. Si une ancienne conclusion est corrigée, ajouter la correction et sa raison au lieu d’effacer l’historique.

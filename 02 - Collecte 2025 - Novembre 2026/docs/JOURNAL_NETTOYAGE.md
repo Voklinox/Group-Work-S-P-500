@@ -1,6 +1,6 @@
 # Journal de nettoyage (livrable noté du cours : « what was wrong, what you did, why »)
 
-Mis à jour le **12 novembre 2026**. Il porte sur `data/processed/sp500_2025_JAMOVI_DRAFT.csv` (500 lignes, une par entreprise). Ce journal sépare : anomalies réellement constatées, contrôles sans anomalie, corrections appliquées, valeurs conservées volontairement et limites. Les causes ne sont écrites que lorsqu'une pièce les établit. Chaque ligne cite sa preuve.
+Mis à jour le **12 novembre 2026**. Il porte sur `data/processed/sp500_2025_JAMOVI.csv` (500 lignes, une par entreprise). Ce journal sépare : anomalies réellement constatées, contrôles sans anomalie, corrections appliquées, valeurs conservées volontairement et limites. Les causes ne sont écrites que lorsqu'une pièce les établit. Chaque ligne cite sa preuve.
 
 ## 1. Population
 

@@ -1,6 +1,6 @@
 # Rapport de référence — Qu'est-ce qui explique la rentabilité des entreprises du S&P 500 ?
 
-**Statut : version de référence calculée par programme (`python -m src.analysis`), non encore reproduite dans Jamovi.** Les chiffres sont des résultats « référence », pas des sorties Jamovi. Ils seront rapprochés de celles de David (étape 2), puis le texte sera finalisé dans le Google Doc (étape 3). Données : `data/processed/sp500_2025_JAMOVI_DRAFT.csv` (500 entreprises ; empreinte SHA-256 dans `outputs/analyses_reference/results.json`). Tableaux : `outputs/analyses_reference/`. Graphiques : `outputs/figures_reference/`. Date : 13 novembre 2026.
+**Statut : version de référence calculée par programme (`python -m src.analysis`), non encore reproduite dans Jamovi.** Les chiffres sont des résultats « référence », pas des sorties Jamovi. Ils seront rapprochés de celles de David (étape 2), puis le texte sera finalisé dans le Google Doc (étape 3). Données : `data/processed/sp500_2025_JAMOVI.csv` (500 entreprises ; empreinte SHA-256 dans `outputs/analyses_reference/results.json`). Tableaux : `outputs/analyses_reference/`. Graphiques : `outputs/figures_reference/`. Date : 13 novembre 2026.
 
 Équipe : David Wanono, Olyvan Perrin, Guillaume Da Cruz. (Évaluations des membres : à ajouter par le groupe sur la couverture du PDF.)
 

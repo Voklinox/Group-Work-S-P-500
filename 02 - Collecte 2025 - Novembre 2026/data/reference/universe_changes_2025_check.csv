@@ -1,0 +1,39 @@
+effective_date,action,ticker,security,expected_in_universe,in_universe
+"December 22, 2025",added,CRH,CRH,yes,yes
+"December 22, 2025",removed,LKQ,LKQ Corporation,no,no
+"December 22, 2025",added,CVNA,Carvana,yes,yes
+"December 22, 2025",removed,SOLS,Solstice Advanced Materials,no,no
+"December 22, 2025",added,FIX,Comfort Systems USA,yes,yes
+"December 22, 2025",removed,MHK,Mohawk Industries,no,no
+"December 11, 2025",added,ARES,Ares Management,yes,yes
+"December 11, 2025",removed,K,Kellanova,no,no
+"November 28, 2025",added,SNDK,Sandisk,yes,yes
+"November 28, 2025",removed,IPG,Interpublic Group,no,no
+"November 4, 2025",removed,EMN,Eastman Chemical Co.,no,no
+"November 3, 2025",added,Q,Qnity Electronics,yes,yes
+"October 31, 2025",removed,KMX,CarMax,no,no
+"October 30, 2025",added,SOLS,Solstice Advanced Materials,no (removed again before 2025-12-31 per S&P rebalance),no
+"September 22, 2025",added,EME,Emcor,yes,yes
+"September 22, 2025",removed,ENPH,Enphase Energy,no,no
+"September 22, 2025",added,HOOD,Robinhood Markets,yes,yes
+"September 22, 2025",removed,CZR,Caesars Entertainment,no,no
+"September 22, 2025",added,APP,AppLovin,yes,yes
+"September 22, 2025",removed,MKTX,MarketAxess,no,no
+"August 28, 2025",added,IBKR,Interactive Brokers,yes,yes
+"August 28, 2025",removed,WBA,Walgreens Boots Alliance,no,no
+"July 23, 2025",added,XYZ,"Block, Inc.",yes,yes
+"July 23, 2025",removed,HES,Hess Corporation,no,no
+"July 18, 2025",added,TTD,Trade Desk (The),yes,yes
+"July 18, 2025",removed,ANSS,Ansys,no,no
+"July 9, 2025",added,DDOG,Datadog,yes,yes
+"July 9, 2025",removed,JNPR,Juniper Networks,no,no
+"May 19, 2025",added,COIN,Coinbase,yes,yes
+"May 19, 2025",removed,DFS,Discover Financial,no,no
+"March 24, 2025",added,DASH,DoorDash,yes,yes
+"March 24, 2025",removed,BWA,BorgWarner,no,no
+"March 24, 2025",added,TKO,TKO Group Holdings,yes,yes
+"March 24, 2025",removed,TFX,Teleflex,no,no
+"March 24, 2025",added,WSM,"Williams-Sonoma, Inc.",yes,yes
+"March 24, 2025",removed,CE,Celanese,no,no
+"March 24, 2025",added,EXE,Expand Energy,yes,yes
+"March 24, 2025",removed,FMC,FMC Corporation,no,no

@@ -29,10 +29,10 @@ Les [consignes et supports du professeur en texte intégral](docs/CONSIGNES_PROF
 | Exercices annuels extraits de durée comparable | 498 (dont 6 exercices de 52/53 semaines clos début janvier 2026, DEC19) |
 | Marges nettes calculables | 498 ; numérateur harmonisé sur le résultat attribuable à la société mère (DEC16) ; manquent Dayforce (pas de rapport annuel 2025) et Paramount (prédécesseur/successeur) ; comparabilité à contrôler |
 | Gouvernance (abandonnée, DEC25) | Travail archivé : 505 documents téléchargés, 290 observations lues, protocole et outils conservés ; non utilisés dans l’analyse |
-| Variables de l’analyse | continues : net_margin_pct, roa_pct, ln_assets, debt_ratio_pct, revenue_growth_pct (488), asset_turnover ; ordinale size_quartile ; nominales sector_group (5), finance_vs_other (2), profitable (2). Base brouillon : data/processed/sp500_2025_JAMOVI_DRAFT.csv (500 lignes) |
+| Variables de l’analyse | continues : net_margin_pct, roa_pct, ln_assets, debt_ratio_pct, revenue_growth_pct (488), asset_turnover ; ordinale size_quartile ; nominales sector_group (5), finance_vs_other (2), profitable (2). CSV final : data/processed/sp500_2025_JAMOVI.csv (500 lignes) |
 | Taille et quartiles | Actif total, quartiles Q1–Q4 sur 498 entreprises (DEC12 confirmée) |
 | Analyses complètes et rapport local de référence | Réalisés le 13 nov. 2026 : docs/RAPPORT_DE_REFERENCE.md, outputs/analyses_reference/, outputs/figures_reference/ ; vérification indépendante des 12 calculs essentiels ; guide Jamovi docs/GUIDE_JAMOVI.md |
-| Reproduction Jamovi puis Google Doc/PDF | À réaliser avec David (étape 2) puis finalisation (étape 3) |
+| Reproduction Jamovi puis Google Doc/PDF | Prochaine étape : Jamovi avec David (étape 2), puis finalisation (étape 3) |
 
 Ces compteurs ne constituent pas un pourcentage d’achèvement du projet. « Document retrouvé », « valeur extraite » et « donnée validée pour l’analyse » sont trois états différents.
 

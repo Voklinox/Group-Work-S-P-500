@@ -8,7 +8,7 @@ Mise à jour du **12 novembre 2026**. Le choix du jeu de données S&P 500 a ét�
 | Titre | Ce qui explique la rentabilité des entreprises du S&P 500 : taille, endettement, croissance et secteur, exercices clos en 2025 |
 | Une ligne = un(e)… | **entreprise** (identifiée par son CIK SEC), composition du S&P 500 au 31 décembre 2025 |
 | N (lignes) | **500** entreprises (503 titres, trois entreprises ayant deux catégories de titres) |
-| Fichier | `data/processed/sp500_2025_JAMOVI_DRAFT.csv` (brouillon tant que D02–D04 ne sont pas finis) |
+| Fichier | `data/processed/sp500_2025_JAMOVI.csv` (fichier final unique ; SHA-256 90c51dd28abc31e57aa3d4ef78aa34890c1391676a5213791f584d581e90c93e) |
 | Variable nominale (2–5 modalités) | `sector_group` (5), `finance_vs_other` (2), `profitable` (2) |
 | Variable ordinale | `size_quartile` (Q1 à Q4, d'après l'actif total) |
 | Variables continues (≥ 3) | `net_margin_pct`, `roa_pct`, `ln_assets`, `debt_ratio_pct`, `revenue_growth_pct`, `asset_turnover`, `assets_bn`, `revenue_bn` |

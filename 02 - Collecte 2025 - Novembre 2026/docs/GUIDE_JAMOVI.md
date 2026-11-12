@@ -4,7 +4,7 @@ Ce guide dit **quoi faire dans Jamovi** et **quels chiffres de référence retro
 
 ## 0. Préparation (à faire une seule fois)
 
-1. Version de Jamovi installée : 2.7 (vérifier dans ≡ → About). Ouvrir `data/processed/sp500_2025_JAMOVI_DRAFT.csv` : ≡ → Open → Browse. (Le fichier définitif remplacera ce brouillon à l'étape D04 ; ne pas commencer sur un autre fichier.)
+1. Version de Jamovi installée : 2.7 (vérifier dans ≡ → About). Ouvrir `data/processed/sp500_2025_JAMOVI.csv` (fichier final unique ; SHA-256 90c51dd28abc31e57aa3d4ef78aa34890c1391676a5213791f584d581e90c93e) : ≡ → Open → Browse. Ne pas utiliser un autre fichier.
 2. Onglet **Data**, double-clic sur chaque en-tête, régler le type :
    - `cik`, `company` → **ID** ;
    - `sector`, `sector_group`, `finance_vs_other`, `profitable` → **Nominal** ;

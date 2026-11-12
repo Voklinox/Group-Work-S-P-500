@@ -1,7 +1,7 @@
 """Reference analyses for sessions 1-4 (label: REFERENCE, not Jamovi output).
 
 Run: .venv/bin/python -m src.analysis   (needs requirements-analysis.txt)
-Input : data/processed/sp500_2025_JAMOVI_DRAFT.csv   (SHA-256 recorded in results.json)
+Input : data/processed/sp500_2025_JAMOVI.csv   (SHA-256 recorded in results.json)
 Output: outputs/analyses_reference/*.csv, results.json ; outputs/figures_reference/*.png
 Conventions follow the course: alpha = 0.05, Shapiro-Wilk and Levene "opposite logic", Cramer's V, Pearson and
 Spearman, Student/Welch, Fisher/Welch/Kruskal-Wallis with Tukey/Games-Howell/DSCF, eta squared, OLS with B and beta.
@@ -24,7 +24,7 @@ from statsmodels.stats.diagnostic import het_breuschpagan
 from statsmodels.stats.stattools import durbin_watson
 
 ROOT = Path(__file__).resolve().parents[1]
-CSV = ROOT / "data/processed/sp500_2025_JAMOVI_DRAFT.csv"
+CSV = ROOT / "data/processed/sp500_2025_JAMOVI.csv"
 OUT = ROOT / "outputs/analyses_reference"
 FIG = ROOT / "outputs/figures_reference"
 CONT = ["net_margin_pct", "roa_pct", "ln_assets", "debt_ratio_pct", "revenue_growth_pct", "asset_turnover"]

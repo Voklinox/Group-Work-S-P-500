@@ -1,6 +1,6 @@
 """Build the DRAFT analysis table (one row per company) and check the course's dataset specification.
 
-Output: data/processed/sp500_2025_JAMOVI_DRAFT.csv (draft until D02-D04). Governance variables were abandoned on 2026-11-12 (DEC25).
+Output: data/processed/sp500_2025_JAMOVI.csv (draft until D02-D04). Governance variables were abandoned on 2026-11-12 (DEC25).
 Missing values stay empty. debt_ratio_pct = 100 x (assets - equity) / assets; asset_turnover = revenue / mean(opening, closing assets).
 Size = total assets at fiscal year end (DEC12); quartile cut points: 25th/50th/75th percentiles, linear interpolation.
 Sector groups follow the five-group map used in the September work (DEC22).
@@ -45,7 +45,7 @@ def main():
                          revenue_growth_pct=round(growth[r["cik"]], 2) if r["cik"] in growth else "",
                          asset_turnover="" if (rev is None or a is None or a0 is None) else round(rev / ((a + a0) / 2), 4),
                          size_quartile=quart))
-    dump_csv(ROOT / "data/processed/sp500_2025_JAMOVI_DRAFT.csv", rows, list(rows[0]))
+    dump_csv(ROOT / "data/processed/sp500_2025_JAMOVI.csv", rows, list(rows[0]))
     n = lambda c: sum(1 for r in rows if r[c] != "")
     print("rows", len(rows), "| quartile cut points (bn USD)", [round(x / 1e9, 1) for x in (c1, c2, c3)])
     print("N valid:", {c: n(c) for c in ("net_margin_pct", "roa_pct", "assets_bn", "ln_assets", "debt_ratio_pct", "revenue_growth_pct", "asset_turnover", "size_quartile")})

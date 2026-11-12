@@ -48,7 +48,7 @@ Le dépôt Git est le dossier parent **Group Work S&P 500**. Les anciens fichier
 | Audit enregistré | 1 095 sources par empreinte, 0 erreur d’intégrité, 9 alertes de définition (11 nov. après F07) | outputs/integrity_audit.json |
 | Documents de gouvernance candidats | 505 pour 496 entreprises | governance_proxy_candidates.csv et governance_catalogue_coverage.json |
 | Gouvernance | abandonnée (DEC25) ; 290 observations et outils archivés, non utilisés | governance_observations.json, PROTOCOLE_LECTURE_GOUVERNANCE.md |
-| CSV final / analyses 2025 / PDF final | Analyses et rapport de référence faits (13 nov.) ; CSV final unique (D04) et PDF final restent à faire | docs/RAPPORT_DE_REFERENCE.md, outputs/analyses_reference/, docs/GUIDE_JAMOVI.md |
+| CSV final / analyses 2025 / PDF final | CSV final, analyses et rapport de référence faits ; PDF final et reproduction Jamovi à faire | data/processed/sp500_2025_JAMOVI.csv, docs/RAPPORT_DE_REFERENCE.md |
 
 Ces valeurs sont un point de reprise, pas des constantes à imposer aux fichiers. Si les fichiers ont évolué, examiner les changements, mettre à jour les compteurs et le journal ; ne pas ramener les données à ces nombres artificiellement.
 
@@ -93,16 +93,15 @@ Les chemins suivants sont relatifs à la racine de ce nouveau dossier.
 
 Les réponses brutes SEC et les originaux de gouvernance sont **ignorés par Git**. Un autre agent sur cette machine peut les relire ; un agent après clonage seul devra disposer d’une copie/sauvegarde ou les récupérer depuis les sources. Ne pas affirmer que Git contient toutes les pièces. Les registres précisent aussi les refus HTTP et les lectures en ligne sans copie locale.
 
-## 5. Première action concrète : finir l'étape 1 puis guider Jamovi
+## 5. Première action concrète : guider Jamovi (étape 2)
 
-Faits le 13 nov. 2026 : analyses de référence (`.venv/bin/python -m src.analysis`), vérification (`-m src.verify_analysis`), rapport (docs/RAPPORT_DE_REFERENCE.md), guide (docs/GUIDE_JAMOVI.md). Prochaines actions :
+Étape 1 terminée le 13 nov. 2026 (analyses `.venv/bin/python -m src.analysis`, vérification `-m src.verify_analysis`, rapport, guide, CSV final). Prochaines actions :
 
-1. **U03** : contrôler les retraits de 2025 de l'univers ; **F09** : clôturer le journal de nettoyage.
-2. **D04** : produire le CSV final unique (sans « DRAFT »), relancer `src.analysis` et `src.verify_analysis`, comparer au rapport et corriger les chiffres s'ils changent.
-3. **Étape 2** : guider David dans Jamovi avec docs/GUIDE_JAMOVI.md et compléter la colonne « Jamovi » de la grille ; expliquer chaque écart.
-4. **Étape 3** : Google Doc final et PDF (relire le Doc avant édition).
+1. **Étape 2** : guider David dans Jamovi avec docs/GUIDE_JAMOVI.md sur data/processed/sp500_2025_JAMOVI.csv ; compléter la colonne « Jamovi » de la grille ; expliquer et résoudre chaque écart (J01–J06).
+2. **Étape 3** : Google Doc final et PDF (relire le Doc avant édition ; évaluations des membres sur la couverture, fournies par le groupe).
+3. Toute modification du CSV impose de relancer src.analysis et src.verify_analysis puis de corriger le rapport.
 
-L'environnement d'analyse est `.venv` (ignoré par Git) créé avec `python3 -m venv .venv && .venv/bin/pip install -r requirements-analysis.txt`.
+L'environnement d'analyse est `.venv` (ignoré par Git) : `python3 -m venv .venv && .venv/bin/pip install -r requirements-analysis.txt`.
 
 ## 6. Autres points ouverts à conserver
 

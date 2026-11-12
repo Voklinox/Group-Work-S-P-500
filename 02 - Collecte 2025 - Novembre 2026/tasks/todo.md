@@ -8,9 +8,11 @@ Mise à jour : **12 novembre 2026**. Une case cochée signifie que le livrable d
 
 ## À reprendre en premier
 
-**Étape 1 (projet de référence) : presque terminée.** Analyses, rapport local (docs/RAPPORT_DE_REFERENCE.md) et guide Jamovi (docs/GUIDE_JAMOVI.md) existent. Reste avant l’étape 2 : **U03** (retraits de 2025), **F09** (clôture du journal de nettoyage) puis **D04** (CSV final unique, renommé sans « DRAFT », et nouvelle exécution de src.analysis + src.verify_analysis pour figer les chiffres). Ensuite **étape 2 : J01–J06 avec David dans Jamovi**.
+**Étape 1 (projet de référence) terminée le 13 novembre 2026** : données justifiées (CSV final), calculs contrôlés, rapport de référence (docs/RAPPORT_DE_REFERENCE.md), tableaux et graphiques (outputs/), guide de reproduction (docs/GUIDE_JAMOVI.md).
 
-La gouvernance est abandonnée (DEC25) : ne pas la reprendre sans décision de David. Lire docs/REPRISE_AGENT.md avant de relancer un programme.
+**Prochaine étape : étape 2, Jamovi avec David (J01–J06)** : importer `data/processed/sp500_2025_JAMOVI.csv`, régler les types, reproduire chaque analyse et compléter la grille de rapprochement du guide ; l’agent explique et résout les écarts. Ensuite étape 3 : Google Doc et PDF (R01–R06).
+
+La gouvernance est abandonnée (DEC25). Lire docs/REPRISE_AGENT.md avant de relancer un programme.
 
 ## A — Cadre et organisation
 
@@ -24,7 +26,7 @@ La gouvernance est abandonnée (DEC25) : ne pas la reprendre sans décision de D
 
 - [x] **U01** Archiver la révision historique de Wikipédia et identifier l’annonce S&P de décembre. Preuve : data/raw/universe_2025_revision_1329075976.json et registre des téléchargements.
 - [x] **U02** Documenter les corrections, conserver les 503 titres et regrouper en 500 CIK uniques. Preuve : data/reference/universe_reconciliation.json et universe_2025-12-31.csv.
-- [ ] **U03 — EN COURS (12 nov.)** Contrôler indépendamment la population complète, les changements de société et les CIK. Fait : 503 titres rapprochés de la table officielle SEC des tickers (data/reference/universe_ticker_check.csv) : 492 concordances ; les 11 écarts sont expliqués par des événements de 2026 (rachats/radiations, changements de ticker ou de nom, réorganisation d’Exxon) avec dépôts SEC ; les 18 ajouts de 2025 du tableau des changements sont tous présents, SOLS absent comme décidé ; 0 CIK en double. Reste : énumérer et contrôler les retraits de 2025 (le tableau des changements de la révision n’a pas pu être analysé automatiquement de façon fiable) et rapprocher le total officiel de l’indice.
+- [x] **U03** (13 nov. 2026) Population contrôlée : 503 titres rapprochés de la table officielle SEC des tickers (492 concordances, 11 écarts expliqués par des événements de 2026, universe_ticker_check.csv) ; tableau des changements de 2025 de la révision archivée analysé : 19 ajouts tous présents (SOLS exclu comme décidé), 19 retraits tous absents (universe_changes_2025_check.csv) ; 0 CIK en double. Limite : pas de liste officielle S&P des constituants (accès payant) : le contrôle repose sur la révision archivée, l’annonce S&P et les données SEC.
 
 ## F — Comptes et qualité financière
 
@@ -36,7 +38,7 @@ La gouvernance est abandonnée (DEC25) : ne pas la reprendre sans décision de D
 - [x] **F06** (11 nov. 2026, DEC17 et DEC19) Résoudre les six exceptions. Preuve : data/reference/core_exception_resolutions.csv ; trois clôtures au 3 janvier 2026 incluses (et L3Harris, Leidos, Trimble corrigées vers leur exercice 2025) ; Synchrony défini ; Paramount et Dayforce manquantes avec motif ; 498 marges. Tests : 20 réussis, audit 0 erreur.
 - [x] **F07** (11 nov. 2026, DEC16) Harmoniser le résultat net consolidé et celui attribuable à la société mère pour les 42 alertes. Preuve : data/reference/net_income_harmonisation.csv, src/reviewed.py (parent_income), tests/test_parent_income.py, audit 0 erreur, 9 alertes restantes (aucun minoritaire déclaré). Ancien critère : Terminé quand le numérateur de marge/ROA a une définition cohérente, ou des exceptions et analyses distinctes explicites.
 - [x] **F08** (12 nov. 2026) Relire les revenus des banques/assurances et un échantillon de rapports. Preuve : src/report_sample.py → data/reference/report_sample_check.csv : 25 rapports tirés au hasard (graine 2026), 73 cellules (revenus, résultat net, actif) sur 75 retrouvées dans le texte ; les 2 non retrouvées (Clorox) s’expliquent par des états financiers placés en annexe du 10-K, non lus. Dépistage src/screening.py ; 3 revenus corrigés (Camden, Huntington, M&T) ; 10 sociétés financières à revenu/actif élevé : 9 revenus retrouvés dans le rapport, Progressive à confirmer dans l’annexe (rapport annuel incorporé par référence). Limite : un échantillon de 25 ne certifie pas les 475 autres.
-- [ ] **F09 — EN COURS (12 nov.)** Examiner valeurs extrêmes, capitaux propres négatifs et données manquantes sans suppression automatique. Fait : 32 capitaux propres négatifs (rachats d’actions, ex. Altria, McDonald’s, Starbucks) conservés et signalés ; extrêmes réels confirmés (Nvidia ROA 82 % exercice janvier 2025, Moderna −145 %, Take-Two, Verisign, AppLovin) ; 23 écarts de bilan >5 % (intérêts minoritaires/mezzanine) signalés. Reste : journal de nettoyage rédigé (docs/NETTOYAGE.md) et N par variable avec la base finale.
+- [x] **F09** (13 nov. 2026) Valeurs extrêmes, capitaux propres négatifs et manquantes examinés sans suppression automatique ; journal de nettoyage rédigé et à jour (docs/JOURNAL_NETTOYAGE.md) ; N par variable dans le dictionnaire et le rapport ; sensibilités sans valeurs influentes dans les analyses.
 
 ## G — Gouvernance publique
 
@@ -55,14 +57,14 @@ La gouvernance est abandonnée (DEC25) : ne pas la reprendre sans décision de D
 - [x] **T01** (12 nov. 2026, DEC12 confirmée par David) Mesure de taille = actif total à la clôture de l’exercice ; capitalisation en sensibilité optionnelle.
 - [x] **T02** (12 nov.) Valeurs d’actif issues du même dépôt annuel que les comptes (preuve : financial_evidence.json) ; 498 valeurs sur 500 ; pas de cours ni d’actions à rapprocher.
 - [x] **T03** (12 nov., brouillon) Quartiles de taille Q1 (plus petits) à Q4 (plus grands) sur l’actif : coupures 25/50/75e centiles avec interpolation linéaire à 13,4 / 31,1 / 73,5 Md USD ; classe ≤ coupure ; 498 valides (125/124/124/125). Code : src/build_dataset.py.
-- [x] **T04** (12 nov., mis à jour DEC25) Spécification du cours vérifiée sur data/processed/sp500_2025_JAMOVI_DRAFT.csv : 500 lignes ; nominales : sector_group (5), finance_vs_other (2), profitable (2) ; ordinale : size_quartile (4) ; continues : net_margin_pct, roa_pct, ln_assets, debt_ratio_pct, revenue_growth_pct (488), asset_turnover. Khi-deux secteur × quartile : effectif attendu minimal 14,9 ≥ 5.
+- [x] **T04** (12 nov., mis à jour DEC25) Spécification du cours vérifiée sur data/processed/sp500_2025_JAMOVI.csv : 500 lignes ; nominales : sector_group (5), finance_vs_other (2), profitable (2) ; ordinale : size_quartile (4) ; continues : net_margin_pct, roa_pct, ln_assets, debt_ratio_pct, revenue_growth_pct (488), asset_turnover. Khi-deux secteur × quartile : effectif attendu minimal 14,9 ≥ 5.
 
 ## D — Base finale et plan d’analyse
 
 - [x] **D01** (12 nov., mis à jour DEC25) Base brouillon sans gouvernance : 500 lignes, une par CIK, variables ci-dessus, aucune valeur remplie artificiellement. Code : src/build_dataset.py, src/extra_variables.py (preuves : data/reference/revenue_growth_evidence.csv).
 - [x] **D02** (13 nov. 2026) Définitions et règles figées : JOURNAL_NETTOYAGE.md, FICHE_PROVENANCE.md, dictionnaire du CSV Jamovi (DICTIONNAIRE.md), N par analyse dans le rapport. À actualiser si D04 modifie la base.
 - [x] **D03** (13 nov. 2026) Plan d’analyse appliqué et documenté dans docs/RAPPORT_DE_REFERENCE.md (hypothèses, conditions, tailles d’effet, sensibilités).
-- [ ] **D04 — À FAIRE** Produire **un seul CSV final Jamovi clairement identifié**, puis vérifier valeurs manquantes, types, modalités, unités et traçabilité. Dépend de U03, F09 et D02–D03 (G05–G09 abandonnées, DEC25). Les valeurs manquantes justifiées peuvent subsister ; elles doivent être visibles.
+- [x] **D04** (13 nov. 2026) CSV final unique : data/processed/sp500_2025_JAMOVI.csv (500 lignes ; SHA-256 90c51dd28abc31e57aa3d4ef78aa34890c1391676a5213791f584d581e90c93e). Analyses (src.analysis) et vérification indépendante (src.verify_analysis) relancées sur ce fichier : aucune valeur modifiée par rapport au rapport de référence. Ne plus modifier ce fichier sans relancer ces deux programmes et mettre à jour le rapport.
 
 ## P — Projet d’analyse complet de référence, sans dépendre de Jamovi
 

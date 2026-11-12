@@ -1,6 +1,6 @@
 {
   "input": {
-    "file": "data/processed/sp500_2025_JAMOVI_DRAFT.csv",
+    "file": "data/processed/sp500_2025_JAMOVI.csv",
     "sha256": "90c51dd28abc31e57aa3d4ef78aa34890c1391676a5213791f584d581e90c93e",
     "rows": 500,
     "versions": {

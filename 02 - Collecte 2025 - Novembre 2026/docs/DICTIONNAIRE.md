@@ -1,6 +1,6 @@
-# Dictionnaire du CSV Jamovi (brouillon du 12 novembre 2026)
+# Dictionnaire du CSV Jamovi (fichier final du 13 novembre 2026)
 
-Fichier : `data/processed/sp500_2025_JAMOVI_DRAFT.csv`, 500 lignes, une par entreprise (CIK). Niveaux de mesure à régler dans Jamovi : cik et company = ID ; sector, sector_group, finance_vs_other, profitable = Nominal ; size_quartile = Ordinal (Q1 < Q2 < Q3 < Q4) ; les autres = Continuous. Cellule vide = valeur non disponible (jamais zéro).
+Fichier : `data/processed/sp500_2025_JAMOVI.csv`, 500 lignes, une par entreprise (CIK). Niveaux de mesure à régler dans Jamovi : cik et company = ID ; sector, sector_group, finance_vs_other, profitable = Nominal ; size_quartile = Ordinal (Q1 < Q2 < Q3 < Q4) ; les autres = Continuous. Cellule vide = valeur non disponible (jamais zéro).
 
 | Colonne | Sens, unité, N valide |
 |---|---|
