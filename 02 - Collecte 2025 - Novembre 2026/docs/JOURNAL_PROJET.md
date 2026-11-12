@@ -228,7 +228,8 @@ Le point d’accès à la racine Git renvoie à cette version complète unique. 
 - **Doc modifié sur place** (même lien) : police Montserrat sur tout le texte (10 pt, titres 16 et 12 pt en bleu marine, titre 24 pt), couverture aérée, libellés en gras, espacements. L'API Docs ne modifie pas les styles nommés : la mise en forme est appliquée directement sur le texte.
 - **Section 3 « Company profile » rédigée en anglais britannique** (protocole IDENTIFY, HYPOTHESISE, DECIDE, RECOMMEND pour la normalité) : tableau des descriptives, tableaux de fréquences côte à côte, grille 3 × 3 de graphiques Jamovi nets (insérés depuis les URL publiques raw.githubusercontent.com du dépôt), analyse de la normalité de la marge sur trois preuves, conclusion pour un gestionnaire. Rendu vérifié par export PDF (7 pages à ce stade).
 - **Section 4 rédigée** (khi-deux, corrélations avec tableau et nuage de points, test t) : 7 tableaux/figures Jamovi, protocole IDENTIFY, HYPOTHESISE, DECIDE, RECOMMEND ; tableaux t08 et t09 rendus en version compacte pour rester lisibles. Le tableau de corrélations (Table 5) occupe presque une page : à déplacer en annexe si le Doc dépasse la longueur visée (environ 12 pages).
-- **Reste** : résumé exécutif, sections 5 et 6, limites et références à compléter, notes d'évaluation (groupe), contrôle final du PDF.
+- **Section 5 rédigée** (ANOVA de Welch et de Fisher, η², Games-Howell, Kruskal-Wallis, DSCF) avec 7 tableaux et 2 graphiques Jamovi. Le Doc fait 14 pages à ce stade (au-delà des 12 visées) : proposer à David de déplacer des tableaux en annexe.
+- **Reste** : résumé exécutif, section 6 (régressions), limites et références à compléter, notes d'évaluation (groupe), contrôle final du PDF.
 
 ## Format pour les prochaines entrées
 
