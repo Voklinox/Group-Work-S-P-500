@@ -124,6 +124,11 @@ Le point d’accès à la racine Git renvoie à cette version complète unique. 
 - Livrables notés du cours rédigés : docs/JOURNAL_NETTOYAGE.md et docs/FICHE_PROVENANCE.md (D02 partiel). Décalage gouvernance/clôture calculé sur 287 observations : médiane −271 jours (242 documents publiés avant la clôture, 45 après).
 - DEC24 : David autorise commits et push ; dépôt public, donc l'adresse de contact SEC est sortie du code (variable SEC_CONTACT_EMAIL).
 
+## 12 novembre 2026 (soir) — F08 terminé, commit e70648a poussé
+
+- Commit e70648a poussé sur GitHub (main) à la demande de David (DEC24) ; contact SEC retiré du code.
+- F08 : 25 rapports aléatoires, 73/75 cellules retrouvées ; Clorox : états en annexe ; 10 sociétés financières à ratio élevé : 9/10 retrouvées, Progressive à confirmer.
+
 ## Format pour les prochaines entrées
 
 Ajouter une section datée avec : demande ou objectif ; action et motif ; fichiers/preuves ; résultat et nombre de cas vérifiés ; tâche terminée ou restant ouverte ; décision éventuelle ; prochaine action. Conserver les entrées précédentes. Si une ancienne conclusion est corrigée, ajouter la correction et sa raison au lieu d’effacer l’historique.

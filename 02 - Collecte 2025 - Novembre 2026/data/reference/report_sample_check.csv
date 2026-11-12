@@ -1,0 +1,76 @@
+cik,company,variable,value,status
+0000010456,Baxter International,revenue_usd,11244000000,found
+0000010456,Baxter International,net_income_usd,-957000000,found
+0000010456,Baxter International,assets_usd,20055000000,found
+0001551182,Eaton Corporation,revenue_usd,27448000000,found
+0001551182,Eaton Corporation,net_income_usd,4087000000,found
+0001551182,Eaton Corporation,assets_usd,41251000000,found
+0001020569,Iron Mountain,revenue_usd,6901737000,found
+0001020569,Iron Mountain,net_income_usd,144591000,found
+0001020569,Iron Mountain,assets_usd,21125019000,found
+0000719955,"Williams-Sonoma, Inc.",revenue_usd,7711541000,found
+0000719955,"Williams-Sonoma, Inc.",net_income_usd,1125251000,found
+0000719955,"Williams-Sonoma, Inc.",assets_usd,5301607000,found
+0000779152,Jack Henry & Associates,revenue_usd,2375288000,found
+0000779152,Jack Henry & Associates,net_income_usd,455748000,found
+0000779152,Jack Henry & Associates,assets_usd,3043970000,found
+0001164727,Newmont,revenue_usd,22669000000,found
+0001164727,Newmont,net_income_usd,7085000000,found
+0001164727,Newmont,assets_usd,57121000000,found
+0000097745,Thermo Fisher Scientific,revenue_usd,44556000000,found
+0000097745,Thermo Fisher Scientific,net_income_usd,6704000000,found
+0000097745,Thermo Fisher Scientific,assets_usd,110343000000,found
+0000915912,AvalonBay Communities,revenue_usd,3040725000,found
+0000915912,AvalonBay Communities,net_income_usd,1051301000,found
+0000915912,AvalonBay Communities,assets_usd,22192137000,found
+0001543151,Uber,revenue_usd,52017000000,found
+0001543151,Uber,net_income_usd,10053000000,found
+0001543151,Uber,assets_usd,61802000000,found
+0000021076,Clorox,revenue_usd,7104000000,found
+0000021076,Clorox,net_income_usd,810000000,not_found
+0000021076,Clorox,assets_usd,5561000000,not_found
+0000731766,UnitedHealth Group,revenue_usd,447567000000,found
+0000731766,UnitedHealth Group,net_income_usd,12056000000,found
+0000731766,UnitedHealth Group,assets_usd,309581000000,found
+0000310158,Merck & Co.,revenue_usd,65011000000,found
+0000310158,Merck & Co.,net_income_usd,18254000000,found
+0000310158,Merck & Co.,assets_usd,136866000000,found
+0001103982,Mondelez International,revenue_usd,38537000000,found
+0001103982,Mondelez International,net_income_usd,2451000000,found
+0001103982,Mondelez International,assets_usd,71487000000,found
+0001069202,Lennox International,revenue_usd,5195300000,found
+0001069202,Lennox International,net_income_usd,805800000,found
+0001069202,Lennox International,assets_usd,4081800000,found
+0000882095,Gilead Sciences,revenue_usd,29443000000,found
+0000882095,Gilead Sciences,net_income_usd,8510000000,found
+0000882095,Gilead Sciences,assets_usd,59023000000,found
+0001108524,Salesforce,revenue_usd,37895000000,found
+0001108524,Salesforce,net_income_usd,6197000000,found
+0001108524,Salesforce,assets_usd,102928000000,found
+0000036270,M&T Bank,revenue_usd,9690000000,found
+0000036270,M&T Bank,net_income_usd,2851000000,found
+0000036270,M&T Bank,assets_usd,213510000000,found
+0001679273,Lamb Weston,revenue_usd,6451300000,found
+0001679273,Lamb Weston,net_income_usd,357200000,found
+0001679273,Lamb Weston,assets_usd,7392600000,found
+0001116132,"Tapestry, Inc.",revenue_usd,7010700000,found
+0001116132,"Tapestry, Inc.",net_income_usd,183200000,found
+0001116132,"Tapestry, Inc.",assets_usd,6580500000,found
+0001045609,Prologis,revenue_usd,8790127000,found
+0001045609,Prologis,net_income_usd,3328231000,found
+0001045609,Prologis,assets_usd,98724256000,found
+0000745732,Ross Stores,revenue_usd,21129219000,found
+0000745732,Ross Stores,net_income_usd,2090730000,found
+0000745732,Ross Stores,assets_usd,14905332000,found
+0001783879,Robinhood Markets,revenue_usd,4473000000,found
+0001783879,Robinhood Markets,net_income_usd,1883000000,found
+0001783879,Robinhood Markets,assets_usd,38137000000,found
+0000051253,International Flavors & Fragrances,revenue_usd,10890000000,found
+0000051253,International Flavors & Fragrances,net_income_usd,-361000000,found
+0000051253,International Flavors & Fragrances,assets_usd,25539000000,found
+0001037038,Ralph Lauren Corporation,revenue_usd,7079000000,found
+0001037038,Ralph Lauren Corporation,net_income_usd,742900000,found
+0001037038,Ralph Lauren Corporation,assets_usd,7047300000,found
+0000084839,"Rollins, Inc.",revenue_usd,3761050000,found
+0000084839,"Rollins, Inc.",net_income_usd,526705000,found
+0000084839,"Rollins, Inc.",assets_usd,3140523000,found
