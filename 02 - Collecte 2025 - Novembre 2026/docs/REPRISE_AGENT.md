@@ -1,6 +1,6 @@
 # Reprendre le projet sans l’historique du chat
 
-Dernière mise à jour : **11 novembre 2026**. Ce guide permet une reprise à partir du dossier local. Les résultats de collecte restent provisoires ; l’objectif est d’abord un projet de référence intégral préparé par l’agent sans dépendre de Jamovi, puis sa reproduction guidée par David dans Jamovi et la finalisation du Google Doc/PDF.
+Dernière mise à jour : **13 novembre 2026**. Étape 1 (projet de référence) **terminée** ; prochaine étape : reproduction guidée dans Jamovi (voir « Reprise Jamovi » ci-dessous et la section 5).
 
 ## 1. Lecture minimale
 
@@ -134,7 +134,7 @@ Ne pas faire tourner deux collecteurs ou deux agents écrivants en même temps s
 
 ## 8. Rapport et collaboration
 
-Google Doc transmis par David : [document de travail du groupe](https://docs.google.com/document/d/1I5zWY43G_JIrLmYNwKz_dlHEgy46E5B4YRlmDasl3qc/edit?tab=t.0). Dernier état connu : brouillon lié à l’ancienne approche. **Non rouvert lors de cette mise à jour documentaire** ; lire son contenu courant avant toute édition.
+Google Doc transmis par David : [document de travail du groupe](https://docs.google.com/document/d/1I5zWY43G_JIrLmYNwKz_dlHEgy46E5B4YRlmDasl3qc/edit?tab=t.0) (identifiant du document : `1I5zWY43G_JIrLmYNwKz_dlHEgy46E5B4YRlmDasl3qc`). **État au 13 nov. 2026 : réécrit** avec l’accord de David (ancienne approche gouvernance supprimée) : couverture, sections 1 (question, données), 2 (préparation), 7 (limites) et références rédigées en anglais ; le résumé exécutif et les sections 3 à 6 contiennent un paragraphe « To be completed with the Jamovi output » à remplacer par les résultats rapprochés de Jamovi. Toujours relire le Doc (outil read_doc) avant d’y écrire et utiliser le numéro de révision (`requiredRevisionId`).
 
 Le professeur demande un PDF final et les évaluations des membres à côté des noms sur la couverture, selon le complément Moodle transmis par David. Le barème des évaluations, une longueur totale et un oral ne sont pas établis dans ce complément. Les notes doivent venir du groupe.
 
@@ -145,3 +145,21 @@ L’agent doit d’abord calculer et interpréter les analyses 2025 et rédiger 
 À chaque lot terminé : mettre à jour la to-do, les compteurs de l’état actuel et le journal. Si une convention change, mettre à jour le registre des décisions, la méthode et le dictionnaire. Conserver les anciennes raisons et rendre explicites les limites restantes.
 
 Pour transmettre le projet dans un nouveau chat, il suffit d’indiquer le dossier et de demander la lecture de **AGENTS.md puis docs/REPRISE_AGENT.md**, avec la tâche à reprendre. Ce guide est une base de reprise, pas la preuve que les tâches encore ouvertes sont réalisées.
+
+## Reprise Jamovi (à lire au début de la prochaine conversation)
+
+**Où on en est.** Étape 1 terminée (13 nov. 2026) : CSV final `data/processed/sp500_2025_JAMOVI.csv` (500 lignes), analyses de référence (`outputs/analyses_reference/`, `outputs/figures_reference/`), rapport de référence `docs/RAPPORT_DE_REFERENCE.md` (§6.4 : robustesse), guide Jamovi avec grille de rapprochement `docs/GUIDE_JAMOVI.md`, audit `docs/AUDIT_2026-11-13.md`. Dépôt GitHub à jour (dernier commit au moment de la rédaction : 5b29cdd, puis le commit de reprise). Gouvernance abandonnée (DEC25) ; question : qu’est-ce qui explique la rentabilité ? Pas besoin de prévenir le professeur (décision de David).
+
+**Comment travailler avec David (préférences confirmées).**
+- Il manipule Jamovi lui-même ; l’agent guide pas à pas, **une analyse à la fois**, dans l’ordre du guide : préparation (types de variables) → S1 profils → S2 khi-deux, corrélations, test t → S3 ANOVA et post-hoc → S4 régressions.
+- À chaque étape David donne les valeurs lues (ou une capture d’écran) ; l’agent les compare à la colonne « Référence » du guide, explique tout écart (écarts mineurs déjà prévus : Levene centré moyenne/médiane, β des facteurs, p des post-hoc, mode) et corrige la référence ou la manipulation. Toute différence de statistique, de df ou de N doit être élucidée.
+- Les sorties Jamovi servent ensuite à compléter le Google Doc (sections 3 à 6 puis résumé exécutif d’une page avec trois recommandations), en anglais, avec le protocole IDENTIFY → HYPOTHESISE → DECIDE → RECOMMEND ; ne pas présenter les chiffres du programme comme des sorties Jamovi.
+- Réponses en français, simples et sans complications inutiles ; ne pas lancer de sous-agents (quota) ; expliquer clairement et dire franchement les points faibles.
+- Commits et push GitHub : autorisés sur demande de David (DEC24) ; le dépôt est **public** : aucune donnée personnelle ; le contact SEC se passe par la variable d’environnement `SEC_CONTACT_EMAIL` (téléchargement seulement). Ne rien déclarer terminé sans l’avoir vérifié.
+- À la fin de la séance Jamovi : mettre à jour tasks/todo.md (J01–J06), le journal, la grille du guide, puis committer si David le demande.
+
+**Message de démarrage à coller dans la nouvelle conversation :**
+
+> Reprise du projet S&P 500 (dossier `02 - Collecte 2025 - Novembre 2026`). Lis AGENTS.md puis docs/REPRISE_AGENT.md (section « Reprise Jamovi »), tasks/todo.md et docs/GUIDE_JAMOVI.md. On passe à l'étape 2 : je refais les analyses dans Jamovi et tu me guides pas à pas, une analyse à la fois, en comparant mes résultats aux valeurs de référence du guide. Commence par la préparation (import du CSV et types de variables) puis les cinq profils de la séance 1.
+
+**Fichiers clés.** CSV : `data/processed/sp500_2025_JAMOVI.csv` (SHA-256 dans FICHE_PROVENANCE). Dictionnaire : `docs/DICTIONNAIRE.md`. Journal de nettoyage et provenance : `docs/JOURNAL_NETTOYAGE.md`, `docs/FICHE_PROVENANCE.md`. Décisions : `docs/DECISIONS.md` (DEC12, DEC16 à DEC25). Programmes : `src/analysis.py`, `src/verify_analysis.py`, `src/robustness.py`, `src/build_dataset.py` ; environnement `.venv` (à recréer : `python3 -m venv .venv && .venv/bin/pip install -r requirements-analysis.txt`).
