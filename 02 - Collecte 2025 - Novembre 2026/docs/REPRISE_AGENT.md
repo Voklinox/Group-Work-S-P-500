@@ -27,7 +27,7 @@ Les [consignes en texte intégral](CONSIGNES_PROFESSEUR.md) et les [quatre suppo
 
 - Équipe : **David Wanono, Olyvan Perrin, Guillaume Da Cruz**. Écrire Olyvan avec un seul n, conformément au nom transmis.
 - Cours : Quantitative Data Analysis, M1 S7, EM Normandie ; professeur Nguyen Anh-Tuan. Date limite indiquée par David : **2 décembre 2026**. Validation du jeu de données par le professeur rapportée par David ; la fiche non signée n’impose pas de redemander cette validation.
-- Question de travail : associations entre caractéristiques publiques du conseil et rentabilité, en tenant compte de taille/secteur. Pas de démonstration causale.
+- Question de travail (DEC25) : qu’est-ce qui explique la rentabilité (marge nette, ROA) : taille, endettement, croissance, secteur ? La gouvernance est abandonnée (travail archivé). Pas de démonstration causale.
 - Finances : dernier exercice annuel **clos en 2025**, dates exactes, pas nécessairement janvier–décembre ni FY2025.
 - Population de travail : S&P 500 au **31 décembre 2025**, 500 CIK et 503 titres. Date de population = convention de travail ; vérifier l’univers complet, pas seulement sa taille.
 - Gouvernance : David a accepté les indicateurs publics gratuits, datés et accessibles légalement. Le pilote utilise le conseil en place décrit dans des documents publiés en 2025. Date du document ≠ moyenne annuelle ≠ garantie au 31 décembre.
@@ -47,7 +47,7 @@ Le dépôt Git est le dossier parent **Group Work S&P 500**. Les anciens fichier
 | Faits / ratios financiers | 3 244 / 989 | financial_evidence.json et derived_evidence.csv |
 | Audit enregistré | 1 095 sources par empreinte, 0 erreur d’intégrité, 9 alertes de définition (11 nov. après F07) | outputs/integrity_audit.json |
 | Documents de gouvernance candidats | 505 pour 496 entreprises | governance_proxy_candidates.csv et governance_catalogue_coverage.json |
-| Mesures de gouvernance | 290 observations (5 pilotes + 285 à auditer, G09) ; 51 non résolues ; 159 pas encore lues | governance_observations.json, governance_shards/, governance_unresolved.csv, governance_audit_queue.csv, governance_measurement_coverage.json |
+| Gouvernance | abandonnée (DEC25) ; 290 observations et outils archivés, non utilisés | governance_observations.json, PROTOCOLE_LECTURE_GOUVERNANCE.md |
 | CSV final / analyses 2025 / PDF final | Aucun résultat final validé | tâches D, J et R ouvertes |
 
 Ces valeurs sont un point de reprise, pas des constantes à imposer aux fichiers. Si les fichiers ont évolué, examiner les changements, mettre à jour les compteurs et le journal ; ne pas ramener les données à ces nombres artificiellement.
@@ -93,16 +93,14 @@ Les chemins suivants sont relatifs à la racine de ce nouveau dossier.
 
 Les réponses brutes SEC et les originaux de gouvernance sont **ignorés par Git**. Un autre agent sur cette machine peut les relire ; un agent après clonage seul devra disposer d’une copie/sauvegarde ou les récupérer depuis les sources. Ne pas affirmer que Git contient toutes les pièces. Les registres précisent aussi les refus HTTP et les lectures en ligne sans copie locale.
 
-## 5. Première action concrète : continuer la gouvernance (G05)
+## 5. Première action concrète : plan d’analyse et analyses de référence (D03, P01–P09)
 
-1. Ouvrir la file de revue et choisir un petit lot non contrôlé, en conservant une diversité de secteurs et en incluant les cas particuliers. Ne pas sélectionner selon la rentabilité.
-2. Retrouver le document dans l’inventaire dédié. S’il y en a plusieurs, vérifier assemblée annuelle/spéciale, date et auteur ; une procuration contestée peut venir d’un tiers.
-3. Lire les rubriques sur le conseil en place, l’indépendance et la direction. Vérifier que numérateur et dénominateur décrivent le même conseil ; rapprocher les candidats des administrateurs déjà en fonction.
-4. Archiver la copie officielle publique si possible et enregistrer URL/date/empreinte. En cas de refus, conserver le motif et chercher une copie officielle librement accessible ; ne pas contourner une restriction ni déclarer une fausse archive.
-5. Ajouter une observation dans `governance_observations.json` en reprenant la structure du pilote : CIK, dépôt, date, effectifs, personnes, catégorie, périmètre et rubriques précises. Une date d’effet différente de la publication doit être conservée dans les preuves. Un doute reste explicite ; aucun zéro de remplacement.
-6. Si la source est une alternative nouvelle, documenter aussi ses métadonnées. Le programme vérifie la correspondance CIK/dépôt/date/lien avec l’inventaire ou les alternatives enregistrées.
-7. Reconstruire avec `python3 -m src.governance`, vérifier le résultat, actualiser les compteurs et le journal. Ce programme écrit des sorties : le lancer après contrôle des entrées, pas simplement pour lire le projet.
-8. Traiter les co-CEO/co-présidents séparément avant extension du schéma : le validateur actuel est fondé sur un nom CEO et un nom de président. Ne pas concaténer arbitrairement plusieurs personnes pour contourner cette limite.
+La gouvernance est abandonnée (DEC25) ; ne pas la reprendre sans décision de David. Prochaines actions :
+
+1. **D03** : plan d’analyse sur data/processed/sp500_2025_JAMOVI_DRAFT.csv : cinq profils univariés ; khi-deux secteur × quartile de taille ; matrice Pearson et Spearman (marge, ROA, ln actif, endettement, croissance, rotation) ; test t marge Finance contre Non-finance ; ANOVA de la marge par groupe de secteurs avec post-hoc ; régressions simple et multiple de la marge.
+2. **D02/D04** : dictionnaire final et CSV final unique ; tableau des N par analyse.
+3. **P01–P09** : calculs de référence (installer un environnement avec SciPy et statsmodels), tableaux, graphiques, rapport de référence, guide Jamovi.
+4. Les contrôles restants : U03 (retraits de 2025), relecture éventuelle des valeurs extrêmes.
 
 ## 6. Autres points ouverts à conserver
 

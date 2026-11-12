@@ -2,9 +2,9 @@
 
 ## Périmètre et décisions de David
 
-- Étude S&P 500 de gouvernance et rentabilité, pour le cours Quantitative Data Analysis, M1 S7.
+- Étude S&P 500 : **qu’est-ce qui explique la rentabilité (marge nette, ROA) des entreprises : taille, endettement, croissance, secteur ?** (DEC25, 12 nov. 2026). La gouvernance a été abandonnée (travail archivé), pour le cours Quantitative Data Analysis, M1 S7.
 - Données du **dernier exercice annuel clos en 2025**. Le choix a été explicitement confirmé par David le 11 novembre 2026. Ce n’est pas forcément janvier–décembre et ce n’est pas nécessairement l’exercice étiqueté FY2025.
-- Gouvernance : David autorise explicitement, le 11 novembre 2026, les indicateurs historiques publics et gratuits (indépendance du conseil, séparation président/directeur général), en remplacement du score ISS. Utiliser uniquement des sources légalement accessibles ; aucun abonnement payant. Ne pas redemander cet accord.
+- Gouvernance : abandonnée le 12 novembre 2026 (DEC25). Ne pas reprendre sa collecte sans nouvelle décision de David ; l’accord du 11 nov. sur les indicateurs publics et le travail réalisé (290 observations, protocole) restent archivés.
 - Une ligne par entreprise. L’univers doit être historique et daté ; 500 lignes est la cible et ne doit jamais être obtenue en ajoutant des entreprises ou des valeurs arbitraires.
 - Collecte nouvelle et datée. Chaque valeur doit être reliée à sa publication ou rester manquante avec une raison.
 - Les anciens travaux sont des archives. Ne jamais réintroduire les imputations Fiserv ni les scores actuels comme valeurs 2025.

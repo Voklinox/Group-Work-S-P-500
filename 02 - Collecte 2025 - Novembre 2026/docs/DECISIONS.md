@@ -68,6 +68,13 @@ David a répondu : actif total « selon ce qui est le plus adapté », capitalis
 
 **Instruction explicite de David** : « n'hésite pas à envoyer un commit sur github ». Cela remplace pour ce dépôt l'interdiction antérieure (DEC10) : l'agent peut committer et pousser sur la branche `main` quand David le demande ou l'a demandé comme ici. Précautions : le dépôt GitHub est **public** ; aucune adresse personnelle, clé ou jeton dans les fichiers (le contact SEC est lu dans la variable d'environnement `SEC_CONTACT_EMAIL`, voir DEC18) ; les fichiers volumineux (réponses SEC brutes, procurations, rapports) restent ignorés par Git ; pas de réinitialisation ni de réécriture d'historique ; Jamovi reste manipulé par David.
 
+## DEC25 — Gouvernance abandonnée ; nouvelle question, 12 novembre 2026
+
+**Décision de David (option 3 proposée par l'agent)** : abandonner la gouvernance comme variable d'analyse, par simplicité et pour avancer plus vite. Raisons : le cours n'exige pas de gouvernance ; sa collecte exige une lecture manuelle des procurations (3 sociétés par séance, 159 non lues, 51 non résolues) ; les variables financières sont disponibles pour les 500 sociétés par programme.
+Nouvelle question de travail : **qu'est-ce qui explique la rentabilité (marge nette, ROA) des entreprises du S&P 500 : taille, endettement, croissance du chiffre d'affaires, secteur ?** Association, pas causalité.
+Variables : continues net_margin_pct, roa_pct, ln_assets, debt_ratio_pct, revenue_growth_pct, asset_turnover ; ordinale size_quartile ; nominales sector_group (5), finance_vs_other (2), profitable (2).
+Conséquences : DEC05–DEC07, DEC20 et le protocole de gouvernance sont **archivés, pas supprimés** (290 observations, protocole et outils restent dans le dépôt comme travail documenté, non utilisés dans l'analyse). DEC22 reste valable ; DEC23 (ceo_duality) est caduque. Les tâches G05–G09 sont closes comme « abandonnées ». À signaler au professeur : le jeu de données (S&P 500) est inchangé, la question managériale a changé ; David décide s'il informe le professeur.
+
 ## Décisions remplacées et alternatives écartées
 
 La V2 de novembre préparée à partir de l’ancien relevé Yahoo reste **archivée**. Ses instructions « Use … in Jamovi » ne s’appliquent plus à cette collecte. Elle corrigeait certains traitements, sans établir des comptes homogènes 2025. David a ensuite choisi la nouvelle collecte ; aucune donnée ni ancien résultat n’est automatiquement transféré.

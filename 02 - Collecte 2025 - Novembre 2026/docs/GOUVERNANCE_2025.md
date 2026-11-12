@@ -1,3 +1,5 @@
+> **ARCHIVÉ le 12 novembre 2026 (DEC25)** : la gouvernance n’est plus une variable d’analyse. Ce document décrit le travail réalisé, conservé pour mémoire.
+
 # Gouvernance publique 2025 — protocole approuvé
 
 ## Décision de David

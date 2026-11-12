@@ -134,6 +134,14 @@ Le point d’accès à la racine Git renvoie à cette version complète unique. 
 - Deux observations ajoutées (Cincinnati Financial 13/9, président exécutif séparé ; Corteva 12/11, effectif fondé sur les candidats) : total 290 observations, 51 non résolues, 159 pas encore lues. 0 échec au vérificateur.
 - **Essai d'automatisation abandonné** : comptage des « cartes d'administrateurs » (ancre « Director since » et étiquette « Independent »), testé sur les 285 observations lues : effectif exact dans 60 cas sur 234 seulement. Trop imprécis, code supprimé. Conclusion : la lecture reste manuelle, environ 2 à 4 sociétés conclues pour 12 000 jetons.
 
+## 13 novembre 2026 — gouvernance abandonnée, nouvelle question (DEC25)
+
+- **Décision de David** (option 3) : abandonner la gouvernance, pour avancer plus vite et simplifier. Raison explicitée : le cours ne l'exige pas ; la collecte exige une lecture manuelle (159 non lues, 51 non résolues).
+- **Nouvelle question** : qu'est-ce qui explique la rentabilité (marge nette, ROA) des entreprises du S&P 500 : taille, endettement, croissance, secteur ?
+- **Fait** : src/extra_variables.py (croissance du chiffre d'affaires à partir du même rapport : 488 valeurs, preuves dans revenue_growth_evidence.csv) ; src/build_dataset.py réécrit sans gouvernance (500 lignes, debt_ratio_pct, asset_turnover, profitable, finance_vs_other) ; documents alignés (AGENTS, README, ÉTAT, REPRISE, DECISIONS, todo, dictionnaire, fiche de provenance, journal de nettoyage). Travail de gouvernance archivé, non supprimé.
+- **Vérification de la spécification du cours** : toutes les exigences satisfaites ; khi-deux secteur × quartile : effectif attendu minimal 14,9.
+- **Prochaine action** : plan d'analyse D03, CSV final D04, puis calculs de référence P01–P09.
+
 ## Format pour les prochaines entrées
 
 Ajouter une section datée avec : demande ou objectif ; action et motif ; fichiers/preuves ; résultat et nombre de cas vérifiés ; tâche terminée ou restant ouverte ; décision éventuelle ; prochaine action. Conserver les entrées précédentes. Si une ancienne conclusion est corrigée, ajouter la correction et sa raison au lieu d’effacer l’historique.

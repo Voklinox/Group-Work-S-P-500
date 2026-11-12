@@ -1,6 +1,6 @@
 # To-do du projet S&P 500
 
-Mise à jour : **11 novembre 2026**. Une case cochée signifie que le livrable décrit existe ; elle ne valide pas automatiquement l’étape suivante. Les mentions **EN COURS**, **À DÉCIDER** et **À FAIRE** précisent les cases ouvertes. Aucun pourcentage global n’est estimé.
+Mise à jour : **12 novembre 2026**. Une case cochée signifie que le livrable décrit existe ; elle ne valide pas automatiquement l’étape suivante. Les mentions **EN COURS**, **À DÉCIDER** et **À FAIRE** précisent les cases ouvertes. Aucun pourcentage global n’est estimé.
 
 ## Ordre prioritaire confirmé par David
 
@@ -8,11 +8,11 @@ Mise à jour : **11 novembre 2026**. Une case cochée signifie que le livrable d
 
 ## À reprendre en premier
 
-1. **G05** — 290 observations (5 pilotes + 285 lues, à auditer), 51 non résolues (data/quarantine/governance_unresolved.csv), **159 sociétés pas encore lues**. Sans sous-agents (DEC21) : `python3 -m src.governance_packets build` puis `show 0 10`, décisions dans un JSON, `src.governance_promote <n°> <fichier>`, `src.governance_check`, `src.merge_governance_shards`, `src.governance`. Environ 1 société sur 3 des paquets se conclut par lecture ciblée ; les autres demandent un second passage (administrateurs partants, candidats nouveaux).
-2. **F06 est terminé (11 nov.)** ; passer à F08–F09 (relecture des revenus bancaires, valeurs extrêmes) pendant que la gouvernance est lue en parallèle.
-3. **T01–T03** — justifier la mesure de taille et les quartiles avant de construire la base finale.
+1. **D03** — plan d’analyse (proposé ci-dessous), puis **D02/D04** (dictionnaire final et CSV final).
+2. **P01–P09** — analyses de référence, graphiques, rapport de référence et guide Jamovi (environnement avec SciPy et statsmodels à préparer).
+3. **U03** (retraits de 2025) et **F09** (journal de nettoyage final) en parallèle.
 
-Le choix de la gouvernance publique est déjà approuvé. Lire docs/REPRISE_AGENT.md avant de relancer un programme. Les 1 000 réponses financières principales sont déjà présentes.
+La gouvernance est abandonnée (DEC25, 12 nov. 2026) : ne pas la reprendre sans décision de David. Lire docs/REPRISE_AGENT.md avant de relancer un programme.
 
 ## A — Cadre et organisation
 
@@ -46,25 +46,25 @@ Le choix de la gouvernance publique est déjà approuvé. Lire docs/REPRISE_AGEN
 - [x] **G02** Fixer le protocole de lecture du conseil en place et les trois catégories de direction. Preuve : docs/GOUVERNANCE_2025.md ; absence de président distincte de séparation des fonctions.
 - [x] **G03** Inventorier 505 documents candidats pour 496 sociétés et identifier quatre sources alternatives. Preuve : governance_proxy_candidates.csv, alternative_governance_sources.json et rapport de couverture documentaire.
 - [x] **G04** Contrôler le pilote de cinq sociétés et calculer les proportions à partir des effectifs. Preuve : governance_observations.json, governance_2025_WORKING.json et résumé pilote.
-- [ ] **G05 — EN COURS : 290/500 observations (285 à auditer), 51 non résolues, 159 à lire** Collecter les observations restantes ou justifier leur absence. Terminé quand chaque ligne de la file a une conclusion documentée ET que l’audit G09 est passé. Ancien critère :
-- [ ] **G09 — EN COURS (12 nov.) file d’audit créée, audit non réalisé** Auditer par sondage les observations lues. File reproductible : `python3 -m src.governance_audit_queue` → data/quarantine/governance_audit_queue.csv (107 cas : 84 à risque — administrateurs partants ou effectifs déduits —, 3 atypiques, 20 d’échantillon aléatoire de 10 %). Terminé quand chaque ligne est relue indépendamment avec statut `audited_ok` ou corrigée ; tout écart impose de relire le fragment. Relecture préliminaire du 12 nov. : 6 observations tirées au hasard cohérentes, 0 incohérence nom/fonction sur 283 ; CBRE et d’autres déduisent des effectifs à justifier. Anciennes consignes :
-- [ ] **G06 — À FAIRE** Traiter Blackstone, KKR, Paramount et Qnity via leurs sources alternatives ; traiter les co-CEO/co-présidents et les assemblées spéciales/contestées. Terminé quand les nominations effectives, le périmètre et la date sont établis ou le cas laissé manquant avec motif.
-- [ ] **G07 — À FAIRE** Compléter les copies sources, notamment Alphabet et PepsiCo, par une voie publique autorisée lorsque possible. Sinon conserver l’état « lecture en ligne, non archivé » et les références précises. Ne pas annoncer une archive inexistante.
-- [ ] **G08 — À FAIRE** Vérifier les écarts de dates gouvernance/comptes, la couverture par secteur et les catégories rares. Terminé quand les limites, N et conséquences sur les tests sont consignés dans le plan d’analyse.
+- [x] **G05 — ABANDONNÉE le 12 nov. 2026 (DEC25)** Collecte de gouvernance : 290 observations lues, 159 non lues, 51 non résolues ; travail archivé, non utilisé.
+- [x] **G09 — ABANDONNÉE (DEC25)** Audit par sondage : sans objet puisque la gouvernance n’est plus une variable ; file d’audit conservée (data/quarantine/governance_audit_queue.csv).
+- [x] **G06 — ABANDONNÉE (DEC25)**
+- [x] **G07 — ABANDONNÉE (DEC25)**
+- [x] **G08 — ABANDONNÉE (DEC25)**
 
 ## T — Taille et variables du cours
 
 - [x] **T01** (12 nov. 2026, DEC12 confirmée par David) Mesure de taille = actif total à la clôture de l’exercice ; capitalisation en sensibilité optionnelle.
 - [x] **T02** (12 nov.) Valeurs d’actif issues du même dépôt annuel que les comptes (preuve : financial_evidence.json) ; 498 valeurs sur 500 ; pas de cours ni d’actions à rapprocher.
 - [x] **T03** (12 nov., brouillon) Quartiles de taille Q1 (plus petits) à Q4 (plus grands) sur l’actif : coupures 25/50/75e centiles avec interpolation linéaire à 13,4 / 31,1 / 73,5 Md USD ; classe ≤ coupure ; 498 valides (125/124/124/125). Code : src/build_dataset.py.
-- [x] **T04** (12 nov., brouillon) Spécification du cours vérifiée sur data/processed/sp500_2025_JAMOVI_DRAFT.csv : ≥100 lignes (500) ; nominales 2–5 modalités : ceo_duality (2), board_leadership (3), sector_group (5) ; ordinale : size_quartile (4) ; continues : net_margin_pct, roa_pct, board_independence_pct, assets_bn, ln_assets, revenue_bn. Limite : « No board chair » = 1 société (Nvidia), d’où ceo_duality (DEC23) pour le khi-deux et le test t.
+- [x] **T04** (12 nov., mis à jour DEC25) Spécification du cours vérifiée sur data/processed/sp500_2025_JAMOVI_DRAFT.csv : 500 lignes ; nominales : sector_group (5), finance_vs_other (2), profitable (2) ; ordinale : size_quartile (4) ; continues : net_margin_pct, roa_pct, ln_assets, debt_ratio_pct, revenue_growth_pct (488), asset_turnover. Khi-deux secteur × quartile : effectif attendu minimal 14,9 ≥ 5.
 
 ## D — Base finale et plan d’analyse
 
-- [x] **D01** (12 nov., brouillon) Finances et gouvernance jointes par CIK, 500 lignes conservées, statut de gouvernance par ligne (observed 288 / unresolved 51 / not_yet_read 161), aucune valeur remplie artificiellement. À refaire après G05 et G09.
+- [x] **D01** (12 nov., mis à jour DEC25) Base brouillon sans gouvernance : 500 lignes, une par CIK, variables ci-dessus, aucune valeur remplie artificiellement. Code : src/build_dataset.py, src/extra_variables.py (preuves : data/reference/revenue_growth_evidence.csv).
 - [ ] **D02 — EN COURS (12 nov.)** Figer les définitions, règles de nettoyage et échantillons valides par analyse. Fait : docs/JOURNAL_NETTOYAGE.md (journal noté du cours) et docs/FICHE_PROVENANCE.md (fiche de provenance), définitions des variables créées. Reste : dictionnaire final des colonnes du CSV Jamovi (docs/DICTIONNAIRE.md à aligner sur sp500_2025_JAMOVI_DRAFT.csv) et tableau des N par analyse (après G05/G09).
-- [ ] **D03 — À FAIRE** Établir un plan d’analyse répondant à la question et aux quatre séances ; préciser hypothèses, conditions, tailles d’effet et contrôles. Prévoir une comparaison à deux groupes pertinente pour couvrir la mention du t-test dans la synthèse du cours, sans inventer un nouvel artefact séparé.
-- [ ] **D04 — À FAIRE** Produire **un seul CSV final Jamovi clairement identifié**, puis vérifier valeurs manquantes, types, modalités, unités et traçabilité. Dépend de U03, F06–F09, G05–G08, T01–T04 et D01–D03. Les valeurs manquantes justifiées peuvent subsister ; elles doivent être visibles.
+- [ ] **D03 — À FAIRE (plan proposé)** Plan d’analyse répondant à la question « qu’est-ce qui explique la rentabilité ? » : (S1) cinq profils univariés (marge, ROA, actif, endettement, croissance) avec diagnostic de normalité de la marge ; (S2) khi-deux secteur × quartile de taille avec V de Cramér, matrice Pearson et Spearman des six variables continues et nuage marge–endettement ou marge–croissance, test t Finance contre Non-finance sur la marge (Student/Welch, d de Cohen) ; (S3) ANOVA de la marge par sector_group (Levene, Fisher ou Welch, post-hoc, η²) et Kruskal–Wallis de contrôle ; (S4) régression simple (marge ~ ln_assets) puis multiple (marge ~ ln_assets + debt_ratio_pct + revenue_growth_pct + facteur secteur), diagnostics (résidus, VIF, Cook), sensibilités (ROA, sans valeurs extrêmes justifiées). Hypothèses et conditions à écrire dans le plan.
+- [ ] **D04 — À FAIRE** Produire **un seul CSV final Jamovi clairement identifié**, puis vérifier valeurs manquantes, types, modalités, unités et traçabilité. Dépend de U03, F09 et D02–D03 (G05–G09 abandonnées, DEC25). Les valeurs manquantes justifiées peuvent subsister ; elles doivent être visibles.
 
 ## P — Projet d’analyse complet de référence, sans dépendre de Jamovi
 

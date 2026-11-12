@@ -1,3 +1,28 @@
+# Dictionnaire du CSV Jamovi (brouillon du 12 novembre 2026)
+
+Fichier : `data/processed/sp500_2025_JAMOVI_DRAFT.csv`, 500 lignes, une par entreprise (CIK). Niveaux de mesure à régler dans Jamovi : cik et company = ID ; sector, sector_group, finance_vs_other, profitable = Nominal ; size_quartile = Ordinal (Q1 < Q2 < Q3 < Q4) ; les autres = Continuous. Cellule vide = valeur non disponible (jamais zéro).
+
+| Colonne | Sens, unité, N valide |
+|---|---|
+| cik, company | Identifiant SEC à dix chiffres (texte) et nom de l'entreprise. 500 |
+| sector | Secteur GICS (11 modalités). 500 |
+| sector_group | Cinq groupes : Tech & Comms, Healthcare, Finance, Industrials & Energy, Consumer (immobilier dans Consumer, DEC22). 500 |
+| finance_vs_other | Finance (secteur Financials) contre Non-finance. 500 |
+| profitable | Profit si résultat net attribuable > 0, sinon Loss. 498 (470 Profit, 28 Loss) |
+| period_end | Date de clôture de l'exercice annuel retenu (jj exacts). 498 |
+| net_margin_pct | 100 × résultat net attribuable / revenus, en %. 498 |
+| roa_pct | 100 × résultat net attribuable / moyenne de l'actif d'ouverture et de clôture, en %. 498 |
+| revenue_bn, assets_bn | Revenus de l'exercice et actif à la clôture, en milliards USD. 498 |
+| ln_assets | Logarithme naturel de l'actif en USD (taille continue). 498 |
+| debt_ratio_pct | 100 × (actif − capitaux propres) / actif, en % ; peut dépasser 100 (capitaux propres négatifs, 32 sociétés). 498 |
+| revenue_growth_pct | Croissance des revenus vs exercice précédent du même rapport, en %. 488 |
+| asset_turnover | Revenus / moyenne de l'actif d'ouverture et de clôture (fois). 498 |
+| size_quartile | Q1 (actif ≤ 13,4 Md USD), Q2 (≤ 31,1), Q3 (≤ 73,5), Q4 (au-delà). 498 |
+
+Les définitions détaillées, sources et corrections sont dans JOURNAL_NETTOYAGE.md et FICHE_PROVENANCE.md. Le reste de ce document décrit la table de collecte intermédiaire.
+
+---
+
 # Dictionnaire — collecte financière provisoire
 
 Chaque ligne du tableau financier représente une entreprise (identifiant CIK), pas une catégorie d’actions. Le seul futur fichier à ouvrir dans Jamovi sera annoncé après validation. `financials_2025_WORKING.csv` est un tableau de contrôle, pas le fichier analytique final.

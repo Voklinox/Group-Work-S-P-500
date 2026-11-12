@@ -25,7 +25,6 @@ Mis à jour le **12 novembre 2026**. Il porte sur `data/processed/sp500_2025_JAM
 |---|---:|---|
 | Marge nette, ROA, revenus, résultat net, actif | 2 | **Dayforce** : aucun rapport annuel 2025 (rachat clos le 4 fév. 2026, Form 15 le 17 fév.) ; **Paramount Skydance** : périodes prédécesseur/successeur non comparables. Valeurs laissées vides, jamais imputées |
 | Passif, trésorerie | 143 ; 83 | Concept normalisé non publié par ces sociétés (présentation différente). Variables secondaires : non utilisées dans les analyses principales ; pas d'imputation par différence |
-| Gouvernance (taille du conseil, % indépendants, direction) | 212 | 51 non résolues pour une raison documentée (dirigeants ou président en transition, co-CEO, indépendance non déclarée, conseil non rapprochable) ; 161 procurations pas encore lues. Statut par ligne dans `governance_status` |
 
 Aucun zéro de remplacement n'a été utilisé. Chaque analyse annoncera son N valide.
 
@@ -49,21 +48,14 @@ Aucune suppression automatique. Le dépistage (`financial_screening.csv`) signal
 - **23 écarts de bilan > 5 %** (actif ≠ capitaux propres + passif, à cause des minoritaires et éléments hors capitaux propres) : signalés, sans effet sur les variables retenues.
 - **10 sociétés financières à revenu/actif élevé** (assureurs, bourses, Block, Mastercard…) : revenus a priori légitimes, à confirmer (F08).
 
-## 6. Gouvernance
+## 6. Gouvernance (abandonnée)
 
-| Constat | Action | Pourquoi |
-|---|---|---|
-| Un seul document décrit le conseil « en place » à une date de 2025 (publication du proxy) | Date de publication conservée à côté de la date de clôture comptable ; aucune moyenne annuelle supposée | DEC07 ; décalage publication − clôture comptable : médiane -271 jours, de -314 à +122 jours (242 documents publiés avant la clôture, 45 après), calculé sur 287 observations |
-| Candidats ≠ administrateurs en place (partants encore en poste, nouveaux candidats) | Rapprochement avec le conseil en place ; effectifs déduits explicitement documentés ; cas non rapprochables classés non résolus | Numérateur et dénominateur doivent décrire les mêmes personnes |
-| « No board chair » : 1 société (Nvidia) | Variable à deux modalités `ceo_duality` pour les tests (DEC23) | Effectifs attendus du khi-deux < 5 |
-| Citations des preuves | Contrôle automatique : chaque citation existe mot pour mot dans le document | src/governance_check.py |
-
-Ces valeurs restent « lues, à auditer » jusqu'à l'audit G09 (107 cas, file : governance_audit_queue.csv).
+La gouvernance a été étudiée puis abandonnée le 12 novembre 2026 (DEC25) : 290 observations lues et 159 sociétés non lues, jugées trop coûteuses à compléter ; aucune variable de gouvernance n'est dans le fichier d'analyse. Le travail reste archivé (docs/GOUVERNANCE_2025.md, PROTOCOLE_LECTURE_GOUVERNANCE.md).
 
 ## 7. Variables créées
 
-`assets_bn` (actif en milliards USD) ; `ln_assets` (logarithme naturel de l'actif en USD) ; `size_quartile` (Q1 plus petits à Q4 plus grands, coupures 25/50/75e centiles de l'actif à 13,4 / 31,1 / 73,5 Md USD) ; `sector_group` (5 groupes, DEC22) ; `ceo_duality` (DEC23) ; `board_independence_pct` = 100 × indépendants / effectif en place. Les unités sont en pourcentage (12 = 12 %) et en milliards USD.
+`assets_bn` (actif en milliards USD) ; `ln_assets` (logarithme naturel de l'actif en USD) ; `size_quartile` (Q1 plus petits à Q4 plus grands, coupures 25/50/75e centiles de l'actif à 13,4 / 31,1 / 73,5 Md USD) ; `sector_group` (5 groupes, DEC22) ; `finance_vs_other` (Finance contre Non-finance) ; `profitable` (Profit si résultat net > 0, sinon Loss ; 470 / 28) ; `debt_ratio_pct` = 100 × (actif − capitaux propres) / actif (peut dépasser 100 si capitaux propres négatifs : 32 sociétés, conservées) ; `revenue_growth_pct` = croissance du chiffre d'affaires par rapport à l'exercice précédent publié dans le même rapport (488 valeurs ; manquante lorsque le revenu est une reconstruction ou que l'exercice précédent n'est pas comparable) ; `asset_turnover` = revenus / moyenne de l'actif d'ouverture et de clôture. Pourcentages exprimés en points (12 = 12 %), montants en milliards USD.
 
 ## 8. Limites
 
-Comptes : périodes différentes entre sociétés (mais toutes dates exactes) ; revenus bancaires par convention ; comparabilité sectorielle des marges non certifiée. Gouvernance : mesure déclarative (indépendance au sens du NYSE/Nasdaq), à une date de publication ; lecture encore incomplète ; association et non causalité.
+Croissance du chiffre d'affaires : 488 valeurs sur 500 ; une croissance extrême (jusqu'à +186 %) reflète souvent des acquisitions, conservée. Comptes : périodes différentes entre sociétés (mais toutes dates exactes) ; revenus bancaires par convention ; comparabilité sectorielle des marges non certifiée.

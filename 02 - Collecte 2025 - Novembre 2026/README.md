@@ -2,7 +2,7 @@
 
 **Équipe : David Wanono, Olyvan Perrin, Guillaume Da Cruz.** Cours Quantitative Data Analysis, M1 S7, EM Normandie. Échéance indiquée par David : **2 décembre 2026**. Dernière mise à jour documentaire : **11 novembre 2026**.
 
-Étudier les liens entre caractéristiques publiques du conseil d’administration et rentabilité, en tenant compte de la taille et du secteur. Comptes du dernier exercice annuel **clos en 2025**, avec dates exactes ; une ligne par entreprise. David a approuvé le remplacement d’ISS par des indicateurs publics, gratuits et datés.
+Étudier ce qui explique la rentabilité (marge nette, ROA) des entreprises du S&P 500 : taille, endettement, croissance du chiffre d’affaires et secteur (DEC25 : la gouvernance a été abandonnée le 12 novembre 2026, travail archivé). Comptes du dernier exercice annuel **clos en 2025**, avec dates exactes ; une ligne par entreprise.
 
 **Le jeu de données final et les analyses 2025 ne sont pas encore terminés. Aucun CSV final Jamovi n’est disponible.**
 
@@ -28,8 +28,8 @@ Les [consignes et supports du professeur en texte intégral](docs/CONSIGNES_PROF
 | Sources SEC financières | Company Facts et Submissions présents pour les 500 entreprises |
 | Exercices annuels extraits de durée comparable | 498 (dont 6 exercices de 52/53 semaines clos début janvier 2026, DEC19) |
 | Marges nettes calculables | 498 ; numérateur harmonisé sur le résultat attribuable à la société mère (DEC16) ; manquent Dayforce (pas de rapport annuel 2025) et Paramount (prédécesseur/successeur) ; comparabilité à contrôler |
-| Documents de gouvernance candidats | 505 documents pour 496 entreprises ; quatre sources alternatives identifiées |
-| Mesures de gouvernance | 290 observations (5 pilotes contrôlés + 285 lues avec citations vérifiées automatiquement, **à auditer** : file G09 de 107 cas) ; 51 non résolues avec raison ; 159 pas encore lues (12 nov. 2026) |
+| Gouvernance (abandonnée, DEC25) | Travail archivé : 505 documents téléchargés, 290 observations lues, protocole et outils conservés ; non utilisés dans l’analyse |
+| Variables de l’analyse | continues : net_margin_pct, roa_pct, ln_assets, debt_ratio_pct, revenue_growth_pct (488), asset_turnover ; ordinale size_quartile ; nominales sector_group (5), finance_vs_other (2), profitable (2). Base brouillon : data/processed/sp500_2025_JAMOVI_DRAFT.csv (500 lignes) |
 | Taille et quartiles | Mesure finale non arrêtée ; capitalisation historique non validée |
 | Analyses complètes et rapport local de référence | À réaliser par l’agent, avant Jamovi |
 | Reproduction Jamovi puis Google Doc/PDF | À réaliser après le projet de référence |
